@@ -36,18 +36,7 @@ class File:
 class Card:
     def __init__(self):
         try:
-            self.allCard = File('data/card_details.json')
-            self.allCardList = self.allCard.rJSon()
-            print(len(self.allCardList))
-        except:
-            print('Đang tải thẻ bài...')
-            response = requests.get('https://api2.splinterlands.com/cards/get_details?')
-            self.allCardList = json.loads(response.text)
-            self.allCard.wJSon(self.allCardList)
-            os.system('cls')
-
-        try:
-            self.ownerCard = File('data/card_owned.json')
+            self.ownerCard = File('data/playable.json')
             self.ownerCardList = self.ownerCard.rJSon()
         except:
             self.ownerCardList = []
@@ -58,15 +47,19 @@ class Card:
             list_of_card_names.append(card['name'])
         return list_of_card_names
 
+    def getAllCards(self):
+        response = requests.get('https://api2.splinterlands.com/cards/get_details?')
+        return json.loads(response.text)
+
     def sortNames(self, list_card):
         return sorted(self.getNames(list_card))
 
-    def show(self, list_card='owner'):
+    def showNames(self, list_card='owner'):
         if list_card == 'owner':
             typeOfListCard = self.ownerCardList
             length = len(typeOfListCard)
         elif list_card == 'all':
-            typeOfListCard = self.allCardList
+            typeOfListCard = self.getAllCards()
             length = len(typeOfListCard)
         elif list_card == 'na':
             typeOfListCard = self.cardNotAvailable()
@@ -74,7 +67,9 @@ class Card:
         listOfNames = self.sortNames(typeOfListCard)
         numOfRow = length // 4
         numOfRedunNames = length % 4
-        columnName = listIndex = listOfRedunNames = []
+        columnName = [] 
+        listIndex = []
+        listOfRedunNames = []
         i = 1
         a = 0
         b = numOfRow
@@ -87,20 +82,26 @@ class Card:
             a = b
             b = b + numOfRow
             i += 1
+
         columnName.append(listOfNames[a:b])
         indexLastRow = ((1, 1, 1), (2, 2, 2), (2, 3, 3), (2, 3, 4))
+
         for i in range(numOfRow):
             index = indexLastRow[numOfRedunNames]
-            print(f'{i + 1:>3} {columnName[0][i]:<23}{i + index[0] + numOfRow:>3} {columnName[1][i]:<23}{i + index[1] + numOfRow * 2:>3} {columnName[2][i]:<23}{i + index[2] + numOfRow * 3:>3} {columnName[3][i]:<23}')
+            print(
+                f'{i + 1:>3} {columnName[0][i]:<23}{i + index[0] + numOfRow:>3} {columnName[1][i]:<23}{i + index[1] + numOfRow * 2:>3} {columnName[2][i]:<23}{i + index[2] + numOfRow * 3:>3} {columnName[3][i]:<23}')
+
+            
         if numOfRedunNames != 0:
             for i in range(len(listOfRedunNames)):
                 print(f'{listIndex[i]:>3} {listOfRedunNames[i]:<23}', end='')
         print()
 
+
     def cardNotAvailable(self):
         cardNA = []
         sortedNameCardList = self.sortNames(self.ownerCardList)
-        for card in self.allCardList:
+        for card in self.getAllCards():
             if not (card['name'] in sortedNameCardList):
                 cardNA.append(card)
         return cardNA
@@ -221,4 +222,3 @@ class Card:
     '''
 
 p=Card()
-p.show("all")
