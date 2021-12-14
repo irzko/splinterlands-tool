@@ -1044,8 +1044,6 @@ def start():
                     time.sleep(1)
 
 def checkVer(old_ver, new_ver):
-    old_ver=old_ver.split('.')
-    new_ver=new_ver.split('.')
     for i in range(3):
         if int(old_ver[i]) < int(new_ver[i]):
             return True
@@ -1064,14 +1062,15 @@ def version():
             f.close
     except:
         get_version = requests.get('https://raw.githubusercontent.com/tmkha/Splint/main/data/version')
-        saveFile('data/version', get_version.text.strip())
+        ver = File('data/version')
         version = get_version.text.strip()
+        ver.wText(version)
     return version	
 
 
 def update():
     ver = version()
-    get_version = requests.get('https://raw.githubusercontent.com/tmkha/splinterlands/master/version')
+    get_version = requests.get('https://raw.githubusercontent.com/tmkha/Splint/main/data/version')
     new_ver = get_version.text.strip()
     if checkVer(ver, new_ver):
         get_update = requests.get('https://raw.githubusercontent.com/tmkha/splinterlands/master/update.py')
