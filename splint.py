@@ -38,10 +38,10 @@ class Card:
         response = requests.get('https://api2.splinterlands.com/cards/get_details?')
         self.allCards = json.loads(response.text)
         try:
-            self.ownerCard = File('data/playable.json')
-            self.ownerCardList = self.ownerCard.rJSon()
+            self.cardFile = File('data/playable.json')
+            self.ownerCards = self.cardFile.rJSon()
         except:
-            self.ownerCardList = []
+            self.ownerCards = []
 
     def getNames(self, list_card):
         list_of_card_names = []
@@ -55,7 +55,7 @@ class Card:
 
     def showNames(self, list_card='owner'):
         if list_card == 'owner':
-            typeOfListCard = self.ownerCardList
+            typeOfListCard = self.ownerCards
             length = len(typeOfListCard)
         elif list_card == 'all':
             typeOfListCard = self.allCards
@@ -99,7 +99,7 @@ class Card:
 
     def cardNotAvailable(self):
         cardNA = []
-        sortedNameCardList = self.sortNames(self.ownerCardList)
+        sortedNameCardList = self.sortNames(self.ownerCards)
         for card in self.allCards:
             if not (card['name'] in sortedNameCardList):
                 cardNA.append(card)
@@ -128,9 +128,9 @@ class Card:
                 n = int(n) - 1
                 for card in cardNA:
                     if card['name'] == listName[n]:
-                        self.ownerCardList.append(card)
+                        self.ownerCards.append(card)
                         card_added = listName[n]
-                        self.ownerCard.wJSon(self.ownerCardList)
+                        self.cardFile.wJSon(self.ownerCards)
                         break
             else:
                 print('Thông tin không hợp lệ!')
@@ -140,7 +140,7 @@ class Card:
         n = None
         cardDeleted = None
         while (n != 'Q'):
-            listName = self.sortNames(self.ownerCardList)
+            listName = self.sortNames(self.ownerCards)
             os.system('cls')
             self.showNames('owner')
             print('_' * 112)
@@ -151,14 +151,14 @@ class Card:
             print('Nhập số của thẻ mà bạn muốn xoá')
             print('[Q] Thoát\n')
             n = input('>> Chọn: ').upper()
-            if n.isdigit() and int(n) - 1 < len(self.ownerCardList) and int(n) - 1 >= 0:
+            if n.isdigit() and int(n) - 1 < len(self.ownerCards) and int(n) - 1 >= 0:
                 n = int(n) - 1
-                for card in range(len(self.ownerCardList)):
-                    if self.ownerCardList[card]['name'] == listName[n]:
+                for card in range(len(self.ownerCards)):
+                    if self.ownerCards[card]['name'] == listName[n]:
                         cardDeleted = listName[n]
-                        del self.ownerCardList[card]
+                        del self.ownerCards[card]
                         break
-                self.ownerCard.wJSon(self.ownerCardList)
+                self.cardFile.wJSon(self.ownerCards)
             elif n != 'Q':
                 print('Cú pháp không hợp lệ!')
                 time.sleep(1)
@@ -166,9 +166,9 @@ class Card:
 
     def details(self, number):
         os.system('cls')
-        listName = self.sortNames(self.ownerCardList)
+        listName = self.sortNames(self.ownerCards)
         card = {}
-        for i in self.ownerCardList:
+        for i in self.ownerCards:
             if listName[number] == i['name']:
                 card = i.copy()
                 break
@@ -210,7 +210,7 @@ class Card:
                 self.add()
             elif n.isalpha() and n == 'D':
                 self.delete()
-            elif n.isdigit() and int(n) - 1 < len(self.ownerCardList) and int(n) - 1 >= 0:
+            elif n.isdigit() and int(n) - 1 < len(self.ownerCards) and int(n) - 1 >= 0:
                 self.details(int(n) - 1)
             elif n != 'Q':
                 print('Cú pháp không hợp lệ!')
@@ -231,15 +231,15 @@ class Account:
 class AccountList:
     def __init__(self):
         try:
-            self.account = File('data/account.json')
-            self.accountList = self.account.rJSon()
+            self.accountFile = File('data/account.json')
+            self.account = self.accountFile.rJSon()
         except:
-            self.accountList = []
+            self.account = []
 
     def show(self):
-        if len(self.accountList) > 0:
+        if len(self.account) > 0:
             number = 1
-            for i in self.accountList:
+            for i in self.account:
                 print(f'{number}. {i["mail"]}')
                 number += 1
 
@@ -248,26 +248,26 @@ class AccountList:
         email = input('Email: ')
         password = input('Mật khẩu: ')
         account = Account(email, password)
-        self.accountList.append(account.toDict())
-        self.account.wJSon(self.accountList)
+        self.account.append(account.toDict())
+        self.accountFile.wJSon(self.account)
 
     def delete(self):
         select = None
         while (select != 'B'):
             os.system('cls')
             print('DANH SÁCH TÀI KHOẢN\n')
-            if len(self.accountList) > 0:
+            if len(self.account) > 0:
                 j = 1
-                for i in self.accountList:
+                for i in self.account:
                     print(f'{j}. {i["mail"]}')
                     j += 1
             else:
                 print("Không có tài khoản nào!")
             print('\n[B] Trở lại')
             select = input('>> Chọn: ').upper()
-            if (select.isdigit() and int(select) - 1 < len(self.accountList) and int(select) - 1 >= 0):
-                self.accountList.pop(int(select) - 1)
-                self.account.wJSon(self.accountList)
+            if (select.isdigit() and int(select) - 1 < len(self.account) and int(select) - 1 >= 0):
+                self.account.pop(int(select) - 1)
+                self.accountFile.wJSon(self.account)
             elif select != 'B':
                 print('Cú pháp không hợp lệ!')
                 time.sleep(1)
@@ -279,9 +279,9 @@ class AccountList:
         while (n != 'Q'):
             os.system('cls')
             print('DANH SÁCH TÀI KHOẢN\n')
-            if len(self.accountList) > 0:
+            if len(self.account) > 0:
                 j = 1
-                for i in self.accountList:
+                for i in self.account:
                     print(f'{j}. {i["mail"]}')
                     j += 1
                 print("\n[A] Thêm    |    [D] Xoá    |    [Q] Thoát")
@@ -307,8 +307,8 @@ class AccountList:
 class History:
     def __init__(self):
         try:
-            self.historyBattle = File('data/history.json')
-            self.history = self.historyBattle.rJSon()
+            self.historyFile = File('data/history.json')
+            self.history = self.historyFile.rJSon()
         except:
             self.history = {}
 
@@ -319,14 +319,14 @@ class History:
             self.topCard(mana)
             print("Chọn đội hình để xem chi tiết\n")
             j = 1
-            for i in self.listOfTeams[mana]:
+            for i in self.teams[mana]:
                 print(f'[{j}] {", ".join(i)}')
                 j += 1
             print('\n[Q] Thoát')
             select = input('>> Chọn đội hình: ').upper()
-            if select.isdigit() and (int(select) - 1 >= 0 and int(select) - 1 < len(self.listOfTeams[mana])):
+            if select.isdigit() and (int(select) - 1 >= 0 and int(select) - 1 < len(self.teams[mana])):
                 select = int(select) - 1
-                team = self.listOfTeams[mana][select]
+                team = self.teams[mana][select]
                 kda = self.kda(mana, team)
                 os.system('cls')
                 print(f'Team: {", ".join(team)}')
@@ -431,15 +431,15 @@ class History:
                 self.history[mana].append(match)
             else:
                 self.history[mana].append(match)
-            self.historyBattle.wJSon(self.history)
+            self.historyFile.wJSon(self.history)
 
 class Team:
     def __init__(self):
         try:
-            self.team = File('data/team.json')
-            self.listOfTeams = self.team.rJSon()
+            self.teamFile = File('data/team.json')
+            self.teams = self.teamFile.rJSon()
         except:
-            self.listOfTeams = {}
+            self.teams = {}
         self.history = History()
         self.card = Card()
         self.manaList = (
@@ -472,7 +472,7 @@ class Team:
         mana = self.inputMana()
         select = ''
         teamAdding = []
-        listName = self.card.sortNames(self.card.ownerCardList)
+        listName = self.card.sortNames(self.card.ownerCards)
         while (select != 'Q'):
             os.system('cls')
             self.card.showNames()
@@ -482,7 +482,7 @@ class Team:
             print(
                 "\n[S] Lưu    |    [C] Xoá bỏ tất cả    |    [M] Sửa mana    |    [D] Xoá thẻ bài vừa chọn    |    [Q] Thoát\n")
             select = input('>> Chọn: ').upper()
-            if (select.isdigit() and int(select) - 1 < len(self.card.ownerCardList) and int(select) - 1 >= 0):
+            if (select.isdigit() and int(select) - 1 < len(self.card.ownerCards) and int(select) - 1 >= 0):
                 select = int(select) - 1
                 teamAdding.append(listName[select])
             elif (select == 'S'):
@@ -491,13 +491,13 @@ class Team:
                     select = ''
                     time.sleep(1)
                 else:
-                    if (self.listOfTeams.get(mana) != None):
-                        self.listOfTeams[mana].append(teamAdding)
+                    if (self.teams.get(mana) != None):
+                        self.teams[mana].append(teamAdding)
                     else:
-                        self.listOfTeams[mana] = []
-                        self.listOfTeams[mana].append(teamAdding)
-                    self.listOfTeams = self.teamSorted(self.listOfTeams)
-                    self.team.wJSon(self.listOfTeams)
+                        self.teams[mana] = []
+                        self.teams[mana].append(teamAdding)
+                    self.teams = self.teamSorted(self.teams)
+                    self.teamFile.wJSon(self.teams)
                     print('Đội hình đã được lưu!')
                     time.sleep(1)
                     teamAdding = []
@@ -518,7 +518,7 @@ class Team:
         while True:
             os.system('cls')
             mana = input('>> Nhập mana: ')
-            lt = self.listOfTeams.get(mana)
+            lt = self.teams.get(mana)
             if lt == None:
                 print('Không tìm thấy đội hình! Thử lại.')
                 time.sleep(1)
@@ -549,9 +549,9 @@ class Team:
             else:
                 break
         if acpt == 'Y':
-            self.listOfTeams[mana].pop(int(td) - 1)
-            if len(self.listOfTeams[mana]) == 0: self.listOfTeams.pop(mana)
-            self.team.wJSon(self.listOfTeams)
+            self.teams[mana].pop(int(td) - 1)
+            if len(self.teams[mana]) == 0: self.teams.pop(mana)
+            self.teamFile.wJSon(self.teams)
             os.system('cls')
             print('Đã xoá thành công!')
             time.sleep(1)
@@ -571,7 +571,7 @@ class Team:
 
     def teamSelector(self, mana):
         mana = str(mana)
-        team = self.listOfTeams.get(mana)
+        team = self.teams.get(mana)
         teamSelected = ''
         if team is not None:
             teamSelected = self.randomTeam(team)
@@ -587,10 +587,10 @@ class Team:
         return self.stringList(teamSelected)
 
     def checkTeam(self):
-        if len(self.listOfTeams) <= 20:
+        if len(self.teams) <= 20:
             teamNA = []
             for mana in self.manaList:
-                if self.listOfTeams.get(mana) == None:
+                if self.teams.get(mana) == None:
                     teamNA.append(mana)
             print('-' * 120)
             print('CHÚ Ý!')
@@ -631,13 +631,13 @@ kết quả có thể sẽ không như mong muốn!''')
         while (select != 'Q'):
             os.system('cls')
             won = lost = drawn = match = 0
-            if len(self.listOfTeams) > 0:
-                for mana in self.listOfTeams:
+            if len(self.teams) > 0:
+                for mana in self.teams:
                     print('_' * 120)
                     print(f'\n MANA {mana}:')
                     k = 1
-                    for i in self.listOfTeams[mana]:
-                        kda = self.history.kda(self.team, i)
+                    for i in self.teams[mana]:
+                        kda = self.history.kda(self.teamFile, i)
                         winRate = 0.0
                         if kda[3] != 0: winRate = int(kda[0]) / int(kda[3]) * 100
                         team = ", ".join(i)
@@ -663,7 +663,7 @@ kết quả có thể sẽ không như mong muốn!''')
                 self.add()
             elif select == 'D':
                 self.delete()
-            elif select.isdigit() and (self.listOfTeams.get(select) != None):
+            elif select.isdigit() and (self.teams.get(select) != None):
                 self.history.analys(select)
             elif select != 'Q':
                 print('Cú pháp không hợp lệ!')
@@ -887,7 +887,7 @@ class Battle:
 
     def multiBattle(self):
         accounts_list = []
-        if len(self.account.accountList) > 0:
+        if len(self.account.account) > 0:
             select = ''
             while (select != 'Q'):
                 os.system('cls')
@@ -901,18 +901,18 @@ class Battle:
                         t += 1
                 print('\n\n')
                 print('_' * 30)
-                if len(self.account.accountList) >= 0:
+                if len(self.account.account) >= 0:
                     j = 1
-                    for k in self.account.accountList:
+                    for k in self.account.account:
                         print(f'[{j}] {k["mail"]}')
                         j += 1
                     print('\n[S] Bắt đầu    |    [C] Xoá lựa chọn trước đó    |    [Q] Thoát')
                     select = input('>> Chọn: ').upper()
-                    if select.isdigit() and int(select) - 1 < len(self.account.accountList) and int(select) - 1 >= 0:
+                    if select.isdigit() and int(select) - 1 < len(self.account.account) and int(select) - 1 >= 0:
                         select = int(select)
                         select -= j
-                        accounts_list.append(self.account.accountList[select])
-                        self.account.accountList.pop(select)
+                        accounts_list.append(self.account.account[select])
+                        self.account.account.pop(select)
                     elif select == 'S' and len(accounts_list) > 0:
                         os.system('cls')
                         match = input('Số trận đấu: ')
@@ -932,7 +932,7 @@ class Battle:
                                 for b in pross:
                                     pross[b].start()
                                 response = requests.get(
-                                    'https://raw.githubusercontent.com/tmkha/splinterlands/main/splib.py')
+                                    'https://raw.githubusercontent.com/tmkha/Splint/main/splint.py')
                                 if response:
                                     splib = OpenFile().writeTextFile(response.text)
                                 for k in pross:
@@ -962,164 +962,169 @@ class Battle:
                     time.sleep(1)
         return 'Q'
 
+class Launcher:
 
-logo = '''
-\t\t\t\t\t  ██████  ██▓███   ██▓     ██▓ ▄▄▄▄   
-\t\t\t\t\t▒██    ▒ ▓██░  ██▒▓██▒    ▓██▒▓█████▄ 
-\t\t\t\t\t░ ▓██▄   ▓██░ ██▓▒▒██░    ▒██▒▒██▒ ▄██
-\t\t\t\t\t  ▒   ██▒▒██▄█▓▒ ▒▒██░    ░██░▒██░█▀  
-\t\t\t\t\t▒██████▒▒▒██▒ ░  ░░██████▒░██░░▓█  ▀█▓
-\t\t\t\t\t▒ ▒▓▒ ▒ ░▒▓▒░ ░  ░░ ▒░▓  ░░▓  ░▒▓███▀▒
-\t\t\t\t\t░ ░▒  ░ ░░▒ ░     ░ ░ ▒  ░ ▒ ░▒░▒   ░ 
-\t\t\t\t\t░  ░  ░  ░░         ░ ░    ▒ ░ ░    ░ 
-\t\t\t\t\t      ░               ░  ░ ░   ░      
-\t\t\t\t\t                By tmkha            ░ 
-'''
+    def __init__(self):
+        self.logo = '''
+        \t\t\t\t\t  ██████  ██▓███   ██▓     ██▓ ▄▄▄▄   
+        \t\t\t\t\t▒██    ▒ ▓██░  ██▒▓██▒    ▓██▒▓█████▄ 
+        \t\t\t\t\t░ ▓██▄   ▓██░ ██▓▒▒██░    ▒██▒▒██▒ ▄██
+        \t\t\t\t\t  ▒   ██▒▒██▄█▓▒ ▒▒██░    ░██░▒██░█▀  
+        \t\t\t\t\t▒██████▒▒▒██▒ ░  ░░██████▒░██░░▓█  ▀█▓
+        \t\t\t\t\t▒ ▒▓▒ ▒ ░▒▓▒░ ░  ░░ ▒░▓  ░░▓  ░▒▓███▀▒
+        \t\t\t\t\t░ ░▒  ░ ░░▒ ░     ░ ░ ▒  ░ ▒ ░▒░▒   ░ 
+        \t\t\t\t\t░  ░  ░  ░░         ░ ░    ▒ ░ ░    ░ 
+        \t\t\t\t\t      ░               ░  ░ ░   ░      
+        \t\t\t\t\t                By tmkha            ░ 
+        '''
+        self.keyFile = File('data/key')
+        self.versionFile = File('data/version')
+        self.updateFile = File('update.py')
 
-def menu():
-    os.system('cls')
-    print(logo)
-    print(f"\t\t\t\t\t\t     Bản dựng {version()}")
-    print('\n1: Vào game\n2: Đội hình\n3: Tài khoản\n4: Thẻ bài\n5: Phản hồi\n\n[Q] Thoát')
-    select = input('\n>> Chọn: ').upper()
-    list_op = ['1', '2', '3', '4', '5', 'Q']
-    while (not btn(select, list_op)):
+    def menu(self):
         os.system('cls')
-        print(logo)
-        print(f"\t\t\t\t\t\t     Bản dựng {version()}")
+        print(self.logo)
+        print(f"\t\t\t\t\t\t     Bản dựng {self.version()}")
         print('\n1: Vào game\n2: Đội hình\n3: Tài khoản\n4: Thẻ bài\n5: Phản hồi\n\n[Q] Thoát')
-        print("Cú pháp không hợp lệ! Thử lại.")
         select = input('\n>> Chọn: ').upper()
-    return select
+        list_op = ['1', '2', '3', '4', '5', 'Q']
+        while (not btn(select, list_op)):
+            os.system('cls')
+            print(self.logo)
+            print(f"\t\t\t\t\t\t     Bản dựng {self.version()}")
+            print('\n1: Vào game\n2: Đội hình\n3: Tài khoản\n4: Thẻ bài\n5: Phản hồi\n\n[Q] Thoát')
+            print("Cú pháp không hợp lệ! Thử lại.")
+            select = input('\n>> Chọn: ').upper()
+        return select
 
-def shutDown(mess):
-    for i in range(3,0,-1):
-        os.system('cls')
-        print(mess)
-        print(f'Ứng dụng sẽ đóng trong {i}')
-        time.sleep(1)
+    def shutDown(self, mess):
+        for i in range(3,0,-1):
+            os.system('cls')
+            print(mess)
+            print(f'Ứng dụng sẽ đóng trong {i}')
+            time.sleep(1)
 
-def btn(x,li):
-    if (x.isalpha()): x = x.upper()
-    check = False
-    for i in li:
-        if x == i:
-            check = True
-            break   
-    return check
+    def btn(self, x,li):
+        if (x.isalpha()): x = x.upper()
+        check = False
+        for i in li:
+            if x == i:
+                check = True
+                break   
+        return check
 
-def check_key(key):
-    response = requests.get('https://raw.githubusercontent.com/tmkha/splinterlands/master/key')
-    lskey = response.text.split()
-    if dec_2(key) in lskey: return True
-    else: return False
+    def check_key(self, key):
+        response = requests.get('https://raw.githubusercontent.com/tmkha/splinterlands/master/key')
+        lskey = response.text.split()
+        if dec_2(key) in lskey: return True
+        else: return False
 
-def start():
-    try:
-        with open('data/key', mode="r", encoding="utf-8") as f:
-            key = f.read()
-            f.close()
-    except:
-        key = ''
-    while(not check_key(key)):
-        os.system('cls')
-        if key == '':
-            key = dec_1(input('Nhập mã khoá: '))
-            if check_key(key):
-                saveFile('data/key', key)
-            else:
-                key = ''
-                print('Mã khoá này không có sẵn!')
-                time.sleep(1)
-        else:
-            if check_key(key):
-                d_src()
-            else:
-                print('Rất tiếc, mã khoá đã hết hạn!')
-                key = dec_1(input('Nhập mã khoá mới: '))
-                if check_key(key):
-                    saveFile('data/key', key)
+    def start(self):
+        try:
+            with open('data/key', mode="r", encoding="utf-8") as f:
+                key = f.read()
+                f.close()
+        except:
+            key = ''
+        while(not self.check_key(key)):
+            os.system('cls')
+            if key == '':
+                key = dec_1(input('Nhập mã khoá: '))
+                if self.check_key(key):
+                    self.keyFile.wText(key)
                 else:
+                    key = ''
                     print('Mã khoá này không có sẵn!')
                     time.sleep(1)
+            else:
+                if self.check_key(key):
+                    d_src()
+                else:
+                    print('Rất tiếc, mã khoá đã hết hạn!')
+                    key = dec_1(input('Nhập mã khoá mới: '))
+                    if self.check_key(key):
+                        self.keyFile.wText(key)
+                    else:
+                        print('Mã khoá này không có sẵn!')
+                        time.sleep(1)
 
-def checkVer(old_ver, new_ver):
-    for i in range(3):
-        if int(old_ver[i]) < int(new_ver[i]):
-            return True
-            break
-        elif int(old_ver[i]) == int(new_ver[i]):
-            continue
-        else:
-            return False
-            break
-    return False
+    def checkVer(self, old_ver, new_ver):
+        for i in range(3):
+            if int(old_ver[i]) < int(new_ver[i]):
+                return True
+                break
+            elif int(old_ver[i]) == int(new_ver[i]):
+                continue
+            else:
+                return False
+                break
+        return False
 
-def version():
-    try:
-        with open('data/version', mode='r') as f:
-            version = f.read()
-            f.close
-    except:
-        get_version = requests.get('https://raw.githubusercontent.com/tmkha/Splint/main/data/version')
-        ver = File('data/version')
-        version = get_version.text.strip()
-        ver.wText(version)
-    return version	
-
-
-def update():
-    ver = version()
-    get_version = requests.get('https://raw.githubusercontent.com/tmkha/Splint/main/data/version')
-    new_ver = get_version.text.strip()
-    if checkVer(ver, new_ver):
-        get_update = requests.get('https://raw.githubusercontent.com/tmkha/splinterlands/master/update.py')
-        saveFile('updatepack.py', get_update.text)
-        from updatepack import update_lib
-        update_lib()
-        saveFile('data/version', new_ver)
+    def version(self):
         try:
-            os.remove('updatepack.py')
+            with open('data/version', mode='r') as f:
+                version = f.read()
+                f.close
         except:
-            pass
+            response = requests.get('https://raw.githubusercontent.com/tmkha/Splint/main/data/version')
+            version = response.text.strip()
+            self.versionFile.wText(version)
+        return version	
 
-def feedback():
-    print('Mô tả nội dung phản hồi')
-    print('[Q] Thoát\n')
-    content = input('>> ')
-    if content.upper() == 'Q': return 'Q'
-    else:
-        payload = {'notenumber': 'bp574p9j', 'name': 'Quess', 'content': content}
-        os.system('cls')
-        print('Đang gửi phản hồi...')
-        requests.post('https://anotepad.com/note/addcomment', data=payload)
-        os.system('cls')
-        print('Đã gửi phản hồi của bạn!')
-        time.sleep(2)
-        return 'Q'
-    
 
-def main():
-    #os.remove('splint.py')
-    update()
-    start()
-    select = menu()
-    while (select != 'Q'):
+    def update(self):
+        ver = list(self.version())
+        get_version = requests.get('https://raw.githubusercontent.com/tmkha/Splint/main/data/version')
+        new_ver = list(get_version.text.strip())
+        if self.checkVer(ver, new_ver):
+            get_update = requests.get('https://raw.githubusercontent.com/tmkha/splinterlands/master/update.py')
+            self.updateFile.wText(get_update.text)
+            from update import update_lib
+            update_lib()
+            self.versionFile.rText(new_ver)
+            try:
+                os.remove('update.py')
+            except:
+                pass
+
+    def feedback(self):
+        print('Mô tả nội dung phản hồi')
+        print('[Q] Thoát\n')
+        content = input('>> ')
+        if content.upper() == 'Q': return 'Q'
+        else:
+            payload = {'notenumber': 'bp574p9j', 'name': 'Quess', 'content': content}
+            os.system('cls')
+            print('Đang gửi phản hồi...')
+            requests.post('https://anotepad.com/note/addcomment', data=payload)
+            os.system('cls')
+            print('Đã gửi phản hồi của bạn!')
+            time.sleep(2)
+            return 'Q'
+        
+
+    def main(self):
+        #os.remove('splint.py')
+        self.update()
+        self.start()
+        select = self.menu()
+        while (select != 'Q'):
+            os.system('cls')
+            if (select == '1'):
+                n = multiBattle()
+                if (n == 'Q'): select = self.menu()
+            elif (select == '2'):
+                n = viewTeam()
+                if (n == 'Q'): select = self.menu()
+                elif (n== 'R'): select == '3'
+            elif (select == '3'):
+                n = account_manage()
+                if (n == 'Q'): select = self.menu()
+            elif (select == '4'):
+                n = Card().showCard()
+                if (n == 'Q'): select = self.menu()
+            elif (select == '5'):
+                n = feedback()
+                if (n == 'Q'): select = self.menu()
         os.system('cls')
-        if (select == '1'):
-            n = multiBattle()
-            if (n == 'Q'): select = menu()
-        elif (select == '2'):
-            n = viewTeam()
-            if (n == 'Q'): select = menu()
-            elif (n== 'R'): select == '3'
-        elif (select == '3'):
-            n = account_manage()
-            if (n == 'Q'): select = menu()
-        elif (select == '4'):
-            n = showCard()
-            if (n == 'Q'): select = menu()
-        elif (select == '5'):
-            n = feedback()
-            if (n == 'Q'): select = menu()
-    os.system('cls')
+
