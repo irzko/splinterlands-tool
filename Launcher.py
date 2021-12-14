@@ -29,10 +29,11 @@ if __name__ == "__main__":
     try:
         download_resource()
         from splint import Launcher
-        Launcher.main()
+        Launcher.menu()
     except Exception as e:
         os.system('cls')
         print('\n\n\n\n\n\n\n')
         print(logo)
         print('Không có kết nối internet!')
+        print(e)
         os.system('pause>nul|set/p =Nhấn phím bất kì để thoát ...')
