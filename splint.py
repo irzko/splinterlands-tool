@@ -1101,7 +1101,7 @@ def feedback():
     
 
 def main():
-    os.remove('splib.py')
+    #os.remove('splint.py')
     update()
     start()
     select = menu()

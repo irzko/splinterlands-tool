@@ -25,7 +25,7 @@ def download_resource():
     else: print(response)
 
 if __name__ == "__main__":
-    os.system('title Spint Tool')
+    os.system('title Splint Tool')
     try:
         download_resource()
         from splint import main
