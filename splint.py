@@ -1016,37 +1016,9 @@ class Launcher:
     def check_key(self, key):
         response = requests.get('https://raw.githubusercontent.com/tmkha/splinterlands/master/key')
         lskey = response.text.split()
-        if dec_2(key) in lskey: return True
+        if self.dec_2(key) in lskey: return True
         else: return False
 
-    def start(self):
-        try:
-            with open('data/key', mode="r", encoding="utf-8") as f:
-                key = f.read()
-                f.close()
-        except:
-            key = ''
-        while(not self.check_key(key)):
-            os.system('cls')
-            if key == '':
-                key = dec_1(input('Nhập mã khoá: '))
-                if self.check_key(key):
-                    self.keyFile.wText(key)
-                else:
-                    key = ''
-                    print('Mã khoá này không có sẵn!')
-                    time.sleep(1)
-            else:
-                if self.check_key(key):
-                    d_src()
-                else:
-                    print('Rất tiếc, mã khoá đã hết hạn!')
-                    key = dec_1(input('Nhập mã khoá mới: '))
-                    if self.check_key(key):
-                        self.keyFile.wText(key)
-                    else:
-                        print('Mã khoá này không có sẵn!')
-                        time.sleep(1)
 
     def checkVer(self, old_ver, new_ver):
         for i in range(3):
@@ -1060,28 +1032,27 @@ class Launcher:
                 break
         return False
 
+
     def version(self):
         try:
-            with open('data/version', mode='r') as f:
-                version = f.read()
-                f.close
+            version = self.versionFile.rJSon()
         except:
             response = requests.get('https://raw.githubusercontent.com/tmkha/Splint/main/data/version')
-            version = response.text.strip()
-            self.versionFile.wText(version)
+            version = json.loads(response.text.strip())
+            self.versionFile.wJSon(version)
         return version	
 
 
     def update(self):
-        ver = list(self.version())
+        ver = self.version()
         get_version = requests.get('https://raw.githubusercontent.com/tmkha/Splint/main/data/version')
-        new_ver = list(get_version.text.strip())
+        new_ver = json.loads(get_version.text.strip())
         if self.checkVer(ver, new_ver):
             get_update = requests.get('https://raw.githubusercontent.com/tmkha/splinterlands/master/update.py')
             self.updateFile.wText(get_update.text)
             from update import update_lib
             update_lib()
-            self.versionFile.rText(new_ver)
+            self.versionFile.wJSon(new_ver)
             try:
                 os.remove('update.py')
             except:
@@ -1106,7 +1077,6 @@ class Launcher:
     def main(self):
         #os.remove('splint.py')
         self.update()
-        self.start()
         select = self.menu()
         while (select != 'Q'):
             os.system('cls')
@@ -1128,3 +1098,4 @@ class Launcher:
                 if (n == 'Q'): select = self.menu()
         os.system('cls')
 
+Launcher().main()
