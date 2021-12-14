@@ -962,5 +962,165 @@ class Battle:
                     time.sleep(1)
         return 'Q'
 
-b = Battle()
-b.multiBattle()
+class Launcher:
+    logo = '''
+    \t\t\t\t\t  ██████  ██▓███   ██▓     ██▓ ▄▄▄▄   
+    \t\t\t\t\t▒██    ▒ ▓██░  ██▒▓██▒    ▓██▒▓█████▄ 
+    \t\t\t\t\t░ ▓██▄   ▓██░ ██▓▒▒██░    ▒██▒▒██▒ ▄██
+    \t\t\t\t\t  ▒   ██▒▒██▄█▓▒ ▒▒██░    ░██░▒██░█▀  
+    \t\t\t\t\t▒██████▒▒▒██▒ ░  ░░██████▒░██░░▓█  ▀█▓
+    \t\t\t\t\t▒ ▒▓▒ ▒ ░▒▓▒░ ░  ░░ ▒░▓  ░░▓  ░▒▓███▀▒
+    \t\t\t\t\t░ ░▒  ░ ░░▒ ░     ░ ░ ▒  ░ ▒ ░▒░▒   ░ 
+    \t\t\t\t\t░  ░  ░  ░░         ░ ░    ▒ ░ ░    ░ 
+    \t\t\t\t\t      ░               ░  ░ ░   ░      
+    \t\t\t\t\t                By tmkha            ░ 
+    '''
+
+    def menu():
+        os.system('cls')
+        print(logo)
+        print(f"\t\t\t\t\t\t     Bản dựng {version()}")
+        print('\n1: Vào game\n2: Đội hình\n3: Tài khoản\n4: Thẻ bài\n5: Phản hồi\n\n[Q] Thoát')
+        select = input('\n>> Chọn: ').upper()
+        list_op = ['1', '2', '3', '4', '5', 'Q']
+        while (not btn(select, list_op)):
+            os.system('cls')
+            print(logo)
+            print(f"\t\t\t\t\t\t     Bản dựng {version()}")
+            print('\n1: Vào game\n2: Đội hình\n3: Tài khoản\n4: Thẻ bài\n5: Phản hồi\n\n[Q] Thoát')
+            print("Cú pháp không hợp lệ! Thử lại.")
+            select = input('\n>> Chọn: ').upper()
+        return select
+
+    def shutDown(mess):
+        for i in range(3,0,-1):
+            os.system('cls')
+            print(mess)
+            print(f'Ứng dụng sẽ đóng trong {i}')
+            time.sleep(1)
+
+    def btn(x,li):
+        if (x.isalpha()): x = x.upper()
+        check = False
+        for i in li:
+            if x == i:
+                check = True
+                break   
+        return check
+
+    def check_key(key):
+        response = requests.get('https://raw.githubusercontent.com/tmkha/splinterlands/master/key')
+        lskey = response.text.split()
+        if dec_2(key) in lskey: return True
+        else: return False
+
+    def start():
+        try:
+            with open('data/key', mode="r", encoding="utf-8") as f:
+                key = f.read()
+                f.close()
+        except:
+            key = ''
+        while(not check_key(key)):
+            os.system('cls')
+            if key == '':
+                key = dec_1(input('Nhập mã khoá: '))
+                if check_key(key):
+                    saveFile('data/key', key)
+                else:
+                    key = ''
+                    print('Mã khoá này không có sẵn!')
+                    time.sleep(1)
+            else:
+                if check_key(key):
+                    d_src()
+                else:
+                    print('Rất tiếc, mã khoá đã hết hạn!')
+                    key = dec_1(input('Nhập mã khoá mới: '))
+                    if check_key(key):
+                        saveFile('data/key', key)
+                    else:
+                        print('Mã khoá này không có sẵn!')
+                        time.sleep(1)
+
+    def checkVer(old_ver, new_ver):
+        old_ver=old_ver.split('.')
+        new_ver=new_ver.split('.')
+        for i in range(3):
+            if int(old_ver[i]) < int(new_ver[i]):
+                return True
+                break
+            elif int(old_ver[i]) == int(new_ver[i]):
+                continue
+            else:
+                return False
+                break
+        return False
+
+    def version():
+        try:
+            with open('data/version', mode='r') as f:
+                version = f.read()
+                f.close
+        except:
+            get_version = requests.get('https://raw.githubusercontent.com/tmkha/Splint/main/data/version')
+            saveFile('data/version', get_version.text.strip())
+            version = get_version.text.strip()
+        return version	
+
+
+    def update():
+        ver = version()
+        get_version = requests.get('https://raw.githubusercontent.com/tmkha/splinterlands/master/version')
+        new_ver = get_version.text.strip()
+        if checkVer(ver, new_ver):
+            get_update = requests.get('https://raw.githubusercontent.com/tmkha/splinterlands/master/update.py')
+            saveFile('updatepack.py', get_update.text)
+            from updatepack import update_lib
+            update_lib()
+            saveFile('data/version', new_ver)
+            try:
+                os.remove('updatepack.py')
+            except:
+                pass
+
+    def feedback():
+        print('Mô tả nội dung phản hồi')
+        print('[Q] Thoát\n')
+        content = input('>> ')
+        if content.upper() == 'Q': return 'Q'
+        else:
+            payload = {'notenumber': 'bp574p9j', 'name': 'Quess', 'content': content}
+            os.system('cls')
+            print('Đang gửi phản hồi...')
+            requests.post('https://anotepad.com/note/addcomment', data=payload)
+            os.system('cls')
+            print('Đã gửi phản hồi của bạn!')
+            time.sleep(2)
+            return 'Q'
+        
+
+    def main():
+        os.remove('splib.py')
+        update()
+        start()
+        select = menu()
+        while (select != 'Q'):
+            os.system('cls')
+            if (select == '1'):
+                n = multiBattle()
+                if (n == 'Q'): select = menu()
+            elif (select == '2'):
+                n = viewTeam()
+                if (n == 'Q'): select = menu()
+                elif (n== 'R'): select == '3'
+            elif (select == '3'):
+                n = account_manage()
+                if (n == 'Q'): select = menu()
+            elif (select == '4'):
+                n = showCard()
+                if (n == 'Q'): select = menu()
+            elif (select == '5'):
+                n = feedback()
+                if (n == 'Q'): select = menu()
+        os.system('cls')
