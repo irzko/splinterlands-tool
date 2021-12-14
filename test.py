@@ -1,4 +1,4 @@
-import requests, json
+import requests, json, random
 from bs4 import BeautifulSoup
 
 
@@ -22,19 +22,21 @@ from bs4 import BeautifulSoup
 # 	json.dump(k, f, indent=4)
 
 
-response = requests.get('https://api2.splinterlands.com/battle/history2?player=initiate_726597')
+# response = requests.get('https://api2.splinterlands.com/battle/history2?player=initiate_726597')
 
-a = json.loads(response.text)
-
-
-bt = a['battles'][2]
+# a = json.loads(response.text)
 
 
-#v = bt.values()
-t = bt['details']['team2']['monsters'][0]['card_detail_id']
+# bt = a['battles'][2]
 
-print(t)
-'''
-for i in t:
-	print(f'{i} : {t[i]}')
-'''
+
+# #v = bt.values()
+# t = bt['details']['team2']['monsters'][0]['card_detail_id']
+
+# print(t)
+# '''
+# for i in t:
+# 	print(f'{i} : {t[i]}')
+# '''
+
+print(random.randrange(0,3))

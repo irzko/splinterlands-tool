@@ -5,7 +5,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.expected_conditions import presence_of_element_located
 from bs4 import BeautifulSoup
-import json, os, time, requests, multiprocessing, random
+import json, os, time, requests, multiprocessing, random, re
 
 class File:
     def __init__(self, path):
@@ -307,8 +307,8 @@ class AccountList:
 class History:
     def __init__(self):
         try:
-            self.historyBattle = OpenFile('data/history.json')
-            self.history = self.historyBattle.readJSonFile()
+            self.historyBattle = File('data/history.json')
+            self.history = self.historyBattle.rJSon()
         except:
             self.history = {}
 
@@ -366,7 +366,10 @@ class History:
 
     def kda(self, mana, team):
         if len(self.history) > 0:
-            won = lost = drawn = match = 0
+            won = 0 
+            lost = 0
+            drawn = 0
+            match = 0
             if self.history.get(mana) != None:
                 for i in range(len(self.history[mana])):
                     if self.history[mana][i]['my_team']['team'] == team:
@@ -428,4 +431,536 @@ class History:
                 self.history[mana].append(match)
             else:
                 self.history[mana].append(match)
-            self.historyBattle.writeJSonFile(self.history)
+            self.historyBattle.wJSon(self.history)
+
+class Team:
+    def __init__(self):
+        try:
+            self.team = File('data/team.json')
+            self.listOfTeams = self.team.rJSon()
+        except:
+            self.listOfTeams = {}
+        self.history = History()
+        self.card = Card()
+        self.manaList = (
+        '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29',
+        '30', '99')
+
+    def inputMana(self):
+        mana = input('>> Mana: ')
+        while (not mana.isdigit() or not (mana in self.manaList)):
+            os.system('cls')
+            print('Số mana không hợp lệ, thử lại!')
+            print(f'Những mana hợp lệ: {", ".join(self.manaList)}\n')
+            mana = input('>> Mana: ')
+        return mana
+
+    def currentMana(self, team_adding):
+        currentMana = 0
+        for i in team_adding:
+            currentMana += self.card.getMana(i)
+        return currentMana
+
+    def teamSorted(self, list_team):
+        team_sorted = {}
+        for key in sorted(list_team.keys()):
+            team_sorted[key] = list_team.get(key)
+        return team_sorted
+
+    def add(self):
+        os.system('cls')
+        mana = self.inputMana()
+        select = ''
+        teamAdding = []
+        listName = self.card.sortNames(self.card.ownerCardList)
+        while (select != 'Q'):
+            os.system('cls')
+            self.card.showNames()
+            print("\n")
+            print(f'Mana: [{self.currentMana(teamAdding)}/{mana}]')
+            print('\n'.join(teamAdding))
+            print(
+                "\n[S] Lưu    |    [C] Xoá bỏ tất cả    |    [M] Sửa mana    |    [D] Xoá thẻ bài vừa chọn    |    [Q] Thoát\n")
+            select = input('>> Chọn: ').upper()
+            if (select.isdigit() and int(select) - 1 < len(self.card.ownerCardList) and int(select) - 1 >= 0):
+                select = int(select) - 1
+                teamAdding.append(listName[select])
+            elif (select == 'S'):
+                if (len(teamAdding) == 0):
+                    print('Đội hình trống! Thử lại.')
+                    select = ''
+                    time.sleep(1)
+                else:
+                    if (self.listOfTeams.get(mana) != None):
+                        self.listOfTeams[mana].append(teamAdding)
+                    else:
+                        self.listOfTeams[mana] = []
+                        self.listOfTeams[mana].append(teamAdding)
+                    self.listOfTeams = self.teamSorted(self.listOfTeams)
+                    self.team.wJSon(self.listOfTeams)
+                    print('Đội hình đã được lưu!')
+                    time.sleep(1)
+                    teamAdding = []
+            elif (select == 'C'):
+                teamAdding.clear()
+            elif (select == 'M'):
+                os.system('cls')
+                mana = self.inputMana()
+            elif (select == 'D'):
+                if len(teamAdding) > 0: teamAdding.pop(-1)
+            elif select != 'Q':
+                print('Cú pháp không hợp lệ!')
+                time.sleep(1)
+
+    def delete(self):
+        os.system('cls')
+        mana = lt = None
+        while True:
+            os.system('cls')
+            mana = input('>> Nhập mana: ')
+            lt = self.listOfTeams.get(mana)
+            if lt == None:
+                print('Không tìm thấy đội hình! Thử lại.')
+                time.sleep(1)
+            else:
+                break
+        os.system('cls')
+        td = ''
+        while True:
+            os.system('cls')
+            print(f'Mana: {mana}')
+            print('Chọn một đội hình để xoá\n')
+            for i in range(len(lt)):
+                print(f'{i + 1}. {lt[i]}')
+            td = input('>> Chọn: ')
+            if (td <= '0' or td > str(len(lt))) and td.isalpha():
+                print("Cú pháp không hợp lệ! Thử lại.")
+                time.sleep(1)
+            else:
+                break
+        os.system('cls')
+        st = lt[int(td) - 1]
+        acpt = ''
+        while True:
+            os.system('cls')
+            acpt = input(f'Đội hình đã được chọn:\n{st}\n\nBạn có muốn xoá đội hình này? [Y/N]\n>> Chọn: ').upper()
+            if acpt != 'Y' and acpt != 'N':
+                print("Cú pháp không hợp lệ! Thử lại.")
+            else:
+                break
+        if acpt == 'Y':
+            self.listOfTeams[mana].pop(int(td) - 1)
+            if len(self.listOfTeams[mana]) == 0: self.listOfTeams.pop(mana)
+            self.team.wJSon(self.listOfTeams)
+            os.system('cls')
+            print('Đã xoá thành công!')
+            time.sleep(1)
+
+    def stringList(self, _list):
+        strlst = '["'
+        strlst += '", "'.join(_list)
+        strlst += '"]'
+        return strlst
+
+    def randomTeam(self, team):
+        if len(team) == 1:
+            return team[0]
+        else:
+            a = random.randrange(0, len(team))
+            return team[a]
+
+    def teamSelector(self, mana):
+        mana = str(mana)
+        team = self.listOfTeams.get(mana)
+        teamSelected = ''
+        if team is not None:
+            teamSelected = self.randomTeam(team)
+        else:
+            try:
+                teamDefault = File('data/team_default.json')
+                team = teamDefault.rJSon()
+            except:
+                response = requests.get('https://raw.githubusercontent.com/tmkha/splinterlands/master/team_default.json')
+                team = json.loads(response.text)
+                teamDefault.wJSon(team_def)
+            teamSelected = team[mana][0]
+        return self.stringList(teamSelected)
+
+    def checkTeam(self):
+        if len(self.listOfTeams) <= 20:
+            teamNA = []
+            for mana in self.manaList:
+                if self.listOfTeams.get(mana) == None:
+                    teamNA.append(mana)
+            print('-' * 120)
+            print('CHÚ Ý!')
+            print('''Bạn chưa thêm đủ đội hình, vì thế những đội hình nào chưa có chúng tôi sẽ chọn đội hình mặc định để chiến đấu, và
+kết quả có thể sẽ không như mong muốn!''')
+            print('\nNhững đội hình có mana sau chưa được thêm:')
+            print(", ".join(teamNA))
+            print('-' * 120)
+
+    def numOfCard(self):
+        listCard = self.card.sortListOfName(self.card.allCardList)
+        numCard = {}
+        for i in range(1, len(listCard) + 1):
+            numCard[listCame[i - 1]] = str(i)
+        return numCard
+
+    def topCard(self, mana):
+        if len(self.history) > 0:
+            print(f"THẺ BÀI ĐƯỢC ĐỐI THỦ CHỌN NHIỀU NHẤT VỚI {mana} MANA\n")
+            team = {}
+            for i in self.history[mana]:
+                enemyTeam = i['enemy_team']['team']
+                for j in enemyTeam:
+                    if team.get(j) == None:
+                        team[j] = 1
+                    else:
+                        team[j] += 1
+            items_sorted = sorted(team.items(), reverse=True, key=lambda x: x[1])
+            print(f'{"Tên thẻ bài":>12}{"Số lần chọn":>16}\n')
+            j = 1
+            for i in items_sorted:
+                print(f'{j:>2} {i[0]:<20} {i[1]:>2}')
+                j += 1
+            print(f"{'_' * 100}\n")
+
+    def show(self):
+        select = ''
+        while (select != 'Q'):
+            os.system('cls')
+            won = lost = drawn = match = 0
+            if len(self.listOfTeams) > 0:
+                for mana in self.listOfTeams:
+                    print('_' * 120)
+                    print(f'\n MANA {mana}:')
+                    k = 1
+                    for i in self.listOfTeams[mana]:
+                        kda = self.history.kda(self.team, i)
+                        winRate = 0.0
+                        if kda[3] != 0: winRate = int(kda[0]) / int(kda[3]) * 100
+                        team = ", ".join(i)
+                        print(f'{k}. {team}')
+                        won += int(kda[0])
+                        lost += int(kda[1])
+                        drawn += int(kda[2])
+                        match += int(kda[3])
+                        print(
+                            f'   --> Thắng: {kda[0]} / Thua: {kda[1]} / Hoà: {kda[2]} / {kda[3]} trận | Tỉ lệ thắng {round(winRate, 2)}%')
+                        k += 1
+                        print()
+            print('_' * 120)
+            sumOfWinRate = 0.0
+            if match != 0: sumOfWinRate = won / match * 100
+            print()
+            self.checkTeam()
+            print(f'\n>> Tổng cộng: {match} trận đấu  |   Tỉ lệ thắng {round(sumOfWinRate, 2)}%\n')
+            print('\nNhập số mana để xem chi tiết, hoặc:')
+            print('[A] Thêm    |    [D] Xoá    |    [Q] Thoát')
+            select = input('\n>> Chọn: ').upper()
+            if select == 'A':
+                self.add()
+            elif select == 'D':
+                self.delete()
+            elif select.isdigit() and (self.listOfTeams.get(select) != None):
+                self.history.analys(select)
+            elif select != 'Q':
+                print('Cú pháp không hợp lệ!')
+                time.sleep(1)
+
+class Battle:
+    def __init__(self):
+        self.account = AccountList()
+        self.history = History()
+        self.team = Team()
+
+    def initDriver(self):
+        options = webdriver.ChromeOptions()
+        #chrome_options.add_argument("user-data-dir="+filePath)
+        driver = webdriver.Chrome('chromedriver', options = options)
+        return driver
+
+    def status(self, stt, mail):
+        named_tuple = time.localtime()
+        time_string = time.strftime("%H:%M:%S", named_tuple)
+        print(f'[{time_string}] [{mail}] {stt}')
+
+    def start(self, match, acc):
+        self.status('Đang khởi động trình duyệt...', acc['mail'])
+        driver = self.initDriver()
+        wait = WebDriverWait(driver, 60)
+        driver.get('https://splinterlands.com/?p=battle_history')
+        driver.find_element(By.ID, 'log_in_button').click()
+        wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, ".modal-body")))
+        time.sleep(1)
+        driver.find_element(By.ID, 'email').send_keys(acc['mail'])
+        driver.find_element(By.ID, 'password').send_keys(acc['pwd'])
+        driver.find_element(By.CSS_SELECTOR, 'form.form-horizontal:nth-child(2) > div:nth-child(3) > div:nth-child(1) > button:nth-child(1)').click()
+        try:
+            WebDriverWait(driver, 5).until(EC.visibility_of_element_located(
+                (By.XPATH, '//*[@id="dialog_container"]/div/div/div/div[2]/div[2]/div')))
+            driver.execute_script("document.getElementsByClassName('close')[0].click();")
+        except:
+            pass
+        driver.get('https://splinterlands.com/?p=battle_history')
+        try:
+            WebDriverWait(driver, 5).until(
+                EC.visibility_of_element_located((By.XPATH, "/html/body/div[3]/div/div/div/div[1]/div[1]")))
+            driver.execute_script("document.getElementsByClassName('modal-close-new')[0].click();")
+        except:
+            pass
+        team = []
+        mana = 0
+        driver.execute_script(
+            "var roww = document.getElementsByClassName('row')[1].innerHTML;var reg = /HOW TO PLAY|PRACTICE|CHALLENGE|RANKED/;var resultt = roww.match(reg);while(resultt != 'RANKED'){document.getElementsByClassName('slider_btn')[1].click();roww = document.getElementsByClassName('row')[1].innerHTML;resultt = roww.match(reg);};")
+
+        def checkPoint_0():
+            time.sleep(1)
+            driver.execute_script("document.getElementsByClassName('big_category_btn red')[0].click();")
+            self.status('Đang tìm đối thủ...', acc['mail'])
+
+        def checkPoint_1():
+            nonlocal team
+            nonlocal mana
+            wait.until(EC.visibility_of_element_located(
+                (By.XPATH, "/html/body/div[3]/div/div/div/div[2]/div[3]/div[2]/button")))
+            time.sleep(1)
+            mana = driver.find_element_by_css_selector(
+                'div.col-md-3:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)').text
+            team = self.team.teamSelector(mana)
+            self.status('Đang khởi tạo đội hình...', acc['mail'])
+            driver.execute_script("document.getElementsByClassName('btn btn--create-team')[0].click();")
+
+        def checkPoint_2():
+            WebDriverWait(driver, 60).until(
+                EC.visibility_of_element_located((By.XPATH, '//*[@id="page_container"]/div/div[1]/div')))
+            self.status('Đang chọn thẻ bài...', acc['mail'])
+            time.sleep(7)
+            driver.execute_script(
+                "var team = " + team + ";for (let i = 0; i < team.length; i++) {let card = document.getElementsByClassName('card beta');let cimg = document.getElementsByClassName('card-img');var reg = /[A-Z]\\w+( \\w+'*\\w*)*/;for (let j = 0; j < card.length; j++){let att_card = card[j].innerText;let result = att_card.match(reg);let name = result[0];if (name == team[i]){cimg[j].click();break;}}}document.getElementsByClassName('btn-green')[0].click();")
+
+        def checkPoint_3():
+            self.status('Đang chờ đối thủ...', acc['mail'])
+            WebDriverWait(driver, 150).until(EC.visibility_of_element_located((By.CSS_SELECTOR, '#btnRumble')))
+            driver.execute_script("document.getElementsByClassName('btn-battle')[0].click()")
+            self.status('Đang bắt đầu trận...', acc['mail'])
+            time.sleep(3.5)
+            self.status('Đang bỏ qua...', acc['mail'])
+            driver.execute_script("document.getElementsByClassName('btn-battle')[1].click()")
+
+        def checkPoint_4():
+            WebDriverWait(driver, 10).until(
+                EC.visibility_of_element_located((By.XPATH, '//*[@id="dialog_container"]/div/div/div/div[1]/h1')))
+            driver.execute_script("document.getElementsByClassName('btn btn--done')[0].click();")
+            self.status('Kết thúc trận đấu', acc['mail'])
+
+        def checkPage():
+            try:
+                WebDriverWait(driver, 5).until(
+                    EC.visibility_of_element_located((By.XPATH, '//*[@id="play_now"]/div/div/div/div/button')))
+                return -1
+            except:
+                pass
+            try:
+                WebDriverWait(driver, 1.5).until(EC.visibility_of_element_located((By.ID, "battle_category_btn")))
+                return 0
+            except:
+                pass
+            try:
+                WebDriverWait(driver, 1.5).until(EC.visibility_of_element_located(
+                    (By.XPATH, "/html/body/div[3]/div/div/div/div[2]/div[3]/div[2]/button")))
+                return 1
+            except:
+                pass
+            try:
+                WebDriverWait(driver, 1.5).until(
+                    EC.visibility_of_element_located((By.XPATH, '//*[@id="page_container"]/div/div[1]/div')))
+                return 2
+            except:
+                pass
+            try:
+                WebDriverWait(driver, 1.5).until(EC.visibility_of_element_located((By.CSS_SELECTOR, '#btnRumble')))
+                return 3
+            except:
+                pass
+            try:
+                WebDriverWait(driver, 1.5).until(
+                    EC.visibility_of_element_located((By.XPATH, '//*[@id="dialog_container"]/div/div/div/div[1]/h1')))
+                return 4
+            except:
+                pass
+            return -2
+
+        def isCheckPoint_0():
+            try:
+                checkPoint_0()
+                isCheckPoint_1()
+                return 0
+            except:
+                return -1
+
+        def isCheckPoint_1():
+            try:
+                checkPoint_1()
+                isCheckPoint_2()
+                return 0
+            except:
+                return -1
+
+        def isCheckPoint_2():
+            try:
+                checkPoint_2()
+                isCheckPoint_3()
+                return 0
+            except:
+                return -1
+
+        def isCheckPoint_3():
+            try:
+                checkPoint_3()
+                isCheckPoint_4()
+                return 0
+            except:
+                return -1
+
+        def isCheckPoint_4():
+            try:
+                checkPoint_4()
+                return 0
+            except:
+                return -1
+
+        def sl_group(x):
+            c = -1
+            if x == -1:
+                driver.get('https://splinterlands.com/?p=battle_history')
+                isCheckPoint_0()
+            elif x == 0:
+                c = isCheckPoint_0()
+            elif x == 1:
+                c = isCheckPoint_1()
+            elif x == 2:
+                c = isCheckPoint_2()
+            elif x == 3:
+                c = isCheckPoint_3()
+            elif x == 3:
+                c = isCheckPoint_4()
+            return c
+
+        check_point = clone_i = 0
+        for i in range(int(match)):
+            clone_i = i + 1
+            self.status(f'Bắt đầu trận thứ [{i + 1}/{match}]', acc['mail'])
+            wait.until(EC.visibility_of_element_located((By.ID, "battle_category_btn")))
+            vf = i + 1
+            if vf % 5 == 0:
+                time.sleep(3)
+                try:
+                    self.status('Đang lưu lịch sử trận đấu...', acc['mail'])
+                    self.history.writeHistory(driver, 20)
+                    self.status('Xong', acc['mail'])
+                except Exception as e:
+                    self.status('Lỗi lưu lịch sử:' + e, acc['mail'])
+                finally:
+                    check_point = vf
+            try:
+                isCheckPoint_0()
+            except:
+                q = -2
+                while (q != 0):
+                    driver.refresh()
+                    vt = checkPage()
+                    if vt != -2: q = sl_group(vt)
+        time.sleep(3)
+        times_when_smaller_20 = clone_i - check_point
+        if times_when_smaller_20 > 0:
+            try:
+                self.status('Đang lưu lịch sử trận đấu...', acc['mail'])
+                self.history.writeHistory(driver, times_when_smaller_20)
+                self.status('Xong', acc['mail'])
+            except:
+                self.status('Lỗi lưu lịch sử', acc['mail'])
+            finally:
+                driver.quit()
+        return 'Q'
+
+    def multiBattle(self):
+        accounts_list = []
+        if len(self.account.accountList) > 0:
+            select = ''
+            while (select != 'Q'):
+                os.system('cls')
+                self.team.checkTeam()
+                print("CHỌN TÀI KHOẢN")
+                print(f'\nĐã chọn {len(accounts_list)} tài khoản')
+                if len(accounts_list) > 0:
+                    t = 1
+                    for account in accounts_list:
+                        print(f"{t}. {account['mail']}")
+                        t += 1
+                print('\n\n')
+                print('_' * 30)
+                if len(self.account.accountList) >= 0:
+                    j = 1
+                    for k in self.account.accountList:
+                        print(f'[{j}] {k["mail"]}')
+                        j += 1
+                    print('\n[S] Bắt đầu    |    [C] Xoá lựa chọn trước đó    |    [Q] Thoát')
+                    select = input('>> Chọn: ').upper()
+                    if select.isdigit() and int(select) - 1 < len(self.account.accountList) and int(select) - 1 >= 0:
+                        select = int(select)
+                        select -= j
+                        accounts_list.append(self.account.accountList[select])
+                        self.account.accountList.pop(select)
+                    elif select == 'S' and len(accounts_list) > 0:
+                        os.system('cls')
+                        match = input('Số trận đấu: ')
+                        while (not (match.isdigit() and int(match) > 0)):
+                            os.system('cls')
+                            print('Vui lòng nhập một số!')
+                            match = input('Số trận đấu: ')
+                        os.system('cls')
+                        if len(accounts_list) == 1:
+                            self.start(match, accounts_list[0])
+                        else:
+                            try:
+                                pross = {}
+                                for i in range(len(accounts_list)):
+                                    keys = 'p' + str(i + 1)
+                                    pross[keys] = multiprocessing.Process(target=self.start, args=(match, acc[i]))
+                                for b in pross:
+                                    pross[b].start()
+                                response = requests.get(
+                                    'https://raw.githubusercontent.com/tmkha/splinterlands/main/splib.py')
+                                if response:
+                                    splib = OpenFile().writeTextFile(response.text)
+                                for k in pross:
+                                    pross[k].join()
+                            finally:
+                                os.remove('splib.py')
+                        return 'Q'
+                    elif select == 'S' and len(acc) == 0:
+                        print('Vui lòng chọn ít nhất một tài khoản!')
+                        time.sleep(1)
+                    elif select == 'C' and len(accounts_list) > 0:
+                        all_acc.append(accounts_list[-1])
+                        acc.pop(-1)
+                    elif select != 'Q':
+                        print('Cú pháp không hợp lệ!')
+                        time.sleep(1)
+        else:
+            m = ''
+            while (m != 'Q'):
+                os.system('cls')
+                print("CHỌN TÀI KHOẢN")
+                print("\nKhông có tài khoản nào, vui lòng thêm tài khoản!")
+                print('\n[Q] Thoát')
+                m = input('>> Chọn: ').upper()
+                if m != 'Q':
+                    print('Cú pháp không hợp lệ!')
+                    time.sleep(1)
+        return 'Q'
+
+b = Battle()
+b.multiBattle()
