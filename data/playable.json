@@ -12840,5 +12840,98 @@
                 "total_burned_xp": 0
             }
         ]
+    },
+    {
+        "id": 435,
+        "name": "Zyvax Vuul",
+        "color": "Gold",
+        "type": "Monster",
+        "sub_type": null,
+        "rarity": 4,
+        "drop_rate": 0,
+        "stats": {
+            "mana": [
+                8,
+                8,
+                8,
+                8
+            ],
+            "attack": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "ranged": [
+                2,
+                2,
+                3,
+                3
+            ],
+            "magic": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "armor": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "health": [
+                8,
+                9,
+                9,
+                9
+            ],
+            "speed": [
+                3,
+                3,
+                3,
+                3
+            ],
+            "abilities": [
+                [
+                    "Flying",
+                    "Recharge"
+                ],
+                [
+                    "Close Range"
+                ],
+                [],
+                [
+                    "Deathblow"
+                ]
+            ]
+        },
+        "is_starter": false,
+        "editions": "7",
+        "created_block_num": null,
+        "last_update_tx": null,
+        "total_printed": 4110,
+        "is_promo": false,
+        "tier": 7,
+        "distribution": [
+            {
+                "card_detail_id": 435,
+                "gold": false,
+                "edition": 7,
+                "num_cards": "2641",
+                "total_xp": "3936",
+                "num_burned": 0,
+                "total_burned_xp": 0
+            },
+            {
+                "card_detail_id": 435,
+                "gold": true,
+                "edition": 7,
+                "num_cards": "162",
+                "total_xp": "174",
+                "num_burned": 0,
+                "total_burned_xp": 0
+            }
+        ]
     }
 ]
