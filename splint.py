@@ -933,7 +933,7 @@ class Launcher:
             select = input('\n>> Chọn: ').upper()
             
             if select == '1':
-                pass
+                Launcher.battle()
             elif select == '2':
                 Team.show()
             elif select == '3':
