@@ -27,13 +27,12 @@ def download_resource():
 if __name__ == "__main__":
     os.system('title Splint Tool')
     try:
-        download_resource()
+        #download_resource()
         from splint import Launcher
         Launcher.menu()
     except Exception as e:
         os.system('cls')
         print('\n\n\n\n\n\n\n')
         print(logo)
-        print('Không có kết nối internet!')
-        print(e)
+        print('Lỗi:', e)
         os.system('pause>nul|set/p =Nhấn phím bất kì để thoát ...')

@@ -1,1 +1,211 @@
-{}
+{
+    "12": [
+        [
+            "Malric Inferno",
+            "Cerberus",
+            "Kobold Miner",
+            "Fire Beetle"
+        ]
+    ],
+    "13": [
+        [
+            "Zintar Mortalis",
+            "Haunted Spirit",
+            "Undead Badger",
+            "Skeleton Assassin"
+        ]
+    ],
+    "14": [
+        [
+            "Malric Inferno",
+            "Cerberus",
+            "Serpentine Spy",
+            "Kobold Miner",
+            "Goblin Fireballer"
+        ]
+    ],
+    "15": [
+        [
+            "Zintar Mortalis",
+            "Haunted Spirit",
+            "Skeleton Assassin",
+            "Twisted Jester"
+        ]
+    ],
+    "16": [
+        [
+            "Zintar Mortalis",
+            "Haunted Spirit",
+            "Undead Priest",
+            "Undead Badger",
+            "Twisted Jester"
+        ]
+    ],
+    "17": [
+        [
+            "Alric Stormbringer",
+            "Serpent of Eld",
+            "Water Elemental",
+            "Ice Pixie"
+        ]
+    ],
+    "18": [
+        [
+            "Alric Stormbringer",
+            "Frozen Soldier",
+            "Medusa",
+            "Ice Pixie",
+            "Enchanted Pixie"
+        ]
+    ],
+    "19": [
+        [
+            "Zintar Mortalis",
+            "Haunted Spirit",
+            "Undead Priest",
+            "Skeleton Assassin",
+            "Twisted Jester",
+            "Undead Badger"
+        ]
+    ],
+    "20": [
+        [
+            "Malric Inferno",
+            "Living Lava",
+            "Cocatrice",
+            "Elven Cutthroat",
+            "Serpentine Spy",
+            "Kobold Miner"
+        ]
+    ],
+    "21": [
+        [
+            "Zintar Mortalis",
+            "Haunted Spirit",
+            "Skeleton Assassin",
+            "Death Elemental",
+            "Twisted Jester",
+            "Undead Priest",
+            "Cursed Slimeball"
+        ]
+    ],
+    "22": [
+        [
+            "Zintar Mortalis",
+            "Haunted Spirit",
+            "Undead Priest",
+            "Undead Badger",
+            "Elven Cutthroat",
+            "Skeleton Assassin",
+            "Twisted Jester"
+        ]
+    ],
+    "23": [
+        [
+            "Alric Stormbringer",
+            "Spineback Turtle",
+            "Albatross",
+            "Medusa",
+            "Elven Mystic",
+            "Ice Pixie",
+            "Water Elemental"
+        ],
+        [
+            "Contessa L'ament",
+            "Haunted Spirit",
+            "Undead Priest",
+            "Skeleton Assassin",
+            "Twisted Jester",
+            "Undead Badger",
+            "Dark Astronomer"
+        ]
+    ],
+    "24": [
+        [
+            "Alric Stormbringer",
+            "Spineback Turtle",
+            "Cocatrice",
+            "Medusa",
+            "Elven Mystic",
+            "Ice Pixie",
+            "Water Elemental"
+        ]
+    ],
+    "25": [
+        [
+            "Malric Inferno",
+            "Living Lava",
+            "Grumpy Dwarf",
+            "Kobold Miner",
+            "Serpentine Spy",
+            "Elven Cutthroat",
+            "Goblin Shaman"
+        ]
+    ],
+    "26": [
+        [
+            "Zintar Mortalis",
+            "Bone Golem",
+            "Haunted Spirit",
+            "Twisted Jester",
+            "Undead Badger",
+            "Skeleton Assassin",
+            "Undead Priest"
+        ]
+    ],
+    "27": [
+        [
+            "Zintar Mortalis",
+            "Animated Corpse",
+            "Haunted Spirit",
+            "Mantoid",
+            "Death Elemental",
+            "Undead Priest",
+            "Twisted Jester"
+        ]
+    ],
+    "28": [
+        [
+            "Alric Stormbringer",
+            "Elven Defender",
+            "Spineback Turtle",
+            "Elven Mystic",
+            "Medusa",
+            "Enchanted Pixie",
+            "Ice Pixie"
+        ]
+    ],
+    "29": [
+        [
+            "Tyrus Paladium",
+            "Cocatrice",
+            "Shieldbearer",
+            "Silvershield Knight",
+            "Elven Cutthroat",
+            "Feral Spirit",
+            "Peacebringer"
+        ]
+    ],
+    "30": [
+        [
+            "Alric Stormbringer",
+            "Frozen Soldier",
+            "Serpent of Eld",
+            "Medusa",
+            "Ice Pixie",
+            "Enchanted Pixie",
+            "Elven Mystic"
+        ]
+    ],
+    "99": [
+        [
+            "Tyrus Paladium",
+            "Elven Defender",
+            "Luminous Eagle",
+            "Shieldbearer",
+            "Silvershield Knight",
+            "Peacebringer",
+            "Cave Slug"
+        ]
+    ]
+}

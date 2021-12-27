@@ -341,7 +341,7 @@ class History:
                                     print(", ".join(History.history[mana][i]['enemy_team']['team']), end="")
                                     print(']')
                                     listNumCard = []
-                                    listName = History.numOfCard()
+                                    listName = Team.numOfCard()
                                     for k in History.history[mana][i]['enemy_team']['team']:
                                         listNumCard.append(str(listName.get(k)))
                                     num = ":".join(listNumCard)
@@ -589,7 +589,7 @@ kết quả có thể sẽ không như mong muốn!''')
             print('-' * 120)
 
     def numOfCard():
-        listCard = Card.sortListOfName(Card.allCardList)
+        listCard = Card.sortNames(Card.allCards)
         numCard = {}
         for i in range(1, len(listCard) + 1):
             numCard[listCard[i - 1]] = str(i)
@@ -658,10 +658,9 @@ kết quả có thể sẽ không như mong muốn!''')
                 time.sleep(1)
 
 class Battle:
-    def __init__(self, account):
+    def __init__(self):
         self.team = []
         self.mana = 0
-        self.account = account
         options = webdriver.ChromeOptions()
         #chrome_options.add_argument("user-data-dir="+filePath)
         self.driver = webdriver.Chrome('chromedriver', options = options)
@@ -670,7 +669,8 @@ class Battle:
         time_log = time.strftime("%H:%M:%S", time.localtime())
         print(f'[{time_log}] [{email}] {log}')
 
-    def start(self, match):
+    def start(self, account, match):
+        self.account = account
         self.showLog('Đang khởi động trình duyệt...', self.account['mail'])
         wait = WebDriverWait(self.driver, 60)
         self.driver.get('https://splinterlands.com/?p=battle_history')
@@ -703,7 +703,7 @@ class Battle:
                     result = row.match(reg);
                     };''')
     
-        checkPoint = None
+        checkPoint = 0
         clone_i = 0
         for i in range(int(match)):
             clone_i = i + 1
@@ -881,29 +881,26 @@ class Battle:
 
 
 
-class multiBattle(Battle):
-    def __init__(self):
-        super.__init__()
+class MultiBattle(Battle):
+    def __init__(self, account_list):
+        self.account_list = account_list
 
-    def run(self, match, account_list):
-        if len(account_list) == 1:
-            self.start(match)
-        else:
-            try:
-                proc = {}
-                for i in range(len(account_list)):
-                    keys = 'p' + str(i + 1)
-                    proc[keys] = multiprocessing.Process(target=self.start, args=(match, account_list[i]))
-                for b in proc:
-                    proc[b].start()
-                response = requests.get(
-                    'https://raw.githubusercontent.com/tmkha/Splint/main/splint.py')
-                if response:
-                    File('splint.py').wText(response.text)
-                for k in proc:
-                    proc[k].join()
-            finally:
-                os.remove('splint.py')
+    def run(self, match):
+        try:
+            proc = {}
+            for i in range(len(self.account_list)):
+                keys = 'p' + str(i + 1)
+                proc[keys] = multiprocessing.Process(target=self.start, args=(self.account_list[i], match))
+            for b in proc:
+                proc[b].start()
+            response = requests.get(
+                'https://raw.githubusercontent.com/tmkha/Splint/main/splint.py')
+            if response:
+                File('splint.py').wText(response.text)
+            for k in proc:
+                proc[k].join()
+        finally:
+            os.remove('splint.py')
 
 class Launcher:
     logo = '''
@@ -990,8 +987,10 @@ class Launcher:
                             os.system('cls')
                             print('Vui lòng nhập một số!')
                             match = input('Số trận đấu: ')
-                        b = multiBattle(account_selected)
-                        b.run(match)
+                        if len(account_selected) == 1:
+                            Battle().start(account_selected[0], match)
+                        else:
+                            MultiBattle(account_selected).run(match)
                         os.system('cls')
 
                     elif select == 'S' and len(account_selected) == 0:
