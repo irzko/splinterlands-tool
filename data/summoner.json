@@ -1,0 +1,2267 @@
+[
+    {
+        "id": 5,
+        "name": "Malric Inferno",
+        "color": "Red",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 2,
+        "drop_rate": 22,
+        "stats": {
+            "mana": 3,
+            "attack": 1,
+            "ranged": 0,
+            "magic": 0,
+            "armor": 0,
+            "health": 0,
+            "speed": 0
+        },
+        "is_starter": true,
+        "editions": "0,1",
+        "created_block_num": null,
+        "last_update_tx": null,
+        "total_printed": 77082,
+        "is_promo": false,
+        "tier": null,
+        "distribution": [
+            {
+                "card_detail_id": 5,
+                "gold": false,
+                "edition": 0,
+                "num_cards": "3322",
+                "total_xp": "1534800",
+                "num_burned": "19",
+                "total_burned_xp": "12600"
+            },
+            {
+                "card_detail_id": 5,
+                "gold": false,
+                "edition": 1,
+                "num_cards": "8314",
+                "total_xp": "3524800",
+                "num_burned": "566",
+                "total_burned_xp": "56975"
+            },
+            {
+                "card_detail_id": 5,
+                "gold": true,
+                "edition": 0,
+                "num_cards": "166",
+                "total_xp": "191500",
+                "num_burned": "2",
+                "total_burned_xp": "1000"
+            },
+            {
+                "card_detail_id": 5,
+                "gold": true,
+                "edition": 1,
+                "num_cards": "451",
+                "total_xp": "492700",
+                "num_burned": "19",
+                "total_burned_xp": "9600"
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "name": "Alric Stormbringer",
+        "color": "Blue",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 2,
+        "drop_rate": 22,
+        "stats": {
+            "mana": 3,
+            "attack": 0,
+            "ranged": 0,
+            "magic": 1,
+            "armor": 0,
+            "health": 0,
+            "speed": 0
+        },
+        "is_starter": true,
+        "editions": "0,1",
+        "created_block_num": null,
+        "last_update_tx": null,
+        "total_printed": 76147,
+        "is_promo": false,
+        "tier": null,
+        "distribution": [
+            {
+                "card_detail_id": 16,
+                "gold": false,
+                "edition": 0,
+                "num_cards": "3134",
+                "total_xp": "1541700",
+                "num_burned": "21",
+                "total_burned_xp": "15400"
+            },
+            {
+                "card_detail_id": 16,
+                "gold": false,
+                "edition": 1,
+                "num_cards": "8045",
+                "total_xp": "3491125",
+                "num_burned": "499",
+                "total_burned_xp": "55550"
+            },
+            {
+                "card_detail_id": 16,
+                "gold": true,
+                "edition": 0,
+                "num_cards": "170",
+                "total_xp": "177500",
+                "num_burned": "4",
+                "total_burned_xp": "4500"
+            },
+            {
+                "card_detail_id": 16,
+                "gold": true,
+                "edition": 1,
+                "num_cards": "481",
+                "total_xp": "489300",
+                "num_burned": "24",
+                "total_burned_xp": "12000"
+            }
+        ]
+    },
+    {
+        "id": 27,
+        "name": "Lyanna Natura",
+        "color": "Green",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 2,
+        "drop_rate": 22,
+        "stats": {
+            "mana": 3,
+            "attack": 0,
+            "ranged": 0,
+            "magic": 0,
+            "armor": 0,
+            "health": 1,
+            "speed": 0
+        },
+        "is_starter": true,
+        "editions": "0,1",
+        "created_block_num": null,
+        "last_update_tx": null,
+        "total_printed": 77437,
+        "is_promo": false,
+        "tier": null,
+        "distribution": [
+            {
+                "card_detail_id": 27,
+                "gold": false,
+                "edition": 0,
+                "num_cards": "3777",
+                "total_xp": "1540100",
+                "num_burned": "28",
+                "total_burned_xp": "11300"
+            },
+            {
+                "card_detail_id": 27,
+                "gold": false,
+                "edition": 1,
+                "num_cards": "8709",
+                "total_xp": "3492000",
+                "num_burned": "449",
+                "total_burned_xp": "65900"
+            },
+            {
+                "card_detail_id": 27,
+                "gold": true,
+                "edition": 0,
+                "num_cards": "147",
+                "total_xp": "173000",
+                "num_burned": 0,
+                "total_burned_xp": 0
+            },
+            {
+                "card_detail_id": 27,
+                "gold": true,
+                "edition": 1,
+                "num_cards": "455",
+                "total_xp": "466300",
+                "num_burned": "25",
+                "total_burned_xp": "12800"
+            }
+        ]
+    },
+    {
+        "id": 38,
+        "name": "Tyrus Paladium",
+        "color": "White",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 2,
+        "drop_rate": 22,
+        "stats": {
+            "mana": 3,
+            "attack": 0,
+            "ranged": 0,
+            "magic": 0,
+            "armor": 1,
+            "health": 0,
+            "speed": 0
+        },
+        "is_starter": true,
+        "editions": "0,1",
+        "created_block_num": null,
+        "last_update_tx": null,
+        "total_printed": 77320,
+        "is_promo": false,
+        "tier": null,
+        "distribution": [
+            {
+                "card_detail_id": 38,
+                "gold": false,
+                "edition": 0,
+                "num_cards": "3821",
+                "total_xp": "1520100",
+                "num_burned": "37",
+                "total_burned_xp": "13000"
+            },
+            {
+                "card_detail_id": 38,
+                "gold": false,
+                "edition": 1,
+                "num_cards": "8992",
+                "total_xp": "3461725",
+                "num_burned": "497",
+                "total_burned_xp": "66700"
+            },
+            {
+                "card_detail_id": 38,
+                "gold": true,
+                "edition": 0,
+                "num_cards": "128",
+                "total_xp": "154500",
+                "num_burned": "1",
+                "total_burned_xp": "500"
+            },
+            {
+                "card_detail_id": 38,
+                "gold": true,
+                "edition": 1,
+                "num_cards": "500",
+                "total_xp": "507000",
+                "num_burned": "21",
+                "total_burned_xp": "14000"
+            }
+        ]
+    },
+    {
+        "id": 49,
+        "name": "Zintar Mortalis",
+        "color": "Black",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 2,
+        "drop_rate": 22,
+        "stats": {
+            "mana": 3,
+            "attack": -1,
+            "ranged": 0,
+            "magic": 0,
+            "armor": 0,
+            "health": 0,
+            "speed": 0
+        },
+        "is_starter": true,
+        "editions": "0,1",
+        "created_block_num": null,
+        "last_update_tx": null,
+        "total_printed": 75473,
+        "is_promo": false,
+        "tier": null,
+        "distribution": [
+            {
+                "card_detail_id": 49,
+                "gold": false,
+                "edition": 0,
+                "num_cards": "3302",
+                "total_xp": "1520600",
+                "num_burned": "27",
+                "total_burned_xp": "14800"
+            },
+            {
+                "card_detail_id": 49,
+                "gold": false,
+                "edition": 1,
+                "num_cards": "9082",
+                "total_xp": "3399950",
+                "num_burned": "412",
+                "total_burned_xp": "34950"
+            },
+            {
+                "card_detail_id": 49,
+                "gold": true,
+                "edition": 0,
+                "num_cards": "171",
+                "total_xp": "171000",
+                "num_burned": "2",
+                "total_burned_xp": "1000"
+            },
+            {
+                "card_detail_id": 49,
+                "gold": true,
+                "edition": 1,
+                "num_cards": "512",
+                "total_xp": "435500",
+                "num_burned": "42",
+                "total_burned_xp": "46000"
+            }
+        ]
+    },
+    {
+        "id": 56,
+        "name": "Selenia Sky",
+        "color": "Gold",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 4,
+        "drop_rate": 2,
+        "stats": {
+            "mana": 3,
+            "attack": 0,
+            "ranged": 1,
+            "magic": 0,
+            "armor": 0,
+            "health": 0,
+            "speed": 0
+        },
+        "is_starter": false,
+        "editions": "0,1",
+        "created_block_num": null,
+        "last_update_tx": null,
+        "total_printed": 5505,
+        "is_promo": false,
+        "tier": null,
+        "distribution": [
+            {
+                "card_detail_id": 56,
+                "gold": false,
+                "edition": 0,
+                "num_cards": "499",
+                "total_xp": "1202000",
+                "num_burned": "8",
+                "total_burned_xp": "11000"
+            },
+            {
+                "card_detail_id": 56,
+                "gold": false,
+                "edition": 1,
+                "num_cards": "943",
+                "total_xp": "1986750",
+                "num_burned": "27",
+                "total_burned_xp": "15000"
+            },
+            {
+                "card_detail_id": 56,
+                "gold": true,
+                "edition": 0,
+                "num_cards": "29",
+                "total_xp": "102500",
+                "num_burned": 0,
+                "total_burned_xp": 0
+            },
+            {
+                "card_detail_id": 56,
+                "gold": true,
+                "edition": 1,
+                "num_cards": "65",
+                "total_xp": "206000",
+                "num_burned": "4",
+                "total_burned_xp": "8000"
+            }
+        ]
+    },
+    {
+        "id": 70,
+        "name": "Talia Firestorm",
+        "color": "Red",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 3,
+        "drop_rate": 10,
+        "stats": {
+            "mana": 2,
+            "attack": 0,
+            "ranged": 0,
+            "magic": 0,
+            "armor": 0,
+            "health": 0,
+            "speed": 0
+        },
+        "is_starter": false,
+        "editions": "1",
+        "created_block_num": null,
+        "last_update_tx": null,
+        "total_printed": 11166,
+        "is_promo": false,
+        "tier": null,
+        "distribution": [
+            {
+                "card_detail_id": 70,
+                "gold": false,
+                "edition": 1,
+                "num_cards": "1775",
+                "total_xp": "1539825",
+                "num_burned": "138",
+                "total_burned_xp": "29925"
+            },
+            {
+                "card_detail_id": 70,
+                "gold": true,
+                "edition": 1,
+                "num_cards": "122",
+                "total_xp": "177600",
+                "num_burned": "25",
+                "total_burned_xp": "48800"
+            }
+        ]
+    },
+    {
+        "id": 71,
+        "name": "Xia Seachan",
+        "color": "Blue",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 3,
+        "drop_rate": 10,
+        "stats": {
+            "mana": 2,
+            "attack": 0,
+            "ranged": 0,
+            "magic": 0,
+            "armor": 0,
+            "health": 0,
+            "speed": 0
+        },
+        "is_starter": false,
+        "editions": "1",
+        "created_block_num": null,
+        "last_update_tx": null,
+        "total_printed": 11067,
+        "is_promo": false,
+        "tier": null,
+        "distribution": [
+            {
+                "card_detail_id": 71,
+                "gold": false,
+                "edition": 1,
+                "num_cards": "1716",
+                "total_xp": "1554875",
+                "num_burned": "94",
+                "total_burned_xp": "18200"
+            },
+            {
+                "card_detail_id": 71,
+                "gold": true,
+                "edition": 1,
+                "num_cards": "107",
+                "total_xp": "172000",
+                "num_burned": "26",
+                "total_burned_xp": "42400"
+            }
+        ]
+    },
+    {
+        "id": 72,
+        "name": "Xander Foxwood",
+        "color": "Green",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 3,
+        "drop_rate": 10,
+        "stats": {
+            "mana": 2,
+            "attack": 0,
+            "ranged": 0,
+            "magic": 0,
+            "armor": 0,
+            "health": 0,
+            "speed": 0
+        },
+        "is_starter": false,
+        "editions": "1",
+        "created_block_num": null,
+        "last_update_tx": null,
+        "total_printed": 11096,
+        "is_promo": false,
+        "tier": null,
+        "distribution": [
+            {
+                "card_detail_id": 72,
+                "gold": false,
+                "edition": 1,
+                "num_cards": "1733",
+                "total_xp": "1545425",
+                "num_burned": "114",
+                "total_burned_xp": "21525"
+            },
+            {
+                "card_detail_id": 72,
+                "gold": true,
+                "edition": 1,
+                "num_cards": "120",
+                "total_xp": "201600",
+                "num_burned": "15",
+                "total_burned_xp": "34400"
+            }
+        ]
+    },
+    {
+        "id": 73,
+        "name": "Kiara Lightbringer",
+        "color": "White",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 3,
+        "drop_rate": 10,
+        "stats": {
+            "mana": 2,
+            "attack": 0,
+            "ranged": 0,
+            "magic": 0,
+            "armor": 0,
+            "health": 0,
+            "speed": 0
+        },
+        "is_starter": false,
+        "editions": "1",
+        "created_block_num": null,
+        "last_update_tx": null,
+        "total_printed": 11115,
+        "is_promo": false,
+        "tier": null,
+        "distribution": [
+            {
+                "card_detail_id": 73,
+                "gold": false,
+                "edition": 1,
+                "num_cards": "1923",
+                "total_xp": "1496775",
+                "num_burned": "184",
+                "total_burned_xp": "27825"
+            },
+            {
+                "card_detail_id": 73,
+                "gold": true,
+                "edition": 1,
+                "num_cards": "131",
+                "total_xp": "182400",
+                "num_burned": "38",
+                "total_burned_xp": "54400"
+            }
+        ]
+    },
+    {
+        "id": 74,
+        "name": "Jarlax the Undead",
+        "color": "Black",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 3,
+        "drop_rate": 10,
+        "stats": {
+            "mana": 2,
+            "attack": 0,
+            "ranged": 0,
+            "magic": 0,
+            "armor": 0,
+            "health": 0,
+            "speed": 0
+        },
+        "is_starter": false,
+        "editions": "1",
+        "created_block_num": null,
+        "last_update_tx": null,
+        "total_printed": 11275,
+        "is_promo": false,
+        "tier": null,
+        "distribution": [
+            {
+                "card_detail_id": 74,
+                "gold": false,
+                "edition": 1,
+                "num_cards": "2006",
+                "total_xp": "1535975",
+                "num_burned": "105",
+                "total_burned_xp": "14875"
+            },
+            {
+                "card_detail_id": 74,
+                "gold": true,
+                "edition": 1,
+                "num_cards": "137",
+                "total_xp": "186400",
+                "num_burned": "38",
+                "total_burned_xp": "55200"
+            }
+        ]
+    },
+    {
+        "id": 78,
+        "name": "Neb Seni",
+        "color": "Gold",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 2,
+        "drop_rate": 0,
+        "stats": {
+            "mana": 4,
+            "attack": 0,
+            "ranged": 0,
+            "magic": 0,
+            "armor": 0,
+            "health": 0,
+            "speed": 1
+        },
+        "is_starter": false,
+        "editions": "2",
+        "created_block_num": null,
+        "last_update_tx": null,
+        "total_printed": 2098,
+        "is_promo": false,
+        "tier": null,
+        "distribution": [
+            {
+                "card_detail_id": 78,
+                "gold": false,
+                "edition": 2,
+                "num_cards": "557",
+                "total_xp": "97400",
+                "num_burned": "5",
+                "total_burned_xp": "0"
+            },
+            {
+                "card_detail_id": 78,
+                "gold": true,
+                "edition": 2,
+                "num_cards": "247",
+                "total_xp": "277900",
+                "num_burned": "6",
+                "total_burned_xp": "3000"
+            }
+        ]
+    },
+    {
+        "id": 88,
+        "name": "Daria Dragonscale",
+        "color": "Gold",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 3,
+        "drop_rate": 0,
+        "stats": {
+            "mana": 4,
+            "attack": 1,
+            "ranged": 0,
+            "magic": 0,
+            "armor": 0,
+            "health": 0,
+            "speed": 0
+        },
+        "is_starter": false,
+        "editions": "3",
+        "created_block_num": null,
+        "last_update_tx": null,
+        "total_printed": 40000,
+        "is_promo": false,
+        "tier": null,
+        "distribution": [
+            {
+                "card_detail_id": 88,
+                "gold": false,
+                "edition": 3,
+                "num_cards": "5528",
+                "total_xp": "5428850",
+                "num_burned": "1100",
+                "total_burned_xp": "261625"
+            },
+            {
+                "card_detail_id": 88,
+                "gold": true,
+                "edition": 3,
+                "num_cards": "287",
+                "total_xp": "464000",
+                "num_burned": "150",
+                "total_burned_xp": "220000"
+            }
+        ]
+    },
+    {
+        "id": 109,
+        "name": "Crypt Mancer",
+        "color": "Black",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 4,
+        "drop_rate": 0,
+        "stats": {
+            "mana": 5,
+            "attack": -1,
+            "ranged": 0,
+            "magic": 0,
+            "armor": 0,
+            "health": -1,
+            "speed": -1
+        },
+        "is_starter": false,
+        "editions": "1",
+        "created_block_num": 30000003,
+        "last_update_tx": "5ce686d0617dfcfdbd5ce570238d975c6fc7be88",
+        "total_printed": 2775,
+        "is_promo": false,
+        "tier": null,
+        "distribution": [
+            {
+                "card_detail_id": 109,
+                "gold": false,
+                "edition": 1,
+                "num_cards": "718",
+                "total_xp": "1476000",
+                "num_burned": "7",
+                "total_burned_xp": "1500"
+            },
+            {
+                "card_detail_id": 109,
+                "gold": true,
+                "edition": 1,
+                "num_cards": "50",
+                "total_xp": "154000",
+                "num_burned": "3",
+                "total_burned_xp": "6000"
+            }
+        ]
+    },
+    {
+        "id": 110,
+        "name": "Plado Emberstorm",
+        "color": "Red",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 4,
+        "drop_rate": 0,
+        "stats": {
+            "mana": 5,
+            "attack": 1,
+            "ranged": 0,
+            "magic": 0,
+            "armor": 0,
+            "health": -1,
+            "speed": 1
+        },
+        "is_starter": false,
+        "editions": "1",
+        "created_block_num": 30000003,
+        "last_update_tx": "5ce686d0617dfcfdbd5ce570238d975c6fc7be88",
+        "total_printed": 2725,
+        "is_promo": false,
+        "tier": null,
+        "distribution": [
+            {
+                "card_detail_id": 110,
+                "gold": false,
+                "edition": 1,
+                "num_cards": "673",
+                "total_xp": "1468500",
+                "num_burned": "14",
+                "total_burned_xp": "3750"
+            },
+            {
+                "card_detail_id": 110,
+                "gold": true,
+                "edition": 1,
+                "num_cards": "43",
+                "total_xp": "150000",
+                "num_burned": 0,
+                "total_burned_xp": 0
+            }
+        ]
+    },
+    {
+        "id": 111,
+        "name": "Valnamor",
+        "color": "Blue",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 4,
+        "drop_rate": 0,
+        "stats": {
+            "mana": 5,
+            "attack": 0,
+            "ranged": 0,
+            "magic": 1,
+            "armor": 0,
+            "health": 1,
+            "speed": 1
+        },
+        "is_starter": false,
+        "editions": "1",
+        "created_block_num": 30000003,
+        "last_update_tx": "5ce686d0617dfcfdbd5ce570238d975c6fc7be88",
+        "total_printed": 2853,
+        "is_promo": false,
+        "tier": null,
+        "distribution": [
+            {
+                "card_detail_id": 111,
+                "gold": false,
+                "edition": 1,
+                "num_cards": "649",
+                "total_xp": "1573500",
+                "num_burned": "18",
+                "total_burned_xp": "4500"
+            },
+            {
+                "card_detail_id": 111,
+                "gold": true,
+                "edition": 1,
+                "num_cards": "54",
+                "total_xp": "160000",
+                "num_burned": "2",
+                "total_burned_xp": "4000"
+            }
+        ]
+    },
+    {
+        "id": 112,
+        "name": "Prince Rennyn",
+        "color": "Green",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 4,
+        "drop_rate": 0,
+        "stats": {
+            "mana": 5,
+            "attack": 0,
+            "ranged": 1,
+            "magic": 0,
+            "armor": 0,
+            "health": 1,
+            "speed": 1
+        },
+        "is_starter": false,
+        "editions": "1",
+        "created_block_num": 30000003,
+        "last_update_tx": "d1972606e13afbadfb985d136e98b63f671882a6",
+        "total_printed": 2711,
+        "is_promo": false,
+        "tier": null,
+        "distribution": [
+            {
+                "card_detail_id": 112,
+                "gold": false,
+                "edition": 1,
+                "num_cards": "577",
+                "total_xp": "1536000",
+                "num_burned": "4",
+                "total_burned_xp": "0"
+            },
+            {
+                "card_detail_id": 112,
+                "gold": true,
+                "edition": 1,
+                "num_cards": "45",
+                "total_xp": "164000",
+                "num_burned": 0,
+                "total_burned_xp": 0
+            }
+        ]
+    },
+    {
+        "id": 113,
+        "name": "The Peakrider",
+        "color": "White",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 4,
+        "drop_rate": 0,
+        "stats": {
+            "mana": 5,
+            "attack": 0,
+            "ranged": -1,
+            "magic": 0,
+            "armor": 3,
+            "health": 0,
+            "speed": 0
+        },
+        "is_starter": false,
+        "editions": "1",
+        "created_block_num": 30000003,
+        "last_update_tx": "5ce686d0617dfcfdbd5ce570238d975c6fc7be88",
+        "total_printed": 2689,
+        "is_promo": false,
+        "tier": null,
+        "distribution": [
+            {
+                "card_detail_id": 113,
+                "gold": false,
+                "edition": 1,
+                "num_cards": "656",
+                "total_xp": "1457250",
+                "num_burned": "10",
+                "total_burned_xp": "0"
+            },
+            {
+                "card_detail_id": 113,
+                "gold": true,
+                "edition": 1,
+                "num_cards": "45",
+                "total_xp": "154000",
+                "num_burned": "3",
+                "total_burned_xp": "6000"
+            }
+        ]
+    },
+    {
+        "id": 114,
+        "name": "Delwyn Dragonscale",
+        "color": "Gold",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 1,
+        "drop_rate": 0,
+        "stats": {
+            "mana": 5,
+            "attack": 0,
+            "ranged": 0,
+            "magic": 1,
+            "armor": 0,
+            "health": 0,
+            "speed": 0
+        },
+        "is_starter": false,
+        "editions": "2",
+        "created_block_num": 33391306,
+        "last_update_tx": "ccbda68444a4cc56f40818d1532010e0cb99c361",
+        "total_printed": 252857,
+        "is_promo": false,
+        "tier": null,
+        "distribution": [
+            {
+                "card_detail_id": 114,
+                "gold": false,
+                "edition": 2,
+                "num_cards": "42348",
+                "total_xp": "2998620",
+                "num_burned": "12967",
+                "total_burned_xp": "491025"
+            },
+            {
+                "card_detail_id": 114,
+                "gold": true,
+                "edition": 2,
+                "num_cards": "1158",
+                "total_xp": "1004800",
+                "num_burned": "457",
+                "total_burned_xp": "214800"
+            }
+        ]
+    },
+    {
+        "id": 130,
+        "name": "Archmage Arius",
+        "color": "Gold",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 4,
+        "drop_rate": 0,
+        "stats": {
+            "mana": 5,
+            "attack": 1,
+            "ranged": 1,
+            "magic": 1,
+            "armor": 0,
+            "health": 0,
+            "speed": 0
+        },
+        "is_starter": false,
+        "editions": "2",
+        "created_block_num": 33074690,
+        "last_update_tx": "faec327f3a3b23475236ba83fdc637cb21aa80a3",
+        "total_printed": 90,
+        "is_promo": false,
+        "tier": null,
+        "distribution": [
+            {
+                "card_detail_id": 130,
+                "gold": false,
+                "edition": 2,
+                "num_cards": "87",
+                "total_xp": "609000",
+                "num_burned": 0,
+                "total_burned_xp": 0
+            },
+            {
+                "card_detail_id": 130,
+                "gold": true,
+                "edition": 2,
+                "num_cards": "3",
+                "total_xp": "21000",
+                "num_burned": 0,
+                "total_burned_xp": 0
+            }
+        ]
+    },
+    {
+        "id": 145,
+        "name": "Contessa L'ament",
+        "color": "Black",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 2,
+        "drop_rate": 0,
+        "stats": {
+            "mana": 3,
+            "attack": 0,
+            "ranged": -1,
+            "magic": 0,
+            "armor": 0,
+            "health": 0,
+            "speed": 0
+        },
+        "is_starter": false,
+        "editions": "4",
+        "created_block_num": 38630017,
+        "last_update_tx": "a38db10ee252db5fea9a5f02ec3f3547a72820a9",
+        "total_printed": 74793,
+        "is_promo": false,
+        "tier": null,
+        "distribution": [
+            {
+                "card_detail_id": 145,
+                "gold": false,
+                "edition": 4,
+                "num_cards": "12324",
+                "total_xp": "71711",
+                "num_burned": "302",
+                "total_burned_xp": "496"
+            },
+            {
+                "card_detail_id": 145,
+                "gold": true,
+                "edition": 4,
+                "num_cards": "1057",
+                "total_xp": "2544",
+                "num_burned": "35",
+                "total_burned_xp": "42"
+            }
+        ]
+    },
+    {
+        "id": 156,
+        "name": "Mother Khala",
+        "color": "White",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 2,
+        "drop_rate": 0,
+        "stats": {
+            "mana": 3,
+            "attack": 0,
+            "ranged": 0,
+            "magic": 0,
+            "armor": 0,
+            "health": 1,
+            "speed": 0
+        },
+        "is_starter": false,
+        "editions": "4",
+        "created_block_num": 38630031,
+        "last_update_tx": "487ad162eec5955c1076b5e68f0cacb6694f6c64",
+        "total_printed": 74598,
+        "is_promo": false,
+        "tier": null,
+        "distribution": [
+            {
+                "card_detail_id": 156,
+                "gold": false,
+                "edition": 4,
+                "num_cards": "12381",
+                "total_xp": "71371",
+                "num_burned": "375",
+                "total_burned_xp": "629"
+            },
+            {
+                "card_detail_id": 156,
+                "gold": true,
+                "edition": 4,
+                "num_cards": "1073",
+                "total_xp": "2543",
+                "num_burned": "40",
+                "total_burned_xp": "55"
+            }
+        ]
+    },
+    {
+        "id": 167,
+        "name": "Pyre",
+        "color": "Red",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 2,
+        "drop_rate": 0,
+        "stats": {
+            "mana": 3,
+            "attack": 0,
+            "ranged": 0,
+            "magic": 0,
+            "armor": 0,
+            "health": 0,
+            "speed": 1
+        },
+        "is_starter": false,
+        "editions": "4",
+        "created_block_num": 38630026,
+        "last_update_tx": "012f50e841b088c731850bbae0f684a744190b4d",
+        "total_printed": 75177,
+        "is_promo": false,
+        "tier": null,
+        "distribution": [
+            {
+                "card_detail_id": 167,
+                "gold": false,
+                "edition": 4,
+                "num_cards": "11288",
+                "total_xp": "71851",
+                "num_burned": "366",
+                "total_burned_xp": "650"
+            },
+            {
+                "card_detail_id": 167,
+                "gold": true,
+                "edition": 4,
+                "num_cards": "1059",
+                "total_xp": "2591",
+                "num_burned": "42",
+                "total_burned_xp": "85"
+            }
+        ]
+    },
+    {
+        "id": 178,
+        "name": "Bortus",
+        "color": "Blue",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 2,
+        "drop_rate": 0,
+        "stats": {
+            "mana": 3,
+            "attack": 0,
+            "ranged": 0,
+            "magic": -1,
+            "armor": 0,
+            "health": 0,
+            "speed": 0
+        },
+        "is_starter": false,
+        "editions": "4",
+        "created_block_num": 38630039,
+        "last_update_tx": "d80c0713c3a042418a231c9ef241248f6bff6abb",
+        "total_printed": 74500,
+        "is_promo": false,
+        "tier": null,
+        "distribution": [
+            {
+                "card_detail_id": 178,
+                "gold": false,
+                "edition": 4,
+                "num_cards": "11250",
+                "total_xp": "71410",
+                "num_burned": "368",
+                "total_burned_xp": "576"
+            },
+            {
+                "card_detail_id": 178,
+                "gold": true,
+                "edition": 4,
+                "num_cards": "1055",
+                "total_xp": "2473",
+                "num_burned": "38",
+                "total_burned_xp": "41"
+            }
+        ]
+    },
+    {
+        "id": 189,
+        "name": "Wizard of Eastwood",
+        "color": "Green",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 2,
+        "drop_rate": 0,
+        "stats": {
+            "mana": 3,
+            "attack": 0,
+            "ranged": 0,
+            "magic": 0,
+            "armor": -2,
+            "health": 0,
+            "speed": 0
+        },
+        "is_starter": false,
+        "editions": "4",
+        "created_block_num": 38630023,
+        "last_update_tx": "bc7f05cd0375561e0330640d889f3f469805d318",
+        "total_printed": 74780,
+        "is_promo": false,
+        "tier": null,
+        "distribution": [
+            {
+                "card_detail_id": 189,
+                "gold": false,
+                "edition": 4,
+                "num_cards": "11931",
+                "total_xp": "71653",
+                "num_burned": "347",
+                "total_burned_xp": "541"
+            },
+            {
+                "card_detail_id": 189,
+                "gold": true,
+                "edition": 4,
+                "num_cards": "1004",
+                "total_xp": "2561",
+                "num_burned": "23",
+                "total_burned_xp": "25"
+            }
+        ]
+    },
+    {
+        "id": 200,
+        "name": "Camila Sungazer",
+        "color": "Gold",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 4,
+        "drop_rate": 0,
+        "stats": {
+            "mana": 3,
+            "attack": -1,
+            "ranged": 0,
+            "magic": 0,
+            "armor": 0,
+            "health": 0,
+            "speed": 0
+        },
+        "is_starter": false,
+        "editions": "4",
+        "created_block_num": 38630044,
+        "last_update_tx": "d129820b1a5ac7b18815917bd677b73d81310589",
+        "total_printed": 6618,
+        "is_promo": false,
+        "tier": null,
+        "distribution": [
+            {
+                "card_detail_id": 200,
+                "gold": false,
+                "edition": 4,
+                "num_cards": "2246",
+                "total_xp": "6339",
+                "num_burned": "28",
+                "total_burned_xp": "40"
+            },
+            {
+                "card_detail_id": 200,
+                "gold": true,
+                "edition": 4,
+                "num_cards": "139",
+                "total_xp": "217",
+                "num_burned": "15",
+                "total_burned_xp": "22"
+            }
+        ]
+    },
+    {
+        "id": 205,
+        "name": "Prince Julian",
+        "color": "Gold",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 4,
+        "drop_rate": 0,
+        "stats": {
+            "mana": 2,
+            "attack": 0,
+            "ranged": 0,
+            "magic": 0,
+            "armor": 0,
+            "health": 0,
+            "speed": 0
+        },
+        "is_starter": false,
+        "editions": "2",
+        "created_block_num": 38628864,
+        "last_update_tx": "d0fdc29973a133a151e45dee5aa912cd400cdfb0",
+        "total_printed": 90,
+        "is_promo": false,
+        "tier": null,
+        "distribution": [
+            {
+                "card_detail_id": 205,
+                "gold": false,
+                "edition": 2,
+                "num_cards": "83",
+                "total_xp": "581000",
+                "num_burned": 0,
+                "total_burned_xp": 0
+            },
+            {
+                "card_detail_id": 205,
+                "gold": true,
+                "edition": 2,
+                "num_cards": "7",
+                "total_xp": "49000",
+                "num_burned": 0,
+                "total_burned_xp": 0
+            }
+        ]
+    },
+    {
+        "id": 224,
+        "name": "Drake of Arnak",
+        "color": "Gold",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 2,
+        "drop_rate": 0,
+        "stats": {
+            "mana": 4,
+            "attack": 0,
+            "ranged": 0,
+            "magic": 0,
+            "armor": 1,
+            "health": 0,
+            "speed": 0
+        },
+        "is_starter": false,
+        "editions": "4",
+        "created_block_num": 39498051,
+        "last_update_tx": "87b33e1dce5f52479f4fbeff15d9d853e983a659",
+        "total_printed": 73660,
+        "is_promo": false,
+        "tier": null,
+        "distribution": [
+            {
+                "card_detail_id": 224,
+                "gold": false,
+                "edition": 4,
+                "num_cards": "14237",
+                "total_xp": "70657",
+                "num_burned": "384",
+                "total_burned_xp": "691"
+            },
+            {
+                "card_detail_id": 224,
+                "gold": true,
+                "edition": 4,
+                "num_cards": "1038",
+                "total_xp": "2241",
+                "num_burned": "38",
+                "total_burned_xp": "71"
+            }
+        ]
+    },
+    {
+        "id": 235,
+        "name": "Mimosa Nightshade",
+        "color": "Black",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 4,
+        "drop_rate": 0,
+        "stats": {
+            "mana": 7,
+            "attack": 0,
+            "ranged": -1,
+            "magic": 0,
+            "armor": 0,
+            "health": 0,
+            "speed": 0,
+            "abilities": [
+                "Void",
+                "Affliction"
+            ]
+        },
+        "is_starter": false,
+        "editions": "4",
+        "created_block_num": 41530757,
+        "last_update_tx": "2bd2e2eb17b6e4062b1c24095686bc2bba928ba9",
+        "total_printed": 5748,
+        "is_promo": false,
+        "tier": null,
+        "distribution": [
+            {
+                "card_detail_id": 235,
+                "gold": false,
+                "edition": 4,
+                "num_cards": "1949",
+                "total_xp": "5535",
+                "num_burned": "12",
+                "total_burned_xp": "13"
+            },
+            {
+                "card_detail_id": 235,
+                "gold": true,
+                "edition": 4,
+                "num_cards": "126",
+                "total_xp": "192",
+                "num_burned": "5",
+                "total_burned_xp": "8"
+            }
+        ]
+    },
+    {
+        "id": 236,
+        "name": "Yodin Zaku",
+        "color": "Red",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 4,
+        "drop_rate": 0,
+        "stats": {
+            "mana": 7,
+            "attack": 0,
+            "ranged": 1,
+            "magic": 0,
+            "armor": 0,
+            "health": 1,
+            "speed": 0,
+            "abilities": [
+                "Blast"
+            ]
+        },
+        "is_starter": false,
+        "editions": "4",
+        "created_block_num": 43056982,
+        "last_update_tx": "120690175fbee33f82238e6b474b7e82798af18f",
+        "total_printed": 5359,
+        "is_promo": false,
+        "tier": null,
+        "distribution": [
+            {
+                "card_detail_id": 236,
+                "gold": false,
+                "edition": 4,
+                "num_cards": "1947",
+                "total_xp": "5185",
+                "num_burned": "8",
+                "total_burned_xp": "10"
+            },
+            {
+                "card_detail_id": 236,
+                "gold": true,
+                "edition": 4,
+                "num_cards": "107",
+                "total_xp": "162",
+                "num_burned": "2",
+                "total_burned_xp": "2"
+            }
+        ]
+    },
+    {
+        "id": 239,
+        "name": "Chanseus the Great",
+        "color": "White",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 4,
+        "drop_rate": 0,
+        "stats": {
+            "mana": 7,
+            "attack": 0,
+            "ranged": 0,
+            "magic": 0,
+            "armor": 0,
+            "health": 0,
+            "speed": 0,
+            "abilities": [
+                "Repair",
+                "Triage",
+                "Resurrect"
+            ]
+        },
+        "is_starter": false,
+        "editions": "4",
+        "created_block_num": 44371570,
+        "last_update_tx": "0674f40ed75871fc60b323e461b0064d05056ac9",
+        "total_printed": 5038,
+        "is_promo": false,
+        "tier": null,
+        "distribution": [
+            {
+                "card_detail_id": 239,
+                "gold": false,
+                "edition": 4,
+                "num_cards": "1904",
+                "total_xp": "4864",
+                "num_burned": "14",
+                "total_burned_xp": "18"
+            },
+            {
+                "card_detail_id": 239,
+                "gold": true,
+                "edition": 4,
+                "num_cards": "102",
+                "total_xp": "151",
+                "num_burned": "5",
+                "total_burned_xp": "5"
+            }
+        ]
+    },
+    {
+        "id": 240,
+        "name": "Kretch Tallevor",
+        "color": "Gold",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 3,
+        "drop_rate": 0,
+        "stats": {
+            "mana": 3,
+            "attack": 0,
+            "ranged": 0,
+            "magic": 0,
+            "armor": 0,
+            "health": 0,
+            "speed": 0
+        },
+        "is_starter": false,
+        "editions": "3",
+        "created_block_num": 44719087,
+        "last_update_tx": "a8ebbe3564e5266e678720e0e0d7b9771dabcf9f",
+        "total_printed": 40000,
+        "is_promo": false,
+        "tier": 4,
+        "distribution": [
+            {
+                "card_detail_id": 240,
+                "gold": false,
+                "edition": 3,
+                "num_cards": "19752",
+                "total_xp": "38573",
+                "num_burned": "420",
+                "total_burned_xp": "586"
+            },
+            {
+                "card_detail_id": 240,
+                "gold": true,
+                "edition": 3,
+                "num_cards": "675",
+                "total_xp": "745",
+                "num_burned": "87",
+                "total_burned_xp": "96"
+            }
+        ]
+    },
+    {
+        "id": 254,
+        "name": "Lir Deepswimmer",
+        "color": "Blue",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 4,
+        "drop_rate": 0,
+        "stats": {
+            "mana": 7,
+            "attack": 0,
+            "ranged": 0,
+            "magic": 0,
+            "armor": 2,
+            "health": 0,
+            "speed": 0,
+            "abilities": [
+                "Return Fire",
+                "Blind"
+            ]
+        },
+        "is_starter": false,
+        "editions": "4",
+        "created_block_num": 45783911,
+        "last_update_tx": "acdb9e94288e9267cd7f5f6e55dc2f4552e73fb5",
+        "total_printed": 4816,
+        "is_promo": false,
+        "tier": null,
+        "distribution": [
+            {
+                "card_detail_id": 254,
+                "gold": false,
+                "edition": 4,
+                "num_cards": "1928",
+                "total_xp": "4642",
+                "num_burned": "9",
+                "total_burned_xp": "9"
+            },
+            {
+                "card_detail_id": 254,
+                "gold": true,
+                "edition": 4,
+                "num_cards": "113",
+                "total_xp": "160",
+                "num_burned": "5",
+                "total_burned_xp": "5"
+            }
+        ]
+    },
+    {
+        "id": 257,
+        "name": "Vera Salacia",
+        "color": "Blue",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 2,
+        "drop_rate": 0,
+        "stats": {
+            "mana": 3,
+            "attack": 0,
+            "ranged": 0,
+            "magic": 0,
+            "armor": 0,
+            "health": 0,
+            "speed": 0,
+            "abilities": [
+                "Snare"
+            ]
+        },
+        "is_starter": false,
+        "editions": "5",
+        "created_block_num": 46386733,
+        "last_update_tx": "dc48bb8f96929079c62ed2e121913f623076cf7f",
+        "total_printed": 62971,
+        "is_promo": false,
+        "tier": 4,
+        "distribution": [
+            {
+                "card_detail_id": 257,
+                "gold": false,
+                "edition": 5,
+                "num_cards": "15643",
+                "total_xp": "60300",
+                "num_burned": "128",
+                "total_burned_xp": "344"
+            },
+            {
+                "card_detail_id": 257,
+                "gold": true,
+                "edition": 5,
+                "num_cards": "1194",
+                "total_xp": "2258",
+                "num_burned": "44",
+                "total_burned_xp": "69"
+            }
+        ]
+    },
+    {
+        "id": 258,
+        "name": "Owster Rotwell",
+        "color": "Black",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 2,
+        "drop_rate": 0,
+        "stats": {
+            "mana": 3,
+            "attack": 0,
+            "ranged": 0,
+            "magic": 0,
+            "armor": 0,
+            "health": 0,
+            "speed": 0,
+            "abilities": [
+                "Magic Reflect"
+            ]
+        },
+        "is_starter": false,
+        "editions": "5",
+        "created_block_num": 46386733,
+        "last_update_tx": "dc48bb8f96929079c62ed2e121913f623076cf7f",
+        "total_printed": 63231,
+        "is_promo": false,
+        "tier": 4,
+        "distribution": [
+            {
+                "card_detail_id": 258,
+                "gold": false,
+                "edition": 5,
+                "num_cards": "14528",
+                "total_xp": "60765",
+                "num_burned": "62",
+                "total_burned_xp": "158"
+            },
+            {
+                "card_detail_id": 258,
+                "gold": true,
+                "edition": 5,
+                "num_cards": "1043",
+                "total_xp": "2292",
+                "num_burned": "14",
+                "total_burned_xp": "16"
+            }
+        ]
+    },
+    {
+        "id": 259,
+        "name": "Mylor Crowling",
+        "color": "Green",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 2,
+        "drop_rate": 0,
+        "stats": {
+            "mana": 3,
+            "attack": 0,
+            "ranged": 0,
+            "magic": 0,
+            "armor": 0,
+            "health": 0,
+            "speed": 0,
+            "abilities": [
+                "Thorns"
+            ]
+        },
+        "is_starter": false,
+        "editions": "5",
+        "created_block_num": 46386733,
+        "last_update_tx": "dc48bb8f96929079c62ed2e121913f623076cf7f",
+        "total_printed": 62941,
+        "is_promo": false,
+        "tier": 4,
+        "distribution": [
+            {
+                "card_detail_id": 259,
+                "gold": false,
+                "edition": 5,
+                "num_cards": "17052",
+                "total_xp": "60595",
+                "num_burned": "60",
+                "total_burned_xp": "75"
+            },
+            {
+                "card_detail_id": 259,
+                "gold": true,
+                "edition": 5,
+                "num_cards": "987",
+                "total_xp": "2265",
+                "num_burned": "5",
+                "total_burned_xp": "6"
+            }
+        ]
+    },
+    {
+        "id": 260,
+        "name": "Qid Yuff",
+        "color": "Red",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 2,
+        "drop_rate": 0,
+        "stats": {
+            "mana": 3,
+            "attack": 0,
+            "ranged": 0,
+            "magic": 0,
+            "armor": 0,
+            "health": 0,
+            "speed": 0,
+            "abilities": [
+                "Piercing"
+            ]
+        },
+        "is_starter": false,
+        "editions": "5",
+        "created_block_num": 46386733,
+        "last_update_tx": "dc48bb8f96929079c62ed2e121913f623076cf7f",
+        "total_printed": 63396,
+        "is_promo": false,
+        "tier": 4,
+        "distribution": [
+            {
+                "card_detail_id": 260,
+                "gold": false,
+                "edition": 5,
+                "num_cards": "14853",
+                "total_xp": "60680",
+                "num_burned": "140",
+                "total_burned_xp": "367"
+            },
+            {
+                "card_detail_id": 260,
+                "gold": true,
+                "edition": 5,
+                "num_cards": "1151",
+                "total_xp": "2281",
+                "num_burned": "43",
+                "total_burned_xp": "68"
+            }
+        ]
+    },
+    {
+        "id": 261,
+        "name": "Lorna Shine",
+        "color": "White",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 2,
+        "drop_rate": 0,
+        "stats": {
+            "mana": 3,
+            "attack": 0,
+            "ranged": 0,
+            "magic": 0,
+            "armor": 0,
+            "health": 0,
+            "speed": 0,
+            "abilities": [
+                "Divine Shield"
+            ]
+        },
+        "is_starter": false,
+        "editions": "5",
+        "created_block_num": 46386733,
+        "last_update_tx": "dc48bb8f96929079c62ed2e121913f623076cf7f",
+        "total_printed": 63559,
+        "is_promo": false,
+        "tier": 4,
+        "distribution": [
+            {
+                "card_detail_id": 261,
+                "gold": false,
+                "edition": 5,
+                "num_cards": "13155",
+                "total_xp": "60868",
+                "num_burned": "138",
+                "total_burned_xp": "277"
+            },
+            {
+                "card_detail_id": 261,
+                "gold": true,
+                "edition": 5,
+                "num_cards": "1072",
+                "total_xp": "2394",
+                "num_burned": "19",
+                "total_burned_xp": "20"
+            }
+        ]
+    },
+    {
+        "id": 262,
+        "name": "Brighton Bloom",
+        "color": "Gold",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 2,
+        "drop_rate": 0,
+        "stats": {
+            "mana": 4,
+            "attack": 0,
+            "ranged": 0,
+            "magic": 0,
+            "armor": 0,
+            "health": 0,
+            "speed": 0,
+            "abilities": [
+                "Flying"
+            ]
+        },
+        "is_starter": false,
+        "editions": "5",
+        "created_block_num": 46386733,
+        "last_update_tx": "dc48bb8f96929079c62ed2e121913f623076cf7f",
+        "total_printed": 63257,
+        "is_promo": false,
+        "tier": 4,
+        "distribution": [
+            {
+                "card_detail_id": 262,
+                "gold": false,
+                "edition": 5,
+                "num_cards": "15533",
+                "total_xp": "60829",
+                "num_burned": "92",
+                "total_burned_xp": "145"
+            },
+            {
+                "card_detail_id": 262,
+                "gold": true,
+                "edition": 5,
+                "num_cards": "1113",
+                "total_xp": "2273",
+                "num_burned": "9",
+                "total_burned_xp": "10"
+            }
+        ]
+    },
+    {
+        "id": 278,
+        "name": "Scarred Llama Mage",
+        "color": "Green",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 4,
+        "drop_rate": 0,
+        "stats": {
+            "mana": 7,
+            "attack": 0,
+            "ranged": 0,
+            "magic": 0,
+            "armor": 0,
+            "health": 2,
+            "speed": 0,
+            "abilities": [
+                "Last Stand",
+                "Cleanse"
+            ]
+        },
+        "is_starter": false,
+        "editions": "4",
+        "created_block_num": 48308755,
+        "last_update_tx": "48b8a0dbdab613a750e9277f7d9e60475955309c",
+        "total_printed": 4437,
+        "is_promo": false,
+        "tier": null,
+        "distribution": [
+            {
+                "card_detail_id": 278,
+                "gold": false,
+                "edition": 4,
+                "num_cards": "1818",
+                "total_xp": "4272",
+                "num_burned": "9",
+                "total_burned_xp": "10"
+            },
+            {
+                "card_detail_id": 278,
+                "gold": true,
+                "edition": 4,
+                "num_cards": "114",
+                "total_xp": "153",
+                "num_burned": "2",
+                "total_burned_xp": "2"
+            }
+        ]
+    },
+    {
+        "id": 291,
+        "name": "Byzantine Kitty",
+        "color": "Gold",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 4,
+        "drop_rate": 0,
+        "stats": {
+            "mana": 7,
+            "attack": 0,
+            "ranged": 0,
+            "magic": 0,
+            "armor": 0,
+            "health": 0,
+            "speed": 2,
+            "abilities": [
+                "True Strike",
+                "Tank Heal"
+            ]
+        },
+        "is_starter": false,
+        "editions": "4",
+        "created_block_num": 52073291,
+        "last_update_tx": "43c2c29aba78ee9d1fa4cdba73f23d530b505cbe",
+        "total_printed": 3953,
+        "is_promo": false,
+        "tier": null,
+        "distribution": [
+            {
+                "card_detail_id": 291,
+                "gold": false,
+                "edition": 4,
+                "num_cards": "1506",
+                "total_xp": "3836",
+                "num_burned": "2",
+                "total_burned_xp": "2"
+            },
+            {
+                "card_detail_id": 291,
+                "gold": true,
+                "edition": 4,
+                "num_cards": "84",
+                "total_xp": "126",
+                "num_burned": "1",
+                "total_burned_xp": "1"
+            }
+        ]
+    },
+    {
+        "id": 437,
+        "name": "Kelya Frendul",
+        "color": "Blue",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 2,
+        "drop_rate": 0,
+        "stats": {
+            "mana": 4,
+            "attack": 0,
+            "ranged": 0,
+            "magic": 0,
+            "armor": 1,
+            "health": 0,
+            "speed": 1
+        },
+        "is_starter": false,
+        "editions": "7",
+        "created_block_num": null,
+        "last_update_tx": null,
+        "total_printed": 35853,
+        "is_promo": false,
+        "tier": 7,
+        "distribution": [
+            {
+                "card_detail_id": 437,
+                "gold": false,
+                "edition": 7,
+                "num_cards": "15745",
+                "total_xp": "34472",
+                "num_burned": 0,
+                "total_burned_xp": 0
+            },
+            {
+                "card_detail_id": 437,
+                "gold": true,
+                "edition": 7,
+                "num_cards": "1102",
+                "total_xp": "1381",
+                "num_burned": 0,
+                "total_burned_xp": 0
+            }
+        ]
+    },
+    {
+        "id": 438,
+        "name": "Thaddius Brood",
+        "color": "Black",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 2,
+        "drop_rate": 0,
+        "stats": {
+            "mana": 4,
+            "attack": 0,
+            "ranged": 0,
+            "magic": -1,
+            "armor": 0,
+            "health": -1,
+            "speed": 0
+        },
+        "is_starter": false,
+        "editions": "7",
+        "created_block_num": null,
+        "last_update_tx": null,
+        "total_printed": 35978,
+        "is_promo": false,
+        "tier": 7,
+        "distribution": [
+            {
+                "card_detail_id": 438,
+                "gold": false,
+                "edition": 7,
+                "num_cards": "16111",
+                "total_xp": "34624",
+                "num_burned": "5",
+                "total_burned_xp": "5"
+            },
+            {
+                "card_detail_id": 438,
+                "gold": true,
+                "edition": 7,
+                "num_cards": "1063",
+                "total_xp": "1349",
+                "num_burned": 0,
+                "total_burned_xp": 0
+            }
+        ]
+    },
+    {
+        "id": 439,
+        "name": "Obsidian",
+        "color": "Green",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 2,
+        "drop_rate": 0,
+        "stats": {
+            "mana": 4,
+            "attack": 0,
+            "ranged": 0,
+            "magic": 1,
+            "armor": 0,
+            "health": 0,
+            "speed": 0
+        },
+        "is_starter": false,
+        "editions": "7",
+        "created_block_num": null,
+        "last_update_tx": null,
+        "total_printed": 36269,
+        "is_promo": false,
+        "tier": 7,
+        "distribution": [
+            {
+                "card_detail_id": 439,
+                "gold": false,
+                "edition": 7,
+                "num_cards": "16182",
+                "total_xp": "34927",
+                "num_burned": 0,
+                "total_burned_xp": 0
+            },
+            {
+                "card_detail_id": 439,
+                "gold": true,
+                "edition": 7,
+                "num_cards": "1064",
+                "total_xp": "1342",
+                "num_burned": 0,
+                "total_burned_xp": 0
+            }
+        ]
+    },
+    {
+        "id": 440,
+        "name": "Tarsa",
+        "color": "Red",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 2,
+        "drop_rate": 0,
+        "stats": {
+            "mana": 4,
+            "attack": 1,
+            "ranged": 0,
+            "magic": 0,
+            "armor": 0,
+            "health": 1,
+            "speed": 0
+        },
+        "is_starter": false,
+        "editions": "7",
+        "created_block_num": null,
+        "last_update_tx": null,
+        "total_printed": 35759,
+        "is_promo": false,
+        "tier": 7,
+        "distribution": [
+            {
+                "card_detail_id": 440,
+                "gold": false,
+                "edition": 7,
+                "num_cards": "15438",
+                "total_xp": "34394",
+                "num_burned": 0,
+                "total_burned_xp": 0
+            },
+            {
+                "card_detail_id": 440,
+                "gold": true,
+                "edition": 7,
+                "num_cards": "1083",
+                "total_xp": "1365",
+                "num_burned": 0,
+                "total_burned_xp": 0
+            }
+        ]
+    },
+    {
+        "id": 441,
+        "name": "General Sloan",
+        "color": "White",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 2,
+        "drop_rate": 0,
+        "stats": {
+            "mana": 4,
+            "attack": 0,
+            "ranged": 1,
+            "magic": 0,
+            "armor": 0,
+            "health": 0,
+            "speed": 0
+        },
+        "is_starter": false,
+        "editions": "7",
+        "created_block_num": null,
+        "last_update_tx": null,
+        "total_printed": 36032,
+        "is_promo": false,
+        "tier": 7,
+        "distribution": [
+            {
+                "card_detail_id": 441,
+                "gold": false,
+                "edition": 7,
+                "num_cards": "16144",
+                "total_xp": "34607",
+                "num_burned": "1",
+                "total_burned_xp": "1"
+            },
+            {
+                "card_detail_id": 441,
+                "gold": true,
+                "edition": 7,
+                "num_cards": "1129",
+                "total_xp": "1424",
+                "num_burned": 0,
+                "total_burned_xp": 0
+            }
+        ]
+    },
+    {
+        "id": 442,
+        "name": "Quix the Devious",
+        "color": "Gold",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 4,
+        "drop_rate": 0,
+        "stats": {
+            "mana": 4,
+            "attack": 0,
+            "ranged": -1,
+            "magic": 0,
+            "armor": 0,
+            "health": 0,
+            "speed": -1
+        },
+        "is_starter": false,
+        "editions": "7",
+        "created_block_num": null,
+        "last_update_tx": null,
+        "total_printed": 4040,
+        "is_promo": false,
+        "tier": 7,
+        "distribution": [
+            {
+                "card_detail_id": 442,
+                "gold": false,
+                "edition": 7,
+                "num_cards": "2426",
+                "total_xp": "3879",
+                "num_burned": 0,
+                "total_burned_xp": 0
+            },
+            {
+                "card_detail_id": 442,
+                "gold": true,
+                "edition": 7,
+                "num_cards": "142",
+                "total_xp": "161",
+                "num_burned": 0,
+                "total_burned_xp": 0
+            }
+        ]
+    }
+]

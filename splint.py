@@ -2,11 +2,9 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support.expected_conditions import presence_of_element_located
 from bs4 import BeautifulSoup
-import json, os, time, requests, multiprocessing, random, re
-
+import json, os, time, requests, random, re
+import multiprocessing
 class File:
     def __init__(self, path):
         self.path = path
@@ -201,6 +199,26 @@ class Card:
                 except:
                     return card['stats']['mana']
 
+    def getColor(card_name):
+        for card in Card.allCards:
+            if card_name == card['name']:
+                return card['color']
+
+    def getSummoner(color):
+        cd = []
+        for card in Card.ownerCards:
+            if card['type'] == 'Summoner' and card['color'] == color:
+                cd.append(card)
+        return cd
+
+    def getMonsters(color):
+        cd = []
+        for card in Card.ownerCards:
+            if card['type'] == 'Monster' and card['color'] == color:
+                cd.append(card)
+        return cd
+
+
     def show():
         n = ''
         while (n != 'Q'):
@@ -233,60 +251,61 @@ class Account:
         return self.__email
 
 class AccountManager:
-    try:
-        accountFile = File('data/account.json')
-        account = accountFile.rJSon()
-    except:
-        account = []
+    def __init__(self):
+        try:
+            self.accountFile = File('data/account.json')
+            self.account = self.accountFile.rJSon()
+        except:
+            self.account = []
 
 
-    def add():
+    def add(self):
         os.system('cls')
         email = input('Email: ')
         password = input('Mật khẩu: ')
         account = Account(email, password)
-        AccountManager.account.append(account.toDict())
-        AccountManager.accountFile.wJSon(AccountManager.account)
+        self.account.append(account.toDict())
+        self.accountFile.wJSon(self.account)
 
-    def delete():
+    def delete(self):
         select = None
         while (select != 'B'):
             os.system('cls')
             print('DANH SÁCH TÀI KHOẢN\n')
-            if len(AccountManager.account) > 0:
+            if len(self.account) > 0:
                 j = 1
-                for i in AccountManager.account:
+                for i in self.account:
                     print(f'{j}. {i["mail"]}')
                     j += 1
             else:
                 break
             print('\n[B] Trở lại')
             select = input('>> Chọn: ').upper()
-            if (select.isdigit() and int(select) - 1 < len(AccountManager.account) and int(select) - 1 >= 0):
-                AccountManager.account.pop(int(select) - 1)
-                AccountManager.accountFile.wJSon(AccountManager.account)
+            if (select.isdigit() and int(select) - 1 < len(self.account) and int(select) - 1 >= 0):
+                self.account.pop(int(select) - 1)
+                self.accountFile.wJSon(self.account)
             elif select != 'B':
                 print('Cú pháp không hợp lệ!')
                 time.sleep(1)
             else:
                 select = 'B'
 
-    def show():
+    def show(self):
         n = ''
         while (n != 'Q'):
             os.system('cls')
             print('DANH SÁCH TÀI KHOẢN\n')
-            if len(AccountManager.account) > 0:
+            if len(self.account) > 0:
                 j = 1
-                for i in AccountManager.account:
+                for i in self.account:
                     print(f'{j}. {i["mail"]}')
                     j += 1
                 print("\n[A] Thêm    |    [D] Xoá    |    [Q] Thoát")
                 n = input('>> Chọn: ').upper()
                 if n == 'A':
-                    AccountManager.add()
+                    self.add()
                 elif n == 'D':
-                    AccountManager.delete()
+                    self.delete()
                 elif n != 'Q':
                     print('Cú pháp không hợp lệ!')
                     time.sleep(1)
@@ -295,7 +314,7 @@ class AccountManager:
                 print("\n[A] Thêm    |    [Q] Thoát")
                 n = input('>> Chọn: ').upper()
                 if n == 'A':
-                    AccountManager.add()
+                    self.add()
                 elif n != 'Q':
                     print('Cú pháp không hợp lệ!')
                     time.sleep(1)
@@ -548,7 +567,7 @@ class Team:
             time.sleep(1)
 
     def stringList(li):
-        return f'[{", ".join(li)}]'
+        return '["' + '", "'.join(li) + '"]'
     
     def randomTeam(team):
         if len(team) == 1:
@@ -557,25 +576,47 @@ class Team:
             a = random.randrange(0, len(team))
             return team[a]
 
-    def teamSelector(mana):
+    def randomBot(p_src, mana):
+        mana = int(mana)
+        soup = BeautifulSoup(p_src, 'html.parser')
+        x = soup.find_all(class_='deck-builder-page2__cards')
+        y = x[0].find_all(class_='card-name-name')
+        color = []
+        for i in y:
+            color.append(Card.getColor(i.text))
+
+        color = set(color)
+        color = list(color)
+        color.remove('Gold')
+        monster = Card.getMonsters(color[0])
+        summoner = Card.getSummoner(color[0])
+        p = []
+        r = random.randint(0, len(summoner) - 1)
+        p.append(summoner[r]['name'])
+        i = 0
+        while i <= mana:
+            r = random.randint(0, len(monster) - 1)
+            t = monster[r]
+            if (Team.currentMana(p) + Card.getMana(t['name']) >= mana) or len(p) > 7:
+               break
+            else:
+                p.append(t['name'])
+                monster.pop(r)
+                i  += Card.getMana(t['name'])
+        return p
+
+    def teamSelector(p_src, mana):
         mana = str(mana)
         team = Team.teams.get(mana)
         teamSelected = ''
         if team is not None:
             teamSelected = Team.randomTeam(team)
         else:
-            try:
-                teamDefault = File('data/team_default.json')
-                team = teamDefault.rJSon()
-            except:
-                response = requests.get('https://raw.githubusercontent.com/tmkha/splinterlands/master/team_default.json')
-                team = json.loads(response.text)
-                teamDefault.wJSon(Team.team_def)
-            teamSelected = team[mana][0]
+            teamSelected = Team.randomBot(p_src, mana)
         return Team.stringList(teamSelected)
 
     def checkTeam():
-        if len(Team.teams) <= 20:
+        if len(Team.teams) < 20:
             teamNA = []
             for mana in Team.manaList:
                 if Team.teams.get(mana) == None:
@@ -657,250 +698,239 @@ kết quả có thể sẽ không như mong muốn!''')
                 print('Cú pháp không hợp lệ!')
                 time.sleep(1)
 
-class Battle:
-    def __init__(self):
-        self.team = []
-        self.mana = 0
-        options = webdriver.ChromeOptions()
-        #chrome_options.add_argument("user-data-dir="+filePath)
-        self.driver = webdriver.Chrome('chromedriver', options = options)
+def showLog(log, email):
+    time_log = time.strftime("%H:%M:%S", time.localtime())
+    print(f'[{time_log}] [{email}] {log}')
 
-    def showLog(self, log, email):
-        time_log = time.strftime("%H:%M:%S", time.localtime())
-        print(f'[{time_log}] [{email}] {log}')
 
-    def start(self, account, match):
-        self.account = account
-        self.showLog('Đang khởi động trình duyệt...', self.account['mail'])
-        wait = WebDriverWait(self.driver, 60)
-        self.driver.get('https://splinterlands.com/?p=battle_history')
-        self.driver.find_element(By.ID, 'log_in_button').click()
-        wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, ".modal-body")))
+def battle(account, match):
+    options = webdriver.ChromeOptions()
+    #chrome_options.add_argument("user-data-dir="+filePath)
+    driver = webdriver.Chrome('chromedriver', options = options)
+    showLog('Đang khởi động trình duyệt...', account['mail'])
+    wait = WebDriverWait(driver, 60)
+    driver.get('https://splinterlands.com/?p=battle_history')
+    driver.find_element(By.ID, 'log_in_button').click()
+    wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, ".modal-body")))
+    time.sleep(1)
+    driver.find_element(By.ID, 'email').send_keys(account['mail'])
+    driver.find_element(By.ID, 'password').send_keys(account['pwd'])
+    driver.find_element(By.ID, 'loginBtn').click()
+    try:
+        WebDriverWait(driver, 5).until(EC.visibility_of_element_located(
+            (By.XPATH, '//*[@id="dialog_container"]/div/div/div/div[2]/div[2]/div')))
+        driver.execute_script("document.getElementsByClassName('close')[0].click();")
+    except Exception as e:
+        print(e)
+    driver.get('https://splinterlands.com/?p=battle_history')
+    try:
+        WebDriverWait(driver, 5).until(
+            EC.visibility_of_element_located((By.XPATH, "/html/body/div[3]/div/div/div/div[1]/div[1]")))
+        driver.execute_script("document.getElementsByClassName('modal-close-new')[0].click();")
+    except Exception as e:
+        print(e)
+
+    driver.execute_script('''var row = document.getElementsByClassName('row')[1].innerHTML;
+            var reg = /HOW TO PLAY|PRACTICE|CHALLENGE|RANKED/;
+            var result = row.match(reg);
+            while(result != 'RANKED') {
+                document.getElementsByClassName('slider_btn')[1].click();
+                row = document.getElementsByClassName('row')[1].innerHTML;
+                result = row.match(reg);
+                };''')
+    mana = 0
+
+
+    def findMatch():
         time.sleep(1)
-        self.driver.find_element(By.ID, 'email').send_keys(self.account['mail'])
-        self.driver.find_element(By.ID, 'password').send_keys(self.account['pwd'])
-        self.driver.find_element(By.CSS_SELECTOR,'form.form-horizontal:nth-child(2) > div:nth-child(3) > div:nth-child(1) > button:nth-child(1)').click()
-        try:
-            WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located(
-                (By.XPATH, '//*[@id="dialog_container"]/div/div/div/div[2]/div[2]/div')))
-            self.driver.execute_script("document.getElementsByClassName('close')[0].click();")
-        except:
-            pass
-        self.driver.get('https://splinterlands.com/?p=battle_history')
-        try:
-            WebDriverWait(self.driver, 5).until(
-                EC.visibility_of_element_located((By.XPATH, "/html/body/div[3]/div/div/div/div[1]/div[1]")))
-            self.driver.execute_script("document.getElementsByClassName('modal-close-new')[0].click();")
-        except:
-            pass
+        driver.execute_script("document.getElementsByClassName('big_category_btn red')[0].click();")
+        showLog('Đang tìm đối thủ...', account['mail'])
 
-        self.driver.execute_script('''var row = document.getElementsByClassName('row')[1].innerHTML;
-                var reg = /HOW TO PLAY|PRACTICE|CHALLENGE|RANKED/;
-                var result = row.match(reg);
-                while(result != 'RANKED') {
-                    document.getElementsByClassName('slider_btn')[1].click();
-                    row = document.getElementsByClassName('row')[1].innerHTML;
-                    result = row.match(reg);
-                    };''')
-    
-        checkPoint = 0
-        clone_i = 0
-        for i in range(int(match)):
-            clone_i = i + 1
-            self.showLog(f'Bắt đầu trận thứ [{i + 1}/{match}]', self.account['mail'])
-            wait.until(EC.visibility_of_element_located((By.ID, "battle_category_btn")))
-            saveHistoryPoint = i + 1
-
-            # Save history 1 time every 5 matches
-            if saveHistoryPoint % 5 == 0:
-                time.sleep(3)
-                try:
-                    self.showLog('Đang lưu lịch sử trận đấu...', self.account['mail'])
-                    History.writeHistory(self.driver, 20)
-                    self.showLog('Xong', self.account['mail'])
-                except Exception as e:
-                    self.showLog('Lỗi lưu lịch sử:' + e, self.account['mail'])
-                finally:
-                    checkPoint = saveHistoryPoint
-
-            # Start
-            try:
-                self.checkPoint0(self.account['mail'])
-            except:
-                q = None
-                while (q != 0):
-                    self.driver.refresh()
-                    saveHistoryPoint = self.checkErr()
-                    if saveHistoryPoint != -2: q = self.tryAgain(saveHistoryPoint)
-        time.sleep(3)
-
-        # Save history when time < 5
-        x = clone_i - checkPoint
-        if x > 0:
-            try:
-                self.showLog('Đang lưu lịch sử trận đấu...', self.account['mail'])
-                History.writeHistory(self.driver, x)
-                self.showLog('Xong', self.account['mail'])
-            except:
-                self.showLog('Lỗi lưu lịch sử', self.account['mail'])
-            finally:
-                self.driver.quit()
-        return 'Q'
-
-    def findMatch(self):
-        time.sleep(1)
-        self.driver.execute_script("document.getElementsByClassName('big_category_btn red')[0].click();")
-        self.showLog('Đang tìm đối thủ...', self.account['mail'])
-
-    def joinMatch(self):
+    def joinMatch():
+        nonlocal mana
         wait.until(EC.visibility_of_element_located(
             (By.XPATH, "/html/body/div[3]/div/div/div/div[2]/div[3]/div[2]/button")))
         time.sleep(1)
-        mana = self.driver.find_element(By.CSS_SELECTOR,
-            'div.col-md-3:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)').text
-        self.team = Team.teamSelector(mana)
-        self.showLog('Đang khởi tạo đội hình...', self.account['mail'])
-        self.driver.execute_script("document.getElementsByClassName('btn btn--create-team')[0].click();")
+        mana = driver.find_element(By.CSS_SELECTOR, 'div.col-md-3:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)').text
+        showLog('Đang khởi tạo đội hình...', account['mail'])
+        driver.execute_script("document.getElementsByClassName('btn btn--create-team')[0].click();")
 
-    def createTeam(self):
-        WebDriverWait(self.driver, 60).until(
+    def createTeam():
+        WebDriverWait(driver, 60).until(
             EC.visibility_of_element_located((By.XPATH, '//*[@id="page_container"]/div/div[1]/div')))
-        self.showLog('Đang chọn thẻ bài...', self.account['mail'])
+        showLog('Đang chọn thẻ bài...', account['mail'])
         time.sleep(7)
-        self.driver.execute_script(
-            "var team = " + self.team + ";for (let i = 0; i < team.length; i++) {let card = document.getElementsByClassName('card beta');let cimg = document.getElementsByClassName('card-img');var reg = /[A-Z]\\w+( \\w+'*\\w*)*/;for (let j = 0; j < card.length; j++){let att_card = card[j].innerText;let result = att_card.match(reg);let name = result[0];if (name == team[i]){cimg[j].click();break;}}}document.getElementsByClassName('btn-green')[0].click();")
+        team = Team.teamSelector(driver.page_source, mana)
+        script = "var team = "+ team + ";for (let i = 0; i < team.length; i++) {let card = document.getElementsByClassName('card beta');let cimg = document.getElementsByClassName('card-img');var reg = /[A-Z]\\w+( \\w+'*\\w*)*/;for (let j = 0; j < card.length; j++){let att_card = card[j].innerText;let result = att_card.match(reg);let name = result[0];if (name == team[i]){cimg[j].click();break;}}}document.getElementsByClassName('btn-green')[0].click();"
+        driver.execute_script(script)
 
-    def startMatch(self):
-        self.showLog('Đang chờ đối thủ...', self.account['mail'])
-        WebDriverWait(self.driver, 150).until(EC.visibility_of_element_located((By.CSS_SELECTOR, '#btnRumble')))
-        self.driver.execute_script("document.getElementsByClassName('btn-battle')[0].click()")
-        self.showLog('Đang bắt đầu trận...', self.account['mail'])
+
+    def startMatch():
+        showLog('Đang chờ đối thủ...', account['mail'])
+        WebDriverWait(driver, 150).until(EC.visibility_of_element_located((By.CSS_SELECTOR, '#btnRumble')))
+        driver.execute_script("document.getElementsByClassName('btn-battle')[0].click()")
+        showLog('Đang bắt đầu trận...', account['mail'])
         time.sleep(3.5)
-        self.showLog('Đang bỏ qua...', self.account['mail'])
-        self.driver.execute_script("document.getElementsByClassName('btn-battle')[1].click()")
+        showLog('Đang bỏ qua...', account['mail'])
+        driver.execute_script("document.getElementsByClassName('btn-battle')[1].click()")
 
-    def skipMatch(self):
-        WebDriverWait(self.driver, 10).until(
+    def skipMatch():
+        WebDriverWait(driver, 10).until(
             EC.visibility_of_element_located((By.XPATH, '//*[@id="dialog_container"]/div/div/div/div[1]/h1')))
-        self.driver.execute_script("document.getElementsByClassName('btn btn--done')[0].click();")
-        self.showLog('Kết thúc trận đấu', self.account['mail'])
+        driver.execute_script("document.getElementsByClassName('btn btn--done')[0].click();")
+        showLog('Kết thúc trận đấu', account['mail'])
 
-    def checkErr(self):
+    def checkErr():
         try:
-            WebDriverWait(self.driver, 2).until(
-                EC.visibility_of_element_located((By.XPATH, '//*[@id="play_now"]/div/div/div/div/button')))
+            WebDriverWait(driver, 2).until(EC.visibility_of_element_located((By.XPATH, '//*[@id="play_now"]/div/div/div/div/button')))
             return -1
         except:
             pass
         try:
-            WebDriverWait(self.driver, 1).until(EC.visibility_of_element_located((By.ID, "battle_category_btn")))
+            WebDriverWait(driver, 1).until(EC.visibility_of_element_located((By.ID, "battle_category_btn")))
             return 0
         except:
             pass
         try:
-            WebDriverWait(self.driver, 1).until(EC.visibility_of_element_located(
-                (By.XPATH, "/html/body/div[3]/div/div/div/div[2]/div[3]/div[2]/button")))
+            WebDriverWait(driver, 1).until(EC.visibility_of_element_located((By.XPATH, "/html/body/div[3]/div/div/div/div[2]/div[3]/div[2]/button")))
             return 1
         except:
             pass
         try:
-            WebDriverWait(self.driver, 1).until(
-                EC.visibility_of_element_located((By.XPATH, '//*[@id="page_container"]/div/div[1]/div')))
+            WebDriverWait(driver, 1).until(EC.visibility_of_element_located((By.XPATH, '//*[@id="page_container"]/div/div[1]/div')))
             return 2
         except:
             pass
         try:
-            WebDriverWait(self.driver, 1).until(EC.visibility_of_element_located((By.CSS_SELECTOR, '#btnRumble')))
+            WebDriverWait(driver, 1).until(EC.visibility_of_element_located((By.CSS_SELECTOR, '#btnRumble')))
             return 3
         except:
             pass
         try:
-            WebDriverWait(self.driver, 1.5).until(
+            WebDriverWait(driver, 1.5).until(
                 EC.visibility_of_element_located((By.XPATH, '//*[@id="dialog_container"]/div/div/div/div[1]/h1')))
             return 4
         except:
             pass
         return -2
 
-    def checkPoint0(self):
+    def checkPoint0():
         try:
-            self.findMatch()
-            self.checkPoint1()
+            findMatch()
+            checkPoint1()
             return 0
         except:
             return -1
 
-    def checkPoint1(self):
+    def checkPoint1():
         try:
-            self.joinMatch()
-            self.checkPoint2()
+            joinMatch()
+            checkPoint2()
             return 0
         except:
             return -1
 
-    def checkPoint2(self):
+    def checkPoint2():
         try:
-            self.createTeam()
-            self.checkPoint3()
+            createTeam()
+            checkPoint3()
             return 0
         except:
             return -1
 
-    def checkPoint3(self):
+    def checkPoint3():
         try:
-            self.startMatch()
-            self.checkPoint4()
+            startMatch()
+            checkPoint4()
             return 0
         except:
             return -1
 
-    def checkPoint4(self):
+    def checkPoint4():
         try:
-            self.skipMatch()
+            skipMatch()
             return 0
         except:
             return -1
 
-    def tryAgain(self, x):
+    def tryAgain(x):
         c = -1
         if x == -1:
-            self.driver.get('https://splinterlands.com/?p=battle_history')
-            self.checkPoint0()
+            driver.get('https://splinterlands.com/?p=battle_history')
+            checkPoint0()
         elif x == 0:
-            c = self.checkPoint0()
+            c = checkPoint0()
         elif x == 1:
-            c = self.checkPoint1()
+            c = checkPoint1()
         elif x == 2:
-            c = self.checkPoint2()
+            c = checkPoint2()
         elif x == 3:
-            c = self.checkPoint3()
+            c = checkPoint3()
         elif x == 3:
-            c = self.checkPoint4()
+            c = checkPoint4()
         return c
 
+    checkPoint = 0
+    clone_i = 0
+    for i in range(int(match)):
+        clone_i = i + 1
+        showLog(f'Bắt đầu trận thứ [{i + 1}/{match}]', account['mail'])
+        wait.until(EC.visibility_of_element_located((By.ID, "battle_category_btn")))
+        saveHistoryPoint = i + 1
 
+        # Save history 1 time every 5 matches
+        if saveHistoryPoint % 5 == 0:
+            time.sleep(3)
+            try:
+                showLog('Đang lưu lịch sử trận đấu...', account['mail'])
+                History.writeHistory(driver, 20)
+                showLog('Xong', account['mail'])
+            except Exception as e:
+                showLog('Lỗi lưu lịch sử:' + e, account['mail'])
+            finally:
+                checkPoint = saveHistoryPoint
 
-
-class MultiBattle(Battle):
-    def __init__(self, account_list):
-        self.account_list = account_list
-
-    def run(self, match):
+        # Start
         try:
-            proc = {}
-            for i in range(len(self.account_list)):
-                keys = 'p' + str(i + 1)
-                proc[keys] = multiprocessing.Process(target=self.start, args=(self.account_list[i], match))
-            for b in proc:
-                proc[b].start()
-            response = requests.get(
-                'https://raw.githubusercontent.com/tmkha/Splint/main/splint.py')
-            if response:
-                File('splint.py').wText(response.text)
-            for k in proc:
-                proc[k].join()
+            checkPoint0(account['mail'])
+        except:
+            q = None
+            while (q != 0):
+                driver.refresh()
+                saveHistoryPoint = checkErr()
+                if saveHistoryPoint != -2: q = tryAgain(saveHistoryPoint)
+    time.sleep(3)
+
+    # Save history when time < 5
+    x = clone_i - checkPoint
+    if x > 0:
+        try:
+            showLog('Đang lưu lịch sử trận đấu...', account['mail'])
+            History.writeHistory(driver, x)
+            showLog('Xong', account['mail'])
+        except Exception as e:
+            showLog('Lỗi lưu lịch sử:' + e, account['mail'])
         finally:
-            os.remove('splint.py')
+            os.system('pause')
+            #driver.quit()
+    return 'Q'
+
+def mbattle(account_list, match):
+    try:
+        proc = {}
+        for i in range(len(account_list)):
+            keys = 'p' + str(i + 1)
+            proc[keys] = multiprocessing.Process(target=battle, args=(account_list[i], match))
+        for b in proc:
+            proc[b].start()
+        response = requests.get(
+            'https://raw.githubusercontent.com/tmkha/Splint/main/splint.py')
+        if response:
+            File('splint.py').wText(response.text)
+        for k in proc:
+            proc[k].join()
+    finally:
+        os.remove('splint.py')
 
 class Launcher:
     logo = '''
@@ -921,6 +951,7 @@ class Launcher:
 
     def menu():
         Launcher.update()
+        accountManager = AccountManager()
         select = None
         while (select != 'Q'):
             os.system('cls')
@@ -934,7 +965,7 @@ class Launcher:
             elif select == '2':
                 Team.show()
             elif select == '3':
-                AccountManager.show()
+                accountManager.show()
             elif select == '4':
                 Card.show()
             elif select == '5':
@@ -952,7 +983,8 @@ class Launcher:
             time.sleep(1)
 
     def battle():
-        account_list = AccountManager.account
+        accountManager = AccountManager()
+        account_list = accountManager.account
         account_selected = []
         if len(account_list) > 0:
             select = None
@@ -988,9 +1020,9 @@ class Launcher:
                             print('Vui lòng nhập một số!')
                             match = input('Số trận đấu: ')
                         if len(account_selected) == 1:
-                            Battle().start(account_selected[0], match)
+                            battle(account_selected[0], match)
                         else:
-                            MultiBattle(account_selected).run(match)
+                            mbattle(account_selected).run(match)
                         os.system('cls')
 
                     elif select == 'S' and len(account_selected) == 0:
@@ -1054,6 +1086,7 @@ class Launcher:
                 pass
 
     def feedback():
+        os.system('cls')
         print('Mô tả nội dung phản hồi')
         print('[Q] Thoát\n')
         content = input('>> ')
