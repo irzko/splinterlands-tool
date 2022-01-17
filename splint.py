@@ -512,9 +512,6 @@ class Team:
                 if len(teamAdding) > 1:
                     temp.append(card_selected)
                     monster_card.remove(card_selected)
-                # if len(teamAdding) == 1:
-                #     color = Card.getColor(teamAdding[0])
-                #     monster_card = Card.sortNames(Card.getMonsters(color))
             elif (select == 'S'):
                 if (len(teamAdding) == 0):
                     print('Đội hình trống! Thử lại.')
