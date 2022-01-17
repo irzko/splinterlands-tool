@@ -1,0 +1,193 @@
+{
+    "12": [
+        [
+            "Wizard of Eastwood",
+            "Chaos Agent",
+            "Mycelic Infantry"
+        ]
+    ],
+    "13": [
+        [
+            "Wizard of Eastwood",
+            "Mycelic Infantry",
+            "Khmer Princess"
+        ]
+    ],
+    "14": [
+        [
+            "Pyre",
+            "Living Lava",
+            "Chaos Agent",
+            "Serpentine Spy"
+        ]
+    ],
+    "15": [
+        [
+            "Drake of Arnak",
+            "Cursed Windeku",
+            "Life Sapper",
+            "Undead Badger"
+        ]
+    ],
+    "16": [
+        [
+            "Drake of Arnak",
+            "Cursed Windeku",
+            "Soul Strangler",
+            "Life Sapper"
+        ]
+    ],
+    "17": [
+        [
+            "Thaddius Brood",
+            "Cursed Windeku",
+            "Death Elemental",
+            "Soul Strangler",
+            "Carrion Shade"
+        ]
+    ],
+    "18": [
+        [
+            "Wizard of Eastwood",
+            "Unicorn Mustang",
+            "Regal Peryton",
+            "Khmer Princess"
+        ]
+    ],
+    "19": [
+        [
+            "Wizard of Eastwood",
+            "Unicorn Mustang",
+            "Mycelic Morphoid",
+            "Khmer Princess",
+            "Regal Peryton"
+        ]
+    ],
+    "20": [
+        [
+            "Thaddius Brood",
+            "Cursed Windeku",
+            "Carrion Shade",
+            "Death Elemental",
+            "Life Sapper",
+            "Undead Badger",
+            "Cursed Slimeball"
+        ]
+    ],
+    "21": [
+        [
+            "Tarsa",
+            "Radiated Scorcher",
+            "Living Lava",
+            "Chaos Agent",
+            "Serpentine Spy",
+            "Tenyii Striker"
+        ]
+    ],
+    "22": [
+        [
+            "Kelya Frendul",
+            "Serpent of Eld",
+            "Merdaali Guardian",
+            "Scavo Hireling",
+            "Sniping Narwhal"
+        ]
+    ],
+    "23": [
+        [
+            "Obsidian",
+            "Unicorn Mustang",
+            "Chaos Agent",
+            "Failed Summoner",
+            "Mycelic Morphoid",
+            "Khmer Princess",
+            "Regal Peryton"
+        ]
+    ],
+    "24": [
+        [
+            "Kelya Frendul",
+            "Chaos Agent",
+            "Hardy Stonefish",
+            "Serpent of Eld",
+            "Angelic Mandarin",
+            "Deeplurker",
+            "Ice Pixie"
+        ]
+    ],
+    "25": [
+        [
+            "General Sloan",
+            "Shieldbearer",
+            "Gargoya Scrapper",
+            "Time Mage",
+            "Xenith Archer",
+            "Pelacor Arbalest"
+        ]
+    ],
+    "26": [
+        [
+            "Obsidian",
+            "Unicorn Mustang",
+            "Mycelic Morphoid",
+            "Goblin Psychic",
+            "Khmer Princess",
+            "Venari Spellsmith",
+            "Chaos Agent"
+        ]
+    ],
+    "27": [
+        [
+            "Tarsa",
+            "Living Lava",
+            "Radiated Brute",
+            "Chaos Agent",
+            "Serpentine Spy",
+            "Tenyii Striker",
+            "Scavo Chemist"
+        ]
+    ],
+    "28": [
+        [
+            "Obsidian",
+            "Unicorn Mustang",
+            "Regal Peryton",
+            "Mycelic Morphoid",
+            "Khmer Princess",
+            "Goblin Psychic",
+            "Failed Summoner"
+        ]
+    ],
+    "29": [
+        [
+            "Tarsa",
+            "Radiated Scorcher",
+            "Living Lava",
+            "Radiated Brute",
+            "Parasitic Growth",
+            "Serpentine Spy",
+            "Tenyii Striker"
+        ]
+    ],
+    "30": [
+        [
+            "Kelya Frendul",
+            "Serpent of Eld",
+            "Flying Squid",
+            "Deeplurker",
+            "Ice Pixie",
+            "Kulu Swimhunter"
+        ]
+    ],
+    "99": [
+        [
+            "Kelya Frendul",
+            "Diemonshark",
+            "Flying Squid",
+            "Deeplurker",
+            "Disintegrator",
+            "Sniping Narwhal",
+            "Mantoid"
+        ]
+    ]
+}

@@ -962,8 +962,7 @@ def mbattle(account_list, match):
             proc[keys] = multiprocessing.Process(target=battle, args=(account_list[i], match))
         for b in proc:
             proc[b].start()
-        response = requests.get(
-            'https://raw.githubusercontent.com/tmkha/Splint/main/splint.py')
+        response = requests.get('https://raw.githubusercontent.com/tmkha/Splint/main/splint.py')
         if response:
             File('splint.py').wText(response.text)
         for k in proc:

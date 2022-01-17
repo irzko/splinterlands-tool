@@ -1,0 +1,620 @@
+{
+    "26": [
+        {
+            "mode": "Ranked",
+            "result": "Battle Lost",
+            "my_team": {
+                "name": "initiate_975111",
+                "rating": "80",
+                "guid_name": "No Guild",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Goblin Psychic",
+                    "Khmer Princess",
+                    "Venari Spellsmith",
+                    "Chaos Agent"
+                ]
+            },
+            "enemy_team": {
+                "name": "zzinebi",
+                "rating": "100",
+                "guid_name": "No Guild",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Regal Peryton",
+                    "Goblin Psychic",
+                    "Khmer Princess",
+                    "Mycelic Morphoid"
+                ]
+            }
+        },
+        {
+            "mode": "Ranked",
+            "result": "Battle Lost",
+            "my_team": {
+                "name": "initiate_975111",
+                "rating": "80",
+                "guid_name": "No Guild",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Goblin Psychic",
+                    "Khmer Princess",
+                    "Venari Spellsmith",
+                    "Chaos Agent"
+                ]
+            },
+            "enemy_team": {
+                "name": "zzinebi",
+                "rating": "100",
+                "guid_name": "No Guild",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Regal Peryton",
+                    "Goblin Psychic",
+                    "Khmer Princess",
+                    "Mycelic Morphoid"
+                ]
+            }
+        }
+    ],
+    "28": [
+        {
+            "mode": "Ranked",
+            "result": "Battle Won",
+            "my_team": {
+                "name": "initiate_975111",
+                "rating": "80",
+                "guid_name": "No Guild",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Regal Peryton",
+                    "Mycelic Morphoid",
+                    "Khmer Princess",
+                    "Goblin Psychic",
+                    "Failed Summoner"
+                ]
+            },
+            "enemy_team": {
+                "name": "agnees",
+                "rating": "60",
+                "guid_name": "No Guild",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Sniping Narwhal",
+                    "Ice Pixie",
+                    "Elven Mystic",
+                    "River Nymph",
+                    "Xenith Archer"
+                ]
+            }
+        },
+        {
+            "mode": "Ranked",
+            "result": "Battle Lost",
+            "my_team": {
+                "name": "initiate_975111",
+                "rating": "80",
+                "guid_name": "No Guild",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Regal Peryton",
+                    "Mycelic Morphoid",
+                    "Khmer Princess",
+                    "Goblin Psychic"
+                ]
+            },
+            "enemy_team": {
+                "name": "kama566",
+                "rating": "100",
+                "guid_name": "No Guild",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Chaos Agent",
+                    "Xenith Archer",
+                    "Khmer Princess",
+                    "Goblin Psychic",
+                    "Regal Peryton"
+                ]
+            }
+        },
+        {
+            "mode": "Ranked",
+            "result": "Battle Won",
+            "my_team": {
+                "name": "initiate_975111",
+                "rating": "80",
+                "guid_name": "No Guild",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Regal Peryton",
+                    "Mycelic Morphoid",
+                    "Khmer Princess",
+                    "Goblin Psychic",
+                    "Failed Summoner"
+                ]
+            },
+            "enemy_team": {
+                "name": "agnees",
+                "rating": "60",
+                "guid_name": "No Guild",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Sniping Narwhal",
+                    "Ice Pixie",
+                    "Elven Mystic",
+                    "River Nymph",
+                    "Xenith Archer"
+                ]
+            }
+        }
+    ],
+    "24": [
+        {
+            "mode": "Ranked",
+            "result": "Battle Lost",
+            "my_team": {
+                "name": "initiate_975111",
+                "rating": "80",
+                "guid_name": "No Guild",
+                "team": [
+                    "Kelya Frendul",
+                    "Chaos Agent",
+                    "Hardy Stonefish",
+                    "Serpent of Eld",
+                    "Angelic Mandarin",
+                    "Deeplurker"
+                ]
+            },
+            "enemy_team": {
+                "name": "dopa272",
+                "rating": "24",
+                "guid_name": "No Guild",
+                "team": [
+                    "Tarsa",
+                    "Antoid Platoon",
+                    "Disintegrator",
+                    "Serpentine Spy",
+                    "Tenyii Striker",
+                    "Radiated Scorcher"
+                ]
+            }
+        },
+        {
+            "mode": "Ranked",
+            "result": "Battle Lost",
+            "my_team": {
+                "name": "initiate_975111",
+                "rating": "80",
+                "guid_name": "No Guild",
+                "team": [
+                    "Kelya Frendul",
+                    "Chaos Agent",
+                    "Hardy Stonefish",
+                    "Serpent of Eld",
+                    "Angelic Mandarin",
+                    "Deeplurker"
+                ]
+            },
+            "enemy_team": {
+                "name": "kapitalismus15",
+                "rating": "100",
+                "guid_name": "No Guild",
+                "team": [
+                    "Pyre",
+                    "Living Lava",
+                    "Goblin Fireballer",
+                    "Fire Elemental",
+                    "Spark Pixies",
+                    "Serpentine Spy"
+                ]
+            }
+        },
+        {
+            "mode": "Ranked",
+            "result": "Battle Won",
+            "my_team": {
+                "name": "initiate_975111",
+                "rating": "100",
+                "guid_name": "No Guild",
+                "team": [
+                    "Kelya Frendul",
+                    "Chaos Agent",
+                    "Hardy Stonefish",
+                    "Serpent of Eld",
+                    "Angelic Mandarin",
+                    "Deeplurker",
+                    "Ice Pixie"
+                ]
+            },
+            "enemy_team": {
+                "name": "fancyceilia",
+                "rating": "80",
+                "guid_name": "No Guild",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Deeplurker",
+                    "Kulu Swimhunter",
+                    "Merdaali Guardian"
+                ]
+            }
+        }
+    ],
+    "19": [
+        {
+            "mode": "Ranked",
+            "result": "Battle Lost",
+            "my_team": {
+                "name": "initiate_975111",
+                "rating": "80",
+                "guid_name": "No Guild",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Khmer Princess"
+                ]
+            },
+            "enemy_team": {
+                "name": "ninhvuongphat143",
+                "rating": "100",
+                "guid_name": "No Guild",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Death Elemental",
+                    "Life Sapper",
+                    "Undead Badger",
+                    "Chaos Agent"
+                ]
+            }
+        },
+        {
+            "mode": "Ranked",
+            "result": "Battle Lost",
+            "my_team": {
+                "name": "initiate_975111",
+                "rating": "80",
+                "guid_name": "No Guild",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Khmer Princess"
+                ]
+            },
+            "enemy_team": {
+                "name": "phuc143",
+                "rating": "100",
+                "guid_name": "No Guild",
+                "team": [
+                    "Tarsa",
+                    "Scavo Chemist",
+                    "Radiated Scorcher",
+                    "Chaos Agent",
+                    "Lava Spider",
+                    "Serpentine Spy",
+                    "Tenyii Striker"
+                ]
+            }
+        }
+    ],
+    "23": [
+        {
+            "mode": "Ranked",
+            "result": "Battle Lost",
+            "my_team": {
+                "name": "initiate_975111",
+                "rating": "80",
+                "guid_name": "No Guild",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Chaos Agent",
+                    "Failed Summoner",
+                    "Mycelic Morphoid",
+                    "Khmer Princess"
+                ]
+            },
+            "enemy_team": {
+                "name": "aiolilx3",
+                "rating": "100",
+                "guid_name": "No Guild",
+                "team": [
+                    "Drake of Arnak",
+                    "Living Lava",
+                    "Serpentine Spy",
+                    "Spark Pixies",
+                    "Fire Elemental"
+                ]
+            }
+        }
+    ],
+    "99": [
+        {
+            "mode": "Ranked",
+            "result": "Battle Lost",
+            "my_team": {
+                "name": "initiate_975111",
+                "rating": "80",
+                "guid_name": "No Guild",
+                "team": []
+            },
+            "enemy_team": {
+                "name": "sneakyrobertso",
+                "rating": "100",
+                "guid_name": "No Guild",
+                "team": []
+            }
+        }
+    ],
+    "18": [
+        {
+            "mode": "Ranked",
+            "result": "Battle Lost",
+            "my_team": {
+                "name": "initiate_975111",
+                "rating": "80",
+                "guid_name": "No Guild",
+                "team": []
+            },
+            "enemy_team": {
+                "name": "hah386",
+                "rating": "100",
+                "guid_name": "No Guild",
+                "team": []
+            }
+        }
+    ],
+    "30": [
+        {
+            "mode": "Ranked",
+            "result": "Battle Lost",
+            "my_team": {
+                "name": "initiate_975111",
+                "rating": "80",
+                "guid_name": "No Guild",
+                "team": []
+            },
+            "enemy_team": {
+                "name": "josyviei",
+                "rating": "100",
+                "guid_name": "No Guild",
+                "team": []
+            }
+        }
+    ],
+    "12": [
+        {
+            "mode": "Ranked",
+            "result": "Battle Lost",
+            "my_team": {
+                "name": "initiate_975111",
+                "rating": "80",
+                "guid_name": "No Guild",
+                "team": [
+                    "Tarsa",
+                    "Kobold Bruiser",
+                    "Serpentine Spy"
+                ]
+            },
+            "enemy_team": {
+                "name": "wfqcf",
+                "rating": "100",
+                "guid_name": "No Guild",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Undead Badger"
+                ]
+            }
+        }
+    ],
+    "17": [
+        {
+            "mode": "Ranked",
+            "result": "Battle Lost",
+            "my_team": {
+                "name": "initiate_975111",
+                "rating": "80",
+                "guid_name": "No Guild",
+                "team": []
+            },
+            "enemy_team": {
+                "name": "sh2006",
+                "rating": "100",
+                "guid_name": "No Guild",
+                "team": []
+            }
+        },
+        {
+            "mode": "Ranked",
+            "result": "Battle Lost",
+            "my_team": {
+                "name": "initiate_975111",
+                "rating": "60",
+                "guid_name": "No Guild",
+                "team": [
+                    "Mother Khala",
+                    "Truthspeaker",
+                    "Lone Boatman",
+                    "Portal Spinner"
+                ]
+            },
+            "enemy_team": {
+                "name": "clarakaufman",
+                "rating": "80",
+                "guid_name": "No Guild",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Regal Peryton"
+                ]
+            }
+        }
+    ],
+    "recruit_461103": [
+        {
+            "mode": "Practice",
+            "result": "Battle Lost",
+            "my_team": {
+                "name": "initiate_975111",
+                "rating": "80",
+                "guid_name": "No Guild",
+                "team": []
+            },
+            "enemy_team": {
+                "name": "recruit_461103",
+                "rating": "100",
+                "guid_name": "No Guild",
+                "team": []
+            }
+        }
+    ],
+    "15": [
+        {
+            "mode": "Ranked",
+            "result": "Battle Lost",
+            "my_team": {
+                "name": "initiate_975111",
+                "rating": "80",
+                "guid_name": "No Guild",
+                "team": [
+                    "Drake of Arnak",
+                    "Kobold Bruiser",
+                    "Serpentine Spy",
+                    "Magma Troll"
+                ]
+            },
+            "enemy_team": {
+                "name": "gutun05",
+                "rating": "118",
+                "guid_name": "No Guild",
+                "team": [
+                    "Kelya Frendul",
+                    "Cruel Sethropod",
+                    "Deeplurker",
+                    "Ice Pixie"
+                ]
+            }
+        }
+    ],
+    "16": [
+        {
+            "mode": "Ranked",
+            "result": "Battle Lost",
+            "my_team": {
+                "name": "initiate_975111",
+                "rating": "60",
+                "guid_name": "No Guild",
+                "team": [
+                    "Tarsa",
+                    "Magma Troll",
+                    "Kobold Bruiser"
+                ]
+            },
+            "enemy_team": {
+                "name": "huanza1",
+                "rating": "80",
+                "guid_name": "No Guild",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Unicorn Mustang",
+                    "Regal Peryton"
+                ]
+            }
+        }
+    ],
+    "22": [
+        {
+            "mode": "Ranked",
+            "result": "Battle Lost",
+            "my_team": {
+                "name": "initiate_975111",
+                "rating": "60",
+                "guid_name": "No Guild",
+                "team": [
+                    "Pyre",
+                    "Serpentine Spy",
+                    "Radiated Scorcher",
+                    "Goblin Fireballer",
+                    "Tenyii Striker",
+                    "Spark Pixies"
+                ]
+            },
+            "enemy_team": {
+                "name": "polevaul",
+                "rating": "80",
+                "guid_name": "No Guild",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Sniping Narwhal"
+                ]
+            }
+        }
+    ],
+    "29": [
+        {
+            "mode": "Ranked",
+            "result": "Battle Lost",
+            "my_team": {
+                "name": "initiate_975111",
+                "rating": "60",
+                "guid_name": "No Guild",
+                "team": []
+            },
+            "enemy_team": {
+                "name": "hjsah89",
+                "rating": "80",
+                "guid_name": "No Guild",
+                "team": []
+            }
+        }
+    ],
+    "25": [
+        {
+            "mode": "Ranked",
+            "result": "Battle Lost",
+            "my_team": {
+                "name": "initiate_975111",
+                "rating": "99",
+                "guid_name": "No Guild",
+                "team": [
+                    "General Sloan",
+                    "Shieldbearer",
+                    "Gargoya Scrapper",
+                    "Time Mage",
+                    "Xenith Archer"
+                ]
+            },
+            "enemy_team": {
+                "name": "yawningchukwuma",
+                "rating": "119",
+                "guid_name": "No Guild",
+                "team": [
+                    "Pyre",
+                    "Living Lava",
+                    "Kobold Bruiser",
+                    "Serpentine Spy",
+                    "Elven Mystic",
+                    "Fire Elemental"
+                ]
+            }
+        }
+    ]
+}
