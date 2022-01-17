@@ -1,3 +1,4 @@
+from turtle import color
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -10,12 +11,12 @@ class File:
         self.path = path
 
     def wText(self, content):
-        with open(self.path, 'w') as file:
+        with open(self.path, 'w', encoding='utf-8') as file:
             file.write(content)
             file.close()
 
     def wJSon(self, content):
-        with open(self.path, 'w') as file:
+        with open(self.path, 'w', encoding='utf-8') as file:
             json.dump(content, file, indent=4)
             file.close()
 
@@ -55,18 +56,13 @@ class Card:
     def sortNames(list_card):
         return sorted(Card.getNames(list_card))
 
-    def showNames(list_card='owner'):
-        if list_card == 'owner':
-            typeOfListCard = Card.ownerCards
-            length = len(typeOfListCard)
-        elif list_card == 'all':
-            typeOfListCard = Card.allCards
-            length = len(typeOfListCard)
-        elif list_card == 'na':
-            typeOfListCard = Card.cardNotAvailable()
-            length = len(typeOfListCard)
-        listOfNames = Card.sortNames(typeOfListCard)
-        numOfRow = length // 4
+    def showNames(typeOfListCard, li = True, start=0):
+        if li:
+            listOfNames = Card.sortNames(typeOfListCard)
+        else:
+            listOfNames = typeOfListCard
+        length = len(typeOfListCard)
+        numOfRow = (length // 4)
         numOfRedundantNames = length % 4
         columnName = [] 
         listIndex = []
@@ -87,15 +83,16 @@ class Card:
         columnName.append(listOfNames[a:b])
         indexLastRow = ((1, 1, 1), (2, 2, 2), (2, 3, 3), (2, 3, 4))
 
-        for i in range(numOfRow):
+        for row in range(numOfRow):
             index = indexLastRow[numOfRedundantNames]
+            i = row + start
             print(
-                f'{i + 1:>3} {columnName[0][i]:<23}{i + index[0] + numOfRow:>3} {columnName[1][i]:<23}{i + index[1] + numOfRow * 2:>3} {columnName[2][i]:<23}{i + index[2] + numOfRow * 3:>3} {columnName[3][i]:<23}')
-
+                f'{i + 1:>3} {columnName[0][row]:<23}{i + index[0] + numOfRow:>3} {columnName[1][row]:<23}{i + index[1] + numOfRow * 2:>3} {columnName[2][row]:<23}{i + index[2] + numOfRow * 3:>3} {columnName[3][row]:<23}')
             
         if numOfRedundantNames != 0:
-            for i in range(len(listOfRedundantNames)):
-                print(f'{listIndex[i]:>3} {listOfRedundantNames[i]:<23}', end='')
+            for row in range(len(listOfRedundantNames)):
+                i = listIndex[row] + start
+                print(f'{i:>3} {listOfRedundantNames[row]:<23}', end='')
         print()
 
 
@@ -115,7 +112,7 @@ class Card:
             os.system('cls')
             listName = Card.sortNames(Card.cardNotAvailable())
             cardNA = Card.cardNotAvailable()
-            Card.showNames('na')
+            Card.showNames(Card.cardNotAvailable())
             print('_' * 112)
             if card_added is not None:
                 print(f'Đã thêm "{card_added}"')
@@ -144,7 +141,7 @@ class Card:
         while (n != 'Q'):
             listName = Card.sortNames(Card.ownerCards)
             os.system('cls')
-            Card.showNames('owner')
+            Card.showNames(Card.ownerCards)
             print('_' * 112)
             if cardDeleted is not None:
                 print(f'Đã xoá "{cardDeleted}"')
@@ -175,8 +172,9 @@ class Card:
                 card = i.copy()
                 break
         print(f'{"ID:":<10}{card["id"]}')
-        print(f'{"Name:":<10}{card["name"]}')
-        print(f'{"Color:":<10}{card["type"]}')
+        print(f'{"Name:":<10}{card["name"]}')            
+        print(f'{"Color:":<10}{card["color"]}')
+        print(f'{"Type:":<10}{card["type"]}')
         print(f'{"Sub type:":<10}{card["sub_type"]}')
         print(f'{"Rarity:":<10}{card["rarity"]}')
         print('_' * 25)
@@ -204,18 +202,28 @@ class Card:
             if card_name == card['name']:
                 return card['color']
 
-    def getSummoner(color):
+    def getSummoner(color=None):
         cd = []
-        for card in Card.ownerCards:
-            if card['type'] == 'Summoner' and card['color'] == color:
-                cd.append(card)
+        if color == None:
+            for card in Card.ownerCards:
+                if card['type'] == 'Summoner':
+                    cd.append(card)
+        else:
+            for card in Card.ownerCards:
+                if card['type'] == 'Summoner' and card['color'] == color:
+                    cd.append(card)
         return cd
 
-    def getMonsters(color):
+    def getMonsters(color=None):
         cd = []
-        for card in Card.ownerCards:
-            if card['type'] == 'Monster' and card['color'] == color:
-                cd.append(card)
+        if color == None:
+            for card in Card.ownerCards:
+                if card['type'] == 'Monster':
+                    cd.append(card)
+        else:
+            for card in Card.ownerCards:
+                if card['type'] == 'Monster' and card['color'] == color:
+                    cd.append(card)
         return cd
 
 
@@ -223,7 +231,7 @@ class Card:
         n = ''
         while (n != 'Q'):
             os.system('cls')
-            Card.showNames('owner')
+            Card.showNames(Card.ownerCards)
             print('_' * 112)
             print('\nNhập số của thẻ để xem chi tiết')
             print('[A] Thêm    |    [D] Xoá    |    [Q]Thoát')
@@ -356,15 +364,9 @@ class History:
                             if History.history[mana][i]['my_team']['team'] == team:
                                 result = History.history[mana][i]['result']
                                 if result[7:] == 'Lost':
-                                    print('\n> [', end="")
+                                    print(f'\n{i}. [', end="")
                                     print(", ".join(History.history[mana][i]['enemy_team']['team']), end="")
                                     print(']')
-                                    listNumCard = []
-                                    listName = Team.numOfCard()
-                                    for k in History.history[mana][i]['enemy_team']['team']:
-                                        listNumCard.append(str(listName.get(k)))
-                                    num = ":".join(listNumCard)
-                                    print(f'--> Số thứ tự [{num}]\n')
                                     print('-' * 120)
                 else:
                     print('\n\t\t\t\t\t\tLỊCH SỬ THUA\n')
@@ -455,7 +457,7 @@ class Team:
     except:
         teams = {}
     manaList = ('12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '99')
-
+ 
     def inputMana():
         mana = input('>> Mana: ')
         while (not mana.isdigit() or not (mana in Team.manaList)):
@@ -482,10 +484,21 @@ class Team:
         mana = Team.inputMana()
         select = ''
         teamAdding = []
-        listName = Card.sortNames(Card.ownerCards)
+        listName = None
+        summoner_card = Card.sortNames(Card.getSummoner())
+        monster_card = Card.sortNames(Card.getMonsters())
+        temp = []
         while (select != 'Q'):
             os.system('cls')
-            Card.showNames()
+            print()
+            if len(teamAdding) == 0:
+                print('CHỌN THẺ SUMMONER'.center(120))
+                Card.showNames(summoner_card, False)
+                listName = summoner_card
+            else:
+                print('CHỌN THẺ MONSTER'.center(120))
+                Card.showNames(monster_card, False)
+                listName = monster_card
             print("\n")
             print(f'Mana: [{Team.currentMana(teamAdding)}/{mana}]')
             print('\n'.join(teamAdding))
@@ -494,7 +507,14 @@ class Team:
             select = input('>> Chọn: ').upper()
             if (select.isdigit() and int(select) - 1 < len(Card.ownerCards) and int(select) - 1 >= 0):
                 select = int(select) - 1
-                teamAdding.append(listName[select])
+                card_selected = listName[select]
+                teamAdding.append(card_selected)
+                if len(teamAdding) > 1:
+                    temp.append(card_selected)
+                    monster_card.remove(card_selected)
+                # if len(teamAdding) == 1:
+                #     color = Card.getColor(teamAdding[0])
+                #     monster_card = Card.sortNames(Card.getMonsters(color))
             elif (select == 'S'):
                 if (len(teamAdding) == 0):
                     print('Đội hình trống! Thử lại.')
@@ -513,10 +533,16 @@ class Team:
                     teamAdding = []
             elif (select == 'C'):
                 teamAdding.clear()
+                summoner_card = Card.sortNames(Card.getSummoner())
+                monster_card = Card.sortNames(Card.getMonsters())
             elif (select == 'M'):
                 os.system('cls')
                 mana = Team.inputMana()
             elif (select == 'D'):
+                if len(teamAdding) > 1:
+                    monster_card.append(temp[-1])
+                    monster_card = sorted(monster_card)
+                    temp.pop(-1)
                 if len(teamAdding) > 0: teamAdding.pop(-1)
             elif select != 'Q':
                 print('Cú pháp không hợp lệ!')
@@ -608,12 +634,14 @@ class Team:
     def teamSelector(p_src, mana):
         mana = str(mana)
         team = Team.teams.get(mana)
-        teamSelected = ''
+        teamSelected = None
         if team is not None:
             teamSelected = Team.randomTeam(team)
         else:
             teamSelected = Team.randomBot(p_src, mana)
-        return Team.stringList(teamSelected)
+        summoner = '["' + teamSelected[0] + '"]'
+        monster = Team.stringList(teamSelected[1:-1])
+        return [summoner, monster]
 
     def checkTeam():
         if len(Team.teams) < 20:
@@ -666,7 +694,7 @@ kết quả có thể sẽ không như mong muốn!''')
                     print(f'\n MANA {mana}:')
                     k = 1
                     for i in Team.teams[mana]:
-                        kda = History.kda(Team.teamFile, i)
+                        kda = History.kda(mana, i)
                         winRate = 0.0
                         if kda[3] != 0: winRate = int(kda[0]) / int(kda[3]) * 100
                         team = ", ".join(i)
@@ -741,6 +769,7 @@ def battle(account, match):
     mana = 0
 
 
+
     def findMatch():
         time.sleep(1)
         driver.execute_script("document.getElementsByClassName('big_category_btn red')[0].click();")
@@ -761,8 +790,14 @@ def battle(account, match):
         showLog('Đang chọn thẻ bài...', account['mail'])
         time.sleep(7)
         team = Team.teamSelector(driver.page_source, mana)
-        script = "var team = "+ team + ";for (let i = 0; i < team.length; i++) {let card = document.getElementsByClassName('card beta');let cimg = document.getElementsByClassName('card-img');var reg = /[A-Z]\\w+( \\w+'*\\w*)*/;for (let j = 0; j < card.length; j++){let att_card = card[j].innerText;let result = att_card.match(reg);let name = result[0];if (name == team[i]){cimg[j].click();break;}}}document.getElementsByClassName('btn-green')[0].click();"
-        driver.execute_script(script)
+        driver.execute_script("var team = "+ team[0] + ";let card = document.getElementsByClassName('card beta');let cimg = document.getElementsByClassName('card-img');var reg = /[A-Z]\\w+( \\w+'*\\w*)*/;for (let j = 0; j < card.length; j++){let att_card = card[j].innerText;let result = att_card.match(reg);let name = result[0];if (name == team[0]){cimg[j].click();break;}}")
+        try:
+            WebDriverWait(driver, 2).until(EC.visibility_of_element_located((By.XPATH, '//*[@id="splinter_selection_modal"]/div/div')))
+            driver.find_element(By.XPATH, '//*[@id="splinter_selection_modal"]/div/div/div[2]/div/div[5]').click()
+        except:
+            pass
+        finally:
+            driver.execute_script("var team = "+ team[1] + ";for (let i = 0; i < team.length; i++) {let card = document.getElementsByClassName('card beta');let cimg = document.getElementsByClassName('card-img');var reg = /[A-Z]\\w+( \\w+'*\\w*)*/;for (let j = 0; j < card.length; j++){let att_card = card[j].innerText;let result = att_card.match(reg);let name = result[0];if (name == team[i]){cimg[j].click();break;}}}document.getElementsByClassName('btn-green')[0].click();")
 
 
     def startMatch():
@@ -869,6 +904,11 @@ def battle(account, match):
         elif x == 3:
             c = checkPoint4()
         return c
+    # findMatch()
+    # joinMatch()
+    # createTeam()
+    # startMatch()
+    # skipMatch()
 
     checkPoint = 0
     clone_i = 0
@@ -911,8 +951,7 @@ def battle(account, match):
         except Exception as e:
             showLog('Lỗi lưu lịch sử:' + e, account['mail'])
         finally:
-            os.system('pause')
-            #driver.quit()
+            driver.quit()
     return 'Q'
 
 def mbattle(account_list, match):
@@ -986,6 +1025,7 @@ class Launcher:
         accountManager = AccountManager()
         account_list = accountManager.account
         account_selected = []
+        temp = []
         if len(account_list) > 0:
             select = None
             while (select != 'Q'):
@@ -1005,7 +1045,7 @@ class Launcher:
                     for k in account_list:
                         print(f'[{j}] {k["mail"]}')
                         j += 1
-                    print('\n[S] Bắt đầu    |    [C] Xoá lựa chọn trước đó    |    [Q] Thoát')
+                    print('\n[S] Bắt đầu    |    [C] Xoá lựa chọn trước đó    |    [A] Chọn tất cả    |    [Q] Thoát')
                     select = input('>> Chọn: ').upper()
                     if select.isdigit() and int(select) - 1 < len(account_list) and int(select) - 1 >= 0:
                         select = int(select)
@@ -1022,7 +1062,7 @@ class Launcher:
                         if len(account_selected) == 1:
                             battle(account_selected[0], match)
                         else:
-                            mbattle(account_selected).run(match)
+                            mbattle(account_selected, match)
                         os.system('cls')
 
                     elif select == 'S' and len(account_selected) == 0:
@@ -1031,6 +1071,9 @@ class Launcher:
                     elif select == 'C' and len(account_selected) > 0:
                         account_list.append(account_selected[-1])
                         account_selected.pop(-1)
+                    elif select == 'A':
+                        account_selected = account_list.copy()
+                        account_list.clear()
                     elif select != 'Q':
                         print('Cú pháp không hợp lệ!')
                         time.sleep(1)
