@@ -327,7 +327,6 @@ class AccountManager:
                     print('Cú pháp không hợp lệ!')
                     time.sleep(1)
 
-
 class History:
     try:
         historyFile = File('data/history.json')
@@ -512,9 +511,6 @@ class Team:
                 if len(teamAdding) > 1:
                     temp.append(card_selected)
                     monster_card.remove(card_selected)
-                # if len(teamAdding) == 1:
-                #     color = Card.getColor(teamAdding[0])
-                #     monster_card = Card.sortNames(Card.getMonsters(color))
             elif (select == 'S'):
                 if (len(teamAdding) == 0):
                     print('Đội hình trống! Thử lại.')
@@ -904,11 +900,6 @@ def battle(account, match):
         elif x == 3:
             c = checkPoint4()
         return c
-    # findMatch()
-    # joinMatch()
-    # createTeam()
-    # startMatch()
-    # skipMatch()
 
     checkPoint = 0
     clone_i = 0
@@ -961,9 +952,6 @@ def mbattle(account_list, match):
         proc[keys] = multiprocessing.Process(target=battle, args=(account_list[i], match))
     for b in proc:
         proc[b].start()
-    response = requests.get('https://raw.githubusercontent.com/tmkha/Splint/main/splint.py')
-    if response:
-        File('splint.py').wText(response.text)
     for k in proc:
         proc[k].join()
 
