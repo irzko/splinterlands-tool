@@ -27,7 +27,7 @@ def download_resource():
 if __name__ == "__main__":
     os.system('title Splint Tool')
     try:
-        download_resource()
+        # download_resource()
         from splint import Launcher
         Launcher.menu()
     except Exception as e:

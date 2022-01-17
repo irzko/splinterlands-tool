@@ -2831,62 +2831,6 @@
             }
         }
     ],
-    "sir-": [
-        {
-            "mode": "Practice",
-            "result": "Battle Lost",
-            "my_team": {
-                "name": "initiate_975111",
-                "rating": "119",
-                "guid_name": "No Guild",
-                "team": []
-            },
-            "enemy_team": {
-                "name": "sir-",
-                "rating": "101",
-                "guid_name": "kennywayne",
-                "team": [
-                    "No Guild"
-                ]
-            }
-        },
-        {
-            "mode": "Practice",
-            "result": "Battle Lost",
-            "my_team": {
-                "name": "initiate_975111",
-                "rating": "119",
-                "guid_name": "No Guild",
-                "team": []
-            },
-            "enemy_team": {
-                "name": "sir-",
-                "rating": "101",
-                "guid_name": "kennywayne",
-                "team": [
-                    "No Guild"
-                ]
-            }
-        },
-        {
-            "mode": "Practice",
-            "result": "Battle Lost",
-            "my_team": {
-                "name": "initiate_975111",
-                "rating": "119",
-                "guid_name": "No Guild",
-                "team": []
-            },
-            "enemy_team": {
-                "name": "sir-",
-                "rating": "101",
-                "guid_name": "kennywayne",
-                "team": [
-                    "No Guild"
-                ]
-            }
-        }
-    ],
     "28": [
         {
             "mode": "Ranked",
@@ -4039,137 +3983,8 @@
             }
         }
     ],
-    "99": [
-        {
-            "mode": "Ranked",
-            "result": "Battle Lost",
-            "my_team": {
-                "name": "initiate_975111",
-                "rating": "80",
-                "guid_name": "No Guild",
-                "team": []
-            },
-            "enemy_team": {
-                "name": "sneakyrobertso",
-                "rating": "100",
-                "guid_name": "No Guild",
-                "team": []
-            }
-        },
-        {
-            "mode": "Ranked",
-            "result": "Battle Lost",
-            "my_team": {
-                "name": "initiate_975111",
-                "rating": "337",
-                "guid_name": "No Guild",
-                "team": [
-                    "Kelya Frendul",
-                    "Diemonshark",
-                    "Flying Squid",
-                    "Deeplurker",
-                    "Disintegrator",
-                    "Sniping Narwhal",
-                    "Mantoid"
-                ]
-            },
-            "enemy_team": {
-                "name": "vanbdn200880",
-                "rating": "377",
-                "guid_name": "No Guild",
-                "team": [
-                    "Obsidian",
-                    "Venari Knifer",
-                    "Unicorn Mustang",
-                    "Regal Peryton",
-                    "Mycelic Slipspawn",
-                    "Khmer Princess",
-                    "Goblin Psychic"
-                ]
-            }
-        },
-        {
-            "mode": "Ranked",
-            "result": "Battle Lost",
-            "my_team": {
-                "name": "initiate_975111",
-                "rating": "337",
-                "guid_name": "No Guild",
-                "team": [
-                    "Kelya Frendul",
-                    "Diemonshark",
-                    "Flying Squid",
-                    "Deeplurker",
-                    "Disintegrator",
-                    "Sniping Narwhal",
-                    "Mantoid"
-                ]
-            },
-            "enemy_team": {
-                "name": "vanbdn200880",
-                "rating": "377",
-                "guid_name": "No Guild",
-                "team": [
-                    "Obsidian",
-                    "Venari Knifer",
-                    "Unicorn Mustang",
-                    "Regal Peryton",
-                    "Mycelic Slipspawn",
-                    "Khmer Princess",
-                    "Goblin Psychic"
-                ]
-            }
-        },
-        {
-            "mode": "Ranked",
-            "result": "Battle Lost",
-            "my_team": {
-                "name": "initiate_975111",
-                "rating": "337",
-                "guid_name": "No Guild",
-                "team": [
-                    "Kelya Frendul",
-                    "Diemonshark",
-                    "Flying Squid",
-                    "Deeplurker",
-                    "Disintegrator",
-                    "Sniping Narwhal",
-                    "Mantoid"
-                ]
-            },
-            "enemy_team": {
-                "name": "vanbdn200880",
-                "rating": "377",
-                "guid_name": "No Guild",
-                "team": [
-                    "Obsidian",
-                    "Venari Knifer",
-                    "Unicorn Mustang",
-                    "Regal Peryton",
-                    "Mycelic Slipspawn",
-                    "Khmer Princess",
-                    "Goblin Psychic"
-                ]
-            }
-        }
-    ],
+    "99": [],
     "18": [
-        {
-            "mode": "Ranked",
-            "result": "Battle Lost",
-            "my_team": {
-                "name": "initiate_975111",
-                "rating": "80",
-                "guid_name": "No Guild",
-                "team": []
-            },
-            "enemy_team": {
-                "name": "hah386",
-                "rating": "100",
-                "guid_name": "No Guild",
-                "team": []
-            }
-        },
         {
             "mode": "Ranked",
             "result": "Battle Won",
@@ -4587,22 +4402,6 @@
         }
     ],
     "30": [
-        {
-            "mode": "Ranked",
-            "result": "Battle Lost",
-            "my_team": {
-                "name": "initiate_975111",
-                "rating": "80",
-                "guid_name": "No Guild",
-                "team": []
-            },
-            "enemy_team": {
-                "name": "josyviei",
-                "rating": "100",
-                "guid_name": "No Guild",
-                "team": []
-            }
-        },
         {
             "mode": "Ranked",
             "result": "Battle Lost",

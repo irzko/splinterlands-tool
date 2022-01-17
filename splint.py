@@ -348,35 +348,42 @@ class History:
             print('\n[Q] Thoát')
             select = input('>> Chọn đội hình: ').upper()
             if select.isdigit() and (int(select) - 1 >= 0 and int(select) - 1 < len(Team.teams[mana])):
+                n = None
                 select = int(select) - 1
-                team = Team.teams[mana][select]
-                kda = History.kda(mana, team)
-                os.system('cls')
-                print(f'Team: {", ".join(team)}')
-                print(f"\nTrong {kda[3]} trận:")
-                print(f'    Thắng: {kda[0]}')
-                print(f'    Thua: {kda[1]}')
-                print(f'    Hoà: {kda[2]}')
-                if len(History.history) > 0:
-                    if kda[3] != 0:
-                        print('\n\t\t\t\t\t\tLỊCH SỬ THUA\n')
-                        for i in range(len(History.history[mana])):
-                            if History.history[mana][i]['my_team']['team'] == team:
-                                result = History.history[mana][i]['result']
-                                if result[7:] == 'Lost':
-                                    print(f'\n{i}. [', end="")
-                                    print(", ".join(History.history[mana][i]['enemy_team']['team']), end="")
-                                    print(']')
-                                    print('-' * 120)
-                else:
-                    print('\n\t\t\t\t\t\tLỊCH SỬ THUA\n')
-                    print('\t\t\t\t\t      Không có lịch sử')
-                n = input('\n[B] Trở lại    |    [Q] Thoát\n>> Chọn: ').upper()
-                while (n != 'B' and n != 'Q'):
+                while (n != 'Q' and n != 'B'):
+                    team = Team.teams[mana][select]
+                    kda = History.kda(mana, team)
                     os.system('cls')
-                    print('Cú pháp không hợp lệ!')
-                    n = input('\n[B] Trở lại    |    [Q] Thoát\n>> Chọn: ').upper()
-                if n == 'Q': select = 'Q'
+                    print(f'Team: {", ".join(team)}')
+                    print(f"\nTrong {kda[3]} trận:")
+                    print(f'    Thắng: {kda[0]}')
+                    print(f'    Thua: {kda[1]}')
+                    print(f'    Hoà: {kda[2]}')
+                    if len(History.history) > 0:
+                        if kda[3] != 0:
+                            print('\n\t\t\t\t\t\tLỊCH SỬ THUA\n')
+                            for i in range(len(History.history[mana])):
+                                if History.history[mana][i]['my_team']['team'] == team:
+                                    result = History.history[mana][i]['result']
+                                    if result[7:] == 'Lost':
+                                        print(f'\n{i}. [', end="")
+                                        print(", ".join(History.history[mana][i]['enemy_team']['team']), end="")
+                                        print(']')
+                                        print('-' * 120)
+                    else:
+                        print('\n\t\t\t\t\t\tLỊCH SỬ THUA\n')
+                        print('\t\t\t\t\t      Không có lịch sử')
+                    print('\nNhập số của đội hình để sao chép')
+                    print('[B] Trở lại    |    [Q] Thoát')
+                    n = input('>> Chọn: ').upper()
+                    print(n)
+                    if n.isdigit():
+                        Team.copyTeam(mana, n)
+                    elif n == 'Q':
+                        select = 'Q'
+                    elif n != 'B':
+                        print('Cú pháp không hợp lệ!')
+                        time.sleep(1)
             elif select != 'Q':
                 print('Cú pháp không hợp lệ!')
                 time.sleep(1)
@@ -397,6 +404,19 @@ class History:
             return [won, lost, drawn, match]
         else:
             return [0, 0, 0, 0]
+
+    def delete(mana, team):
+        h = History.history
+        length = len(h[mana])
+        i = 0
+        while(i < length):
+            myteam = h[mana][i]['my_team']['team']
+            if myteam == team:
+                h[mana].pop(i)
+                length = len(h[mana])
+            i += 1
+        History.historyFile.wJSon(History.history)
+
 
     def writeHistory(driver, times):
         soup = BeautifulSoup(driver.page_source, 'html.parser')
@@ -547,7 +567,8 @@ class Team:
 
     def delete():
         os.system('cls')
-        mana = lt = None
+        mana = None
+        lt = None
         while True:
             os.system('cls')
             mana = input('>> Nhập mana: ')
@@ -585,6 +606,7 @@ class Team:
             Team.teams[mana].pop(int(td) - 1)
             if len(Team.teams[mana]) == 0: Team.teams.pop(mana)
             Team.teamFile.wJSon(Team.teams)
+            History.delete(mana, st)
             os.system('cls')
             print('Đã xoá thành công!')
             time.sleep(1)
@@ -641,6 +663,32 @@ class Team:
         monster = Team.stringList(teamSelected[1:])
         color = Card.getColor(teamSelected[1])
         return {'summoner': summoner, 'monster': monster, 'color': color}
+    
+    def copyTeam(mana, index):
+        h = History.history
+        teamAdding = h[mana][int(index)]["enemy_team"]["team"]
+        n = None
+        while (n != 'N'):
+            os.system('cls')
+            print('Bạn có muốn sao chép đội hình này?\n')
+            print("\n".join(teamAdding))
+            print('\n[Y] Có    |    [N] Không')
+            n = input('>> Chọn: ').upper()
+            if n == "Y":
+                if (Team.teams.get(mana) != None):
+                    Team.teams[mana].append(teamAdding)
+                else:
+                    Team.teams[mana] = []
+                    Team.teams[mana].append(teamAdding)
+                Team.teams = Team.teamSorted(Team.teams)
+                Team.teamFile.wJSon(Team.teams)
+                os.system('cls')
+                print('Đã sao chép thành công!')
+                time.sleep(1)
+                n = 'N'
+            elif n != 'N':
+                print('Cú pháp không hợp lệ!')
+                time.sleep(1)
 
     def checkTeam():
         if len(Team.teams) < 20:
