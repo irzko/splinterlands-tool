@@ -734,7 +734,7 @@ def showLog(log, email):
 def battle(account, match):
     options = webdriver.ChromeOptions()
     #chrome_options.add_argument("user-data-dir="+filePath)
-    driver = webdriver.Chrome('chromedriver', options = options)
+    driver = webdriver.Chrome('webdriver/chromedriver', options = options)
     showLog('Đang khởi động trình duyệt...', account['mail'])
     wait = WebDriverWait(driver, 60)
     driver.get('https://splinterlands.com/?p=battle_history')
