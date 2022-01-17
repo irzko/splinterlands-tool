@@ -639,9 +639,11 @@ class Team:
             teamSelected = Team.randomTeam(team)
         else:
             teamSelected = Team.randomBot(p_src, mana)
+
         summoner = '["' + teamSelected[0] + '"]'
-        monster = Team.stringList(teamSelected[1:-1])
-        return [summoner, monster]
+        monster = Team.stringList(teamSelected[1:])
+        color = Card.getColor(teamSelected[1])
+        return {'summoner': summoner, 'monster': monster, 'color': color}
 
     def checkTeam():
         if len(Team.teams) < 20:
@@ -725,7 +727,6 @@ kết quả có thể sẽ không như mong muốn!''')
             elif select != 'Q':
                 print('Cú pháp không hợp lệ!')
                 time.sleep(1)
-
 def showLog(log, email):
     time_log = time.strftime("%H:%M:%S", time.localtime())
     print(f'[{time_log}] [{email}] {log}')
@@ -790,14 +791,24 @@ def battle(account, match):
         showLog('Đang chọn thẻ bài...', account['mail'])
         time.sleep(7)
         team = Team.teamSelector(driver.page_source, mana)
-        driver.execute_script("var team = "+ team[0] + ";let card = document.getElementsByClassName('card beta');let cimg = document.getElementsByClassName('card-img');var reg = /[A-Z]\\w+( \\w+'*\\w*)*/;for (let j = 0; j < card.length; j++){let att_card = card[j].innerText;let result = att_card.match(reg);let name = result[0];if (name == team[0]){cimg[j].click();break;}}")
+        driver.execute_script("var team = "+ team['summoner'] + ";let card = document.getElementsByClassName('card beta');let cimg = document.getElementsByClassName('card-img');var reg = /[A-Z]\\w+( \\w+'*\\w*)*/;for (let j = 0; j < card.length; j++){let att_card = card[j].innerText;let result = att_card.match(reg);let name = result[0];if (name == team[0]){cimg[j].click();break;}}")
         try:
             WebDriverWait(driver, 2).until(EC.visibility_of_element_located((By.XPATH, '//*[@id="splinter_selection_modal"]/div/div')))
-            driver.find_element(By.XPATH, '//*[@id="splinter_selection_modal"]/div/div/div[2]/div/div[5]').click()
+            color = team['color']
+            if color == 'Black':
+                driver.find_element(By.XPATH, '//*[@id="splinter_selection_modal"]/div/div/div[2]/div/div[5]').click()
+            elif color == 'Red':
+                driver.find_element(By.XPATH, '//*[@id="splinter_selection_modal"]/div/div/div[2]/div/div[1]').click()
+            elif color == 'Blue':
+                driver.find_element(By.XPATH, '//*[@id="splinter_selection_modal"]/div/div/div[2]/div/div[2]').click()
+            elif color == 'Green':
+                driver.find_element(By.XPATH, '//*[@id="splinter_selection_modal"]/div/div/div[2]/div/div[3]/label').click()
+            elif color == 'White':
+                driver.find_element(By.XPATH, '//*[@id="splinter_selection_modal"]/div/div/div[2]/div/div[4]').click()
         except:
             pass
         finally:
-            driver.execute_script("var team = "+ team[1] + ";for (let i = 0; i < team.length; i++) {let card = document.getElementsByClassName('card beta');let cimg = document.getElementsByClassName('card-img');var reg = /[A-Z]\\w+( \\w+'*\\w*)*/;for (let j = 0; j < card.length; j++){let att_card = card[j].innerText;let result = att_card.match(reg);let name = result[0];if (name == team[i]){cimg[j].click();break;}}}document.getElementsByClassName('btn-green')[0].click();")
+            driver.execute_script("var team = "+ team['monster'] + ";for (let i = 0; i < team.length; i++) {let card = document.getElementsByClassName('card beta');let cimg = document.getElementsByClassName('card-img');var reg = /[A-Z]\\w+( \\w+'*\\w*)*/;for (let j = 0; j < card.length; j++){let att_card = card[j].innerText;let result = att_card.match(reg);let name = result[0];if (name == team[i]){cimg[j].click();break;}}}document.getElementsByClassName('btn-green')[0].click();")
 
 
     def startMatch():
