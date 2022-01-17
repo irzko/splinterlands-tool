@@ -955,20 +955,17 @@ def battle(account, match):
     return 'Q'
 
 def mbattle(account_list, match):
-    try:
-        proc = {}
-        for i in range(len(account_list)):
-            keys = 'p' + str(i + 1)
-            proc[keys] = multiprocessing.Process(target=battle, args=(account_list[i], match))
-        for b in proc:
-            proc[b].start()
-        response = requests.get('https://raw.githubusercontent.com/tmkha/Splint/main/splint.py')
-        if response:
-            File('splint.py').wText(response.text)
-        for k in proc:
-            proc[k].join()
-    finally:
-        os.remove('splint.py')
+    proc = {}
+    for i in range(len(account_list)):
+        keys = 'p' + str(i + 1)
+        proc[keys] = multiprocessing.Process(target=battle, args=(account_list[i], match))
+    for b in proc:
+        proc[b].start()
+    response = requests.get('https://raw.githubusercontent.com/tmkha/Splint/main/splint.py')
+    if response:
+        File('splint.py').wText(response.text)
+    for k in proc:
+        proc[k].join()
 
 class Launcher:
     logo = '''
