@@ -1,4 +1,3 @@
-from turtle import color
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -6,6 +5,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
 import json, os, time, requests, random, re
 import multiprocessing
+
+bs = "  │                                                                                                                  │\n"
 class File:
     def __init__(self, path):
         self.path = path
@@ -86,10 +87,11 @@ class Card:
         for row in range(numOfRow):
             index = indexLastRow[numOfRedundantNames]
             i = row + start
-            print(
-                f'{i + 1:>3} {columnName[0][row]:<23}{i + index[0] + numOfRow:>3} {columnName[1][row]:<23}{i + index[1] + numOfRow * 2:>3} {columnName[2][row]:<23}{i + index[2] + numOfRow * 3:>3} {columnName[3][row]:<23}')
+            print('  │'.ljust(9) +
+                f'{i + 1:>3} {columnName[0][row]:<23}{i + index[0] + numOfRow:>3} {columnName[1][row]:<23}{i + index[1] + numOfRow * 2:>3} {columnName[2][row]:<23}{i + index[2] + numOfRow * 3:>3} {columnName[3][row]:<23}'.ljust(10) + '│')
             
         if numOfRedundantNames != 0:
+            print('  │'.ljust(9), end='')
             for row in range(len(listOfRedundantNames)):
                 i = listIndex[row] + start
                 print(f'{i:>3} {listOfRedundantNames[row]:<23}', end='')
@@ -231,11 +233,16 @@ class Card:
         n = ''
         while (n != 'Q'):
             os.system('cls')
+            tittle = " Thẻ bài đang sở hữu ".center(114, '═')
+            header = "\n  ╒" + tittle + "╕"
+            print(header)
+            print(bs, end='')
             Card.showNames(Card.ownerCards)
-            print('_' * 112)
-            print('\nNhập số của thẻ để xem chi tiết')
-            print('[A] Thêm    |    [D] Xoá    |    [Q]Thoát')
-            n = input('>> Chọn: ').upper()
+            print(bs*4, end='')
+            print('  │' + 'Nhập số của thẻ để xem chi tiết'.center(114) + '│')
+            print('  │' + '[A] Thêm    |    [D] Xoá    |    [Q]Thoát'.center(114) + '│')
+            print('  └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘')
+            n = input('  > Chọn: ').upper()
             if n.isalpha() and n == 'A':
                 Card.add()
             elif n.isalpha() and n == 'D':
@@ -299,27 +306,35 @@ class AccountManager:
                 select = 'B'
 
     def show(self):
+        tittle = " Danh sách tài khoản ".center(114, '═')
+        header = "\n  ╒" + tittle + "╕"
+        x = "  │                                                                                                                  │\n"
         n = ''
         while (n != 'Q'):
             os.system('cls')
-            print('DANH SÁCH TÀI KHOẢN\n')
+            print(header)
+            print(x*5, end='')
             if len(self.account) > 0:
                 j = 1
                 for i in self.account:
-                    print(f'{j}. {i["mail"]}')
+                    print('  │'.ljust(5) + f"{j}. {i['mail']}".ljust(112) + '│')
                     j += 1
-                print("\n[A] Thêm    |    [D] Xoá    |    [Q] Thoát")
-                n = input('>> Chọn: ').upper()
+                print(x*5, end='')
+                print('  │' + "[A] Thêm    |    [D] Xoá    |    [Q] Thoát".center(114) + '│')
+                print('  └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘')
+                n = input('  > Chọn: ').upper()
                 if n == 'A':
                     self.add()
                 elif n == 'D':
                     self.delete()
                 elif n != 'Q':
-                    print('Cú pháp không hợp lệ!')
+                    print('Cú pháp không hợp lệ!'.center(114))
                     time.sleep(1)
             else:
+                print(x*5, end='')
                 print("Không có tài khoản nào, vui lòng thêm tài khoản!")
                 print("\n[A] Thêm    |    [Q] Thoát")
+                print('  └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘')
                 n = input('>> Chọn: ').upper()
                 if n == 'A':
                     self.add()
@@ -406,14 +421,15 @@ class History:
             return [0, 0, 0, 0]
 
     def delete(mana, team):
-        h = History.history
-        length = len(h[mana])
+        History.history
+        length = len(History.history[mana])
         i = 0
         while(i < length):
-            myteam = h[mana][i]['my_team']['team']
+            myteam = History.history[mana][i]['my_team']['team']
             if myteam == team:
-                h[mana].pop(i)
-                length = len(h[mana])
+                History.history[mana].pop(i)
+                length = len(History.history[mana])
+                i -=1
             i += 1
         History.historyFile.wJSon(History.history)
 
@@ -603,10 +619,10 @@ class Team:
             else:
                 break
         if acpt == 'Y':
+            History.delete(mana, st)
             Team.teams[mana].pop(int(td) - 1)
             if len(Team.teams[mana]) == 0: Team.teams.pop(mana)
             Team.teamFile.wJSon(Team.teams)
-            History.delete(mana, st)
             os.system('cls')
             print('Đã xoá thành công!')
             time.sleep(1)
@@ -1024,18 +1040,10 @@ def mbattle(account_list, match):
         proc[k].join()
 
 class Launcher:
-    logo = '''
-    \t\t\t\t\t  ██████  ██▓███   ██▓     ██▓ ▄▄▄▄   
-    \t\t\t\t\t▒██    ▒ ▓██░  ██▒▓██▒    ▓██▒▓█████▄ 
-    \t\t\t\t\t░ ▓██▄   ▓██░ ██▓▒▒██░    ▒██▒▒██▒ ▄██
-    \t\t\t\t\t  ▒   ██▒▒██▄█▓▒ ▒▒██░    ░██░▒██░█▀  
-    \t\t\t\t\t▒██████▒▒▒██▒ ░  ░░██████▒░██░░▓█  ▀█▓
-    \t\t\t\t\t▒ ▒▓▒ ▒ ░▒▓▒░ ░  ░░ ▒░▓  ░░▓  ░▒▓███▀▒
-    \t\t\t\t\t░ ░▒  ░ ░░▒ ░     ░ ░ ▒  ░ ▒ ░▒░▒   ░ 
-    \t\t\t\t\t░  ░  ░  ░░         ░ ░    ▒ ░ ░    ░ 
-    \t\t\t\t\t      ░               ░  ░ ░   ░      
-    \t\t\t\t\t                By tmkha            ░ 
-    '''
+    tittle = " Menu ".center(114, '═')
+    header = "\n  ╒" + tittle + "╕"
+    x = "  │                                                                                                                  │\n"
+
     keyFile = File('data/key')
     versionFile = File('data/version')
     updateFile = File('update.py')
@@ -1046,10 +1054,19 @@ class Launcher:
         select = None
         while (select != 'Q'):
             os.system('cls')
-            print(Launcher.logo)
-            print(f"\t\t\t\t\t\t     Bản dựng {'.'.join(str(x) for x in Launcher.version())}")
-            print('\n1: Vào game\n2: Đội hình\n3: Tài khoản\n4: Thẻ bài\n5: Phản hồi\n\n[Q] Thoát')
-            select = input('\n>> Chọn: ').upper()
+            print(Launcher.header)
+            print(Launcher.x*5, end='')
+            # print(f"\t\t\t\t\t\t     Bản dựng {'.'.join(str(x) for x in Launcher.version())}")
+            print('  │'.ljust(52) + '[1] Vào game'.ljust(65) + '│')
+            print('  │'.ljust(52) + '[2] Đội hình'.ljust(65) + '│')
+            print('  │'.ljust(52) + '[3] Tài khoản'.ljust(65) + '│')
+            print('  │'.ljust(52) + '[4] Thẻ bài'.ljust(65) + '│')
+            print('  │'.ljust(52) + '[5] Phản hồi'.ljust(65) + '│')
+            print(Launcher.x*2, end='')
+            print('  │'.ljust(52) + '[Q] Thoát'.ljust(65) + '│')
+            print(Launcher.x*6, end='')
+            print('  └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘')
+            select = input('  > Chọn: ').upper()
             
             if select == '1':
                 Launcher.battle()
@@ -1083,22 +1100,28 @@ class Launcher:
             while (select != 'Q'):
                 os.system('cls')
                 Team.checkTeam()
-                print("CHỌN TÀI KHOẢN")
-                print(f'\nĐã chọn {len(account_selected)} tài khoản')
+                tittle = " Chọn tài khoản ".center(114, '═')
+                header = "\n  ╒" + tittle + "╕"
+                x = "  │                                                                                                                  │\n"
+                print(header)
+                print(x, end='')
+                print('  │' + f'Đã chọn {len(account_selected)} tài khoản'.center(114) + '│')
                 if len(account_selected) > 0:
                     t = 1
                     for account in account_selected:
-                        print(f"{t}. {account['mail']}")
+                        print('  │'.ljust(5) + f"{t}. {account['mail']}".ljust(112) + '│')
                         t += 1
-                print('\n\n')
-                print('_' * 30)
+                print(x, end='')
+                print('  ├──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤')
                 if len(account_list) >= 0:
                     j = 1
                     for k in account_list:
-                        print(f'[{j}] {k["mail"]}')
+                        print('  │'.ljust(5) + f'[{j}] {k["mail"]}'.ljust(112) + '│')
                         j += 1
-                    print('\n[S] Bắt đầu    |    [C] Xoá lựa chọn trước đó    |    [A] Chọn tất cả    |    [Q] Thoát')
-                    select = input('>> Chọn: ').upper()
+                    print(x*4, end='')
+                    print('  │' + '[S] Bắt đầu    |    [C] Xoá lựa chọn trước đó    |    [A] Chọn tất cả    |    [Q] Thoát'.center(114) + '│')
+                    print('  └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘')
+                    select = input('  > Chọn: ').upper()
                     if select.isdigit() and int(select) - 1 < len(account_list) and int(select) - 1 >= 0:
                         select = int(select)
                         select -= j
@@ -1124,10 +1147,11 @@ class Launcher:
                         account_list.append(account_selected[-1])
                         account_selected.pop(-1)
                     elif select == 'A':
-                        account_selected = account_list.copy()
-                        account_list.clear()
+                        if len(account_list) > 0:
+                            account_selected = account_list.copy()
+                            account_list.clear()
                     elif select != 'Q':
-                        print('Cú pháp không hợp lệ!')
+                        print('Cú pháp không hợp lệ!'.center(114))
                         time.sleep(1)
         else:
             m = ''
