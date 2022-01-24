@@ -446,8 +446,12 @@ class History:
         response = requests.get('https://api2.splinterlands.com/battle/history2?player=' + username)
         history = json.loads(response.text)
         mana_cap = history['battles'][0]['mana_cap']
-        player_1 = history['battles'][0]['player_1']
-        player_2 = history['battles'][0]['player_2']
+        player_1 = username
+        if history['battles'][0]['player_2'] != username:
+            player_2 = history['battles'][0]['player_2']
+        else:
+            player_2 = history['battles'][0]['player_1']
+        
         winner = history['battles'][0]['winner']
         result = None
         if winner == player_1:
@@ -458,17 +462,23 @@ class History:
             result = "Drawn"
         team1 = []
         team2 = []
-        summoner = history['battles'][0]['details']['team1']['summoner']['card_detail_id']
+        sw_t1 = 'team1'
+        sw_t2 = 'team2'
+        if history['battles'][0]['player_2'] == username:
+            sw_t1 = 'team2'
+            sw_t2 = 'team1' 
+        summoner = history['battles'][0]['details'][sw_t1]['summoner']['card_detail_id']
         team1.append(Card.getNameById(summoner))
-        monsters = history['battles'][0]['details']['team1']['monsters']
+        monsters = history['battles'][0]['details'][sw_t1]['monsters']
         for monster in monsters:
             team1.append(Card.getNameById(monster['card_detail_id']))
-        summoner = history['battles'][0]['details']['team2']['summoner']['card_detail_id']
+        summoner = history['battles'][0]['details'][sw_t2]['summoner']['card_detail_id']
         team2.append(Card.getNameById(summoner))
-        monsters = history['battles'][0]['details']['team2']['monsters']
+        monsters = history['battles'][0]['details'][sw_t2]['monsters']
         for monster in monsters:
             team2.append(Card.getNameById(monster['card_detail_id']))
         match = {'result': result, "team1": {"player": player_1, 'team': team1}, "team2": {"player": player_2, 'team': team2}}
+        mana_cap = str(mana_cap)
         if History.history.get(mana_cap) == None:
             History.history[mana_cap] = []
             History.history[mana_cap].append(match)
@@ -609,13 +619,18 @@ class Team:
             else:
                 break
         if acpt == 'Y':
-            History.delete(mana, st)
-            Team.teams[mana].pop(int(td) - 1)
-            if len(Team.teams[mana]) == 0: Team.teams.pop(mana)
-            Team.teamFile.wJSon(Team.teams)
-            os.system('cls')
-            print('Đã xoá thành công!')
-            time.sleep(1)
+            try:
+                History.delete(mana, st)
+            except:
+                pass
+            finally:
+                Team.teams[mana].pop(int(td) - 1)
+                if len(Team.teams[mana]) == 0: Team.teams.pop(mana)
+                Team.teamFile.wJSon(Team.teams)
+                os.system('cls')
+                print('Đã xoá thành công!')
+                time.sleep(1)
+
 
     def stringList(li):
         return '["' + '", "'.join(li) + '"]'
@@ -785,10 +800,9 @@ def battle(account, match):
     options = webdriver.ChromeOptions()
     #chrome_options.add_argument("user-data-dir="+filePath)
     driver = webdriver.Chrome('webdriver/chromedriver', options = options)
-    wait = WebDriverWait(driver, 60)
     driver.get('https://splinterlands.com')
     driver.find_element(By.ID, 'log_in_button').click()
-    wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, ".modal-body")))
+    WebDriverWait(driver, 60).until(EC.visibility_of_element_located((By.CSS_SELECTOR, ".modal-body")))
     time.sleep(1)
     driver.find_element(By.ID, 'email').send_keys(account['mail'])
     driver.find_element(By.ID, 'password').send_keys(account['pwd'])
@@ -818,17 +832,14 @@ def battle(account, match):
                 result = row.match(reg);
                 };''')
     mana = 0
-
-
-
     def findMatch():
-        time.sleep(1)
+        WebDriverWait(driver, 30).until(EC.visibility_of_element_located((By.CSS_SELECTOR, '#battle_category_btn')))
         driver.execute_script("document.getElementsByClassName('big_category_btn red')[0].click();")
         showLog('Đang tìm đối thủ...', username)
 
     def joinMatch():
         nonlocal mana
-        wait.until(EC.visibility_of_element_located(
+        WebDriverWait(driver, 30).until(EC.visibility_of_element_located(
             (By.XPATH, "/html/body/div[3]/div/div/div/div[2]/div[3]/div[2]/button")))
         time.sleep(1)
         mana = driver.find_element(By.CSS_SELECTOR, 'div.col-md-3:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)').text
@@ -836,7 +847,7 @@ def battle(account, match):
         driver.execute_script("document.getElementsByClassName('btn btn--create-team')[0].click();")
 
     def createTeam():
-        WebDriverWait(driver, 60).until(
+        WebDriverWait(driver, 30).until(
             EC.visibility_of_element_located((By.XPATH, '//*[@id="page_container"]/div/div[1]/div')))
         showLog('Đang chọn thẻ bài...', username)
         time.sleep(7)
@@ -863,25 +874,25 @@ def battle(account, match):
 
     def startMatch():
         showLog('Đang chờ đối thủ...', username)
-        WebDriverWait(driver, 150).until(EC.visibility_of_element_located((By.CSS_SELECTOR, '#btnRumble')))
+        WebDriverWait(driver, 60).until(EC.visibility_of_element_located((By.CSS_SELECTOR, '#btnRumble')))
         driver.execute_script("document.getElementsByClassName('btn-battle')[0].click()")
         showLog('Đang bắt đầu trận...', username)
         time.sleep(3.5)
-        showLog('Đang bỏ qua...', username)
         driver.execute_script("document.getElementsByClassName('btn-battle')[1].click()")
 
     def skipMatch():
-        WebDriverWait(driver, 10).until(
+        showLog('Đang bỏ qua...', username)
+        WebDriverWait(driver, 30).until(
             EC.visibility_of_element_located((By.XPATH, '//*[@id="dialog_container"]/div/div/div/div[1]/h1')))
+        time.sleep(2)
         driver.execute_script("document.getElementsByClassName('btn btn--done')[0].click();")
         showLog('Kết thúc trận đấu', username)
         showLog('Đang lưu lịch sử trận đấu...', username)
-        History.writeHistory(username)
-        showLog('Xong', username)
+        
 
     def checkErr():
         try:
-            WebDriverWait(driver, 2).until(EC.visibility_of_element_located((By.XPATH, '//*[@id="play_now"]/div/div/div/div/button')))
+            WebDriverWait(driver, 5).until(EC.visibility_of_element_located((By.XPATH, '//*[@id="play_now"]/div/div/div/div/button')))
             return -1
         except:        
             try:
@@ -901,7 +912,7 @@ def battle(account, match):
                             return 3
                         except:                  
                             try:
-                                WebDriverWait(driver, 1.5).until(
+                                WebDriverWait(driver, 1).until(
                                     EC.visibility_of_element_located((By.XPATH, '//*[@id="dialog_container"]/div/div/div/div[1]/h1')))
                                 return 4
                             except:
@@ -942,6 +953,8 @@ def battle(account, match):
     def checkPoint4():
         try:
             skipMatch()
+            History.writeHistory(username)
+            showLog('Xong', username)
             return 0
         except:
             return -1
@@ -967,7 +980,7 @@ def battle(account, match):
     for i in range(int(match)):
         showLog(f'Bắt đầu trận thứ [{i + 1}/{match}]', username)
         try:
-            WebDriverWait(driver, 5).until(EC.visibility_of_element_located((By.ID, "battle_category_btn")))
+            WebDriverWait(driver, 20).until(EC.visibility_of_element_located((By.ID, "battle_category_btn")))
             checkPoint0()
         except:
             q = None
@@ -1172,3 +1185,6 @@ class Launcher:
             print('Đã gửi phản hồi của bạn!')
             time.sleep(2)
             return 'Q'
+
+if __name__ == '__main__':
+    Launcher.menu()
