@@ -53,6 +53,10 @@ class Card:
             list_of_card_names.append(card['name'])
         return list_of_card_names
 
+    def getNameById(id):
+        for card in Card.allCards:
+            if card['id'] == id:
+                return card['name']
 
     def sortNames(list_card):
         return sorted(Card.getNames(list_card))
@@ -136,6 +140,7 @@ class Card:
             else:
                 print('Thông tin không hợp lệ!')
                 time.sleep(1)
+
 
     def delete():
         n = None
@@ -374,26 +379,30 @@ class History:
                     print(f'    Thắng: {kda[0]}')
                     print(f'    Thua: {kda[1]}')
                     print(f'    Hoà: {kda[2]}')
-                    if len(History.history) > 0:
+                    p = []
+                    if len(History.history) != 0:
                         if kda[3] != 0:
                             print('\n\t\t\t\t\t\tLỊCH SỬ THUA\n')
-                            for i in range(len(History.history[mana])):
-                                if History.history[mana][i]['my_team']['team'] == team:
-                                    result = History.history[mana][i]['result']
+                            e_team = []
+                            for i in History.history[mana]:
+                                if i['team1']['team'] == team:
+                                    result = i['result']
                                     if result[7:] == 'Lost':
-                                        print(f'\n{i}. [', end="")
-                                        print(", ".join(History.history[mana][i]['enemy_team']['team']), end="")
-                                        print(']')
-                                        print('-' * 120)
-                    else:
-                        print('\n\t\t\t\t\t\tLỊCH SỬ THUA\n')
-                        print('\t\t\t\t\t      Không có lịch sử')
+                                        e_team.append(i['team2']['team'])
+                            for i in e_team:
+                                if p.count(i) == 0:
+                                    p.append(i)
+                            for i in range(len(p)):
+                                print(f'{i+1}. {p[i]}\n{e_team.count(p[i])} lần\n')
+                        else:
+                            print('\n\t\t\t\t\t\tLỊCH SỬ THUA\n')
+                            print('\t\t\t\t\t      Không có lịch sử')
                     print('\nNhập số của đội hình để sao chép')
                     print('[B] Trở lại    |    [Q] Thoát')
                     n = input('>> Chọn: ').upper()
                     print(n)
                     if n.isdigit():
-                        Team.copyTeam(mana, n)
+                        Team.copyTeam(mana, p[int(n)-1])
                     elif n == 'Q':
                         select = 'Q'
                     elif n != 'B':
@@ -411,7 +420,7 @@ class History:
             match = 0
             if History.history.get(mana) != None:
                 for i in range(len(History.history[mana])):
-                    if History.history[mana][i]['my_team']['team'] == team:
+                    if History.history[mana][i]['team1']['team'] == team:
                         if History.history[mana][i]['result'] == 'Battle Won': won += 1
                         if History.history[mana][i]['result'] == 'Battle Lost': lost += 1
                         if History.history[mana][i]['result'] == 'Drawn': drawn += 1
@@ -421,12 +430,11 @@ class History:
             return [0, 0, 0, 0]
 
     def delete(mana, team):
-        History.history
         length = len(History.history[mana])
         i = 0
         while(i < length):
-            myteam = History.history[mana][i]['my_team']['team']
-            if myteam == team:
+            myTeam = History.history[mana][i]['team1']['team']
+            if myTeam == team:
                 History.history[mana].pop(i)
                 length = len(History.history[mana])
                 i -=1
@@ -434,57 +442,39 @@ class History:
         History.historyFile.wJSon(History.history)
 
 
-    def writeHistory(driver, times):
-        soup = BeautifulSoup(driver.page_source, 'html.parser')
-        rlt_soup = soup.find_all(class_="battle-log-entry")
-        for n in range(times):
-            btl_log = re.compile(r'\d+|\w+\s?\w*\s?\w*\s?\w*[^(\n)]').findall(rlt_soup[n].text)
-            me = []
-            enemy = []
-            for i in range(3, len(btl_log)):
-                if btl_log[i] != 'VS':
-                    me.append(btl_log[i])
-                else:
-                    break
-            en_name = ''
-            en_rat = ''
-            en_gui = ''
-            for j in range(len(btl_log) - 3, -1, -1):
-                if btl_log[j].isdigit():
-                    en_name = btl_log[j + 1]
-                    en_rat = btl_log[j]
-                    en_gui = btl_log[j + 2]
-                    for z in range(j + 3, len(btl_log) - 3):
-                        enemy.append(btl_log[z])
-                    break
-            result = btl_log[len(me) + 4]
-            mode = btl_log[-3]
-            mana = btl_log[len(me) + 7]
-            if mana == '0': mana = btl_log[len(me) + 9]
-            if mana == 'DEC': mana = btl_log[len(me) + 10]
-            my_team = {}
-            my_team['name'] = btl_log[1]
-            my_team['rating'] = btl_log[0]
-            my_team['guid_name'] = btl_log[2]
-            my_team['team'] = me
-            enemy_team = {}
-            enemy_team['name'] = en_name
-            enemy_team['rating'] = en_rat
-            enemy_team['guid_name'] = en_gui
-            enemy_team['team'] = enemy
-            result_ = result[:-3]
-            if result[:-3] != "Battle Lost" and result[:-3] != "Battle Won": result_ = 'Drawn'
-            match = {}
-            match['mode'] = mode[:-4]
-            match['result'] = result_
-            match['my_team'] = my_team
-            match['enemy_team'] = enemy_team
-            if History.history.get(mana) == None:
-                History.history[mana] = []
-                History.history[mana].append(match)
-            else:
-                History.history[mana].append(match)
-            History.historyFile.wJSon(History.history)
+    def writeHistory(username):
+        response = requests.get('https://api2.splinterlands.com/battle/history2?player=' + username)
+        history = json.loads(response.text)
+        mana_cap = history['battles'][0]['mana_cap']
+        player_1 = history['battles'][0]['player_1']
+        player_2 = history['battles'][0]['player_2']
+        winner = history['battles'][0]['winner']
+        result = None
+        if winner == player_1:
+            result = "Battle Won"
+        elif winner == player_2:
+            result = "Battle Lost"
+        else:
+            result = "Drawn"
+        team1 = []
+        team2 = []
+        summoner = history['battles'][0]['details']['team1']['summoner']['card_detail_id']
+        team1.append(Card.getNameById(summoner))
+        monsters = history['battles'][0]['details']['team1']['monsters']
+        for monster in monsters:
+            team1.append(Card.getNameById(monster['card_detail_id']))
+        summoner = history['battles'][0]['details']['team2']['summoner']['card_detail_id']
+        team2.append(Card.getNameById(summoner))
+        monsters = history['battles'][0]['details']['team2']['monsters']
+        for monster in monsters:
+            team2.append(Card.getNameById(monster['card_detail_id']))
+        match = {'result': result, "team1": {"player": player_1, 'team': team1}, "team2": {"player": player_2, 'team': team2}}
+        if History.history.get(mana_cap) == None:
+            History.history[mana_cap] = []
+            History.history[mana_cap].append(match)
+        else:
+            History.history[mana_cap].append(match)
+        History.historyFile.wJSon(History.history)
 
 class Team:
     try:
@@ -680,22 +670,20 @@ class Team:
         color = Card.getColor(teamSelected[1])
         return {'summoner': summoner, 'monster': monster, 'color': color}
     
-    def copyTeam(mana, index):
-        h = History.history
-        teamAdding = h[mana][int(index)]["enemy_team"]["team"]
+    def copyTeam(mana, team):
         n = None
         while (n != 'N'):
             os.system('cls')
             print('Bạn có muốn sao chép đội hình này?\n')
-            print("\n".join(teamAdding))
+            print("\n".join(team))
             print('\n[Y] Có    |    [N] Không')
             n = input('>> Chọn: ').upper()
             if n == "Y":
                 if (Team.teams.get(mana) != None):
-                    Team.teams[mana].append(teamAdding)
+                    Team.teams[mana].append(team)
                 else:
                     Team.teams[mana] = []
-                    Team.teams[mana].append(teamAdding)
+                    Team.teams[mana].append(team)
                 Team.teams = Team.teamSorted(Team.teams)
                 Team.teamFile.wJSon(Team.teams)
                 os.system('cls')
@@ -732,7 +720,7 @@ kết quả có thể sẽ không như mong muốn!''')
             print(f"THẺ BÀI ĐƯỢC ĐỐI THỦ CHỌN NHIỀU NHẤT VỚI {mana} MANA\n")
             team = {}
             for i in History.history[mana]:
-                enemyTeam = i['enemy_team']['team']
+                enemyTeam = i['team2']['team']
                 for j in enemyTeam:
                     if team.get(j) == None:
                         team[j] = 1
@@ -797,9 +785,8 @@ def battle(account, match):
     options = webdriver.ChromeOptions()
     #chrome_options.add_argument("user-data-dir="+filePath)
     driver = webdriver.Chrome('webdriver/chromedriver', options = options)
-    showLog('Đang khởi động trình duyệt...', account['mail'])
     wait = WebDriverWait(driver, 60)
-    driver.get('https://splinterlands.com/?p=battle_history')
+    driver.get('https://splinterlands.com')
     driver.find_element(By.ID, 'log_in_button').click()
     wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, ".modal-body")))
     time.sleep(1)
@@ -812,6 +799,8 @@ def battle(account, match):
         driver.execute_script("document.getElementsByClassName('close')[0].click();")
     except Exception as e:
         print(e)
+    soup = BeautifulSoup(driver.page_source, 'html.parser')
+    username = soup.find(class_='bio__name__display').text
     driver.get('https://splinterlands.com/?p=battle_history')
     try:
         WebDriverWait(driver, 5).until(
@@ -835,7 +824,7 @@ def battle(account, match):
     def findMatch():
         time.sleep(1)
         driver.execute_script("document.getElementsByClassName('big_category_btn red')[0].click();")
-        showLog('Đang tìm đối thủ...', account['mail'])
+        showLog('Đang tìm đối thủ...', username)
 
     def joinMatch():
         nonlocal mana
@@ -843,18 +832,18 @@ def battle(account, match):
             (By.XPATH, "/html/body/div[3]/div/div/div/div[2]/div[3]/div[2]/button")))
         time.sleep(1)
         mana = driver.find_element(By.CSS_SELECTOR, 'div.col-md-3:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)').text
-        showLog('Đang khởi tạo đội hình...', account['mail'])
+        showLog('Đang khởi tạo đội hình...', username)
         driver.execute_script("document.getElementsByClassName('btn btn--create-team')[0].click();")
 
     def createTeam():
         WebDriverWait(driver, 60).until(
             EC.visibility_of_element_located((By.XPATH, '//*[@id="page_container"]/div/div[1]/div')))
-        showLog('Đang chọn thẻ bài...', account['mail'])
+        showLog('Đang chọn thẻ bài...', username)
         time.sleep(7)
         team = Team.teamSelector(driver.page_source, mana)
         driver.execute_script("var team = "+ team['summoner'] + ";let card = document.getElementsByClassName('card beta');let cimg = document.getElementsByClassName('card-img');var reg = /[A-Z]\\w+( \\w+'*\\w*)*/;for (let j = 0; j < card.length; j++){let att_card = card[j].innerText;let result = att_card.match(reg);let name = result[0];if (name == team[0]){cimg[j].click();break;}}")
         try:
-            WebDriverWait(driver, 2).until(EC.visibility_of_element_located((By.XPATH, '//*[@id="splinter_selection_modal"]/div/div')))
+            WebDriverWait(driver, 1).until(EC.visibility_of_element_located((By.XPATH, '//*[@id="splinter_selection_modal"]/div/div')))
             color = team['color']
             if color == 'Black':
                 driver.find_element(By.XPATH, '//*[@id="splinter_selection_modal"]/div/div/div[2]/div/div[5]').click()
@@ -873,53 +862,50 @@ def battle(account, match):
 
 
     def startMatch():
-        showLog('Đang chờ đối thủ...', account['mail'])
+        showLog('Đang chờ đối thủ...', username)
         WebDriverWait(driver, 150).until(EC.visibility_of_element_located((By.CSS_SELECTOR, '#btnRumble')))
         driver.execute_script("document.getElementsByClassName('btn-battle')[0].click()")
-        showLog('Đang bắt đầu trận...', account['mail'])
+        showLog('Đang bắt đầu trận...', username)
         time.sleep(3.5)
-        showLog('Đang bỏ qua...', account['mail'])
+        showLog('Đang bỏ qua...', username)
         driver.execute_script("document.getElementsByClassName('btn-battle')[1].click()")
 
     def skipMatch():
         WebDriverWait(driver, 10).until(
             EC.visibility_of_element_located((By.XPATH, '//*[@id="dialog_container"]/div/div/div/div[1]/h1')))
         driver.execute_script("document.getElementsByClassName('btn btn--done')[0].click();")
-        showLog('Kết thúc trận đấu', account['mail'])
+        showLog('Kết thúc trận đấu', username)
+        showLog('Đang lưu lịch sử trận đấu...', username)
+        History.writeHistory(username)
+        showLog('Xong', username)
 
     def checkErr():
         try:
             WebDriverWait(driver, 2).until(EC.visibility_of_element_located((By.XPATH, '//*[@id="play_now"]/div/div/div/div/button')))
             return -1
-        except:
-            pass
-        try:
-            WebDriverWait(driver, 1).until(EC.visibility_of_element_located((By.ID, "battle_category_btn")))
-            return 0
-        except:
-            pass
-        try:
-            WebDriverWait(driver, 1).until(EC.visibility_of_element_located((By.XPATH, "/html/body/div[3]/div/div/div/div[2]/div[3]/div[2]/button")))
-            return 1
-        except:
-            pass
-        try:
-            WebDriverWait(driver, 1).until(EC.visibility_of_element_located((By.XPATH, '//*[@id="page_container"]/div/div[1]/div')))
-            return 2
-        except:
-            pass
-        try:
-            WebDriverWait(driver, 1).until(EC.visibility_of_element_located((By.CSS_SELECTOR, '#btnRumble')))
-            return 3
-        except:
-            pass
-        try:
-            WebDriverWait(driver, 1.5).until(
-                EC.visibility_of_element_located((By.XPATH, '//*[@id="dialog_container"]/div/div/div/div[1]/h1')))
-            return 4
-        except:
-            pass
-        return -2
+        except:        
+            try:
+                WebDriverWait(driver, 1).until(EC.visibility_of_element_located((By.ID, "battle_category_btn")))
+                return 0
+            except:
+                try:
+                    WebDriverWait(driver, 1).until(EC.visibility_of_element_located((By.XPATH, "/html/body/div[3]/div/div/div/div[2]/div[3]/div[2]/button")))
+                    return 1
+                except:         
+                    try:
+                        WebDriverWait(driver, 1).until(EC.visibility_of_element_located((By.XPATH, '//*[@id="page_container"]/div/div[1]/div')))
+                        return 2
+                    except:               
+                        try:
+                            WebDriverWait(driver, 1).until(EC.visibility_of_element_located((By.CSS_SELECTOR, '#btnRumble')))
+                            return 3
+                        except:                  
+                            try:
+                                WebDriverWait(driver, 1.5).until(
+                                    EC.visibility_of_element_located((By.XPATH, '//*[@id="dialog_container"]/div/div/div/div[1]/h1')))
+                                return 4
+                            except:
+                                return -2
 
     def checkPoint0():
         try:
@@ -976,54 +962,21 @@ def battle(account, match):
         elif x == 3:
             c = checkPoint4()
         return c
-    # findMatch()
-    # joinMatch()
-    # createTeam()
-    # startMatch()
-    # skipMatch()
 
-    checkPoint = 0
-    clone_i = 0
+
     for i in range(int(match)):
-        clone_i = i + 1
-        showLog(f'Bắt đầu trận thứ [{i + 1}/{match}]', account['mail'])
-        wait.until(EC.visibility_of_element_located((By.ID, "battle_category_btn")))
-        saveHistoryPoint = i + 1
-
-        # Save history 1 time every 5 matches
-        if saveHistoryPoint % 5 == 0:
-            time.sleep(3)
-            try:
-                showLog('Đang lưu lịch sử trận đấu...', account['mail'])
-                History.writeHistory(driver, 20)
-                showLog('Xong', account['mail'])
-            except Exception as e:
-                showLog('Lỗi lưu lịch sử:' + e, account['mail'])
-            finally:
-                checkPoint = saveHistoryPoint
-
-        # Start
+        showLog(f'Bắt đầu trận thứ [{i + 1}/{match}]', username)
         try:
-            checkPoint0(account['mail'])
+            WebDriverWait(driver, 5).until(EC.visibility_of_element_located((By.ID, "battle_category_btn")))
+            checkPoint0()
         except:
             q = None
             while (q != 0):
                 driver.refresh()
-                saveHistoryPoint = checkErr()
-                if saveHistoryPoint != -2: q = tryAgain(saveHistoryPoint)
-    time.sleep(3)
-
-    # Save history when time < 5
-    x = clone_i - checkPoint
-    if x > 0:
-        try:
-            showLog('Đang lưu lịch sử trận đấu...', account['mail'])
-            History.writeHistory(driver, x)
-            showLog('Xong', account['mail'])
-        except Exception as e:
-            showLog('Lỗi lưu lịch sử:' + e, account['mail'])
-        finally:
-            driver.quit()
+                cp = checkErr()
+                if cp != -2:
+                    q = tryAgain(cp)
+    driver.quit()
     return 'Q'
 
 def mbattle(account_list, match):
