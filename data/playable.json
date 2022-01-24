@@ -12840,5 +12840,99 @@
                 "total_burned_xp": 0
             }
         ]
+    },
+    {
+        "id": 222,
+        "name": "Zalran Efreet",
+        "color": "Red",
+        "type": "Monster",
+        "sub_type": null,
+        "rarity": 4,
+        "drop_rate": 0,
+        "stats": {
+            "mana": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "attack": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "ranged": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "magic": [
+                2,
+                2,
+                2,
+                2
+            ],
+            "armor": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "health": [
+                3,
+                3,
+                3,
+                3
+            ],
+            "speed": [
+                2,
+                2,
+                2,
+                2
+            ],
+            "abilities": [
+                [
+                    "Life Leech"
+                ],
+                [
+                    "Cleanse"
+                ],
+                [
+                    "Headwinds"
+                ],
+                [
+                    "Strengthen"
+                ]
+            ]
+        },
+        "is_starter": false,
+        "editions": "3",
+        "created_block_num": 39066950,
+        "last_update_tx": "d58702ea084f5be65c544143a410034fce5e77c0",
+        "total_printed": 10000,
+        "is_promo": false,
+        "tier": null,
+        "distribution": [
+            {
+                "card_detail_id": 222,
+                "gold": false,
+                "edition": 3,
+                "num_cards": "3729",
+                "total_xp": "2760000",
+                "num_burned": "1090",
+                "total_burned_xp": "933000"
+            },
+            {
+                "card_detail_id": 222,
+                "gold": true,
+                "edition": 3,
+                "num_cards": "75",
+                "total_xp": "168000",
+                "num_burned": "126",
+                "total_burned_xp": "346000"
+            }
+        ]
     }
 ]

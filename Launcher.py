@@ -1,18 +1,5 @@
 import os, time, requests
 
-logo = '''
-    \t\t\t\t\t  ██████  ██▓███   ██▓     ██▓ ▄▄▄▄   
-    \t\t\t\t\t▒██    ▒ ▓██░  ██▒▓██▒    ▓██▒▓█████▄ 
-    \t\t\t\t\t░ ▓██▄   ▓██░ ██▓▒▒██░    ▒██▒▒██▒ ▄██
-    \t\t\t\t\t  ▒   ██▒▒██▄█▓▒ ▒▒██░    ░██░▒██░█▀  
-    \t\t\t\t\t▒██████▒▒▒██▒ ░  ░░██████▒░██░░▓█  ▀█▓
-    \t\t\t\t\t▒ ▒▓▒ ▒ ░▒▓▒░ ░  ░░ ▒░▓  ░░▓  ░▒▓███▀▒
-    \t\t\t\t\t░ ░▒  ░ ░░▒ ░     ░ ░ ▒  ░ ▒ ░▒░▒   ░ 
-    \t\t\t\t\t░  ░  ░  ░░         ░ ░    ▒ ░ ░    ░ 
-    \t\t\t\t\t      ░               ░  ░ ░   ░      
-    \t\t\t\t\t                By tmkha            ░ 
-    '''
-
 def download_resource():
     print('\n\n\n\n\n\n\n')
     print(logo)
@@ -25,15 +12,17 @@ def download_resource():
     else: print(response)
 
 if __name__ == "__main__":
-    os.system('color 5F')
+    # os.system('color 5F')
     os.system('title Splint Tool')
-    try:
-        # download_resource()
-        from splint import Launcher
-        Launcher.menu()
-    except Exception as e:
-        os.system('cls')
-        print('\n\n\n\n\n\n\n')
-        print(logo)
-        print('Lỗi:', e)
-        os.system('pause>nul|set/p =Nhấn phím bất kì để thoát ...')
+    from splint import Launcher
+    Launcher.menu()
+    # try:
+    #     # download_resource()
+    #     from splint import Launcher
+    #     Launcher.menu()
+    # except Exception as e:
+    #     os.system('cls')
+    #     print('\n\n\n\n\n\n\n')
+    #     print(logo)
+    #     print('Lỗi:', e)
+    #     os.system('pause>nul|set/p =Nhấn phím bất kì để thoát ...')

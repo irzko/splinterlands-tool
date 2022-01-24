@@ -1,0 +1,423 @@
+{
+    "battle_queue_id_1": "sl_74e4a814b406a631102454f6f4f9d815",
+    "battle_queue_id_2": "sl_cc9b677ed6ce4c8d138d55da3d0f8b6d",
+    "player_1_rating_initial": 466,
+    "player_2_rating_initial": 464,
+    "winner": "caixanh347",
+    "player_1_rating_final": 446,
+    "player_2_rating_final": 484,
+    "details": {
+        "seed": "8b095c40767c1641d7f8ed8311f7469a",
+        "team1": {
+            "player": "initiate_975111",
+            "rating": 633,
+            "color": "Red",
+            "summoner": {
+                "uid": "starter-440-zsCsL",
+                "xp": 1,
+                "gold": false,
+                "card_detail_id": 440,
+                "level": 1,
+                "edition": 7,
+                "state": {
+                    "stats": [
+                        1,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0
+                    ],
+                    "abilities": []
+                }
+            },
+            "monsters": [
+                {
+                    "uid": "starter-162-RfJed",
+                    "xp": 1,
+                    "gold": false,
+                    "card_detail_id": 162,
+                    "level": 1,
+                    "edition": 4,
+                    "state": {
+                        "alive": true,
+                        "stats": [
+                            3,
+                            0,
+                            0,
+                            2,
+                            6,
+                            1
+                        ],
+                        "base_health": 6,
+                        "other": []
+                    },
+                    "abilities": [
+                        "Shield"
+                    ]
+                },
+                {
+                    "uid": "starter-397-1q2Jd",
+                    "xp": 1,
+                    "gold": false,
+                    "card_detail_id": 397,
+                    "level": 1,
+                    "edition": 7,
+                    "state": {
+                        "alive": true,
+                        "stats": [
+                            2,
+                            0,
+                            0,
+                            0,
+                            5,
+                            1
+                        ],
+                        "base_health": 5,
+                        "other": []
+                    },
+                    "abilities": [
+                        "Reach"
+                    ]
+                },
+                {
+                    "uid": "starter-426-6Sdtp",
+                    "xp": 1,
+                    "gold": false,
+                    "card_detail_id": 426,
+                    "level": 1,
+                    "edition": 7,
+                    "state": {
+                        "alive": true,
+                        "stats": [
+                            0,
+                            0,
+                            0,
+                            0,
+                            1,
+                            2
+                        ],
+                        "base_health": 1,
+                        "other": []
+                    },
+                    "abilities": []
+                },
+                {
+                    "uid": "starter-158-q1e0O",
+                    "xp": 1,
+                    "gold": false,
+                    "card_detail_id": 158,
+                    "level": 1,
+                    "edition": 4,
+                    "state": {
+                        "alive": true,
+                        "stats": [
+                            2,
+                            0,
+                            0,
+                            0,
+                            1,
+                            3
+                        ],
+                        "base_health": 1,
+                        "other": []
+                    },
+                    "abilities": [
+                        "Opportunity"
+                    ]
+                },
+                {
+                    "uid": "starter-401-gzoa7",
+                    "xp": 1,
+                    "gold": false,
+                    "card_detail_id": 401,
+                    "level": 1,
+                    "edition": 7,
+                    "state": {
+                        "alive": true,
+                        "stats": [
+                            2,
+                            0,
+                            0,
+                            0,
+                            6,
+                            2
+                        ],
+                        "base_health": 6,
+                        "other": []
+                    },
+                    "abilities": [
+                        "Sneak"
+                    ]
+                },
+                {
+                    "uid": "starter-398-MIjos",
+                    "xp": 1,
+                    "gold": false,
+                    "card_detail_id": 398,
+                    "level": 1,
+                    "edition": 7,
+                    "state": {
+                        "alive": true,
+                        "stats": [
+                            0,
+                            0,
+                            0,
+                            0,
+                            3,
+                            2
+                        ],
+                        "base_health": 3,
+                        "other": []
+                    },
+                    "abilities": [
+                        "Cleanse"
+                    ]
+                }
+            ]
+        },
+        "team2": {
+            "player": "caixanh347",
+            "rating": 579,
+            "color": "Red",
+            "summoner": {
+                "uid": "starter-167-ZFCQI",
+                "xp": 1,
+                "gold": false,
+                "card_detail_id": 167,
+                "level": 1,
+                "edition": 4,
+                "state": {
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "abilities": []
+                }
+            },
+            "monsters": [
+                {
+                    "uid": "starter-162-k9YMH",
+                    "xp": 1,
+                    "gold": false,
+                    "card_detail_id": 162,
+                    "level": 1,
+                    "edition": 4,
+                    "state": {
+                        "alive": true,
+                        "stats": [
+                            3,
+                            0,
+                            0,
+                            2,
+                            6,
+                            1
+                        ],
+                        "base_health": 6,
+                        "other": []
+                    },
+                    "abilities": [
+                        "Shield"
+                    ]
+                },
+                {
+                    "uid": "starter-396-bRdb7",
+                    "xp": 1,
+                    "gold": false,
+                    "card_detail_id": 396,
+                    "level": 1,
+                    "edition": 7,
+                    "state": {
+                        "alive": true,
+                        "stats": [
+                            0,
+                            1,
+                            0,
+                            0,
+                            4,
+                            2
+                        ],
+                        "base_health": 4,
+                        "other": []
+                    },
+                    "abilities": [
+                        "Snipe"
+                    ]
+                },
+                {
+                    "uid": "starter-161-7Ch4l",
+                    "xp": 1,
+                    "gold": false,
+                    "card_detail_id": 161,
+                    "level": 1,
+                    "edition": 4,
+                    "state": {
+                        "alive": true,
+                        "stats": [
+                            0,
+                            2,
+                            0,
+                            0,
+                            2,
+                            4
+                        ],
+                        "base_health": 2,
+                        "other": []
+                    },
+                    "abilities": [
+                        "Blast"
+                    ]
+                },
+                {
+                    "uid": "starter-426-Bw6XT",
+                    "xp": 1,
+                    "gold": false,
+                    "card_detail_id": 426,
+                    "level": 1,
+                    "edition": 7,
+                    "state": {
+                        "alive": true,
+                        "stats": [
+                            0,
+                            0,
+                            0,
+                            0,
+                            1,
+                            2
+                        ],
+                        "base_health": 1,
+                        "other": []
+                    },
+                    "abilities": []
+                },
+                {
+                    "uid": "starter-158-HDwIk",
+                    "xp": 1,
+                    "gold": false,
+                    "card_detail_id": 158,
+                    "level": 1,
+                    "edition": 4,
+                    "state": {
+                        "alive": true,
+                        "stats": [
+                            2,
+                            0,
+                            0,
+                            0,
+                            1,
+                            3
+                        ],
+                        "base_health": 1,
+                        "other": []
+                    },
+                    "abilities": [
+                        "Opportunity"
+                    ]
+                },
+                {
+                    "uid": "starter-402-pVtpC",
+                    "xp": 1,
+                    "gold": false,
+                    "card_detail_id": 402,
+                    "level": 1,
+                    "edition": 7,
+                    "state": {
+                        "alive": true,
+                        "stats": [
+                            0,
+                            0,
+                            2,
+                            0,
+                            4,
+                            2
+                        ],
+                        "base_health": 4,
+                        "other": []
+                    },
+                    "abilities": []
+                }
+            ]
+        },
+        "winner": "caixanh347",
+        "loser": "initiate_975111"
+    },
+    "player_1": "initiate_975111",
+    "player_2": "caixanh347",
+    "created_date": "2022-01-23T05:24:39.858Z",
+    "match_type": "Ranked",
+    "mana_cap": 27,
+    "current_streak": 1,
+    "ruleset": "Standard",
+    "inactive": "",
+    "settings": "{\"rating_level\":1}",
+    "block_num": 61170644,
+    "rshares": 74316,
+    "dec_info": "{\"rshares\":74316,\"capture_rate\":6554.5925196,\"reward\":0.067,\"bonuses\":{\"streak\":{\"wins\":0,\"bonus\":0},\"gold\":{\"cards\":0,\"bonus\":0},\"alpha\":{\"cards\":0,\"bonus\":0},\"beta\":{\"cards\":0,\"bonus\":0},\"guild\":{\"level\":0,\"bonus\":0}}}",
+    "leaderboard": 0,
+    "reward_dec": "0.067",
+    "reward_sps": null,
+    "player_1_data": {
+        "name": "initiate_975111",
+        "join_date": "2021-09-11T10:16:56.462Z",
+        "rating": 446,
+        "battles": 610,
+        "wins": 291,
+        "current_streak": 0,
+        "longest_streak": 9,
+        "max_rating": 1149,
+        "max_rank": 110227,
+        "champion_points": 0,
+        "capture_rate": 6113,
+        "last_reward_block": 61170644,
+        "last_reward_time": "2022-01-23T05:24:39.858Z",
+        "guild": null,
+        "guild_name": null,
+        "guild_motto": null,
+        "guild_data": null,
+        "guild_level": null,
+        "guild_quest_lodge_level": null,
+        "starter_pack_purchase": false,
+        "avatar_id": 9,
+        "display_name": null,
+        "title_pre": null,
+        "title_post": null,
+        "collection_power": 0,
+        "league": 1,
+        "adv_msg_sent": false,
+        "alt_name": null
+    },
+    "player_2_data": {
+        "name": "caixanh347",
+        "join_date": "2021-10-30T06:43:34.789Z",
+        "rating": 596,
+        "battles": 2608,
+        "wins": 1189,
+        "current_streak": 2,
+        "longest_streak": 10,
+        "max_rating": 1234,
+        "max_rank": 169552,
+        "champion_points": 0,
+        "capture_rate": 4997,
+        "last_reward_block": 61171283,
+        "last_reward_time": "2022-01-23T05:56:44.048Z",
+        "guild": null,
+        "guild_name": null,
+        "guild_motto": null,
+        "guild_data": null,
+        "guild_level": null,
+        "guild_quest_lodge_level": null,
+        "starter_pack_purchase": true,
+        "avatar_id": 0,
+        "display_name": null,
+        "title_pre": null,
+        "title_post": null,
+        "collection_power": 0,
+        "league": 1,
+        "adv_msg_sent": false,
+        "alt_name": "recruit_980006"
+    }
+}

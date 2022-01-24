@@ -60,14 +60,6 @@
             "Truthspeaker",
             "Stitch Leech",
             "Celestial Harpy"
-        ],
-        [
-            "Thaddius Brood",
-            "Cursed Windeku",
-            "Death Elemental",
-            "Undead Badger",
-            "Carrion Shade",
-            "Cursed Slimeball"
         ]
     ],
     "18": [
@@ -147,11 +139,11 @@
     "24": [
         [
             "Kelya Frendul",
-            "Chaos Agent",
-            "Hardy Stonefish",
             "Serpent of Eld",
+            "Merdaali Guardian",
+            "Kulu Swimhunter",
             "Angelic Mandarin",
-            "Deeplurker",
+            "Albatross",
             "Ice Pixie"
         ]
     ],
@@ -179,8 +171,7 @@
             "Thaddius Brood",
             "Cursed Windeku",
             "Riftwing",
-            "Silent Sha-",
-            "vi",
+            "Silent Sha-vi",
             "Death Elemental",
             "Undead Badger",
             "Xenith Archer"
@@ -199,13 +190,13 @@
     ],
     "28": [
         [
-            "Tarsa",
-            "Radiated Scorcher",
-            "Living Lava",
-            "Disintegrator",
-            "Tenyii Striker",
-            "Serpentine Spy",
-            "Chaos Agent"
+            "Kelya Frendul",
+            "Serpent of Eld",
+            "Deeplurker",
+            "Merdaali Guardian",
+            "Scavo Hireling",
+            "Feasting Seaweed",
+            "Albatross"
         ]
     ],
     "29": [
