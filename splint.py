@@ -1,4 +1,6 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service as ChromeService
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -797,9 +799,8 @@ def showLog(log, email):
 
 
 def battle(account, match):
-    options = webdriver.ChromeOptions()
-    #chrome_options.add_argument("user-data-dir="+filePath)
-    driver = webdriver.Chrome('webdriver/chromedriver', options = options)
+    service = ChromeService(executable_path=ChromeDriverManager().install())
+    driver = webdriver.Chrome(service=service)
     driver.get('https://splinterlands.com')
     driver.find_element(By.ID, 'log_in_button').click()
     WebDriverWait(driver, 60).until(EC.visibility_of_element_located((By.CSS_SELECTOR, ".modal-body")))
@@ -807,6 +808,7 @@ def battle(account, match):
     driver.find_element(By.ID, 'email').send_keys(account['mail'])
     driver.find_element(By.ID, 'password').send_keys(account['pwd'])
     driver.find_element(By.ID, 'loginBtn').click()
+
     try:
         WebDriverWait(driver, 5).until(EC.visibility_of_element_located(
             (By.XPATH, '//*[@id="dialog_container"]/div/div/div/div[2]/div[2]/div')))
@@ -874,19 +876,13 @@ def battle(account, match):
 
     def startMatch():
         showLog('Đang chờ đối thủ...', username)
-        WebDriverWait(driver, 60).until(EC.visibility_of_element_located((By.CSS_SELECTOR, '#btnRumble')))
-        driver.execute_script("document.getElementsByClassName('btn-battle')[0].click()")
-        showLog('Đang bắt đầu trận...', username)
-        time.sleep(3.5)
-        driver.execute_script("document.getElementsByClassName('btn-battle')[1].click()")
-
-    def skipMatch():
+        WebDriverWait(driver, 60).until(EC.visibility_of_element_located((By.CSS_SELECTOR, '#btnSkip')))
         showLog('Đang bỏ qua...', username)
-        WebDriverWait(driver, 30).until(
-            EC.visibility_of_element_located((By.XPATH, '//*[@id="dialog_container"]/div/div/div/div[1]/h1')))
-        time.sleep(2)
-        driver.execute_script("document.getElementsByClassName('btn btn--done')[0].click();")
+        driver.find_element(By.ID, "btnSkip").click()
         showLog('Kết thúc trận đấu', username)
+        time.sleep(2)
+        WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, '//*[@id="dialog_container"]/div/div/div/div[1]/h1')))
+        driver.execute_script('document.getElementsByClassName("btn btn--done")[0].click()')
         showLog('Đang lưu lịch sử trận đấu...', username)
         
 
@@ -908,15 +904,10 @@ def battle(account, match):
                         return 2
                     except:               
                         try:
-                            WebDriverWait(driver, 1).until(EC.visibility_of_element_located((By.CSS_SELECTOR, '#btnRumble')))
+                            WebDriverWait(driver, 30).until(EC.visibility_of_element_located((By.CSS_SELECTOR, '#btnSkip')))
                             return 3
-                        except:                  
-                            try:
-                                WebDriverWait(driver, 1).until(
-                                    EC.visibility_of_element_located((By.XPATH, '//*[@id="dialog_container"]/div/div/div/div[1]/h1')))
-                                return 4
-                            except:
-                                return -2
+                        except:
+                            return -2
 
     def checkPoint0():
         try:
@@ -945,14 +936,6 @@ def battle(account, match):
     def checkPoint3():
         try:
             startMatch()
-            checkPoint4()
-            return 0
-        except:
-            return -1
-
-    def checkPoint4():
-        try:
-            skipMatch()
             History.writeHistory(username)
             showLog('Xong', username)
             return 0
@@ -972,8 +955,6 @@ def battle(account, match):
             c = checkPoint2()
         elif x == 3:
             c = checkPoint3()
-        elif x == 3:
-            c = checkPoint4()
         return c
 
 
