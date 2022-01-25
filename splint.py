@@ -739,12 +739,12 @@ class Team:
                 if Team.teams.get(mana) == None:
                     teamNA.append(mana)
             print('-' * 120)
-            print('CHÚ Ý!')
-            print('''Bạn chưa thêm đủ đội hình, vì thế những đội hình nào chưa có chúng tôi sẽ chọn đội hình mặc định để chiến đấu, và
-kết quả có thể sẽ không như mong muốn!''')
-            print('\nNhững đội hình có mana sau chưa được thêm:')
-            print(", ".join(teamNA))
-            print('-' * 120)
+            print('  │' + "CHÚ Ý!".center(114) + '│')
+            print('  │' + "Bạn chưa thêm đủ đội hình, vì thế những đội hình nào chưa có chúng tôi sẽ chọn đội hình mặc định để chiến đấu, và".center(114) + '│')
+            print('  │' + "kết quả có thể sẽ không như mong muốn!".center(114) + '│')
+            make_empty_line(1)
+            print('  │' + "Những đội hình có mana sau chưa được thêm:".center(114) + '│')
+            print('  │' + f'", ".join(teamNA)'.center(114) + '│')
 
     def numOfCard():
         listCard = Card.sortNames(Card.allCards)
