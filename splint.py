@@ -1090,17 +1090,21 @@ class Launcher:
                         account_list.pop(select)
                     elif select == 'S' and len(account_selected) > 0:
                         os.system('cls')
-                        match = input('Số trận đấu: ')
-                        while (not (match.isdigit() and int(match) > 0)):
+                        match = None
+                        while (match != 'Q'):
                             os.system('cls')
-                            print('Vui lòng nhập một số!')
-                            match = input('Số trận đấu: ')
-                        if len(account_selected) == 1:
-                            battle(account_selected[0], match)
-                        else:
-                            mbattle(account_selected, match)
-                        os.system('cls')
-
+                            print('Nhập sô trận đấu')
+                            print('[Q] Thoát\n')
+                            match = input('> Chọn: ').upper()
+                            if match.isdigit() and int(match) > 0:
+                                if len(account_selected) == 1:
+                                    battle(account_selected[0], match)
+                                else:
+                                    mbattle(account_selected, match)
+                                break
+                            if match != 'Q':
+                                print('Vui lòng nhập một số hợp lệ!')
+                                time.sleep(1)
                     elif select == 'S' and len(account_selected) == 0:
                         print('Vui lòng chọn ít nhất một tài khoản!'.center(116))
                         time.sleep(1)
@@ -1180,3 +1184,6 @@ class Launcher:
             print('Đã gửi phản hồi của bạn!')
             time.sleep(2)
             return 'Q'
+
+if __name__ == '__main__':
+    Launcher.menu()
