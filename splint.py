@@ -370,13 +370,16 @@ class History:
         while (select != 'Q'):
             os.system('cls')
             Team.topCard(mana)
-            print("Chọn đội hình để xem chi tiết\n")
+            print('  │' + "Chọn đội hình để xem chi tiết".center(114) + '│')
+            make_empty_line(1)
             j = 1
             for i in Team.teams[mana]:
-                print(f'[{j}] {", ".join(i)}')
+                print('  │'.ljust(5) + f'[{j}] {", ".join(i)}'.ljust(112) + '│')
                 j += 1
-            print('\n[Q] Thoát')
-            select = input('>> Chọn đội hình: ').upper()
+            make_empty_line(1)
+            print('  │' + "[Q] Thoát".center(114) + '│')
+            print(end)
+            select = input('  > Chọn đội hình: ').upper()
             if select.isdigit() and (int(select) - 1 >= 0 and int(select) - 1 < len(Team.teams[mana])):
                 n = None
                 select = int(select) - 1
@@ -384,15 +387,16 @@ class History:
                     team = Team.teams[mana][select]
                     kda = History.kda(mana, team)
                     os.system('cls')
-                    print(f'Team: {", ".join(team)}')
-                    print(f"\nTrong {kda[3]} trận:")
-                    print(f'    Thắng: {kda[0]}')
-                    print(f'    Thua: {kda[1]}')
-                    print(f'    Hoà: {kda[2]}')
+                    header("Thông tin")
+                    print('  │' + 'Đội của bạn'.center(114) + '│')
+                    print('  │' + f'{", ".join(team)}'.center(114) + '│')
+                    print('  │' + f"Thắng: {kda[0]} / Thua: {kda[1]} / Hoà: {kda[2]} / {kda[3]} trận".center(114) + '│')
+                    print(break_line)
                     p = []
+                    print('  │' + 'Các đội đã thắng đội của bạn'.center(114) + '│')
+                    make_empty_line(1)
                     if len(History.history) != 0:
                         if kda[3] != 0:
-                            print('\n\t\t\t\t\t\tLỊCH SỬ THUA\n')
                             e_team = []
                             for i in History.history[mana]:
                                 if i['team1']['team'] == team:
@@ -403,23 +407,26 @@ class History:
                                 if p.count(i) == 0:
                                     p.append(i)
                             for i in range(len(p)):
-                                print(f'{i+1}. {p[i]}\n{e_team.count(p[i])} lần\n')
+                                print('  │'.ljust(2) + f"┌ [{i+1}] {', '.join(p[i])}".ljust(114) + '│')
+                                print('  │' + f'└ Đánh bại bạn {e_team.count(p[i])} lần'.ljust(114) + '│')
+                                make_empty_line(1)
+                            print('  │' + "Nhập số của đội hình để sao chép".center(114) + '│')
                         else:
-                            print('\n\t\t\t\t\t\tLỊCH SỬ THUA\n')
-                            print('\t\t\t\t\t      Không có lịch sử')
-                    print('\nNhập số của đội hình để sao chép')
-                    print('[B] Trở lại    |    [Q] Thoát')
-                    n = input('>> Chọn: ').upper()
-                    print(n)
-                    if n.isdigit():
+                            make_empty_line(4)
+                            print('  │' + "Không có lịch sử".center(114) + '│')
+                            make_empty_line(5)
+                    print('  │' + "[B] Trở lại    |    [Q] Thoát".center(114) + '│')
+                    print(end)
+                    n = input('  > Chọn: ').upper()
+                    if n.isdigit() and int(n) - 1 < len(p) and int(n) - 1 >= 0:
                         Team.copyTeam(mana, p[int(n)-1])
                     elif n == 'Q':
                         select = 'Q'
                     elif n != 'B':
-                        print('Cú pháp không hợp lệ!')
+                        print('Cú pháp không hợp lệ!'. center(116))
                         time.sleep(1)
             elif select != 'Q':
-                print('Cú pháp không hợp lệ!')
+                print('Cú pháp không hợp lệ!'. center(116))
                 time.sleep(1)
 
     def kda(mana, team):
@@ -745,7 +752,7 @@ kết quả có thể sẽ không như mong muốn!''')
 
     def topCard(mana):
         if len(History.history) > 0:
-            print(f"THẺ BÀI ĐƯỢC ĐỐI THỦ CHỌN NHIỀU NHẤT VỚI {mana} MANA\n")
+            header("Thẻ bài được đối thủ chọn nhiều nhất")
             team = {}
             for i in History.history[mana]:
                 enemyTeam = i['team2']['team']
@@ -755,12 +762,12 @@ kết quả có thể sẽ không như mong muốn!''')
                     else:
                         team[j] += 1
             items_sorted = sorted(team.items(), reverse=True, key=lambda x: x[1])
-            print(f'{"Tên thẻ bài":>12}{"Số lần chọn":>16}\n')
+            print('  │'.ljust(46) + f'{"Tên thẻ bài":>12}{"Số lần chọn":>16}'.ljust(71) + '│')
             j = 1
             for i in items_sorted:
-                print(f'{j:>2} {i[0]:<20} {i[1]:>2}')
+                print('  │'.ljust(44) + f'{j:>2} {i[0]:<20} {i[1]:>2}'.ljust(73) + '│')
                 j += 1
-            print(f"{'_' * 100}\n")
+            print(break_line)
 
     def show():
         select = ''
