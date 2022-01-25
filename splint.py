@@ -5,11 +5,22 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
-from border import *
 import json, os, time, requests, random
 import multiprocessing
 
 
+empty_line = "  │                                                                                                                  │"
+end = "  └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘"
+break_line = "  ├──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤"
+def header(tittle):
+    t = " {0} ".format(tittle)
+    p = t.center(114, '═')
+    header = "\n  ╒" + p.format(tittle) + "╕"
+    print(header)
+    print(empty_line)
+def make_empty_line(line):
+    for i in range(0, line):
+        print(empty_line)
 class File:
     def __init__(self, path):
         self.path = path

@@ -12842,21 +12842,310 @@
         ]
     },
     {
-        "id": 222,
-        "name": "Zalran Efreet",
-        "color": "Red",
+        "id": 337,
+        "name": "Pelacor Bandit",
+        "color": "Blue",
         "type": "Monster",
         "sub_type": null,
-        "rarity": 4,
+        "rarity": 1,
         "drop_rate": 0,
         "stats": {
             "mana": [
-                5,
-                5,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3
+            ],
+            "attack": [
+                1,
+                1,
+                1,
+                2,
+                2,
+                2,
+                3,
+                3,
+                3,
+                4
+            ],
+            "ranged": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "magic": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "armor": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "health": [
+                2,
+                3,
+                3,
+                3,
+                4,
+                4,
+                4,
+                4,
                 5,
                 5
             ],
+            "speed": [
+                3,
+                3,
+                4,
+                4,
+                4,
+                5,
+                5,
+                6,
+                6,
+                6
+            ],
+            "abilities": [
+                [
+                    "Sneak",
+                    "Flying"
+                ],
+                [],
+                [],
+                [],
+                [],
+                [],
+                [],
+                [],
+                [],
+                []
+            ]
+        },
+        "is_starter": false,
+        "editions": "3",
+        "created_block_num": null,
+        "last_update_tx": null,
+        "total_printed": 1895842,
+        "is_promo": false,
+        "tier": 7,
+        "distribution": [
+            {
+                "card_detail_id": 337,
+                "gold": false,
+                "edition": 3,
+                "num_cards": "725233",
+                "total_xp": "1853859",
+                "num_burned": "2824",
+                "total_burned_xp": "4351"
+            },
+            {
+                "card_detail_id": 337,
+                "gold": true,
+                "edition": 3,
+                "num_cards": "23961",
+                "total_xp": "37604",
+                "num_burned": "24",
+                "total_burned_xp": "28"
+            }
+        ]
+    },
+    {
+        "id": 334,
+        "name": "Pelacor Mercenary",
+        "color": "Green",
+        "type": "Monster",
+        "sub_type": null,
+        "rarity": 1,
+        "drop_rate": 0,
+        "stats": {
+            "mana": [
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7
+            ],
             "attack": [
+                2,
+                2,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3
+            ],
+            "ranged": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "magic": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "armor": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ],
+            "health": [
+                8,
+                9,
+                9,
+                9,
+                10,
+                9,
+                10,
+                10,
+                11,
+                11
+            ],
+            "speed": [
+                2,
+                2,
+                2,
+                3,
+                3,
+                3,
+                3,
+                4,
+                4,
+                4
+            ],
+            "abilities": [
+                [
+                    "Flying"
+                ],
+                [],
+                [],
+                [],
+                [],
+                [
+                    "Heal"
+                ],
+                [],
+                [],
+                [],
+                [
+                    "Retaliate"
+                ]
+            ]
+        },
+        "is_starter": false,
+        "editions": "3",
+        "created_block_num": null,
+        "last_update_tx": null,
+        "total_printed": 1893024,
+        "is_promo": false,
+        "tier": 7,
+        "distribution": [
+            {
+                "card_detail_id": 334,
+                "gold": false,
+                "edition": 3,
+                "num_cards": "722984",
+                "total_xp": "1851184",
+                "num_burned": "2365",
+                "total_burned_xp": "4221"
+            },
+            {
+                "card_detail_id": 334,
+                "gold": true,
+                "edition": 3,
+                "num_cards": "23732",
+                "total_xp": "37591",
+                "num_burned": "27",
+                "total_burned_xp": "28"
+            }
+        ]
+    },
+    {
+        "id": 343,
+        "name": "Pelacor Conjurer",
+        "color": "White",
+        "type": "Monster",
+        "sub_type": null,
+        "rarity": 1,
+        "drop_rate": 0,
+        "stats": {
+            "mana": [
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "attack": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
                 0,
                 0,
                 0,
@@ -12866,72 +13155,665 @@
                 0,
                 0,
                 0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
                 0
             ],
             "magic": [
-                2,
-                2,
-                2,
-                2
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
             ],
             "armor": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
                 0,
                 0,
                 0,
                 0
             ],
             "health": [
-                3,
-                3,
-                3,
-                3
+                4,
+                5,
+                5,
+                5,
+                6,
+                6,
+                6,
+                7,
+                8,
+                8
             ],
             "speed": [
-                2,
-                2,
-                2,
-                2
+                3,
+                3,
+                4,
+                4,
+                4,
+                5,
+                5,
+                5,
+                5,
+                5
             ],
             "abilities": [
                 [
-                    "Life Leech"
+                    "Flying"
                 ],
+                [],
+                [],
                 [
-                    "Cleanse"
+                    "Magic Reflect"
                 ],
+                [],
+                [],
                 [
-                    "Headwinds"
+                    "Divine Shield"
                 ],
+                [],
+                [],
                 [
-                    "Strengthen"
+                    "Phase"
                 ]
             ]
         },
         "is_starter": false,
         "editions": "3",
-        "created_block_num": 39066950,
-        "last_update_tx": "d58702ea084f5be65c544143a410034fce5e77c0",
-        "total_printed": 10000,
+        "created_block_num": null,
+        "last_update_tx": null,
+        "total_printed": 1894023,
+        "is_promo": false,
+        "tier": 7,
+        "distribution": [
+            {
+                "card_detail_id": 343,
+                "gold": false,
+                "edition": 3,
+                "num_cards": "725296",
+                "total_xp": "1852193",
+                "num_burned": "2861",
+                "total_burned_xp": "4004"
+            },
+            {
+                "card_detail_id": 343,
+                "gold": true,
+                "edition": 3,
+                "num_cards": "23430",
+                "total_xp": "37807",
+                "num_burned": "18",
+                "total_burned_xp": "19"
+            }
+        ]
+    },
+    {
+        "id": 340,
+        "name": "Pelacor Deceiver",
+        "color": "Black",
+        "type": "Monster",
+        "sub_type": null,
+        "rarity": 1,
+        "drop_rate": 0,
+        "stats": {
+            "mana": [
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5
+            ],
+            "attack": [
+                1,
+                1,
+                2,
+                2,
+                2,
+                2,
+                2,
+                3,
+                3,
+                3
+            ],
+            "ranged": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "magic": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "armor": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "health": [
+                8,
+                8,
+                8,
+                9,
+                10,
+                9,
+                10,
+                10,
+                10,
+                10
+            ],
+            "speed": [
+                3,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                5,
+                5
+            ],
+            "abilities": [
+                [
+                    "Flying"
+                ],
+                [],
+                [],
+                [],
+                [],
+                [
+                    "Backfire"
+                ],
+                [],
+                [],
+                [],
+                [
+                    "Retaliate"
+                ]
+            ]
+        },
+        "is_starter": false,
+        "editions": "3",
+        "created_block_num": null,
+        "last_update_tx": null,
+        "total_printed": 1894146,
+        "is_promo": false,
+        "tier": 7,
+        "distribution": [
+            {
+                "card_detail_id": 340,
+                "gold": false,
+                "edition": 3,
+                "num_cards": "712904",
+                "total_xp": "1851159",
+                "num_burned": "2803",
+                "total_burned_xp": "5134"
+            },
+            {
+                "card_detail_id": 340,
+                "gold": true,
+                "edition": 3,
+                "num_cards": "25090",
+                "total_xp": "37812",
+                "num_burned": "40",
+                "total_burned_xp": "41"
+            }
+        ]
+    },
+    {
+        "id": 349,
+        "name": "Gargoya Lion",
+        "color": "Gray",
+        "type": "Monster",
+        "sub_type": null,
+        "rarity": 1,
+        "drop_rate": 0,
+        "stats": {
+            "mana": [
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6
+            ],
+            "attack": [
+                1,
+                1,
+                2,
+                2,
+                2,
+                2,
+                2,
+                3,
+                3,
+                3
+            ],
+            "ranged": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "magic": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "armor": [
+                2,
+                2,
+                2,
+                3,
+                2,
+                3,
+                3,
+                3,
+                3,
+                3
+            ],
+            "health": [
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                7
+            ],
+            "speed": [
+                1,
+                2,
+                2,
+                2,
+                2,
+                2,
+                3,
+                3,
+                3,
+                3
+            ],
+            "abilities": [
+                [
+                    "Flying"
+                ],
+                [],
+                [],
+                [],
+                [
+                    "Void"
+                ],
+                [],
+                [],
+                [],
+                [
+                    "Enrage"
+                ],
+                []
+            ]
+        },
+        "is_starter": false,
+        "editions": "3",
+        "created_block_num": null,
+        "last_update_tx": null,
+        "total_printed": 1896579,
+        "is_promo": false,
+        "tier": 7,
+        "distribution": [
+            {
+                "card_detail_id": 349,
+                "gold": false,
+                "edition": 3,
+                "num_cards": "717242",
+                "total_xp": "1853458",
+                "num_burned": "3232",
+                "total_burned_xp": "5299"
+            },
+            {
+                "card_detail_id": 349,
+                "gold": true,
+                "edition": 3,
+                "num_cards": "25395",
+                "total_xp": "37784",
+                "num_burned": "35",
+                "total_burned_xp": "38"
+            }
+        ]
+    },
+    {
+        "id": 350,
+        "name": "Gargoya Devil",
+        "color": "Gray",
+        "type": "Monster",
+        "sub_type": null,
+        "rarity": 2,
+        "drop_rate": 0,
+        "stats": {
+            "mana": [
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7
+            ],
+            "attack": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "ranged": [
+                2,
+                2,
+                3,
+                3,
+                3,
+                3,
+                3,
+                4
+            ],
+            "magic": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "armor": [
+                1,
+                1,
+                1,
+                1,
+                2,
+                2,
+                2,
+                2
+            ],
+            "health": [
+                3,
+                3,
+                3,
+                3,
+                3,
+                4,
+                5,
+                5
+            ],
+            "speed": [
+                2,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3
+            ],
+            "abilities": [
+                [
+                    "Flying",
+                    "Close Range"
+                ],
+                [],
+                [],
+                [
+                    "Deathblow"
+                ],
+                [],
+                [],
+                [],
+                []
+            ]
+        },
+        "is_starter": false,
+        "editions": "3",
+        "created_block_num": null,
+        "last_update_tx": null,
+        "total_printed": 387857,
+        "is_promo": false,
+        "tier": 7,
+        "distribution": [
+            {
+                "card_detail_id": 350,
+                "gold": false,
+                "edition": 3,
+                "num_cards": "172500",
+                "total_xp": "379541",
+                "num_burned": "478",
+                "total_burned_xp": "635"
+            },
+            {
+                "card_detail_id": 350,
+                "gold": true,
+                "edition": 3,
+                "num_cards": "5480",
+                "total_xp": "7674",
+                "num_burned": "7",
+                "total_burned_xp": "7"
+            }
+        ]
+    },
+    {
+        "id": 351,
+        "name": "Uraeus",
+        "color": "Gray",
+        "type": "Monster",
+        "sub_type": null,
+        "rarity": 3,
+        "drop_rate": 0,
+        "stats": {
+            "mana": [
+                3,
+                3,
+                3,
+                3,
+                3,
+                3
+            ],
+            "attack": [
+                1,
+                2,
+                2,
+                2,
+                2,
+                3
+            ],
+            "ranged": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "magic": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "armor": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ],
+            "health": [
+                2,
+                2,
+                3,
+                3,
+                4,
+                4
+            ],
+            "speed": [
+                2,
+                2,
+                3,
+                3,
+                4,
+                4
+            ],
+            "abilities": [
+                [
+                    "Sneak"
+                ],
+                [],
+                [],
+                [
+                    "Poison"
+                ],
+                [],
+                []
+            ]
+        },
+        "is_starter": false,
+        "editions": "3",
+        "created_block_num": null,
+        "last_update_tx": null,
+        "total_printed": 154025,
+        "is_promo": false,
+        "tier": 7,
+        "distribution": [
+            {
+                "card_detail_id": 351,
+                "gold": false,
+                "edition": 3,
+                "num_cards": "79815",
+                "total_xp": "150740",
+                "num_burned": "163",
+                "total_burned_xp": "178"
+            },
+            {
+                "card_detail_id": 351,
+                "gold": true,
+                "edition": 3,
+                "num_cards": "2406",
+                "total_xp": "3103",
+                "num_burned": "4",
+                "total_burned_xp": "4"
+            }
+        ]
+    },
+    {
+        "id": 236,
+        "name": "Yodin Zaku",
+        "color": "Red",
+        "type": "Summoner",
+        "sub_type": null,
+        "rarity": 4,
+        "drop_rate": 0,
+        "stats": {
+            "mana": 7,
+            "attack": 0,
+            "ranged": 1,
+            "magic": 0,
+            "armor": 0,
+            "health": 1,
+            "speed": 0,
+            "abilities": [
+                "Blast"
+            ]
+        },
+        "is_starter": false,
+        "editions": "4",
+        "created_block_num": 43056982,
+        "last_update_tx": "120690175fbee33f82238e6b474b7e82798af18f",
+        "total_printed": 5366,
         "is_promo": false,
         "tier": null,
         "distribution": [
             {
-                "card_detail_id": 222,
+                "card_detail_id": 236,
                 "gold": false,
-                "edition": 3,
-                "num_cards": "3729",
-                "total_xp": "2760000",
-                "num_burned": "1090",
-                "total_burned_xp": "933000"
+                "edition": 4,
+                "num_cards": "1924",
+                "total_xp": "5192",
+                "num_burned": "8",
+                "total_burned_xp": "10"
             },
             {
-                "card_detail_id": 222,
+                "card_detail_id": 236,
                 "gold": true,
-                "edition": 3,
-                "num_cards": "75",
-                "total_xp": "168000",
-                "num_burned": "126",
-                "total_burned_xp": "346000"
+                "edition": 4,
+                "num_cards": "107",
+                "total_xp": "162",
+                "num_burned": "2",
+                "total_burned_xp": "2"
             }
         ]
     }
