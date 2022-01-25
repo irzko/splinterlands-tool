@@ -709,10 +709,13 @@ class Team:
         n = None
         while (n != 'N'):
             os.system('cls')
-            print('Bạn có muốn sao chép đội hình này?\n')
-            print("\n".join(team))
-            print('\n[Y] Có    |    [N] Không')
-            n = input('>> Chọn: ').upper()
+            header("Thông tin sao chép")
+            print('  │' + f"{', '.join(team)}".center(114) + '│')
+            make_empty_line(5)
+            print('  │' + "Bạn có muốn sao chép đội hình này?".center(114) + '│')
+            print('  │' + "[Y] Có    |    [N] Không".center(114) + '│')
+            print(end)
+            n = input('  > Chọn: ').upper()
             if n == "Y":
                 if (Team.teams.get(mana) != None):
                     Team.teams[mana].append(team)
@@ -722,11 +725,11 @@ class Team:
                 Team.teams = Team.teamSorted(Team.teams)
                 Team.teamFile.wJSon(Team.teams)
                 os.system('cls')
-                print('Đã sao chép thành công!')
+                print('Đã sao chép thành công!'.center(116))
                 time.sleep(1)
                 n = 'N'
             elif n != 'N':
-                print('Cú pháp không hợp lệ!')
+                print('Cú pháp không hợp lệ!'.center(116))
                 time.sleep(1)
 
     def checkTeam():
