@@ -148,7 +148,7 @@ class Card:
                         Card.ownerCardFile.wJSon(Card.ownerCards)
                         break
             else:
-                print('Thông tin không hợp lệ!')
+                print('Thông tin không hợp lệ!'.center(116))
                 time.sleep(1)
 
             
@@ -178,7 +178,7 @@ class Card:
                         break
                 Card.ownerCardFile.wJSon(Card.ownerCards)
             elif n != 'Q':
-                print('Cú pháp không hợp lệ!')
+                print('Cú pháp không hợp lệ!'.center(116))
                 time.sleep(1)
 
 
@@ -264,7 +264,7 @@ class Card:
             elif n.isdigit() and int(n) - 1 < len(Card.ownerCards) and int(n) - 1 >= 0:
                 Card.details(int(n) - 1)
             elif n != 'Q':
-                print('Cú pháp không hợp lệ!')
+                print('Cú pháp không hợp lệ!'.center(116))
                 time.sleep(1)
         return 'Q'
 
@@ -318,7 +318,7 @@ class AccountManager:
                 self.account.pop(int(select) - 1)
                 self.accountFile.wJSon(self.account)
             elif select != 'B':
-                print('Cú pháp không hợp lệ!')
+                print('Cú pháp không hợp lệ!'.center(116))
                 time.sleep(1)
             else:
                 select = 'B'
@@ -328,7 +328,7 @@ class AccountManager:
         while (n != 'Q'):
             os.system('cls')
             header("Danh sách tài khoản")
-            make_empty_line(5)
+            make_empty_line(4)
             if len(self.account) > 0:
                 j = 1
                 for i in self.account:
@@ -346,15 +346,15 @@ class AccountManager:
                     print('Cú pháp không hợp lệ!'.center(114))
                     time.sleep(1)
             else:
+                print('  │' + "Không có tài khoản nào, vui lòng thêm tài khoản!".center(114) + '│')
                 make_empty_line(5)
-                print("Không có tài khoản nào, vui lòng thêm tài khoản!")
-                print("\n[A] Thêm    |    [Q] Thoát")
+                print('  │' + "[A] Thêm    |    [Q] Thoát".center(114) + '│')
                 print(end)
-                n = input('>> Chọn: ').upper()
+                n = input('  > Chọn: ').upper()
                 if n == 'A':
                     self.add()
                 elif n != 'Q':
-                    print('Cú pháp không hợp lệ!')
+                    print('Cú pháp không hợp lệ!'.center(116))
                     time.sleep(1)
 
 
@@ -538,19 +538,22 @@ class Team:
             os.system('cls')
             print()
             if len(teamAdding) == 0:
-                print('CHỌN THẺ SUMMONER'.center(120))
+                header("Thẻ Summoner")
                 Card.showNames(summoner_card, False)
                 listName = summoner_card
             else:
-                print('CHỌN THẺ MONSTER'.center(120))
+                header("Thẻ Monster")
                 Card.showNames(monster_card, False)
                 listName = monster_card
-            print("\n")
-            print(f'Mana: [{Team.currentMana(teamAdding)}/{mana}]')
-            print('\n'.join(teamAdding))
-            print(
-                "\n[S] Lưu    |    [C] Xoá bỏ tất cả    |    [M] Sửa mana    |    [D] Xoá thẻ bài vừa chọn    |    [Q] Thoát\n")
-            select = input('>> Chọn: ').upper()
+            make_empty_line(1)
+            print('  ├' + ' Đang chọn '.center(114, "─") + '┤')
+            print('  │' + f'Mana: {Team.currentMana(teamAdding)}/{mana}'.center(114) + '│')
+            for i in teamAdding:
+                print('  │'.ljust(8) + i.ljust(109) + '│')
+            make_empty_line(1)
+            print('  │' + '[S] Lưu    |    [C] Xoá bỏ tất cả    |    [M] Sửa mana    |    [D] Xoá thẻ bài vừa chọn    |    [Q] Thoát'.center(114) + '│')
+            print(end)
+            select = input('  > Chọn: ').upper()
             if (select.isdigit() and int(select) - 1 < len(Card.ownerCards) and int(select) - 1 >= 0):
                 select = int(select) - 1
                 card_selected = listName[select]
@@ -763,35 +766,36 @@ kết quả có thể sẽ không như mong muốn!''')
         select = ''
         while (select != 'Q'):
             os.system('cls')
+            header("Danh sách đội hình")
             won = lost = drawn = match = 0
             if len(Team.teams) > 0:
                 for mana in Team.teams:
-                    print('_' * 120)
-                    print(f'\n MANA {mana}:')
+                    print('  ├'.ljust(5, '─') + f" Mana {mana} ".ljust(112, '─') + '┤')
+                    make_empty_line(1)
                     k = 1
                     for i in Team.teams[mana]:
                         kda = History.kda(mana, i)
                         winRate = 0.0
                         if kda[3] != 0: winRate = int(kda[0]) / int(kda[3]) * 100
                         team = ", ".join(i)
-                        print(f'{k}. {team}')
+                        print('  │'.ljust(2) + f"┌{team}".ljust(114) + '│')
                         won += int(kda[0])
                         lost += int(kda[1])
                         drawn += int(kda[2])
                         match += int(kda[3])
-                        print(
-                            f'   --> Thắng: {kda[0]} / Thua: {kda[1]} / Hoà: {kda[2]} / {kda[3]} trận | Tỉ lệ thắng {round(winRate, 2)}%')
+                        print('  │' + f'└Thắng: {kda[0]} / Thua: {kda[1]} / Hoà: {kda[2]} / {kda[3]} trận | Tỉ lệ thắng {round(winRate, 2)}%'.ljust(114) + '│')
                         k += 1
-                        print()
-            print('_' * 120)
+                        make_empty_line(1)
             sumOfWinRate = 0.0
             if match != 0: sumOfWinRate = won / match * 100
-            print()
             Team.checkTeam()
-            print(f'\n>> Tổng cộng: {match} trận đấu  |   Tỉ lệ thắng {round(sumOfWinRate, 2)}%\n')
-            print('\nNhập số mana để xem chi tiết, hoặc:')
-            print('[A] Thêm    |    [D] Xoá    |    [Q] Thoát')
-            select = input('\n>> Chọn: ').upper()
+            print(break_line)
+            print('  │' + f"Tổng cộng: {match} trận đấu  |   Tỉ lệ thắng {round(sumOfWinRate, 2)}%".center(114) + '│')
+            print(break_line)
+            print('  │' + "Nhập số mana để xem chi tiết, hoặc:".center(114) + '│')
+            print('  │' + "[A] Thêm    |    [D] Xoá    |    [Q] Thoát".center(114) + '│')
+            print(end)
+            select = input('  > Chọn: ').upper()
             if select == 'A':
                 Team.add()
             elif select == 'D':
@@ -799,7 +803,7 @@ kết quả có thể sẽ không như mong muốn!''')
             elif select.isdigit() and (Team.teams.get(select) != None):
                 History.analys(select)
             elif select != 'Q':
-                print('Cú pháp không hợp lệ!')
+                print('Cú pháp không hợp lệ!'.center(116))
                 time.sleep(1)
 def showLog(log, email):
     time_log = time.strftime("%H:%M:%S", time.localtime())
@@ -1028,7 +1032,7 @@ class Launcher:
             elif select == '5':
                 Launcher.feedback()
             elif select != 'Q':
-                print('Cú pháp không hợp lệ! Thử lại.')
+                print('Cú pháp không hợp lệ! Thử lại.'.center(116))
                 time.sleep(1)
         
 
@@ -1087,7 +1091,7 @@ class Launcher:
                         os.system('cls')
 
                     elif select == 'S' and len(account_selected) == 0:
-                        print('Vui lòng chọn ít nhất một tài khoản!')
+                        print('Vui lòng chọn ít nhất một tài khoản!'.center(116))
                         time.sleep(1)
                     elif select == 'C' and len(account_selected) > 0:
                         account_list.append(account_selected[-1])
@@ -1097,7 +1101,7 @@ class Launcher:
                             account_selected = account_list.copy()
                             account_list.clear()
                     elif select != 'Q':
-                        print('Cú pháp không hợp lệ!'.center(114))
+                        print('Cú pháp không hợp lệ!'.center(116))
                         time.sleep(1)
         else:
             m = ''
