@@ -512,12 +512,12 @@ class Team:
     manaList = ('12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '99')
  
     def inputMana():
-        mana = input('>> Mana: ')
+        mana = input('  > Mana: ')
         while (not mana.isdigit() or not (mana in Team.manaList)):
             os.system('cls')
             print('Số mana không hợp lệ, thử lại!')
             print(f'Những mana hợp lệ: {", ".join(Team.manaList)}\n')
-            mana = input('>> Mana: ')
+            mana = input('  > Mana: ')
         return mana
 
     def currentMana(team_adding):
@@ -607,7 +607,7 @@ class Team:
         lt = None
         while True:
             os.system('cls')
-            mana = input('>> Nhập mana: ')
+            mana = input('  > Nhập mana: ')
             lt = Team.teams.get(mana)
             if lt == None:
                 print('Không tìm thấy đội hình! Thử lại.')
@@ -622,7 +622,7 @@ class Team:
             print('Chọn một đội hình để xoá\n')
             for i in range(len(lt)):
                 print(f'{i + 1}. {lt[i]}')
-            td = input('>> Chọn: ')
+            td = input('  > Chọn: ')
             if (td <= '0' or td > str(len(lt))) and td.isalpha():
                 print("Cú pháp không hợp lệ! Thử lại.")
                 time.sleep(1)
@@ -633,7 +633,7 @@ class Team:
         acpt = ''
         while True:
             os.system('cls')
-            acpt = input(f'Đội hình đã được chọn:\n{st}\n\nBạn có muốn xoá đội hình này? [Y/N]\n>> Chọn: ').upper()
+            acpt = input(f'Đội hình đã được chọn:\n{st}\n\nBạn có muốn xoá đội hình này? [Y/N]\n  > Chọn: ').upper()
             if acpt != 'Y' and acpt != 'N':
                 print("Cú pháp không hợp lệ! Thử lại.")
             else:
@@ -738,13 +738,13 @@ class Team:
             for mana in Team.manaList:
                 if Team.teams.get(mana) == None:
                     teamNA.append(mana)
-            print('-' * 120)
+            print(break_line)
             print('  │' + "CHÚ Ý!".center(114) + '│')
-            print('  │' + "Bạn chưa thêm đủ đội hình, vì thế những đội hình nào chưa có chúng tôi sẽ chọn đội hình mặc định để chiến đấu, và".center(114) + '│')
-            print('  │' + "kết quả có thể sẽ không như mong muốn!".center(114) + '│')
+            print('  │' + "Bạn chưa thêm đủ đội hình, vì thế những đội hình nào chưa có chúng tôi sẽ chọn đội hình mặc định để chiến đấu,".center(114) + '│')
+            print('  │' + "và kết quả có thể sẽ không như mong muốn!".center(114) + '│')
             make_empty_line(1)
             print('  │' + "Những đội hình có mana sau chưa được thêm:".center(114) + '│')
-            print('  │' + f'", ".join(teamNA)'.center(114) + '│')
+            print('  │' + f'{", ".join(teamNA)}'.center(114) + '│')
 
     def numOfCard():
         listCard = Card.sortNames(Card.allCards)
@@ -1062,7 +1062,6 @@ class Launcher:
             select = None
             while (select != 'Q'):
                 os.system('cls')
-                Team.checkTeam()
                 header("Chọn tài khoản")
                 print('  │' + f'Đã chọn {len(account_selected)} tài khoản'.center(114) + '│')
                 if len(account_selected) > 0:
@@ -1079,6 +1078,7 @@ class Launcher:
                         print('  │'.ljust(5) + f'[{j}] {k["mail"]}'.ljust(112) + '│')
                         j += 1
                     make_empty_line(4)
+                    Team.checkTeam()
                     print('  │' + '[S] Bắt đầu    |    [C] Xoá lựa chọn trước đó    |    [A] Chọn tất cả    |    [Q] Thoát'.center(114) + '│')
                     print(end)
                     select = input('  > Chọn: ').upper()
@@ -1120,7 +1120,7 @@ class Launcher:
                 print("CHỌN TÀI KHOẢN")
                 print("\nKhông có tài khoản nào, vui lòng thêm tài khoản!")
                 print('\n[Q] Thoát')
-                m = input('>> Chọn: ').upper()
+                m = input('  > Chọn: ').upper()
                 if m != 'Q':
                     print('Cú pháp không hợp lệ!')
                     time.sleep(1)
@@ -1168,7 +1168,7 @@ class Launcher:
         os.system('cls')
         print('Mô tả nội dung phản hồi')
         print('[Q] Thoát\n')
-        content = input('>> ')
+        content = input('  > ')
         if content.upper() == 'Q': return 'Q'
         else:
             payload = {'notenumber': 'bp574p9j', 'name': 'Quess', 'content': content}
