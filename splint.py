@@ -1184,6 +1184,3 @@ class Launcher:
             print('Đã gửi phản hồi của bạn!')
             time.sleep(2)
             return 'Q'
-
-if __name__ == '__main__':
-    Launcher.menu()
