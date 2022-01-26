@@ -574,8 +574,8 @@ class Team:
             make_empty_line(1)
             print('  ├' + ' Đang chọn '.center(114, "─") + '┤')
             print('  │' + f'Mana: {Team.currentMana(teamAdding)}/{mana}'.center(114) + '│')
-            for i in teamAdding:
-                print('  │'.ljust(8) + i.ljust(109) + '│')
+            if len(teamAdding) > 0:
+                Team.showTeam(teamAdding)
             make_empty_line(1)
             print(break_line)
             print('  │' + '[S] Lưu    |    [C] Xoá bỏ tất cả    |    [M] Sửa mana    |    [D] Xoá thẻ bài vừa chọn    |    [Q] Thoát'.center(114) + '│')
@@ -618,7 +618,7 @@ class Team:
                     temp.pop(-1)
                 if len(teamAdding) > 0: teamAdding.pop(-1)
             elif select != 'Q':
-                print('Cú pháp không hợp lệ!')
+                print('Cú pháp không hợp lệ!'.center(116))
                 time.sleep(1)
 
     def delete():
@@ -694,7 +694,10 @@ class Team:
             return team[a]
 
     def getColor(team):
-        return Card.getColor(team[-1])
+        if len(team) > 1:
+            return Card.getColor(team[1])
+        else:
+            return Card.getColor(team[0])
 
     def randomBot(p_src, mana):
         mana = int(mana)
@@ -817,7 +820,7 @@ class Team:
         color = Team.getColor(team)
         print('  │'.ljust(5) + "Summoner Card ┐".ljust(112) + '│')
         print('  │'.ljust(19) + f"└─── {team[0]} ({color})".ljust(98) + '│')
-        if len(team) > 2:
+        if len(team) > 1:
             print('  │'.ljust(5) + "Monster Card ─┐".ljust(112) + '│')
             for j in team[1:-1]:
                 print('  │'.ljust(19) + f"├─── {j}".ljust(98) + '│')
