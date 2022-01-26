@@ -571,9 +571,9 @@ class Team:
                 header("Thẻ Monster")
                 Card.showNames(monster_card, False)
                 listName = monster_card
-            make_empty_line(1)
-            print('  ├' + ' Đang chọn '.center(114, "─") + '┤')
-            print('  │' + f'Mana: {Team.currentMana(teamAdding)}/{mana}'.center(114) + '│')
+                make_empty_line(1)
+                print('  ├' + ' Đang chọn '.center(114, "─") + '┤')
+                print('  │' + f'Mana: {Team.currentMana(teamAdding)}/{mana}'.center(114) + '│')
             if len(teamAdding) > 0:
                 Team.showTeam(teamAdding)
             make_empty_line(1)
@@ -1035,7 +1035,7 @@ def battle(account, match):
             c = checkPoint3()
         return c
 
-
+    os.system('cls')
     for i in range(int(match)):
         showLog(f'Bắt đầu trận thứ [{i + 1}/{match}]', username)
         try:
@@ -1154,6 +1154,7 @@ class Launcher:
                             print('Nhập sô trận đấu')
                             print('[Q] Thoát\n')
                             match = input('> Chọn: ').upper()
+                            os.system('cls')
                             if match.isdigit() and int(match) > 0:
                                 if len(account_selected) == 1:
                                     battle(account_selected[0], match)
