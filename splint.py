@@ -1149,9 +1149,10 @@ class Launcher:
                         match = None
                         while (match != 'Q'):
                             os.system('cls')
-                            print('Nhập sô trận đấu')
-                            print('[Q] Thoát\n')
-                            match = input('> Chọn: ').upper()
+                            print()
+                            print('Nhập số trận đấu'.center(116))
+                            print('  [Q] Thoát\n')
+                            match = input('  > Chọn: ').upper()
                             os.system('cls')
                             if match.isdigit() and int(match) > 0:
                                 if len(account_selected) == 1:
@@ -1228,8 +1229,9 @@ class Launcher:
 
     def feedback():
         os.system('cls')
-        print('Mô tả nội dung phản hồi')
-        print('[Q] Thoát\n')
+        print()
+        print('Mô tả nội dung phản hồi'.center(116))
+        print('  [Q] Thoát\n')
         content = input('  > ')
         if content.upper() == 'Q': return 'Q'
         else:
@@ -1238,6 +1240,6 @@ class Launcher:
             print('Đang gửi phản hồi...')
             requests.post('https://anotepad.com/note/addcomment', data=payload)
             os.system('cls')
-            print('Đã gửi phản hồi của bạn!')
+            print('Đã gửi phản hồi của bạn!'.center(116))
             time.sleep(2)
             return 'Q'
