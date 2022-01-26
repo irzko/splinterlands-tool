@@ -1,3 +1,4 @@
+from turtle import title
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
@@ -12,6 +13,7 @@ import multiprocessing
 empty_line = "  │                                                                                                                  │"
 end = "  └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘"
 break_line = "  ├──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤"
+break_line_2 = "  ├╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┤"
 
 def header(tittle):
     t = " {0} ".format(tittle)
@@ -143,6 +145,7 @@ class Card:
             cardNA = Card.cardNotAvailable()
             Card.showNames(Card.cardNotAvailable())
             make_empty_line(1)
+            print(break_line)
             print('  │' + 'Nhập số của thẻ mà bạn muốn thêm'.center(114) + '│')
             print('  │' + '[Q]Thoát'.center(114) + '│')
             print(end)
@@ -175,6 +178,7 @@ class Card:
             header("Danh sách thẻ")
             Card.showNames(Card.ownerCards)
             make_empty_line(1)
+            print(break_line)
             print('  │' + 'Nhập số của thẻ mà bạn muốn xoá'.center(114) + '│')
             print('  │' + '[Q]Thoát'.center(114) + '│')
             print(end)
@@ -218,7 +222,7 @@ class Card:
         print(f'{"Health:":<10}{card["stats"]["health"]}')
         print(f'{"Speed:":<10}{card["stats"]["speed"]}')
         print()
-        os.system('pause')
+        os.system('pause>nul|set/p =Nhấn phím bất kì để thoát ...')
 
     def getMana(card_name):
         for card in Card.allCards:
@@ -232,6 +236,7 @@ class Card:
         for card in Card.allCards:
             if card_name == card['name']:
                 return card['color']
+
 
     def getSummoner(color=None):
         cd = []
@@ -265,6 +270,7 @@ class Card:
             header("Thẻ bài đang sở hữu")
             Card.showNames(Card.ownerCards)
             print(empty_line)
+            print(break_line)
             print('  │' + 'Nhập số của thẻ để xem chi tiết'.center(114) + '│')
             print('  │' + '[A] Thêm    |    [D] Xoá    |    [Q]Thoát'.center(114) + '│')
             print(end)
@@ -322,6 +328,7 @@ class AccountManager:
             else:
                 break
             make_empty_line(5)
+            print(break_line)
             print('  │' + "Chọn tài khoản muốn xoá".center(114) + '│')
             print('  │' + "[B] Trở lại".center(114) + '│')
             print(end)
@@ -347,6 +354,7 @@ class AccountManager:
                     print('  │'.ljust(5) + f"{j}. {i['mail']}".ljust(112) + '│')
                     j += 1
                 make_empty_line(5)
+                print(break_line)
                 print('  │' + "[A] Thêm    |    [D] Xoá    |    [Q] Thoát".center(114) + '│')
                 print(end)
                 n = input('  > Chọn: ').upper()
@@ -381,15 +389,16 @@ class History:
         select = ''
         while (select != 'Q'):
             os.system('cls')
-            Team.topCard(mana)
-            print('  │' + "Chọn đội hình để xem chi tiết".center(114) + '│')
-            make_empty_line(1)
+            header("Danh sách đội hình")
             j = 1
             for i in Team.teams[mana]:
-                print('  │'.ljust(5) + f'[{j}] {", ".join(i)}'.ljust(112) + '│')
+                print('  ├'.ljust(5, '─') + f" [{j}] ".ljust(112, '─') + '┤')
+                Team.showTeam(i)
                 j += 1
             make_empty_line(1)
-            print('  │' + "[Q] Thoát".center(114) + '│')
+            print(break_line)
+            print('  │' + "Chọn đội để xem các đội của đối thủ đã thắng đội của bạn".center(114) + '│')
+            print('  │' + "[A] Xem các thẻ được đối thủ sử dụng nhiều    |    [Q] Thoát".center(114) + '│')
             print(end)
             select = input('  > Chọn đội hình: ').upper()
             if select.isdigit() and (int(select) - 1 >= 0 and int(select) - 1 < len(Team.teams[mana])):
@@ -399,14 +408,8 @@ class History:
                     team = Team.teams[mana][select]
                     kda = History.kda(mana, team)
                     os.system('cls')
-                    header("Thông tin")
-                    print('  │' + 'Đội của bạn'.center(114) + '│')
-                    print('  │' + f'{", ".join(team)}'.center(114) + '│')
-                    print('  │' + f"Thắng: {kda[0]} / Thua: {kda[1]} / Hoà: {kda[2]} / {kda[3]} trận".center(114) + '│')
-                    print(break_line)
+                    header("Các đội đã thắng đội của bạn")
                     p = []
-                    print('  │' + 'Các đội đã thắng đội của bạn'.center(114) + '│')
-                    make_empty_line(1)
                     if len(History.history) != 0:
                         if kda[3] != 0:
                             e_team = []
@@ -419,9 +422,11 @@ class History:
                                 if p.count(i) == 0:
                                     p.append(i)
                             for i in range(len(p)):
-                                print('  │'.ljust(2) + f"┌ [{i+1}] {', '.join(p[i])}".ljust(114) + '│')
-                                print('  │' + f'└ Đánh bại bạn {e_team.count(p[i])} lần'.ljust(114) + '│')
+                                print('  ├'.ljust(5, '─') + f" [{i+1}] ".ljust(112, '─') + '┤')
+                                Team.showTeam(p[i])
+                                print('  │' + f'Đánh bại bạn {e_team.count(p[i])} lần'.center(114) + '│')
                                 make_empty_line(1)
+                            print(break_line)
                             print('  │' + "Nhập số của đội hình để sao chép".center(114) + '│')
                         else:
                             make_empty_line(4)
@@ -437,6 +442,8 @@ class History:
                     elif n != 'B':
                         print('Cú pháp không hợp lệ!'. center(116))
                         time.sleep(1)
+            elif select == 'A':
+                select = Team.topCard(mana)
             elif select != 'Q':
                 print('Cú pháp không hợp lệ!'. center(116))
                 time.sleep(1)
@@ -570,6 +577,7 @@ class Team:
             for i in teamAdding:
                 print('  │'.ljust(8) + i.ljust(109) + '│')
             make_empty_line(1)
+            print(break_line)
             print('  │' + '[S] Lưu    |    [C] Xoá bỏ tất cả    |    [M] Sửa mana    |    [D] Xoá thẻ bài vừa chọn    |    [Q] Thoát'.center(114) + '│')
             print(end)
             select = input('  > Chọn: ').upper()
@@ -630,13 +638,18 @@ class Team:
         td = ''
         while True:
             os.system('cls')
-            print(f'Mana: {mana}')
-            print('Chọn một đội hình để xoá\n')
+            title = f'Danh sách team mana {mana}'
+            header(title)
+
             for i in range(len(lt)):
-                print(f'{i + 1}. {lt[i]}')
+                print('  ├'.ljust(5, '─') + f" [{i+1}] ".ljust(112, '─') + '┤')
+                Team.showTeam(lt[i])
+            print(break_line)
+            print('  │' + "Chọn một đội hình để xoá".center(114) + '│')
+            print(end)
             td = input('  > Chọn: ')
             if (td <= '0' or td > str(len(lt))) and td.isalpha():
-                print("Cú pháp không hợp lệ! Thử lại.")
+                print("Cú pháp không hợp lệ! Thử lại.".center(116))
                 time.sleep(1)
             else:
                 break
@@ -645,9 +658,15 @@ class Team:
         acpt = ''
         while True:
             os.system('cls')
-            acpt = input(f'Đội hình đã được chọn:\n{st}\n\nBạn có muốn xoá đội hình này? [Y/N]\n  > Chọn: ').upper()
+            header("Đội hình đã được chọn")
+            Team.showTeam(st)
+            print(break_line)
+            print('  │' + "Bạn có muốn xoá đội hình này?".center(114) + '│')
+            print('  │' + "[Y] Có    |    [N] Không".center(114) + '│')
+            print(end)
+            acpt = input('  > Chọn: ').upper()
             if acpt != 'Y' and acpt != 'N':
-                print("Cú pháp không hợp lệ! Thử lại.")
+                print("Cú pháp không hợp lệ! Thử lại.".center(116))
             else:
                 break
         if acpt == 'Y':
@@ -673,6 +692,9 @@ class Team:
         else:
             a = random.randrange(0, len(team))
             return team[a]
+
+    def getColor(team):
+        return Card.getColor(team[-1])
 
     def randomBot(p_src, mana):
         mana = int(mana)
@@ -766,23 +788,42 @@ class Team:
         return numCard
 
     def topCard(mana):
-        if len(History.history) > 0:
-            header("Thẻ bài được đối thủ chọn nhiều nhất")
-            team = {}
-            for i in History.history[mana]:
-                enemyTeam = i['team2']['team']
-                for j in enemyTeam:
-                    if team.get(j) == None:
-                        team[j] = 1
-                    else:
-                        team[j] += 1
-            items_sorted = sorted(team.items(), reverse=True, key=lambda x: x[1])
-            print('  │'.ljust(46) + f'{"Tên thẻ bài":>12}{"Số lần chọn":>16}'.ljust(71) + '│')
-            j = 1
-            for i in items_sorted:
-                print('  │'.ljust(44) + f'{j:>2} {i[0]:<20} {i[1]:>2}'.ljust(73) + '│')
-                j += 1
-            print(break_line)
+        n = None
+        while (n != 'Q'):
+            os.system('cls')
+            if len(History.history) > 0:
+                header("Thẻ bài được đối thủ chọn nhiều nhất")
+                team = {}
+                for i in History.history[mana]:
+                    enemyTeam = i['team2']['team']
+                    for j in enemyTeam:
+                        if team.get(j) == None:
+                            team[j] = 1
+                        else:
+                            team[j] += 1
+                items_sorted = sorted(team.items(), reverse=True, key=lambda x: x[1])
+                print('  │'.ljust(46) + f'{"Tên thẻ bài":>12}{"Số lần chọn":>16}'.ljust(71) + '│')
+                j = 1
+                for i in items_sorted:
+                    print('  │'.ljust(44) + f'{j:>2} {i[0]:<20} {i[1]:>2}'.ljust(73) + '│')
+                    j += 1
+                print(break_line)
+                print('  │' + "[Q] Thoát".center(114) + '│')
+                print(end)
+            n = input('  > Chọn: ').upper()
+        return 'Q'
+
+    def showTeam(team):
+        color = Team.getColor(team)
+        print('  │'.ljust(5) + "Summoner Card ┐".ljust(112) + '│')
+        print('  │'.ljust(19) + f"└─── {team[0]} ({color})".ljust(98) + '│')
+        if len(team) > 2:
+            print('  │'.ljust(5) + "Monster Card ─┐".ljust(112) + '│')
+            for j in team[1:-1]:
+                print('  │'.ljust(19) + f"├─── {j}".ljust(98) + '│')
+            print('  │'.ljust(19) + f"└─── {team[-1]}".ljust(98) + '│')
+        elif len(team) == 2:
+            print('  │'.ljust(19) + f"└─── {team[-1]}".ljust(98) + '│')
 
     def show():
         select = ''
@@ -799,13 +840,14 @@ class Team:
                         kda = History.kda(mana, i)
                         winRate = 0.0
                         if kda[3] != 0: winRate = int(kda[0]) / int(kda[3]) * 100
-                        team = ", ".join(i)
-                        print('  │'.ljust(2) + f"┌{team}".ljust(114) + '│')
+                        Team.showTeam(i)
                         won += int(kda[0])
                         lost += int(kda[1])
                         drawn += int(kda[2])
                         match += int(kda[3])
-                        print('  │' + f'└Thắng: {kda[0]} / Thua: {kda[1]} / Hoà: {kda[2]} / {kda[3]} trận | Tỉ lệ thắng {round(winRate, 2)}%'.ljust(114) + '│')
+                        print('  │' + f'Thắng: {kda[0]} / Thua: {kda[1]} / Hoà: {kda[2]} / {kda[3]} trận | Tỉ lệ thắng {round(winRate, 2)}%'.center(114) + '│')
+                        if i != Team.teams[mana][-1]:
+                            print(break_line_2)
                         k += 1
                         make_empty_line(1)
             sumOfWinRate = 0.0
@@ -1092,6 +1134,7 @@ class Launcher:
                         j += 1
                     make_empty_line(4)
                     Team.checkTeam()
+                    print(break_line)
                     print('  │' + '[S] Bắt đầu    |    [C] Xoá lựa chọn trước đó    |    [A] Chọn tất cả    |    [Q] Thoát'.center(114) + '│')
                     print(end)
                     select = input('  > Chọn: ').upper()
