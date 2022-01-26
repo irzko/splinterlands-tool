@@ -1,4 +1,3 @@
-from turtle import title
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
@@ -319,11 +318,11 @@ class AccountManager:
         while (select != 'B'):
             os.system('cls')
             header("Danh sách tài khoản")
-            make_empty_line(5)
+            make_empty_line(4)
             if len(self.account) > 0:
                 j = 1
                 for i in self.account:
-                    print('  │'.ljust(5) + f"{j}. {i['mail']}".ljust(112) + '│')
+                    print('  │'.ljust(5) + f"{j} {i['mail']}".ljust(112) + '│')
                     j += 1
             else:
                 break
@@ -349,10 +348,8 @@ class AccountManager:
             header("Danh sách tài khoản")
             make_empty_line(4)
             if len(self.account) > 0:
-                j = 1
                 for i in self.account:
-                    print('  │'.ljust(5) + f"{j}. {i['mail']}".ljust(112) + '│')
-                    j += 1
+                    print('  │'.ljust(7) + f"{i['mail']}".ljust(110) + '│')
                 make_empty_line(5)
                 print(break_line)
                 print('  │' + "[A] Thêm    |    [D] Xoá    |    [Q] Thoát".center(114) + '│')
@@ -564,11 +561,11 @@ class Team:
             os.system('cls')
             print()
             if len(teamAdding) == 0:
-                header("Thẻ Summoner")
+                header("Chọn thẻ Summoner")
                 Card.showNames(summoner_card, False)
                 listName = summoner_card
             else:
-                header("Thẻ Monster")
+                header("Chọn thẻ Monster")
                 Card.showNames(monster_card, False)
                 listName = monster_card
                 make_empty_line(1)
@@ -581,7 +578,7 @@ class Team:
             print('  │' + '[S] Lưu    |    [C] Xoá bỏ tất cả    |    [M] Sửa mana    |    [D] Xoá thẻ bài vừa chọn    |    [Q] Thoát'.center(114) + '│')
             print(end)
             select = input('  > Chọn: ').upper()
-            if (select.isdigit() and int(select) - 1 < len(Card.ownerCards) and int(select) - 1 >= 0):
+            if (select.isdigit() and int(select) - 1 < len(listName) and int(select) - 1 >= 0):
                 select = int(select) - 1
                 card_selected = listName[select]
                 teamAdding.append(card_selected)
@@ -810,6 +807,7 @@ class Team:
                 for i in items_sorted:
                     print('  │'.ljust(44) + f'{j:>2} {i[0]:<20} {i[1]:>2}'.ljust(73) + '│')
                     j += 1
+                make_empty_line(1)
                 print(break_line)
                 print('  │' + "[Q] Thoát".center(114) + '│')
                 print(end)
