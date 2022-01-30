@@ -14,6 +14,12 @@ end = "  └──────────────────────�
 break_line = "  ├──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤"
 break_line_2 = "  ├╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┤"
 
+def clear():
+    if os.name == 'nt':
+        _ = os.system('cls')
+    else:
+        _ = os.system('clear')
+
 def header(tittle):
     t = " {0} ".format(tittle)
     p = t.center(114, '═')
@@ -138,7 +144,7 @@ class Card:
         card_added = None
         n = None
         while (n != 'Q'):
-            os.system('cls')
+            clear()
             header("Danh sách thẻ")
             listName = Card.sortNames(Card.cardNotAvailable())
             cardNA = Card.cardNotAvailable()
@@ -172,7 +178,7 @@ class Card:
         n = None
         cardDeleted = None
         while (n != 'Q'):
-            os.system('cls')
+            clear()
             listName = Card.sortNames(Card.ownerCards)
             header("Danh sách thẻ")
             Card.showNames(Card.ownerCards)
@@ -198,7 +204,7 @@ class Card:
 
 
     def details(number):
-        os.system('cls')
+        clear()
         listName = Card.sortNames(Card.ownerCards)
         card = {}
         for i in Card.ownerCards:
@@ -265,7 +271,7 @@ class Card:
     def show():
         n = ''
         while (n != 'Q'):
-            os.system('cls')
+            clear()
             header("Thẻ bài đang sở hữu")
             Card.showNames(Card.ownerCards)
             print(empty_line)
@@ -306,7 +312,7 @@ class AccountManager:
 
 
     def add(self):
-        os.system('cls')
+        clear()
         email = input('Email: ')
         password = input('Mật khẩu: ')
         account = Account(email, password)
@@ -316,7 +322,7 @@ class AccountManager:
     def delete(self):
         select = None
         while (select != 'B'):
-            os.system('cls')
+            clear()
             header("Danh sách tài khoản")
             make_empty_line(4)
             if len(self.account) > 0:
@@ -344,7 +350,7 @@ class AccountManager:
     def show(self):
         n = ''
         while (n != 'Q'):
-            os.system('cls')
+            clear()
             header("Danh sách tài khoản")
             make_empty_line(4)
             if len(self.account) > 0:
@@ -385,7 +391,7 @@ class History:
     def analys(mana):
         select = ''
         while (select != 'Q'):
-            os.system('cls')
+            clear()
             header("Danh sách đội hình")
             j = 1
             for i in Team.teams[mana]:
@@ -404,7 +410,7 @@ class History:
                 while (n != 'Q' and n != 'B'):
                     team = Team.teams[mana][select]
                     kda = History.kda(mana, team)
-                    os.system('cls')
+                    clear()
                     header("Các đội đã thắng đội của bạn")
                     p = []
                     if len(History.history) != 0:
@@ -530,7 +536,7 @@ class Team:
     def inputMana():
         mana = input('  > Mana: ')
         while (not mana.isdigit() or not (mana in Team.manaList)):
-            os.system('cls')
+            clear()
             print('Số mana không hợp lệ, thử lại!')
             print(f'Những mana hợp lệ: {", ".join(Team.manaList)}\n')
             mana = input('  > Mana: ')
@@ -549,7 +555,7 @@ class Team:
         return team_sorted
 
     def add():
-        os.system('cls')
+        clear()
         mana = Team.inputMana()
         select = ''
         teamAdding = []
@@ -558,7 +564,7 @@ class Team:
         monster_card = Card.sortNames(Card.getMonsters())
         temp = []
         while (select != 'Q'):
-            os.system('cls')
+            clear()
             print()
             if len(teamAdding) == 0:
                 header("Chọn thẻ Summoner")
@@ -606,7 +612,7 @@ class Team:
                 summoner_card = Card.sortNames(Card.getSummoner())
                 monster_card = Card.sortNames(Card.getMonsters())
             elif (select == 'M'):
-                os.system('cls')
+                clear()
                 mana = Team.inputMana()
             elif (select == 'D'):
                 if len(teamAdding) > 1:
@@ -619,11 +625,11 @@ class Team:
                 time.sleep(1)
 
     def delete():
-        os.system('cls')
+        clear()
         mana = None
         lt = None
         while True:
-            os.system('cls')
+            clear()
             mana = input('  > Nhập mana: ')
             lt = Team.teams.get(mana)
             if lt == None:
@@ -631,10 +637,10 @@ class Team:
                 time.sleep(1)
             else:
                 break
-        os.system('cls')
+        clear()
         td = ''
         while True:
-            os.system('cls')
+            clear()
             title = f'Danh sách team mana {mana}'
             header(title)
 
@@ -650,11 +656,11 @@ class Team:
                 time.sleep(1)
             else:
                 break
-        os.system('cls')
+        clear()
         st = lt[int(td) - 1]
         acpt = ''
         while True:
-            os.system('cls')
+            clear()
             header("Đội hình đã được chọn")
             Team.showTeam(st)
             print(break_line)
@@ -675,7 +681,7 @@ class Team:
                 Team.teams[mana].pop(int(td) - 1)
                 if len(Team.teams[mana]) == 0: Team.teams.pop(mana)
                 Team.teamFile.wJSon(Team.teams)
-                os.system('cls')
+                clear()
                 print('Đã xoá thành công!')
                 time.sleep(1)
 
@@ -742,7 +748,7 @@ class Team:
     def copyTeam(mana, team):
         n = None
         while (n != 'N'):
-            os.system('cls')
+            clear()
             header("Thông tin sao chép")
             print('  │' + f"{', '.join(team)}".center(114) + '│')
             make_empty_line(5)
@@ -758,7 +764,7 @@ class Team:
                     Team.teams[mana].append(team)
                 Team.teams = Team.teamSorted(Team.teams)
                 Team.teamFile.wJSon(Team.teams)
-                os.system('cls')
+                clear()
                 print('Đã sao chép thành công!'.center(116))
                 time.sleep(1)
                 n = 'N'
@@ -790,7 +796,7 @@ class Team:
     def topCard(mana):
         n = None
         while (n != 'Q'):
-            os.system('cls')
+            clear()
             if len(History.history) > 0:
                 header("Thẻ bài được đối thủ chọn nhiều nhất")
                 team = {}
@@ -829,7 +835,7 @@ class Team:
     def show():
         select = ''
         while (select != 'Q'):
-            os.system('cls')
+            clear()
             header("Danh sách đội hình")
             won = lost = drawn = match = 0
             if len(Team.teams) > 0:
@@ -1033,7 +1039,7 @@ def battle(account, match):
             c = checkPoint3()
         return c
 
-    os.system('cls')
+    clear()
     for i in range(int(match)):
         showLog(f'Bắt đầu trận thứ [{i + 1}/{match}]', username)
         try:
@@ -1072,7 +1078,7 @@ class Launcher:
         accountManager = AccountManager()
         select = None
         while (select != 'Q'):
-            os.system('cls')
+            clear()
             header("Menu")
             make_empty_line(5)
             # print(f"\t\t\t\t\t\t     Bản dựng {'.'.join(str(x) for x in Launcher.version())}")
@@ -1104,7 +1110,7 @@ class Launcher:
 
     def shutDown(mess):
         for i in range(3,0,-1):
-            os.system('cls')
+            clear()
             print(mess)
             print(f'Ứng dụng sẽ đóng trong {i}')
             time.sleep(1)
@@ -1117,7 +1123,7 @@ class Launcher:
         if len(account_list) > 0:
             select = None
             while (select != 'Q'):
-                os.system('cls')
+                clear()
                 header("Chọn tài khoản")
                 print('  │' + f'Đã chọn {len(account_selected)} tài khoản'.center(114) + '│')
                 if len(account_selected) > 0:
@@ -1145,15 +1151,15 @@ class Launcher:
                         account_selected.append(account_list[select])
                         account_list.pop(select)
                     elif select == 'S' and len(account_selected) > 0:
-                        os.system('cls')
+                        clear()
                         match = None
                         while (match != 'Q'):
-                            os.system('cls')
+                            clear()
                             print()
                             print('Nhập số trận đấu'.center(116))
                             print('  [Q] Thoát\n')
                             match = input('  > Chọn: ').upper()
-                            os.system('cls')
+                            clear()
                             if match.isdigit() and int(match) > 0:
                                 if len(account_selected) == 1:
                                     battle(account_selected[0], match)
@@ -1179,7 +1185,7 @@ class Launcher:
         else:
             m = ''
             while (m != 'Q'):
-                os.system('cls')
+                clear()
                 print("CHỌN TÀI KHOẢN")
                 print("\nKhông có tài khoản nào, vui lòng thêm tài khoản!")
                 print('\n[Q] Thoát')
@@ -1228,7 +1234,7 @@ class Launcher:
                 pass
 
     def feedback():
-        os.system('cls')
+        clear()
         print()
         print('Mô tả nội dung phản hồi'.center(116))
         print('  [Q] Thoát\n')
@@ -1236,10 +1242,10 @@ class Launcher:
         if content.upper() == 'Q': return 'Q'
         else:
             payload = {'notenumber': 'bp574p9j', 'name': 'Quess', 'content': content}
-            os.system('cls')
+            clear()
             print('Đang gửi phản hồi...')
             requests.post('https://anotepad.com/note/addcomment', data=payload)
-            os.system('cls')
+            clear()
             print('Đã gửi phản hồi của bạn!'.center(116))
             time.sleep(2)
             return 'Q'
