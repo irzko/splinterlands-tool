@@ -1197,6 +1197,225 @@
                     "Carrion Shade"
                 ]
             }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Unicorn Mustang",
+                    "Regal Peryton",
+                    "Khmer Princess"
+                ]
+            },
+            "team2": {
+                "player": "tuanvn140",
+                "team": [
+                    "Drake of Arnak",
+                    "Cursed Windeku",
+                    "Cursed Slimeball",
+                    "Undead Badger",
+                    "Silent Sha-vi"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Unicorn Mustang",
+                    "Regal Peryton",
+                    "Khmer Princess"
+                ]
+            },
+            "team2": {
+                "player": "hao16",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Undead Badger",
+                    "Silent Sha-vi",
+                    "Carrion Shade"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Unicorn Mustang",
+                    "Regal Peryton",
+                    "Khmer Princess"
+                ]
+            },
+            "team2": {
+                "player": "muoifoiui3",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Unicorn Mustang",
+                    "Khmer Princess",
+                    "Regal Peryton"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Unicorn Mustang",
+                    "Regal Peryton",
+                    "Khmer Princess"
+                ]
+            },
+            "team2": {
+                "player": "ding2850",
+                "team": [
+                    "Drake of Arnak",
+                    "Cursed Windeku",
+                    "Xenith Archer",
+                    "Life Sapper",
+                    "Soul Strangler"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Unicorn Mustang",
+                    "Regal Peryton",
+                    "Khmer Princess"
+                ]
+            },
+            "team2": {
+                "player": "langz112",
+                "team": [
+                    "Drake of Arnak",
+                    "Cursed Windeku",
+                    "Cursed Slimeball",
+                    "Undead Badger",
+                    "Silent Sha-vi"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Unicorn Mustang",
+                    "Regal Peryton",
+                    "Khmer Princess"
+                ]
+            },
+            "team2": {
+                "player": "tieukienvuianh",
+                "team": [
+                    "Drake of Arnak",
+                    "Cursed Windeku",
+                    "Xenith Archer",
+                    "Life Sapper",
+                    "Soul Strangler"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Unicorn Mustang",
+                    "Regal Peryton",
+                    "Khmer Princess"
+                ]
+            },
+            "team2": {
+                "player": "lehaicovy32464",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Cursed Slimeball",
+                    "Life Sapper",
+                    "Death Elemental",
+                    "Carrion Shade"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Unicorn Mustang",
+                    "Regal Peryton",
+                    "Khmer Princess"
+                ]
+            },
+            "team2": {
+                "player": "sachlop",
+                "team": [
+                    "Mother Khala",
+                    "Shieldbearer",
+                    "Scavo Hireling",
+                    "Venari Crystalsmith"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Unicorn Mustang",
+                    "Regal Peryton",
+                    "Khmer Princess"
+                ]
+            },
+            "team2": {
+                "player": "lamgi263",
+                "team": [
+                    "Drake of Arnak",
+                    "Cursed Windeku",
+                    "Xenith Archer",
+                    "Life Sapper",
+                    "Soul Strangler"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Unicorn Mustang",
+                    "Regal Peryton",
+                    "Khmer Princess"
+                ]
+            },
+            "team2": {
+                "player": "elioperesam",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Life Sapper",
+                    "Soul Strangler",
+                    "Xenith Archer"
+                ]
+            }
         }
     ],
     "22": [
@@ -2432,6 +2651,245 @@
                     "Diemonshark",
                     "Djinn Oshannus",
                     "Ice Pixie"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Cruel Sethropod",
+                    "Deeplurker",
+                    "Hardy Stonefish",
+                    "Ice Pixie",
+                    "Xenith Archer",
+                    "Kulu Swimhunter"
+                ]
+            },
+            "team2": {
+                "player": "tstouchy",
+                "team": [
+                    "Tarsa",
+                    "Radiated Scorcher",
+                    "Living Lava",
+                    "Tenyii Striker",
+                    "Serpentine Spy",
+                    "Goblin Fireballer"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Cruel Sethropod",
+                    "Deeplurker",
+                    "Hardy Stonefish",
+                    "Ice Pixie",
+                    "Xenith Archer",
+                    "Kulu Swimhunter"
+                ]
+            },
+            "team2": {
+                "player": "xlb7a953",
+                "team": [
+                    "Drake of Arnak",
+                    "Chaos Agent",
+                    "Cursed Windeku",
+                    "Carrion Shade",
+                    "Undead Badger",
+                    "Silent Sha-vi",
+                    "Death Elemental"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Cruel Sethropod",
+                    "Deeplurker",
+                    "Hardy Stonefish",
+                    "Ice Pixie",
+                    "Xenith Archer",
+                    "Kulu Swimhunter"
+                ]
+            },
+            "team2": {
+                "player": "substancesure",
+                "team": [
+                    "Tarsa",
+                    "Living Lava",
+                    "Chaos Agent",
+                    "Serpentine Spy",
+                    "Tenyii Striker",
+                    "Scavo Chemist"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Cruel Sethropod",
+                    "Deeplurker",
+                    "Hardy Stonefish",
+                    "Ice Pixie",
+                    "Xenith Archer",
+                    "Kulu Swimhunter"
+                ]
+            },
+            "team2": {
+                "player": "steventensehill",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Silent Sha-vi",
+                    "Chaos Agent",
+                    "Undead Badger",
+                    "Death Elemental",
+                    "Carrion Shade"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Cruel Sethropod",
+                    "Deeplurker",
+                    "Hardy Stonefish",
+                    "Ice Pixie",
+                    "Xenith Archer",
+                    "Kulu Swimhunter"
+                ]
+            },
+            "team2": {
+                "player": "xuez75",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Failed Summoner",
+                    "Chaos Agent",
+                    "Khmer Princess",
+                    "Regal Peryton"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Cruel Sethropod",
+                    "Deeplurker",
+                    "Hardy Stonefish",
+                    "Ice Pixie",
+                    "Xenith Archer",
+                    "Kulu Swimhunter"
+                ]
+            },
+            "team2": {
+                "player": "hoangdat31",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Failed Summoner",
+                    "Chaos Agent",
+                    "Khmer Princess",
+                    "Regal Peryton"
+                ]
+            }
+        },
+        {
+            "result": "Drawn",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Cruel Sethropod",
+                    "Deeplurker",
+                    "Hardy Stonefish",
+                    "Ice Pixie",
+                    "Xenith Archer",
+                    "Kulu Swimhunter"
+                ]
+            },
+            "team2": {
+                "player": "lymzz574",
+                "team": [
+                    "Kelya Frendul",
+                    "Cruel Sethropod",
+                    "Deeplurker",
+                    "Hardy Stonefish",
+                    "Ice Pixie",
+                    "Xenith Archer",
+                    "Kulu Swimhunter"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Cruel Sethropod",
+                    "Deeplurker",
+                    "Hardy Stonefish",
+                    "Ice Pixie",
+                    "Xenith Archer",
+                    "Kulu Swimhunter"
+                ]
+            },
+            "team2": {
+                "player": "issexplos",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Chaos Agent",
+                    "Undead Badger",
+                    "Life Sapper",
+                    "Silent Sha-vi",
+                    "Carrion Shade"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Cruel Sethropod",
+                    "Deeplurker",
+                    "Hardy Stonefish",
+                    "Ice Pixie",
+                    "Xenith Archer",
+                    "Kulu Swimhunter"
+                ]
+            },
+            "team2": {
+                "player": "hung221",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Chaos Agent",
+                    "Undead Badger",
+                    "Life Sapper",
+                    "Silent Sha-vi",
+                    "Carrion Shade"
                 ]
             }
         }
@@ -4483,6 +4941,330 @@
                     "Regal Peryton"
                 ]
             }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Tarsa",
+                    "Radiated Scorcher",
+                    "Living Lava",
+                    "Radiated Brute",
+                    "Parasitic Growth",
+                    "Serpentine Spy",
+                    "Tenyii Striker"
+                ]
+            },
+            "team2": {
+                "player": "tyurun218",
+                "team": [
+                    "Kelya Frendul",
+                    "Diemonshark",
+                    "Hardy Stonefish",
+                    "Ice Pixie",
+                    "Deeplurker",
+                    "Feasting Seaweed",
+                    "Kulu Swimhunter"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Tarsa",
+                    "Radiated Scorcher",
+                    "Living Lava",
+                    "Radiated Brute",
+                    "Parasitic Growth",
+                    "Serpentine Spy",
+                    "Tenyii Striker"
+                ]
+            },
+            "team2": {
+                "player": "btktz75022881",
+                "team": [
+                    "Kelya Frendul",
+                    "Diemonshark",
+                    "Hardy Stonefish",
+                    "Ice Pixie",
+                    "Deeplurker",
+                    "Feasting Seaweed",
+                    "Kulu Swimhunter"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Tarsa",
+                    "Radiated Scorcher",
+                    "Living Lava",
+                    "Radiated Brute",
+                    "Parasitic Growth",
+                    "Serpentine Spy",
+                    "Tenyii Striker"
+                ]
+            },
+            "team2": {
+                "player": "ding4874",
+                "team": [
+                    "Tarsa",
+                    "Scavo Chemist",
+                    "Living Lava",
+                    "Chaos Agent",
+                    "Disintegrator",
+                    "Serpentine Spy",
+                    "Tenyii Striker"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Tarsa",
+                    "Radiated Scorcher",
+                    "Living Lava",
+                    "Radiated Brute",
+                    "Parasitic Growth",
+                    "Serpentine Spy",
+                    "Tenyii Striker"
+                ]
+            },
+            "team2": {
+                "player": "warforcevn15",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Deeplurker",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Feasting Seaweed",
+                    "Ice Pixie"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Tarsa",
+                    "Radiated Scorcher",
+                    "Living Lava",
+                    "Radiated Brute",
+                    "Parasitic Growth",
+                    "Serpentine Spy",
+                    "Tenyii Striker"
+                ]
+            },
+            "team2": {
+                "player": "nnam193",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Riftwing",
+                    "Undead Badger",
+                    "Life Sapper",
+                    "Goblin Chariot",
+                    "Silent Sha-vi"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Tarsa",
+                    "Radiated Scorcher",
+                    "Living Lava",
+                    "Radiated Brute",
+                    "Parasitic Growth",
+                    "Serpentine Spy",
+                    "Tenyii Striker"
+                ]
+            },
+            "team2": {
+                "player": "lamgi520",
+                "team": [
+                    "Tarsa",
+                    "Scavo Chemist",
+                    "Living Lava",
+                    "Chaos Agent",
+                    "Disintegrator",
+                    "Serpentine Spy",
+                    "Tenyii Striker"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Tarsa",
+                    "Radiated Scorcher",
+                    "Living Lava",
+                    "Radiated Brute",
+                    "Parasitic Growth",
+                    "Serpentine Spy",
+                    "Tenyii Striker"
+                ]
+            },
+            "team2": {
+                "player": "shadpuchi2",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Riftwing",
+                    "Silent Sha-vi",
+                    "Undead Badger",
+                    "Dhampir Stalker",
+                    "Carrion Shade"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Tarsa",
+                    "Radiated Scorcher",
+                    "Living Lava",
+                    "Radiated Brute",
+                    "Parasitic Growth",
+                    "Serpentine Spy",
+                    "Tenyii Striker"
+                ]
+            },
+            "team2": {
+                "player": "eto05fae",
+                "team": [
+                    "General Sloan",
+                    "Shieldbearer",
+                    "Celestial Harpy",
+                    "Time Mage",
+                    "Truthspeaker",
+                    "Xenith Archer",
+                    "Pelacor Arbalest"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Tarsa",
+                    "Radiated Scorcher",
+                    "Living Lava",
+                    "Radiated Brute",
+                    "Parasitic Growth",
+                    "Serpentine Spy",
+                    "Tenyii Striker"
+                ]
+            },
+            "team2": {
+                "player": "cn04901",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Riftwing",
+                    "Silent Sha-vi",
+                    "Undead Badger",
+                    "Dhampir Stalker",
+                    "Carrion Shade"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Tarsa",
+                    "Radiated Scorcher",
+                    "Living Lava",
+                    "Radiated Brute",
+                    "Parasitic Growth",
+                    "Serpentine Spy",
+                    "Tenyii Striker"
+                ]
+            },
+            "team2": {
+                "player": "sallyhartmanqft",
+                "team": [
+                    "Tarsa",
+                    "Radiated Scorcher",
+                    "Living Lava",
+                    "Radiated Brute",
+                    "Serpentine Spy",
+                    "Spark Pixies",
+                    "Tenyii Striker"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Tarsa",
+                    "Radiated Scorcher",
+                    "Living Lava",
+                    "Radiated Brute",
+                    "Parasitic Growth",
+                    "Serpentine Spy",
+                    "Tenyii Striker"
+                ]
+            },
+            "team2": {
+                "player": "sdgbfdghd54",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Failed Summoner",
+                    "Goblin Psychic",
+                    "Elven Mystic",
+                    "Khmer Princess",
+                    "Child of the Forest"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Tarsa",
+                    "Radiated Scorcher",
+                    "Living Lava",
+                    "Radiated Brute",
+                    "Parasitic Growth",
+                    "Serpentine Spy",
+                    "Tenyii Striker"
+                ]
+            },
+            "team2": {
+                "player": "zxciz68243223",
+                "team": [
+                    "Tarsa",
+                    "Scavo Chemist",
+                    "Living Lava",
+                    "Chaos Agent",
+                    "Disintegrator",
+                    "Serpentine Spy",
+                    "Tenyii Striker"
+                ]
+            }
         }
     ],
     "25": [
@@ -6048,6 +6830,421 @@
                     "Deeplurker",
                     "Kulu Swimhunter",
                     "Ice Pixie"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "General Sloan",
+                    "Shieldbearer",
+                    "Gargoya Scrapper",
+                    "Time Mage",
+                    "Xenith Archer",
+                    "Pelacor Arbalest"
+                ]
+            },
+            "team2": {
+                "player": "dtbwgv866",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Albatross",
+                    "Hardy Stonefish",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Deeplurker"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "General Sloan",
+                    "Shieldbearer",
+                    "Gargoya Scrapper",
+                    "Time Mage",
+                    "Xenith Archer",
+                    "Pelacor Arbalest"
+                ]
+            },
+            "team2": {
+                "player": "dh040",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Albatross",
+                    "Hardy Stonefish",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Deeplurker"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "General Sloan",
+                    "Shieldbearer",
+                    "Gargoya Scrapper",
+                    "Time Mage",
+                    "Xenith Archer",
+                    "Pelacor Arbalest"
+                ]
+            },
+            "team2": {
+                "player": "chenyiqi73",
+                "team": [
+                    "Drake of Arnak",
+                    "Unicorn Mustang",
+                    "Venari Scout",
+                    "Chaos Agent",
+                    "Khmer Princess",
+                    "Goblin Psychic",
+                    "Mycelic Morphoid"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "General Sloan",
+                    "Shieldbearer",
+                    "Gargoya Scrapper",
+                    "Time Mage",
+                    "Xenith Archer",
+                    "Pelacor Arbalest"
+                ]
+            },
+            "team2": {
+                "player": "yyf8znv3pol9xo9",
+                "team": [
+                    "Obsidian",
+                    "Hill Giant",
+                    "Regal Peryton",
+                    "Goblin Psychic",
+                    "Khmer Princess",
+                    "Elven Mystic",
+                    "Chaos Agent"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "General Sloan",
+                    "Shieldbearer",
+                    "Gargoya Scrapper",
+                    "Time Mage",
+                    "Xenith Archer",
+                    "Pelacor Arbalest"
+                ]
+            },
+            "team2": {
+                "player": "liuyu43",
+                "team": [
+                    "Kelya Frendul",
+                    "Albatross",
+                    "Serpent of Eld",
+                    "Hardy Stonefish",
+                    "Deeplurker",
+                    "Kulu Swimhunter",
+                    "Ice Pixie"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "General Sloan",
+                    "Shieldbearer",
+                    "Gargoya Scrapper",
+                    "Time Mage",
+                    "Xenith Archer",
+                    "Pelacor Arbalest"
+                ]
+            },
+            "team2": {
+                "player": "tientq1858",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Albatross",
+                    "Hardy Stonefish",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Deeplurker"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "General Sloan",
+                    "Shieldbearer",
+                    "Gargoya Scrapper",
+                    "Time Mage",
+                    "Xenith Archer",
+                    "Pelacor Arbalest"
+                ]
+            },
+            "team2": {
+                "player": "mintashin",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Riftwing",
+                    "Death Elemental",
+                    "Undead Badger",
+                    "Silent Sha-vi",
+                    "Cursed Slimeball"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "General Sloan",
+                    "Shieldbearer",
+                    "Gargoya Scrapper",
+                    "Time Mage",
+                    "Xenith Archer",
+                    "Pelacor Arbalest"
+                ]
+            },
+            "team2": {
+                "player": "manglyt",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Albatross",
+                    "Hardy Stonefish",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Deeplurker"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "General Sloan",
+                    "Shieldbearer",
+                    "Gargoya Scrapper",
+                    "Time Mage",
+                    "Xenith Archer",
+                    "Pelacor Arbalest"
+                ]
+            },
+            "team2": {
+                "player": "ffbx7",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Albatross",
+                    "Hardy Stonefish",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Deeplurker"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "General Sloan",
+                    "Shieldbearer",
+                    "Gargoya Scrapper",
+                    "Time Mage",
+                    "Xenith Archer",
+                    "Pelacor Arbalest"
+                ]
+            },
+            "team2": {
+                "player": "liuzz151",
+                "team": [
+                    "Kelya Frendul",
+                    "Albatross",
+                    "Serpent of Eld",
+                    "Hardy Stonefish",
+                    "Deeplurker",
+                    "Kulu Swimhunter",
+                    "Ice Pixie"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "General Sloan",
+                    "Shieldbearer",
+                    "Gargoya Scrapper",
+                    "Time Mage",
+                    "Xenith Archer",
+                    "Pelacor Arbalest"
+                ]
+            },
+            "team2": {
+                "player": "gilbeforbe87",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Albatross",
+                    "Hardy Stonefish",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Deeplurker"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "General Sloan",
+                    "Shieldbearer",
+                    "Gargoya Scrapper",
+                    "Time Mage",
+                    "Xenith Archer",
+                    "Pelacor Arbalest"
+                ]
+            },
+            "team2": {
+                "player": "chenyiqi164",
+                "team": [
+                    "Drake of Arnak",
+                    "Unicorn Mustang",
+                    "Venari Scout",
+                    "Chaos Agent",
+                    "Khmer Princess",
+                    "Goblin Psychic",
+                    "Mycelic Morphoid"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "General Sloan",
+                    "Shieldbearer",
+                    "Gargoya Scrapper",
+                    "Time Mage",
+                    "Xenith Archer",
+                    "Pelacor Arbalest"
+                ]
+            },
+            "team2": {
+                "player": "motmatcogang",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Xenith Archer",
+                    "Child of the Forest",
+                    "Khmer Princess",
+                    "Goblin Psychic"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "General Sloan",
+                    "Shieldbearer",
+                    "Gargoya Scrapper",
+                    "Time Mage",
+                    "Xenith Archer",
+                    "Pelacor Arbalest"
+                ]
+            },
+            "team2": {
+                "player": "haigame6664",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Albatross",
+                    "Hardy Stonefish",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Deeplurker"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "General Sloan",
+                    "Shieldbearer",
+                    "Gargoya Scrapper",
+                    "Time Mage",
+                    "Xenith Archer",
+                    "Pelacor Arbalest"
+                ]
+            },
+            "team2": {
+                "player": "wpsma30894443",
+                "team": [
+                    "Kelya Frendul",
+                    "Hardy Stonefish",
+                    "Cruel Sethropod",
+                    "Deeplurker",
+                    "Feasting Seaweed",
+                    "Ice Pixie",
+                    "Sniping Narwhal"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "General Sloan",
+                    "Shieldbearer",
+                    "Gargoya Scrapper",
+                    "Time Mage",
+                    "Xenith Archer",
+                    "Pelacor Arbalest"
+                ]
+            },
+            "team2": {
+                "player": "chenyiqi16",
+                "team": [
+                    "Drake of Arnak",
+                    "Unicorn Mustang",
+                    "Venari Scout",
+                    "Chaos Agent",
+                    "Khmer Princess",
+                    "Goblin Psychic",
+                    "Mycelic Morphoid"
                 ]
             }
         }
@@ -7934,6 +9131,222 @@
                     "Creeping Ooze"
                 ]
             }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Unicorn Mustang",
+                    "Goblin Thief"
+                ]
+            },
+            "team2": {
+                "player": "vethoi873",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Undead Badger",
+                    "Death Elemental"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Unicorn Mustang",
+                    "Xenith Archer",
+                    "Khmer Princess"
+                ]
+            },
+            "team2": {
+                "player": "dusno316",
+                "team": [
+                    "Obsidian",
+                    "Failed Summoner",
+                    "Mycelic Morphoid",
+                    "Chaos Agent",
+                    "Khmer Princess",
+                    "Regal Peryton"
+                ]
+            }
+        },
+        {
+            "result": "Drawn",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Unicorn Mustang",
+                    "Goblin Thief"
+                ]
+            },
+            "team2": {
+                "player": "ahihicb",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Unicorn Mustang",
+                    "Goblin Thief"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Unicorn Mustang",
+                    "Goblin Thief"
+                ]
+            },
+            "team2": {
+                "player": "lymzz38",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Cursed Slimeball",
+                    "Life Sapper",
+                    "Carrion Shade"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Unicorn Mustang",
+                    "Goblin Thief"
+                ]
+            },
+            "team2": {
+                "player": "mattrang711",
+                "team": [
+                    "Obsidian",
+                    "Failed Summoner",
+                    "Mycelic Morphoid",
+                    "Chaos Agent",
+                    "Khmer Princess",
+                    "Regal Peryton"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Unicorn Mustang",
+                    "Xenith Archer",
+                    "Khmer Princess"
+                ]
+            },
+            "team2": {
+                "player": "ding2086",
+                "team": [
+                    "Drake of Arnak",
+                    "Carrion Shade",
+                    "Cursed Slimeball",
+                    "Chaos Agent",
+                    "Life Sapper",
+                    "Undead Badger",
+                    "Death Elemental"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Unicorn Mustang",
+                    "Goblin Thief"
+                ]
+            },
+            "team2": {
+                "player": "fywlz535",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Cursed Slimeball",
+                    "Life Sapper",
+                    "Carrion Shade"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Unicorn Mustang",
+                    "Xenith Archer",
+                    "Khmer Princess"
+                ]
+            },
+            "team2": {
+                "player": "haigame2439",
+                "team": [
+                    "Obsidian",
+                    "Hill Giant",
+                    "Mycelic Morphoid",
+                    "Khmer Princess",
+                    "Regal Peryton"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Unicorn Mustang",
+                    "Goblin Thief"
+                ]
+            },
+            "team2": {
+                "player": "dominhtien212",
+                "team": [
+                    "Obsidian",
+                    "Failed Summoner",
+                    "Mycelic Morphoid",
+                    "Chaos Agent",
+                    "Khmer Princess",
+                    "Regal Peryton"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Unicorn Mustang",
+                    "Xenith Archer",
+                    "Khmer Princess"
+                ]
+            },
+            "team2": {
+                "player": "huang257",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Cursed Slimeball",
+                    "Life Sapper",
+                    "Carrion Shade"
+                ]
+            }
         }
     ],
     "24": [
@@ -9704,6 +11117,216 @@
                     "Death Elemental",
                     "Undead Badger",
                     "Silent Sha-vi"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Merdaali Guardian",
+                    "Kulu Swimhunter",
+                    "Angelic Mandarin",
+                    "Albatross",
+                    "Ice Pixie"
+                ]
+            },
+            "team2": {
+                "player": "ade55wq252",
+                "team": [
+                    "Drake of Arnak",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Failed Summoner",
+                    "Goblin Psychic",
+                    "Khmer Princess",
+                    "Chaos Agent"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Merdaali Guardian",
+                    "Kulu Swimhunter",
+                    "Angelic Mandarin",
+                    "Albatross",
+                    "Ice Pixie"
+                ]
+            },
+            "team2": {
+                "player": "paulooliveira",
+                "team": [
+                    "Mother Khala",
+                    "Chaos Knight",
+                    "Celestial Harpy",
+                    "Stitch Leech",
+                    "Lone Boatman",
+                    "Time Mage"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Merdaali Guardian",
+                    "Kulu Swimhunter",
+                    "Angelic Mandarin",
+                    "Albatross",
+                    "Ice Pixie"
+                ]
+            },
+            "team2": {
+                "player": "alternowhere",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Chaos Agent",
+                    "Goblin Psychic",
+                    "Regal Peryton"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Merdaali Guardian",
+                    "Kulu Swimhunter",
+                    "Angelic Mandarin",
+                    "Albatross",
+                    "Ice Pixie"
+                ]
+            },
+            "team2": {
+                "player": "ecar3",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Deeplurker",
+                    "Ice Pixie",
+                    "Sniping Narwhal"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Merdaali Guardian",
+                    "Kulu Swimhunter",
+                    "Angelic Mandarin",
+                    "Albatross",
+                    "Ice Pixie"
+                ]
+            },
+            "team2": {
+                "player": "csp62",
+                "team": [
+                    "Drake of Arnak",
+                    "Living Lava",
+                    "Furious Chicken",
+                    "Serpentine Spy",
+                    "Creeping Ooze",
+                    "Fire Elemental",
+                    "Spark Pixies"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Merdaali Guardian",
+                    "Kulu Swimhunter",
+                    "Angelic Mandarin",
+                    "Albatross",
+                    "Ice Pixie"
+                ]
+            },
+            "team2": {
+                "player": "crigleraar",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Albatross",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Deeplurker"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Merdaali Guardian",
+                    "Kulu Swimhunter",
+                    "Angelic Mandarin",
+                    "Albatross",
+                    "Ice Pixie"
+                ]
+            },
+            "team2": {
+                "player": "xiangyang345",
+                "team": [
+                    "Drake of Arnak",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Failed Summoner",
+                    "Goblin Psychic",
+                    "Khmer Princess",
+                    "Chaos Agent"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Merdaali Guardian",
+                    "Kulu Swimhunter",
+                    "Angelic Mandarin",
+                    "Albatross",
+                    "Ice Pixie"
+                ]
+            },
+            "team2": {
+                "player": "mmhihuhy",
+                "team": [
+                    "General Sloan",
+                    "Gargoya Scrapper",
+                    "Chaos Agent",
+                    "Time Mage",
+                    "Truthspeaker",
+                    "Goblin Chariot",
+                    "Pelacor Arbalest"
                 ]
             }
         }
@@ -11496,6 +13119,325 @@
                     "Albatross"
                 ]
             }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Goblin Psychic",
+                    "Khmer Princess",
+                    "Venari Spellsmith",
+                    "Chaos Agent"
+                ]
+            },
+            "team2": {
+                "player": "fywlz50",
+                "team": [
+                    "Kelya Frendul",
+                    "Hardy Stonefish",
+                    "Albatross",
+                    "Diemonshark",
+                    "Feasting Seaweed",
+                    "Deeplurker",
+                    "Ice Pixie"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Goblin Psychic",
+                    "Khmer Princess",
+                    "Venari Spellsmith",
+                    "Chaos Agent"
+                ]
+            },
+            "team2": {
+                "player": "hidody",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Hardy Stonefish",
+                    "Ice Pixie",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Deeplurker"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Goblin Psychic",
+                    "Khmer Princess",
+                    "Venari Spellsmith",
+                    "Chaos Agent"
+                ]
+            },
+            "team2": {
+                "player": "tranghis",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Goblin Psychic",
+                    "Khmer Princess",
+                    "Regal Peryton"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Goblin Psychic",
+                    "Khmer Princess",
+                    "Venari Spellsmith",
+                    "Chaos Agent"
+                ]
+            },
+            "team2": {
+                "player": "chenyiqi202",
+                "team": [
+                    "Drake of Arnak",
+                    "Unicorn Mustang",
+                    "Chaos Agent",
+                    "Khmer Princess",
+                    "Goblin Thief",
+                    "Goblin Psychic",
+                    "Mycelic Morphoid"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Goblin Psychic",
+                    "Khmer Princess",
+                    "Venari Spellsmith",
+                    "Chaos Agent"
+                ]
+            },
+            "team2": {
+                "player": "chenyiqi146",
+                "team": [
+                    "Drake of Arnak",
+                    "Unicorn Mustang",
+                    "Chaos Agent",
+                    "Khmer Princess",
+                    "Goblin Thief",
+                    "Goblin Psychic",
+                    "Mycelic Morphoid"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Goblin Psychic",
+                    "Khmer Princess",
+                    "Venari Spellsmith",
+                    "Chaos Agent"
+                ]
+            },
+            "team2": {
+                "player": "ding1824",
+                "team": [
+                    "Drake of Arnak",
+                    "Cursed Windeku",
+                    "Riftwing",
+                    "Silent Sha-vi",
+                    "Undead Badger",
+                    "Death Elemental",
+                    "Xenith Archer"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Goblin Psychic",
+                    "Khmer Princess",
+                    "Venari Spellsmith",
+                    "Chaos Agent"
+                ]
+            },
+            "team2": {
+                "player": "ding4103",
+                "team": [
+                    "Drake of Arnak",
+                    "Cursed Windeku",
+                    "Riftwing",
+                    "Silent Sha-vi",
+                    "Undead Badger",
+                    "Death Elemental",
+                    "Xenith Archer"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Goblin Psychic",
+                    "Khmer Princess",
+                    "Venari Spellsmith",
+                    "Chaos Agent"
+                ]
+            },
+            "team2": {
+                "player": "longnt112",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Xenith Archer",
+                    "Death Elemental",
+                    "Silent Sha-vi"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Goblin Psychic",
+                    "Khmer Princess",
+                    "Venari Spellsmith",
+                    "Chaos Agent"
+                ]
+            },
+            "team2": {
+                "player": "chenyiqi429",
+                "team": [
+                    "Drake of Arnak",
+                    "Unicorn Mustang",
+                    "Chaos Agent",
+                    "Khmer Princess",
+                    "Goblin Thief",
+                    "Goblin Psychic",
+                    "Mycelic Morphoid"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Goblin Psychic",
+                    "Khmer Princess",
+                    "Venari Spellsmith",
+                    "Chaos Agent"
+                ]
+            },
+            "team2": {
+                "player": "vad0112",
+                "team": [
+                    "Kelya Frendul",
+                    "Diemonshark",
+                    "River Nymph",
+                    "Venari Spellsmith",
+                    "Ice Pixie",
+                    "Elven Mystic"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Goblin Psychic",
+                    "Khmer Princess",
+                    "Venari Spellsmith",
+                    "Chaos Agent"
+                ]
+            },
+            "team2": {
+                "player": "bubi135",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Goblin Psychic",
+                    "Khmer Princess",
+                    "Regal Peryton"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Goblin Psychic",
+                    "Khmer Princess",
+                    "Venari Spellsmith",
+                    "Chaos Agent"
+                ]
+            },
+            "team2": {
+                "player": "clonee140",
+                "team": [
+                    "Kelya Frendul",
+                    "Xenith Monk",
+                    "Ice Pixie",
+                    "Feasting Seaweed",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Deeplurker"
+                ]
+            }
         }
     ],
     "13": [
@@ -13138,6 +15080,316 @@
                     "Drake of Arnak",
                     "Cursed Windeku",
                     "Death Elemental"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Mycelic Infantry",
+                    "Khmer Princess"
+                ]
+            },
+            "team2": {
+                "player": "longvinh",
+                "team": [
+                    "Drake of Arnak",
+                    "Cursed Windeku",
+                    "Death Elemental"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Mycelic Infantry",
+                    "Khmer Princess"
+                ]
+            },
+            "team2": {
+                "player": "ddgamier",
+                "team": [
+                    "Drake of Arnak",
+                    "Cursed Windeku",
+                    "Life Sapper"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Mycelic Infantry",
+                    "Khmer Princess"
+                ]
+            },
+            "team2": {
+                "player": "shelove36",
+                "team": [
+                    "Drake of Arnak",
+                    "Carrion Shade",
+                    "Cursed Windeku",
+                    "Undead Badger"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Mycelic Infantry",
+                    "Khmer Princess"
+                ]
+            },
+            "team2": {
+                "player": "zxvxz",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Undead Badger",
+                    "Chaos Agent"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Mycelic Infantry",
+                    "Khmer Princess"
+                ]
+            },
+            "team2": {
+                "player": "landingarrettn",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Unicorn Mustang",
+                    "Khmer Princess"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Mycelic Infantry",
+                    "Khmer Princess"
+                ]
+            },
+            "team2": {
+                "player": "harddemocracy80",
+                "team": [
+                    "Thaddius Brood",
+                    "Carrion Shade",
+                    "Cursed Slimeball",
+                    "Chaos Agent",
+                    "Death Elemental",
+                    "Life Sapper"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Mycelic Infantry",
+                    "Khmer Princess"
+                ]
+            },
+            "team2": {
+                "player": "mattroimoc22",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Death Elemental"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Mycelic Infantry",
+                    "Khmer Princess"
+                ]
+            },
+            "team2": {
+                "player": "haoge127",
+                "team": [
+                    "Drake of Arnak",
+                    "Cursed Windeku",
+                    "Life Sapper"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Mycelic Infantry",
+                    "Khmer Princess"
+                ]
+            },
+            "team2": {
+                "player": "aadadarttay",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Death Elemental"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Mycelic Infantry",
+                    "Khmer Princess"
+                ]
+            },
+            "team2": {
+                "player": "fdsf3",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Death Elemental"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Mycelic Infantry",
+                    "Khmer Princess"
+                ]
+            },
+            "team2": {
+                "player": "hak08",
+                "team": [
+                    "Alric Stormbringer",
+                    "Djinn Oshannus",
+                    "Ice Pixie"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Mycelic Infantry",
+                    "Khmer Princess"
+                ]
+            },
+            "team2": {
+                "player": "lymzz967",
+                "team": [
+                    "Drake of Arnak",
+                    "Cursed Windeku",
+                    "Life Sapper"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Mycelic Infantry",
+                    "Khmer Princess"
+                ]
+            },
+            "team2": {
+                "player": "sonha5373",
+                "team": [
+                    "Obsidian",
+                    "Failed Summoner",
+                    "Regal Peryton",
+                    "Khmer Princess"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Mycelic Infantry",
+                    "Khmer Princess"
+                ]
+            },
+            "team2": {
+                "player": "xiangyang359",
+                "team": [
+                    "Drake of Arnak",
+                    "Cursed Windeku",
+                    "Life Sapper"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Mycelic Infantry",
+                    "Khmer Princess"
+                ]
+            },
+            "team2": {
+                "player": "egcdb03155534",
+                "team": [
+                    "Drake of Arnak",
+                    "Cursed Windeku",
+                    "Life Sapper"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Mycelic Infantry",
+                    "Khmer Princess"
+                ]
+            },
+            "team2": {
+                "player": "ding4740",
+                "team": [
+                    "Drake of Arnak",
+                    "Cursed Windeku",
+                    "Life Sapper"
                 ]
             }
         }
@@ -14857,6 +17109,138 @@
                     "Scavo Hireling",
                     "Serpentine Spy",
                     "Tenyii Striker"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Chaos Agent",
+                    "Failed Summoner",
+                    "Mycelic Morphoid",
+                    "Khmer Princess",
+                    "Regal Peryton"
+                ]
+            },
+            "team2": {
+                "player": "kamyrito",
+                "team": [
+                    "Drake of Arnak",
+                    "Living Lava",
+                    "Serpentine Spy",
+                    "Spark Pixies",
+                    "Fire Elemental"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Chaos Agent",
+                    "Failed Summoner",
+                    "Mycelic Morphoid",
+                    "Khmer Princess",
+                    "Regal Peryton"
+                ]
+            },
+            "team2": {
+                "player": "bdy63ur59",
+                "team": [
+                    "General Sloan",
+                    "Gargoya Scrapper",
+                    "Blinding Reflector",
+                    "Time Mage",
+                    "Truthspeaker",
+                    "Pelacor Arbalest",
+                    "Herbalist"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Chaos Agent",
+                    "Failed Summoner",
+                    "Mycelic Morphoid",
+                    "Khmer Princess",
+                    "Regal Peryton"
+                ]
+            },
+            "team2": {
+                "player": "leoraroby",
+                "team": [
+                    "Tarsa",
+                    "Radiated Scorcher",
+                    "Living Lava",
+                    "Chaos Agent",
+                    "Goblin Fireballer",
+                    "Serpentine Spy",
+                    "Tenyii Striker"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Chaos Agent",
+                    "Failed Summoner",
+                    "Mycelic Morphoid",
+                    "Khmer Princess",
+                    "Regal Peryton"
+                ]
+            },
+            "team2": {
+                "player": "degodebilleder2",
+                "team": [
+                    "Obsidian",
+                    "Failed Summoner",
+                    "Regal Peryton",
+                    "Venari Spellsmith",
+                    "Goblin Psychic",
+                    "Khmer Princess"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Chaos Agent",
+                    "Failed Summoner",
+                    "Mycelic Morphoid",
+                    "Khmer Princess",
+                    "Regal Peryton"
+                ]
+            },
+            "team2": {
+                "player": "xlb3a982",
+                "team": [
+                    "General Sloan",
+                    "Gargoya Scrapper",
+                    "Blinding Reflector",
+                    "Time Mage",
+                    "Truthspeaker",
+                    "Pelacor Arbalest",
+                    "Herbalist"
                 ]
             }
         }
@@ -16693,6 +19077,370 @@
                     "Xenith Archer"
                 ]
             }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Chaos Agent",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Ice Pixie",
+                    "Albatross"
+                ]
+            },
+            "team2": {
+                "player": "aotha",
+                "team": [
+                    "Pyre",
+                    "Living Lava",
+                    "Tenyii Striker",
+                    "Serpentine Spy",
+                    "Lava Spider"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Chaos Agent",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Ice Pixie",
+                    "Albatross"
+                ]
+            },
+            "team2": {
+                "player": "explosiveb",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Khmer Princess",
+                    "Goblin Psychic"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Chaos Agent",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Ice Pixie",
+                    "Albatross"
+                ]
+            },
+            "team2": {
+                "player": "strobelisandra",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Chaos Agent",
+                    "Khmer Princess",
+                    "Regal Peryton"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Chaos Agent",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Ice Pixie",
+                    "Albatross"
+                ]
+            },
+            "team2": {
+                "player": "yangz117",
+                "team": [
+                    "Kelya Frendul",
+                    "Albatross",
+                    "Cruel Sethropod",
+                    "Chaos Agent",
+                    "Deeplurker",
+                    "Kulu Swimhunter",
+                    "Ice Pixie"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Chaos Agent",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Ice Pixie",
+                    "Albatross"
+                ]
+            },
+            "team2": {
+                "player": "tyurun145",
+                "team": [
+                    "Kelya Frendul",
+                    "Albatross",
+                    "Cruel Sethropod",
+                    "Chaos Agent",
+                    "Deeplurker",
+                    "Kulu Swimhunter",
+                    "Ice Pixie"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Chaos Agent",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Ice Pixie",
+                    "Albatross"
+                ]
+            },
+            "team2": {
+                "player": "zmcfp98929138",
+                "team": [
+                    "Kelya Frendul",
+                    "Albatross",
+                    "Cruel Sethropod",
+                    "Chaos Agent",
+                    "Deeplurker",
+                    "Kulu Swimhunter",
+                    "Ice Pixie"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Chaos Agent",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Ice Pixie",
+                    "Albatross"
+                ]
+            },
+            "team2": {
+                "player": "mattrang279",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Unicorn Mustang",
+                    "Khmer Princess",
+                    "Goblin Psychic",
+                    "Xenith Archer"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Chaos Agent",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Ice Pixie",
+                    "Albatross"
+                ]
+            },
+            "team2": {
+                "player": "concodaovan",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Goblin Psychic",
+                    "Khmer Princess",
+                    "Chaos Agent"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Chaos Agent",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Ice Pixie",
+                    "Albatross"
+                ]
+            },
+            "team2": {
+                "player": "tyurun303",
+                "team": [
+                    "Kelya Frendul",
+                    "Albatross",
+                    "Cruel Sethropod",
+                    "Chaos Agent",
+                    "Deeplurker",
+                    "Kulu Swimhunter",
+                    "Ice Pixie"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Chaos Agent",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Ice Pixie",
+                    "Albatross"
+                ]
+            },
+            "team2": {
+                "player": "huonghoang306",
+                "team": [
+                    "Kelya Frendul",
+                    "Albatross",
+                    "Cruel Sethropod",
+                    "Chaos Agent",
+                    "Deeplurker",
+                    "Kulu Swimhunter",
+                    "Ice Pixie"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Chaos Agent",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Ice Pixie",
+                    "Albatross"
+                ]
+            },
+            "team2": {
+                "player": "docthan679",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Khmer Princess",
+                    "Goblin Psychic",
+                    "Chaos Agent"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Chaos Agent",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Ice Pixie",
+                    "Albatross"
+                ]
+            },
+            "team2": {
+                "player": "marisolbauer",
+                "team": [
+                    "Tarsa",
+                    "Living Lava",
+                    "Chaos Agent",
+                    "Serpentine Spy",
+                    "Tenyii Striker",
+                    "Radiated Scorcher"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Chaos Agent",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Ice Pixie",
+                    "Albatross"
+                ]
+            },
+            "team2": {
+                "player": "lexvnzuela19",
+                "team": [
+                    "Tarsa",
+                    "Antoid Platoon",
+                    "Ant Miners",
+                    "Tenyii Striker",
+                    "Flame Monkey",
+                    "Kobold Miner",
+                    "Goblin Shaman"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Chaos Agent",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Ice Pixie",
+                    "Albatross"
+                ]
+            },
+            "team2": {
+                "player": "ngocnhi6",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Unicorn Mustang",
+                    "Goblin Psychic",
+                    "Child of the Forest",
+                    "Mycelic Morphoid"
+                ]
+            }
         }
     ],
     "20": [
@@ -18198,6 +20946,365 @@
                     "Kulu Swimhunter"
                 ]
             }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Thaddius Brood",
+                    "Carrion Shade",
+                    "Cursed Slimeball",
+                    "Riftwing",
+                    "Death Elemental",
+                    "Undead Badger"
+                ]
+            },
+            "team2": {
+                "player": "ferguason",
+                "team": [
+                    "Mother Khala",
+                    "Gargoya Scrapper",
+                    "Blinding Reflector",
+                    "Celestial Harpy",
+                    "Time Mage",
+                    "Pelacor Arbalest",
+                    "Chaos Agent"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Thaddius Brood",
+                    "Carrion Shade",
+                    "Cursed Slimeball",
+                    "Riftwing",
+                    "Death Elemental",
+                    "Undead Badger"
+                ]
+            },
+            "team2": {
+                "player": "stanwhi8ney",
+                "team": [
+                    "Obsidian",
+                    "Venari Knifer",
+                    "Failed Summoner",
+                    "Mycelic Morphoid",
+                    "Khmer Princess",
+                    "Regal Peryton"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Thaddius Brood",
+                    "Carrion Shade",
+                    "Cursed Slimeball",
+                    "Riftwing",
+                    "Death Elemental",
+                    "Undead Badger"
+                ]
+            },
+            "team2": {
+                "player": "tyurun640",
+                "team": [
+                    "Thaddius Brood",
+                    "Carrion Shade",
+                    "Cursed Slimeball",
+                    "Riftwing",
+                    "Death Elemental",
+                    "Undead Badger",
+                    "Silent Sha-vi"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Thaddius Brood",
+                    "Carrion Shade",
+                    "Cursed Slimeball",
+                    "Riftwing",
+                    "Death Elemental",
+                    "Undead Badger"
+                ]
+            },
+            "team2": {
+                "player": "tygot08567106",
+                "team": [
+                    "Drake of Arnak",
+                    "Chaos Agent",
+                    "Cursed Windeku",
+                    "Cursed Slimeball",
+                    "Carrion Shade",
+                    "Silent Sha-vi",
+                    "Undead Badger"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Thaddius Brood",
+                    "Carrion Shade",
+                    "Cursed Slimeball",
+                    "Riftwing",
+                    "Death Elemental",
+                    "Undead Badger"
+                ]
+            },
+            "team2": {
+                "player": "capin3",
+                "team": [
+                    "Thaddius Brood",
+                    "Carrion Shade",
+                    "Cursed Slimeball",
+                    "Riftwing",
+                    "Death Elemental",
+                    "Undead Badger",
+                    "Silent Sha-vi"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Thaddius Brood",
+                    "Carrion Shade",
+                    "Cursed Slimeball",
+                    "Riftwing",
+                    "Death Elemental",
+                    "Undead Badger"
+                ]
+            },
+            "team2": {
+                "player": "jeannhinton82",
+                "team": [
+                    "Mother Khala",
+                    "Gargoya Scrapper",
+                    "Blinding Reflector",
+                    "Celestial Harpy",
+                    "Time Mage",
+                    "Pelacor Arbalest",
+                    "Chaos Agent"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Thaddius Brood",
+                    "Carrion Shade",
+                    "Cursed Slimeball",
+                    "Riftwing",
+                    "Death Elemental",
+                    "Undead Badger"
+                ]
+            },
+            "team2": {
+                "player": "roangstonio",
+                "team": [
+                    "Drake of Arnak",
+                    "Chaos Agent",
+                    "Cursed Windeku",
+                    "Cursed Slimeball",
+                    "Carrion Shade",
+                    "Silent Sha-vi",
+                    "Undead Badger"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Thaddius Brood",
+                    "Carrion Shade",
+                    "Cursed Slimeball",
+                    "Riftwing",
+                    "Death Elemental",
+                    "Undead Badger"
+                ]
+            },
+            "team2": {
+                "player": "hung580",
+                "team": [
+                    "Mother Khala",
+                    "Gargoya Scrapper",
+                    "Blinding Reflector",
+                    "Celestial Harpy",
+                    "Time Mage",
+                    "Pelacor Arbalest",
+                    "Chaos Agent"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Thaddius Brood",
+                    "Carrion Shade",
+                    "Cursed Slimeball",
+                    "Riftwing",
+                    "Death Elemental",
+                    "Undead Badger"
+                ]
+            },
+            "team2": {
+                "player": "goudubo",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Undead Badger",
+                    "Life Sapper",
+                    "Silent Sha-vi"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Thaddius Brood",
+                    "Carrion Shade",
+                    "Cursed Slimeball",
+                    "Riftwing",
+                    "Death Elemental",
+                    "Undead Badger"
+                ]
+            },
+            "team2": {
+                "player": "thaihoad",
+                "team": [
+                    "Mother Khala",
+                    "Gargoya Scrapper",
+                    "Chaos Agent",
+                    "Blinding Reflector",
+                    "Time Mage",
+                    "Pelacor Arbalest",
+                    "Celestial Harpy"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Thaddius Brood",
+                    "Carrion Shade",
+                    "Cursed Slimeball",
+                    "Riftwing",
+                    "Death Elemental",
+                    "Undead Badger"
+                ]
+            },
+            "team2": {
+                "player": "langz461",
+                "team": [
+                    "Thaddius Brood",
+                    "Carrion Shade",
+                    "Cursed Slimeball",
+                    "Riftwing",
+                    "Death Elemental",
+                    "Undead Badger",
+                    "Silent Sha-vi"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Thaddius Brood",
+                    "Carrion Shade",
+                    "Cursed Slimeball",
+                    "Riftwing",
+                    "Death Elemental",
+                    "Undead Badger"
+                ]
+            },
+            "team2": {
+                "player": "ding1556",
+                "team": [
+                    "Drake of Arnak",
+                    "Carrion Shade",
+                    "Cursed Slimeball",
+                    "Riftwing",
+                    "Death Elemental",
+                    "Silent Sha-vi",
+                    "Undead Badger"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Thaddius Brood",
+                    "Carrion Shade",
+                    "Cursed Slimeball",
+                    "Riftwing",
+                    "Death Elemental",
+                    "Undead Badger"
+                ]
+            },
+            "team2": {
+                "player": "kapitalismus349",
+                "team": [
+                    "Thaddius Brood",
+                    "Carrion Shade",
+                    "Cursed Slimeball",
+                    "Riftwing",
+                    "Death Elemental",
+                    "Undead Badger",
+                    "Silent Sha-vi"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Thaddius Brood",
+                    "Carrion Shade",
+                    "Cursed Slimeball",
+                    "Riftwing",
+                    "Death Elemental",
+                    "Undead Badger"
+                ]
+            },
+            "team2": {
+                "player": "viraleser",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Merdaali Guardian",
+                    "Ice Pixie",
+                    "Kulu Swimhunter"
+                ]
+            }
         }
     ],
     "14": [
@@ -19426,6 +22533,265 @@
                     "Bortus",
                     "Albatross",
                     "Djinn Oshannus",
+                    "Ice Pixie"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Death Elemental",
+                    "Cursed Slimeball"
+                ]
+            },
+            "team2": {
+                "player": "felix.leo9",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Chaos Agent",
+                    "Carrion Shade",
+                    "Undead Badger"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Death Elemental",
+                    "Cursed Slimeball"
+                ]
+            },
+            "team2": {
+                "player": "doanngoc57",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Carrion Shade",
+                    "Undead Badger",
+                    "Chaos Agent"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Death Elemental",
+                    "Cursed Slimeball"
+                ]
+            },
+            "team2": {
+                "player": "ding699",
+                "team": [
+                    "Drake of Arnak",
+                    "Cursed Windeku",
+                    "Chaos Agent",
+                    "Life Sapper"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Death Elemental",
+                    "Cursed Slimeball"
+                ]
+            },
+            "team2": {
+                "player": "xiangyang725",
+                "team": [
+                    "Drake of Arnak",
+                    "Cursed Windeku",
+                    "Chaos Agent",
+                    "Life Sapper"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Death Elemental",
+                    "Cursed Slimeball"
+                ]
+            },
+            "team2": {
+                "player": "steventensehill",
+                "team": [
+                    "Drake of Arnak",
+                    "Carrion Shade",
+                    "Cursed Slimeball",
+                    "Life Sapper",
+                    "Death Elemental",
+                    "Undead Badger"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Death Elemental",
+                    "Cursed Slimeball"
+                ]
+            },
+            "team2": {
+                "player": "tyurun120",
+                "team": [
+                    "Drake of Arnak",
+                    "Cursed Windeku",
+                    "Carrion Shade",
+                    "Life Sapper"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Death Elemental",
+                    "Cursed Slimeball"
+                ]
+            },
+            "team2": {
+                "player": "ding904",
+                "team": [
+                    "Drake of Arnak",
+                    "Cursed Windeku",
+                    "Chaos Agent",
+                    "Life Sapper"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Death Elemental",
+                    "Cursed Slimeball"
+                ]
+            },
+            "team2": {
+                "player": "hkngan14",
+                "team": [
+                    "Pyre",
+                    "Living Lava",
+                    "Chaos Agent",
+                    "Serpentine Spy"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Death Elemental",
+                    "Cursed Slimeball"
+                ]
+            },
+            "team2": {
+                "player": "fywlz561",
+                "team": [
+                    "Drake of Arnak",
+                    "Cursed Windeku",
+                    "Carrion Shade",
+                    "Life Sapper"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Death Elemental",
+                    "Cursed Slimeball"
+                ]
+            },
+            "team2": {
+                "player": "btclaim4780",
+                "team": [
+                    "Pyre",
+                    "Living Lava",
+                    "Chaos Agent",
+                    "Serpentine Spy"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Death Elemental",
+                    "Cursed Slimeball"
+                ]
+            },
+            "team2": {
+                "player": "mattrang179",
+                "team": [
+                    "Drake of Arnak",
+                    "Carrion Shade",
+                    "Cursed Slimeball",
+                    "Life Sapper",
+                    "Death Elemental",
+                    "Undead Badger"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Death Elemental",
+                    "Cursed Slimeball"
+                ]
+            },
+            "team2": {
+                "player": "thutrang685",
+                "team": [
+                    "Kelya Frendul",
+                    "Hardy Stonefish",
+                    "Albatross",
+                    "Deeplurker",
                     "Ice Pixie"
                 ]
             }
@@ -21265,6 +24631,99 @@
                     "Carrion Shade"
                 ]
             }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Khmer Princess",
+                    "Regal Peryton"
+                ]
+            },
+            "team2": {
+                "player": "goodabdulla",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Life Sapper",
+                    "Death Elemental",
+                    "Soul Strangler"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Khmer Princess",
+                    "Regal Peryton"
+                ]
+            },
+            "team2": {
+                "player": "kuboinlove299",
+                "team": [
+                    "Pyre",
+                    "Living Lava",
+                    "Chaos Agent",
+                    "Serpentine Spy",
+                    "Tenyii Striker"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Khmer Princess",
+                    "Regal Peryton"
+                ]
+            },
+            "team2": {
+                "player": "tientq2615",
+                "team": [
+                    "Bortus",
+                    "Cruel Sethropod",
+                    "Hardy Stonefish",
+                    "River Nymph",
+                    "Venari Wavesmith",
+                    "Ice Pixie"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Khmer Princess",
+                    "Regal Peryton"
+                ]
+            },
+            "team2": {
+                "player": "fenghualuo33",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Death Elemental",
+                    "Undead Badger",
+                    "Dark Astronomer"
+                ]
+            }
         }
     ],
     "16": [
@@ -22677,25 +26136,139 @@
                     "Death Elemental"
                 ]
             }
-        }
-    ],
-    "12": [
+        },
         {
-            "result": "Battle Lost",
+            "result": "Battle Won",
             "team1": {
-                "player": "initiate_726597",
+                "player": "dazh0702",
                 "team": [
                     "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
+                    "Hill Giant",
+                    "Failed Summoner",
+                    "Khmer Princess",
+                    "Regal Peryton"
                 ]
             },
             "team2": {
-                "player": "kouum21874510",
+                "player": "tientq2403",
+                "team": [
+                    "Drake of Arnak",
+                    "Cursed Windeku",
+                    "Life Sapper",
+                    "Undead Badger",
+                    "Carrion Shade"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Hill Giant",
+                    "Failed Summoner",
+                    "Khmer Princess",
+                    "Regal Peryton"
+                ]
+            },
+            "team2": {
+                "player": "khuctam60",
                 "team": [
                     "Thaddius Brood",
                     "Cursed Windeku",
+                    "Silent Sha-vi",
+                    "Chaos Agent"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Hill Giant",
+                    "Failed Summoner",
+                    "Khmer Princess",
+                    "Regal Peryton"
+                ]
+            },
+            "team2": {
+                "player": "tayho335",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Chaos Agent",
+                    "Silent Sha-vi"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Hill Giant",
+                    "Failed Summoner",
+                    "Khmer Princess",
+                    "Regal Peryton"
+                ]
+            },
+            "team2": {
+                "player": "acnkaw6mu7d3",
+                "team": [
+                    "Drake of Arnak",
+                    "Carrion Shade",
+                    "Cursed Windeku",
+                    "Life Sapper",
+                    "Undead Badger"
+                ]
+            }
+        },
+        {
+            "result": "Drawn",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Hill Giant",
+                    "Failed Summoner",
+                    "Khmer Princess",
+                    "Regal Peryton"
+                ]
+            },
+            "team2": {
+                "player": "etdntr",
+                "team": [
+                    "Obsidian",
+                    "Hill Giant",
+                    "Failed Summoner",
+                    "Khmer Princess",
+                    "Regal Peryton"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Hill Giant",
+                    "Failed Summoner",
+                    "Khmer Princess",
+                    "Regal Peryton"
+                ]
+            },
+            "team2": {
+                "player": "yurun496",
+                "team": [
+                    "Drake of Arnak",
+                    "Carrion Shade",
+                    "Cursed Windeku",
+                    "Life Sapper",
                     "Undead Badger"
                 ]
             }
@@ -22703,251 +26276,68 @@
         {
             "result": "Battle Won",
             "team1": {
-                "player": "initiate_726597",
+                "player": "dazh0702",
                 "team": [
                     "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
+                    "Hill Giant",
+                    "Failed Summoner",
+                    "Khmer Princess",
+                    "Regal Peryton"
                 ]
             },
             "team2": {
-                "player": "watayo19",
+                "player": "chenyiqi135",
                 "team": [
                     "Drake of Arnak",
-                    "Cursed Slimeball",
-                    "Carrion Shade",
-                    "Death Elemental",
-                    "Life Sapper"
-                ]
-            }
-        },
-        {
-            "result": "Battle Won",
-            "team1": {
-                "player": "initiate_975111",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "embezanilla",
-                "team": [
-                    "Kelya Frendul",
-                    "Albatross",
-                    "Hardy Stonefish",
-                    "River Nymph",
-                    "Ice Pixie"
-                ]
-            }
-        },
-        {
-            "result": "Battle Won",
-            "team1": {
-                "player": "initiate_975111",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "usb72",
-                "team": [
-                    "Drake of Arnak",
-                    "Cursed Slimeball",
-                    "Carrion Shade",
-                    "Death Elemental",
-                    "Life Sapper"
-                ]
-            }
-        },
-        {
-            "result": "Battle Lost",
-            "team1": {
-                "player": "initiate_975111",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "khai304",
-                "team": [
-                    "Thaddius Brood",
                     "Cursed Windeku",
-                    "Undead Badger"
+                    "Carrion Shade",
+                    "Silent Sha-vi"
+                ]
+            }
+        },
+        {
+            "result": "Drawn",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Hill Giant",
+                    "Failed Summoner",
+                    "Khmer Princess",
+                    "Regal Peryton"
+                ]
+            },
+            "team2": {
+                "player": "tjjhhhuff",
+                "team": [
+                    "Obsidian",
+                    "Hill Giant",
+                    "Failed Summoner",
+                    "Khmer Princess",
+                    "Regal Peryton"
                 ]
             }
         },
         {
             "result": "Battle Lost",
             "team1": {
-                "player": "initiate_975111",
+                "player": "dazh0702",
                 "team": [
                     "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
+                    "Hill Giant",
+                    "Failed Summoner",
+                    "Khmer Princess",
+                    "Regal Peryton"
                 ]
             },
             "team2": {
-                "player": "andeavila",
+                "player": "neit02",
                 "team": [
                     "Tarsa",
                     "Radiated Scorcher",
-                    "Xenith Monk",
-                    "Serpentine Spy"
-                ]
-            }
-        },
-        {
-            "result": "Battle Won",
-            "team1": {
-                "player": "dazh0702",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "spotk3",
-                "team": [
-                    "Drake of Arnak",
-                    "Cursed Slimeball",
-                    "Carrion Shade",
-                    "Death Elemental",
-                    "Life Sapper"
-                ]
-            }
-        },
-        {
-            "result": "Battle Lost",
-            "team1": {
-                "player": "dazh0702",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "sgdsg65",
-                "team": [
-                    "Thaddius Brood",
-                    "Cursed Windeku",
-                    "Undead Badger"
-                ]
-            }
-        },
-        {
-            "result": "Battle Won",
-            "team1": {
-                "player": "initiate_726597",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "jay100zz35",
-                "team": [
-                    "Contessa L'ament",
-                    "Cursed Windeku",
-                    "Life Sapper"
-                ]
-            }
-        },
-        {
-            "result": "Battle Won",
-            "team1": {
-                "player": "dazh0702",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "wolken-farm-24",
-                "team": [
-                    "Drake of Arnak",
-                    "Cursed Slimeball",
-                    "Carrion Shade",
-                    "Death Elemental",
-                    "Life Sapper"
-                ]
-            }
-        },
-        {
-            "result": "Battle Lost",
-            "team1": {
-                "player": "dazh0702",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "gggba40013809",
-                "team": [
-                    "Thaddius Brood",
-                    "Cursed Windeku",
-                    "Undead Badger"
-                ]
-            }
-        },
-        {
-            "result": "Battle Lost",
-            "team1": {
-                "player": "dazh0702",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "rrrrrr4",
-                "team": [
-                    "Thaddius Brood",
-                    "Cursed Windeku",
-                    "Undead Badger"
-                ]
-            }
-        },
-        {
-            "result": "Battle Won",
-            "team1": {
-                "player": "dazh0702",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "dgsdfdf",
-                "team": [
-                    "Tarsa",
-                    "Scavo Chemist",
-                    "Radiated Scorcher",
+                    "Chaos Agent",
+                    "Xenith Archer",
+                    "Serpentine Spy",
                     "Tenyii Striker"
                 ]
             }
@@ -22958,719 +26348,24 @@
                 "player": "dazh0702",
                 "team": [
                     "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
+                    "Hill Giant",
+                    "Failed Summoner",
+                    "Khmer Princess",
+                    "Regal Peryton"
                 ]
             },
             "team2": {
-                "player": "qtiep074",
+                "player": "io6142",
                 "team": [
                     "Thaddius Brood",
                     "Cursed Windeku",
-                    "Undead Badger"
-                ]
-            }
-        },
-        {
-            "result": "Battle Lost",
-            "team1": {
-                "player": "dazh0702",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "geilicai158",
-                "team": [
-                    "Thaddius Brood",
-                    "Cursed Windeku",
-                    "Undead Badger"
-                ]
-            }
-        },
-        {
-            "result": "Battle Won",
-            "team1": {
-                "player": "dazh0702",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "whjyj20043101",
-                "team": [
-                    "Kelya Frendul",
-                    "Albatross",
-                    "Hardy Stonefish",
-                    "Ice Pixie",
-                    "River Nymph"
-                ]
-            }
-        },
-        {
-            "result": "Battle Lost",
-            "team1": {
-                "player": "dazh0702",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "ding3352",
-                "team": [
-                    "Thaddius Brood",
-                    "Cursed Windeku",
-                    "Undead Badger"
-                ]
-            }
-        },
-        {
-            "result": "Battle Lost",
-            "team1": {
-                "player": "dazh0702",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "mcauleyserin54",
-                "team": [
-                    "Thaddius Brood",
-                    "Cursed Windeku",
-                    "Undead Badger"
-                ]
-            }
-        },
-        {
-            "result": "Battle Won",
-            "team1": {
-                "player": "dazh0702",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "dh024",
-                "team": [
-                    "Drake of Arnak",
-                    "Carrion Shade",
-                    "Cursed Slimeball",
-                    "Death Elemental",
-                    "Life Sapper"
-                ]
-            }
-        },
-        {
-            "result": "Battle Won",
-            "team1": {
-                "player": "dazh0702",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "quann118",
-                "team": [
-                    "Wizard of Eastwood",
-                    "Mycelic Morphoid",
-                    "Mycelic Infantry"
-                ]
-            }
-        },
-        {
-            "result": "Battle Won",
-            "team1": {
-                "player": "dazh0702",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "hokmim",
-                "team": [
-                    "Contessa L'ament",
-                    "Cursed Windeku",
-                    "Life Sapper"
-                ]
-            }
-        },
-        {
-            "result": "Battle Lost",
-            "team1": {
-                "player": "dazh0702",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "ding1660",
-                "team": [
-                    "Thaddius Brood",
-                    "Cursed Windeku",
-                    "Undead Badger"
-                ]
-            }
-        },
-        {
-            "result": "Battle Won",
-            "team1": {
-                "player": "dazh0702",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "err35",
-                "team": [
-                    "Kelya Frendul",
-                    "Albatross",
-                    "Hardy Stonefish",
-                    "Ice Pixie",
-                    "River Nymph"
-                ]
-            }
-        },
-        {
-            "result": "Battle Won",
-            "team1": {
-                "player": "dazh0702",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "sdlamana11e",
-                "team": [
-                    "Contessa L'ament",
-                    "Cursed Windeku",
-                    "Undead Badger",
-                    "Carrion Shade"
-                ]
-            }
-        },
-        {
-            "result": "Battle Lost",
-            "team1": {
-                "player": "dazh0702",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "liuzz89",
-                "team": [
-                    "Thaddius Brood",
-                    "Cursed Windeku",
-                    "Undead Badger"
-                ]
-            }
-        },
-        {
-            "result": "Battle Lost",
-            "team1": {
-                "player": "dazh0702",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "fywls120",
-                "team": [
-                    "Thaddius Brood",
-                    "Cursed Windeku",
-                    "Undead Badger"
-                ]
-            }
-        },
-        {
-            "result": "Drawn",
-            "team1": {
-                "player": "dazh0702",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "huyb253",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            }
-        },
-        {
-            "result": "Battle Won",
-            "team1": {
-                "player": "dazh0702",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "chenqiang65",
-                "team": [
-                    "Drake of Arnak",
-                    "Cursed Windeku",
-                    "Undead Badger"
-                ]
-            }
-        },
-        {
-            "result": "Battle Won",
-            "team1": {
-                "player": "dazh0702",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "haigame998",
-                "team": [
-                    "Wizard of Eastwood",
-                    "Mycelic Morphoid",
-                    "Mycelic Infantry"
-                ]
-            }
-        },
-        {
-            "result": "Battle Lost",
-            "team1": {
-                "player": "dazh0702",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "quandz432",
-                "team": [
-                    "Thaddius Brood",
-                    "Cursed Windeku",
-                    "Undead Badger"
-                ]
-            }
-        },
-        {
-            "result": "Battle Lost",
-            "team1": {
-                "player": "dazh0702",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "vuilen114",
-                "team": [
-                    "Thaddius Brood",
-                    "Cursed Windeku",
-                    "Undead Badger"
-                ]
-            }
-        },
-        {
-            "result": "Battle Lost",
-            "team1": {
-                "player": "dazh0702",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "aeromechanical",
-                "team": [
-                    "Thaddius Brood",
-                    "Cursed Windeku",
-                    "Undead Badger"
-                ]
-            }
-        },
-        {
-            "result": "Battle Lost",
-            "team1": {
-                "player": "dazh0702",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "changchang379",
-                "team": [
-                    "Thaddius Brood",
-                    "Cursed Windeku",
-                    "Undead Badger"
-                ]
-            }
-        },
-        {
-            "result": "Battle Lost",
-            "team1": {
-                "player": "dazh0702",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "ding523",
-                "team": [
-                    "Thaddius Brood",
-                    "Cursed Windeku",
-                    "Undead Badger"
-                ]
-            }
-        },
-        {
-            "result": "Battle Won",
-            "team1": {
-                "player": "dazh0702",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "liuzz203",
-                "team": [
-                    "Thaddius Brood",
-                    "Cursed Windeku",
-                    "Undead Badger"
-                ]
-            }
-        },
-        {
-            "result": "Battle Lost",
-            "team1": {
-                "player": "dazh0702",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "kelly923",
-                "team": [
-                    "Tarsa",
-                    "Xenith Monk",
-                    "Radiated Scorcher",
-                    "Serpentine Spy"
-                ]
-            }
-        },
-        {
-            "result": "Battle Won",
-            "team1": {
-                "player": "dazh0702",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "ryles98018821",
-                "team": [
-                    "Drake of Arnak",
-                    "Cursed Slimeball",
-                    "Carrion Shade",
-                    "Death Elemental",
-                    "Life Sapper"
-                ]
-            }
-        },
-        {
-            "result": "Battle Won",
-            "team1": {
-                "player": "dazh0702",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "formosa",
-                "team": [
-                    "Drake of Arnak",
-                    "Cursed Windeku",
-                    "Undead Badger"
-                ]
-            }
-        },
-        {
-            "result": "Drawn",
-            "team1": {
-                "player": "dazh0702",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "sabubua",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            }
-        },
-        {
-            "result": "Battle Lost",
-            "team1": {
-                "player": "dazh0702",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "huang89",
-                "team": [
-                    "Thaddius Brood",
-                    "Cursed Windeku",
-                    "Undead Badger"
-                ]
-            }
-        },
-        {
-            "result": "Battle Won",
-            "team1": {
-                "player": "dazh0702",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "hahihi346",
-                "team": [
-                    "Wizard of Eastwood",
-                    "Mycelic Morphoid",
-                    "Mycelic Infantry"
-                ]
-            }
-        },
-        {
-            "result": "Battle Won",
-            "team1": {
-                "player": "dazh0702",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "skyoi132",
-                "team": [
-                    "Tarsa",
-                    "Radiated Scorcher",
-                    "Living Lava"
-                ]
-            }
-        },
-        {
-            "result": "Battle Won",
-            "team1": {
-                "player": "dazh0702",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "hsjez22056806",
-                "team": [
-                    "Drake of Arnak",
-                    "Cursed Slimeball",
-                    "Carrion Shade",
-                    "Death Elemental",
-                    "Life Sapper"
-                ]
-            }
-        },
-        {
-            "result": "Battle Lost",
-            "team1": {
-                "player": "dazh0702",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "ding350",
-                "team": [
-                    "Thaddius Brood",
-                    "Cursed Windeku",
-                    "Undead Badger"
-                ]
-            }
-        },
-        {
-            "result": "Battle Lost",
-            "team1": {
-                "player": "dazh0702",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "ggy13",
-                "team": [
-                    "Mother Khala",
-                    "Blinding Reflector",
-                    "Gargoya Scrapper",
-                    "Stitch Leech",
-                    "Celestial Harpy"
-                ]
-            }
-        },
-        {
-            "result": "Drawn",
-            "team1": {
-                "player": "dazh0702",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "usb50",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            }
-        },
-        {
-            "result": "Battle Lost",
-            "team1": {
-                "player": "dazh0702",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "heterogenen",
-                "team": [
-                    "Tarsa",
-                    "Xenith Monk",
-                    "Serpentine Spy",
-                    "Radiated Scorcher"
-                ]
-            }
-        },
-        {
-            "result": "Battle Lost",
-            "team1": {
-                "player": "dazh0702",
-                "team": [
-                    "Obsidian",
-                    "Mycelic Morphoid",
-                    "Regal Peryton",
-                    "Khmer Princess"
-                ]
-            },
-            "team2": {
-                "player": "ding4499",
-                "team": [
-                    "Thaddius Brood",
-                    "Cursed Windeku",
-                    "Undead Badger"
+                    "Chaos Agent",
+                    "Silent Sha-vi"
                 ]
             }
         }
     ],
+    "12": [],
     "28": [
         {
             "result": "Battle Lost",
@@ -25564,6 +28259,276 @@
                     "Deeplurker"
                 ]
             }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Deeplurker",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Feasting Seaweed",
+                    "Albatross"
+                ]
+            },
+            "team2": {
+                "player": "tientq24781",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Regal Peryton",
+                    "Xenith Archer",
+                    "Khmer Princess",
+                    "Goblin Psychic",
+                    "Chaos Agent"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Deeplurker",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Feasting Seaweed",
+                    "Albatross"
+                ]
+            },
+            "team2": {
+                "player": "kushinab42",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Furious Chicken",
+                    "Regal Peryton",
+                    "Goblin Psychic",
+                    "Khmer Princess",
+                    "Child of the Forest"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Deeplurker",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Feasting Seaweed",
+                    "Albatross"
+                ]
+            },
+            "team2": {
+                "player": "silico",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Regal Peryton",
+                    "Xenith Archer",
+                    "Khmer Princess",
+                    "Goblin Psychic",
+                    "Chaos Agent"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Deeplurker",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Feasting Seaweed",
+                    "Albatross"
+                ]
+            },
+            "team2": {
+                "player": "liuyu106",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Albatross",
+                    "Merdaali Guardian",
+                    "Feasting Seaweed",
+                    "Scavo Hireling",
+                    "Deeplurker"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Deeplurker",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Feasting Seaweed",
+                    "Albatross"
+                ]
+            },
+            "team2": {
+                "player": "hy844",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Albatross",
+                    "Deeplurker",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Feasting Seaweed"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Deeplurker",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Feasting Seaweed",
+                    "Albatross"
+                ]
+            },
+            "team2": {
+                "player": "langz74",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Albatross",
+                    "Merdaali Guardian",
+                    "Feasting Seaweed",
+                    "Scavo Hireling",
+                    "Deeplurker"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Deeplurker",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Feasting Seaweed",
+                    "Albatross"
+                ]
+            },
+            "team2": {
+                "player": "dung743",
+                "team": [
+                    "Tarsa",
+                    "Living Lava",
+                    "Disintegrator",
+                    "Chaos Agent",
+                    "Serpentine Spy",
+                    "Tenyii Striker",
+                    "Radiated Scorcher"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Deeplurker",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Feasting Seaweed",
+                    "Albatross"
+                ]
+            },
+            "team2": {
+                "player": "ding2726",
+                "team": [
+                    "Obsidian",
+                    "Failed Summoner",
+                    "Unicorn Mustang",
+                    "Chaos Agent",
+                    "Khmer Princess",
+                    "Goblin Psychic",
+                    "Regal Peryton"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Deeplurker",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Feasting Seaweed",
+                    "Albatross"
+                ]
+            },
+            "team2": {
+                "player": "bis8",
+                "team": [
+                    "General Sloan",
+                    "Chaos Knight",
+                    "Celestial Harpy",
+                    "Truthspeaker",
+                    "Time Mage",
+                    "Pelacor Arbalest",
+                    "Herbalist"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Deeplurker",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Feasting Seaweed",
+                    "Albatross"
+                ]
+            },
+            "team2": {
+                "player": "mattroi733",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Creeping Ooze",
+                    "Xenith Archer",
+                    "Khmer Princess",
+                    "Goblin Psychic",
+                    "Regal Peryton"
+                ]
+            }
         }
     ],
     "17": [
@@ -26530,6 +29495,205 @@
                     "Wizard of Eastwood",
                     "Unicorn Mustang",
                     "Venari Knifer"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Slimeball",
+                    "Cursed Windeku",
+                    "Death Elemental",
+                    "Life Sapper"
+                ]
+            },
+            "team2": {
+                "player": "splintersand",
+                "team": [
+                    "Drake of Arnak",
+                    "Djinn Chwala",
+                    "Merdaali Guardian",
+                    "Ice Pixie"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Slimeball",
+                    "Cursed Windeku",
+                    "Death Elemental",
+                    "Life Sapper"
+                ]
+            },
+            "team2": {
+                "player": "qishi26",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Life Sapper",
+                    "Tower Griffin"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Slimeball",
+                    "Cursed Windeku",
+                    "Death Elemental",
+                    "Life Sapper"
+                ]
+            },
+            "team2": {
+                "player": "fywls157",
+                "team": [
+                    "Drake of Arnak",
+                    "Cursed Windeku",
+                    "Undead Badger",
+                    "Silent Sha-vi"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Slimeball",
+                    "Cursed Windeku",
+                    "Death Elemental",
+                    "Life Sapper"
+                ]
+            },
+            "team2": {
+                "player": "ritthuotv",
+                "team": [
+                    "Wizard of Eastwood",
+                    "Unicorn Mustang",
+                    "Venari Knifer"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Slimeball",
+                    "Cursed Windeku",
+                    "Death Elemental",
+                    "Life Sapper"
+                ]
+            },
+            "team2": {
+                "player": "thattungg",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Life Sapper",
+                    "Tower Griffin"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Slimeball",
+                    "Cursed Windeku",
+                    "Death Elemental",
+                    "Life Sapper"
+                ]
+            },
+            "team2": {
+                "player": "lymzz504",
+                "team": [
+                    "Drake of Arnak",
+                    "Cursed Windeku",
+                    "Undead Badger",
+                    "Silent Sha-vi"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Slimeball",
+                    "Cursed Windeku",
+                    "Death Elemental",
+                    "Life Sapper"
+                ]
+            },
+            "team2": {
+                "player": "heerydraf",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Life Sapper",
+                    "Tower Griffin"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Slimeball",
+                    "Cursed Windeku",
+                    "Death Elemental",
+                    "Life Sapper"
+                ]
+            },
+            "team2": {
+                "player": "dungchoa",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Chaos Agent",
+                    "Undead Badger",
+                    "Death Elemental",
+                    "Carrion Shade"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Slimeball",
+                    "Cursed Windeku",
+                    "Death Elemental",
+                    "Life Sapper"
+                ]
+            },
+            "team2": {
+                "player": "liuzz367",
+                "team": [
+                    "Drake of Arnak",
+                    "Cursed Windeku",
+                    "Undead Badger",
+                    "Silent Sha-vi"
                 ]
             }
         }
@@ -28674,6 +31838,355 @@
                     "Goblin Psychic"
                 ]
             }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Khmer Princess",
+                    "Elven Mystic",
+                    "Goblin Psychic",
+                    "Regal Peryton"
+                ]
+            },
+            "team2": {
+                "player": "tinx6",
+                "team": [
+                    "Tarsa",
+                    "Living Lava",
+                    "Disintegrator",
+                    "Chaos Agent",
+                    "Tenyii Striker",
+                    "Serpentine Spy",
+                    "Lava Spider"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Khmer Princess",
+                    "Elven Mystic",
+                    "Goblin Psychic",
+                    "Regal Peryton"
+                ]
+            },
+            "team2": {
+                "player": "gaminginmanila",
+                "team": [
+                    "Kelya Frendul",
+                    "Diemonshark",
+                    "Feasting Seaweed",
+                    "Ice Pixie",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Deeplurker"
+                ]
+            }
+        },
+        {
+            "result": "Drawn",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Khmer Princess",
+                    "Elven Mystic",
+                    "Goblin Psychic",
+                    "Regal Peryton"
+                ]
+            },
+            "team2": {
+                "player": "xueyong635",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Khmer Princess",
+                    "Elven Mystic",
+                    "Goblin Psychic",
+                    "Regal Peryton"
+                ]
+            }
+        },
+        {
+            "result": "Drawn",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Khmer Princess",
+                    "Elven Mystic",
+                    "Goblin Psychic",
+                    "Regal Peryton"
+                ]
+            },
+            "team2": {
+                "player": "flzd330",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Khmer Princess",
+                    "Elven Mystic",
+                    "Goblin Psychic",
+                    "Regal Peryton"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Khmer Princess",
+                    "Elven Mystic",
+                    "Goblin Psychic",
+                    "Regal Peryton"
+                ]
+            },
+            "team2": {
+                "player": "kuboinlove282",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Regal Peryton",
+                    "Goblin Psychic",
+                    "Elven Mystic",
+                    "Khmer Princess",
+                    "Mycelic Morphoid"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Khmer Princess",
+                    "Elven Mystic",
+                    "Goblin Psychic",
+                    "Regal Peryton"
+                ]
+            },
+            "team2": {
+                "player": "ding897",
+                "team": [
+                    "Kelya Frendul",
+                    "Diemonshark",
+                    "Ice Pixie",
+                    "Feasting Seaweed",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Deeplurker"
+                ]
+            }
+        },
+        {
+            "result": "Drawn",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Khmer Princess",
+                    "Elven Mystic",
+                    "Goblin Psychic",
+                    "Regal Peryton"
+                ]
+            },
+            "team2": {
+                "player": "yangz84",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Khmer Princess",
+                    "Elven Mystic",
+                    "Goblin Psychic",
+                    "Regal Peryton"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Khmer Princess",
+                    "Elven Mystic",
+                    "Goblin Psychic",
+                    "Regal Peryton"
+                ]
+            },
+            "team2": {
+                "player": "tientq2615",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Slipspawn",
+                    "Mycelic Morphoid",
+                    "Goblin Psychic",
+                    "Khmer Princess"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Khmer Princess",
+                    "Elven Mystic",
+                    "Goblin Psychic",
+                    "Regal Peryton"
+                ]
+            },
+            "team2": {
+                "player": "ding926",
+                "team": [
+                    "Kelya Frendul",
+                    "Diemonshark",
+                    "Ice Pixie",
+                    "Feasting Seaweed",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Deeplurker"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Khmer Princess",
+                    "Elven Mystic",
+                    "Goblin Psychic",
+                    "Regal Peryton"
+                ]
+            },
+            "team2": {
+                "player": "tomkoeben",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Regal Peryton",
+                    "Goblin Psychic",
+                    "Elven Mystic",
+                    "Khmer Princess",
+                    "Mycelic Morphoid"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Khmer Princess",
+                    "Elven Mystic",
+                    "Goblin Psychic",
+                    "Regal Peryton"
+                ]
+            },
+            "team2": {
+                "player": "gjkhkj",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Slipspawn",
+                    "Mycelic Morphoid",
+                    "Goblin Psychic",
+                    "Khmer Princess"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Khmer Princess",
+                    "Elven Mystic",
+                    "Goblin Psychic",
+                    "Regal Peryton"
+                ]
+            },
+            "team2": {
+                "player": "mucbay485",
+                "team": [
+                    "Thaddius Brood",
+                    "Cursed Windeku",
+                    "Disintegrator",
+                    "Life Sapper",
+                    "Death Elemental",
+                    "Undead Badger",
+                    "Silent Sha-vi"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Khmer Princess",
+                    "Elven Mystic",
+                    "Goblin Psychic",
+                    "Regal Peryton"
+                ]
+            },
+            "team2": {
+                "player": "sps.gamer2046",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Regal Peryton",
+                    "Goblin Psychic",
+                    "Khmer Princess",
+                    "Venari Spellsmith"
+                ]
+            }
         }
     ],
     "27": [
@@ -29798,6 +33311,369 @@
                     "Undead Badger",
                     "Silent Sha-vi",
                     "Death Elemental"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Deeplurker",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Feasting Seaweed"
+                ]
+            },
+            "team2": {
+                "player": "hdidisi",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Chaos Agent",
+                    "Khmer Princess",
+                    "Goblin Psychic",
+                    "Regal Peryton"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Deeplurker",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Feasting Seaweed"
+                ]
+            },
+            "team2": {
+                "player": "xiangyang487",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Chaos Agent",
+                    "Goblin Psychic",
+                    "Khmer Princess",
+                    "Regal Peryton"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Deeplurker",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Feasting Seaweed"
+                ]
+            },
+            "team2": {
+                "player": "bfvr",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Regal Peryton",
+                    "Khmer Princess",
+                    "Goblin Psychic",
+                    "Chaos Agent"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Deeplurker",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Feasting Seaweed"
+                ]
+            },
+            "team2": {
+                "player": "tientq2483",
+                "team": [
+                    "Kelya Frendul",
+                    "Diemonshark",
+                    "Deeplurker",
+                    "Merdaali Guardian",
+                    "Feasting Seaweed",
+                    "Hardy Stonefish",
+                    "Albatross"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Deeplurker",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Feasting Seaweed"
+                ]
+            },
+            "team2": {
+                "player": "juliuswqixp45",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Chaos Agent",
+                    "Goblin Psychic",
+                    "Khmer Princess",
+                    "Regal Peryton"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Deeplurker",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Feasting Seaweed"
+                ]
+            },
+            "team2": {
+                "player": "ngayhat785",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Albatross",
+                    "Merdaali Guardian",
+                    "Deeplurker",
+                    "Scavo Hireling",
+                    "Angelic Mandarin"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Deeplurker",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Feasting Seaweed"
+                ]
+            },
+            "team2": {
+                "player": "ding894",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Chaos Agent",
+                    "Goblin Psychic",
+                    "Khmer Princess",
+                    "Regal Peryton"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Deeplurker",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Feasting Seaweed"
+                ]
+            },
+            "team2": {
+                "player": "lamgi520",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Chaos Agent",
+                    "Goblin Psychic",
+                    "Khmer Princess",
+                    "Regal Peryton"
+                ]
+            }
+        },
+        {
+            "result": "Drawn",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Deeplurker",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Feasting Seaweed"
+                ]
+            },
+            "team2": {
+                "player": "lymzz324",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Deeplurker",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Feasting Seaweed"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Deeplurker",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Feasting Seaweed"
+                ]
+            },
+            "team2": {
+                "player": "skyoi499",
+                "team": [
+                    "Kelya Frendul",
+                    "Cruel Sethropod",
+                    "Angelic Mandarin",
+                    "Ice Pixie",
+                    "Deeplurker",
+                    "Feasting Seaweed",
+                    "Sniping Narwhal"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Deeplurker",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Feasting Seaweed"
+                ]
+            },
+            "team2": {
+                "player": "huonghoang591",
+                "team": [
+                    "Kelya Frendul",
+                    "Cruel Sethropod",
+                    "Angelic Mandarin",
+                    "Ice Pixie",
+                    "Deeplurker",
+                    "Feasting Seaweed",
+                    "Sniping Narwhal"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Deeplurker",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Feasting Seaweed"
+                ]
+            },
+            "team2": {
+                "player": "coni3",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Morphoid",
+                    "Regal Peryton",
+                    "Khmer Princess",
+                    "Goblin Psychic",
+                    "Chaos Agent"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Deeplurker",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Feasting Seaweed"
+                ]
+            },
+            "team2": {
+                "player": "dung790",
+                "team": [
+                    "Tarsa",
+                    "Living Lava",
+                    "Radiated Brute",
+                    "Chaos Agent",
+                    "Serpentine Spy",
+                    "Tenyii Striker",
+                    "Scavo Chemist"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Kelya Frendul",
+                    "Serpent of Eld",
+                    "Deeplurker",
+                    "Merdaali Guardian",
+                    "Scavo Hireling",
+                    "Feasting Seaweed"
+                ]
+            },
+            "team2": {
+                "player": "haigame3650",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Chaos Agent",
+                    "Mycelic Morphoid",
+                    "Regal Peryton",
+                    "Goblin Psychic",
+                    "Khmer Princess"
                 ]
             }
         }
@@ -31231,6 +35107,276 @@
                     "Regal Peryton",
                     "Goblin Psychic",
                     "Goblin Tower"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Venari Knifer",
+                    "Unicorn Mustang",
+                    "Regal Peryton",
+                    "Mycelic Slipspawn",
+                    "Khmer Princess",
+                    "Goblin Psychic"
+                ]
+            },
+            "team2": {
+                "player": "thanhlinh079",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Regal Peryton",
+                    "Mycelic Slipspawn",
+                    "Goblin Tower",
+                    "Goblin Psychic",
+                    "Supply Runner"
+                ]
+            }
+        },
+        {
+            "result": "Drawn",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Venari Knifer",
+                    "Unicorn Mustang",
+                    "Regal Peryton",
+                    "Mycelic Slipspawn",
+                    "Khmer Princess",
+                    "Goblin Psychic"
+                ]
+            },
+            "team2": {
+                "player": "liuyu74",
+                "team": [
+                    "Obsidian",
+                    "Venari Knifer",
+                    "Unicorn Mustang",
+                    "Regal Peryton",
+                    "Mycelic Slipspawn",
+                    "Khmer Princess",
+                    "Goblin Psychic"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Venari Knifer",
+                    "Unicorn Mustang",
+                    "Regal Peryton",
+                    "Mycelic Slipspawn",
+                    "Khmer Princess",
+                    "Goblin Psychic"
+                ]
+            },
+            "team2": {
+                "player": "chenz25",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Mycelic Slipspawn",
+                    "Mycelic Infantry",
+                    "Regal Peryton",
+                    "Goblin Tower",
+                    "Goblin Psychic"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Venari Knifer",
+                    "Unicorn Mustang",
+                    "Regal Peryton",
+                    "Mycelic Slipspawn",
+                    "Khmer Princess",
+                    "Goblin Psychic"
+                ]
+            },
+            "team2": {
+                "player": "nnam191",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Regal Peryton",
+                    "Mycelic Slipspawn",
+                    "Goblin Tower",
+                    "Goblin Psychic",
+                    "Supply Runner"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Venari Knifer",
+                    "Unicorn Mustang",
+                    "Regal Peryton",
+                    "Mycelic Slipspawn",
+                    "Khmer Princess",
+                    "Goblin Psychic"
+                ]
+            },
+            "team2": {
+                "player": "tranghis",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Regal Peryton",
+                    "Mycelic Slipspawn",
+                    "Goblin Tower",
+                    "Goblin Psychic",
+                    "Supply Runner"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Venari Knifer",
+                    "Unicorn Mustang",
+                    "Regal Peryton",
+                    "Mycelic Slipspawn",
+                    "Khmer Princess",
+                    "Goblin Psychic"
+                ]
+            },
+            "team2": {
+                "player": "scarle",
+                "team": [
+                    "Kelya Frendul",
+                    "Disintegrator",
+                    "Diemonshark",
+                    "Djinn Oshannus",
+                    "Merdaali Guardian",
+                    "Deeplurker",
+                    "Mantoid"
+                ]
+            }
+        },
+        {
+            "result": "Drawn",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Venari Knifer",
+                    "Unicorn Mustang",
+                    "Regal Peryton",
+                    "Mycelic Slipspawn",
+                    "Khmer Princess",
+                    "Goblin Psychic"
+                ]
+            },
+            "team2": {
+                "player": "tyurun90",
+                "team": [
+                    "Obsidian",
+                    "Venari Knifer",
+                    "Unicorn Mustang",
+                    "Regal Peryton",
+                    "Mycelic Slipspawn",
+                    "Khmer Princess",
+                    "Goblin Psychic"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Venari Knifer",
+                    "Unicorn Mustang",
+                    "Regal Peryton",
+                    "Mycelic Slipspawn",
+                    "Khmer Princess",
+                    "Goblin Psychic"
+                ]
+            },
+            "team2": {
+                "player": "usb79",
+                "team": [
+                    "Obsidian",
+                    "Mycelic Infantry",
+                    "Unicorn Mustang",
+                    "Mycelic Slipspawn",
+                    "Goblin Tower",
+                    "Regal Peryton",
+                    "Goblin Psychic"
+                ]
+            }
+        },
+        {
+            "result": "Battle Lost",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Venari Knifer",
+                    "Unicorn Mustang",
+                    "Regal Peryton",
+                    "Mycelic Slipspawn",
+                    "Khmer Princess",
+                    "Goblin Psychic"
+                ]
+            },
+            "team2": {
+                "player": "li33",
+                "team": [
+                    "Obsidian",
+                    "Mycelic Infantry",
+                    "Unicorn Mustang",
+                    "Regal Peryton",
+                    "Goblin Psychic",
+                    "Goblin Tower",
+                    "Mycelic Slipspawn"
+                ]
+            }
+        },
+        {
+            "result": "Battle Won",
+            "team1": {
+                "player": "dazh0702",
+                "team": [
+                    "Obsidian",
+                    "Venari Knifer",
+                    "Unicorn Mustang",
+                    "Regal Peryton",
+                    "Mycelic Slipspawn",
+                    "Khmer Princess",
+                    "Goblin Psychic"
+                ]
+            },
+            "team2": {
+                "player": "tayho233",
+                "team": [
+                    "Obsidian",
+                    "Unicorn Mustang",
+                    "Regal Peryton",
+                    "Mycelic Slipspawn",
+                    "Goblin Tower",
+                    "Goblin Psychic",
+                    "Supply Runner"
                 ]
             }
         }

@@ -937,7 +937,7 @@ def battle(account, match):
         showLog('Đang chọn thẻ bài...', username)
         time.sleep(7)
         team = Team.teamSelector(driver.page_source, mana)
-        driver.execute_script("var team = "+ team['summoner'] + ";let card = document.getElementsByClassName('card beta');let cimg = document.getElementsByClassName('card-img');var reg = /[A-Z]\\w+( \\w+'*\\w*)*/;for (let j = 0; j < card.length; j++){let att_card = card[j].innerText;let result = att_card.match(reg);let name = result[0];if (name == team[0]){cimg[j].click();break;}}")
+        driver.execute_script("var team = "+ team['summoner'] + ";let card = document.getElementsByClassName('card-name-name');let cimg = document.getElementsByClassName('card-img');for (let j = 0; j < card.length; j++){if (card[j].innerText == team[0]){cimg[j].click();break;}}")
         try:
             WebDriverWait(driver, 1).until(EC.visibility_of_element_located((By.XPATH, '//*[@id="splinter_selection_modal"]/div/div')))
             color = team['color']
@@ -954,7 +954,7 @@ def battle(account, match):
         except:
             pass
         finally:
-            driver.execute_script("var team = "+ team['monster'] + ";for (let i = 0; i < team.length; i++) {let card = document.getElementsByClassName('card beta');let cimg = document.getElementsByClassName('card-img');var reg = /[A-Z]\\w+( \\w+'*\\w*)*/;for (let j = 0; j < card.length; j++){let att_card = card[j].innerText;let result = att_card.match(reg);let name = result[0];if (name == team[i]){cimg[j].click();break;}}}document.getElementsByClassName('btn-green')[0].click();")
+            driver.execute_script("var team = "+ team['monster'] + ";for (let i = 0; i < team.length; i++){let card = document.getElementsByClassName('card-name-name');let cimg = document.getElementsByClassName('card-img');for (let j = 0; j < card.length; j++) {if (card[j].innerText == team[i]) {cimg[j].click();break;}}}document.getElementsByClassName('btn-green')[0].click();")
 
 
     def startMatch():
