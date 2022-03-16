@@ -697,10 +697,7 @@ class Team:
             return team[a]
 
     def getColor(team):
-        if len(team) > 1:
-            return Card.getColor(team[1])
-        else:
-            return Card.getColor(team[0])
+        return Card.getColor(team[0])
 
     def randomBot(p_src, mana):
         mana = int(mana)
@@ -731,12 +728,18 @@ class Team:
                 i  += Card.getMana(t['name'])
         return p
 
-    def teamSelector(p_src, mana):
+    def teamSelector(p_src, mana, cl):
         mana = str(mana)
         team = Team.teams.get(mana)
         teamSelected = None
         if team is not None:
-            teamSelected = Team.randomTeam(team)
+            if cl is not None:
+                for i in team:
+                    if Team.getColor(i) == cl:
+                        teamSelected = i
+                        break
+            if teamSelected is None:
+                teamSelected = Team.randomTeam(team)
         else:
             teamSelected = Team.randomBot(p_src, mana)
 
@@ -876,12 +879,14 @@ class Team:
             elif select != 'Q':
                 print('Cú pháp không hợp lệ!'.center(116))
                 time.sleep(1)
+
+
 def showLog(log, email):
     time_log = time.strftime("%H:%M:%S", time.localtime())
     print(f'[{time_log}] [{email}] {log}')
 
 
-def battle(account, match):
+def battle(account, match, col):
     service = ChromeService(executable_path=ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service)
     driver.get('https://splinterlands.com')
@@ -936,7 +941,7 @@ def battle(account, match):
             EC.visibility_of_element_located((By.XPATH, '//*[@id="page_container"]/div/div[1]/div')))
         showLog('Đang chọn thẻ bài...', username)
         time.sleep(7)
-        team = Team.teamSelector(driver.page_source, mana)
+        team = Team.teamSelector(driver.page_source, mana, col)
         driver.execute_script("var team = "+ team['summoner'] + ";let card = document.getElementsByClassName('card-name-name');let cimg = document.getElementsByClassName('card-img');for (let j = 0; j < card.length; j++){if (card[j].innerText == team[0]){cimg[j].click();break;}}")
         try:
             WebDriverWait(driver, 1).until(EC.visibility_of_element_located((By.XPATH, '//*[@id="splinter_selection_modal"]/div/div')))
@@ -1038,7 +1043,6 @@ def battle(account, match):
         elif x == 3:
             c = checkPoint3()
         return c
-
     clear()
     for i in range(int(match)):
         showLog(f'Bắt đầu trận thứ [{i + 1}/{match}]', username)
@@ -1152,23 +1156,46 @@ class Launcher:
                         account_list.pop(select)
                     elif select == 'S' and len(account_selected) > 0:
                         clear()
-                        match = None
-                        while (match != 'Q'):
+                        match = '0'
+                        while (True):
                             clear()
                             print()
                             print('Nhập số trận đấu'.center(116))
                             print('  [Q] Thoát\n')
                             match = input('  > Chọn: ').upper()
-                            clear()
-                            if match.isdigit() and int(match) > 0:
-                                if len(account_selected) == 1:
-                                    battle(account_selected[0], match)
-                                else:
-                                    mbattle(account_selected, match)
+                            if match == 'Q':
                                 break
-                            if match != 'Q':
+                            elif match.isdigit() and int(match) > 0:
+                                break
+                            else:
                                 print('Vui lòng nhập một số hợp lệ!')
                                 time.sleep(1)
+
+                        cl = ['Red', 'Green', 'Blue', 'White', 'Black', 'Gold']
+                        cx = '0'
+                        while (True):
+                            for i in range(0, len(cl)):
+                                print(str(i+1) + '. ' + cl[i])
+                            print('Chọn màu'.center(116))
+                            print('  [Q] Thoát\n')
+                            cx = input('  > Chọn: ').upper()
+                            if cx == 'Q':
+                                break
+                            elif cx == '':
+                                if len(account_selected) == 1:
+                                    battle(account_selected[0], match, None)
+                                else:
+                                    mbattle(account_selected, match, None)
+                            elif (cx.isdigit() and int(cx) in range(1, 7)):
+                                if len(account_selected) == 1:
+                                    battle(account_selected[0], match, cl[int(cx) - 1])
+                                else:
+                                    mbattle(account_selected, match, cl[int(cx) - 1])
+                            else:
+                                print('Vui lòng nhập một số hợp lệ!')
+                                time.sleep(1)
+
+
                     elif select == 'S' and len(account_selected) == 0:
                         print('Vui lòng chọn ít nhất một tài khoản!'.center(116))
                         time.sleep(1)
