@@ -57,7 +57,7 @@ class File:
 
 class Card:
     try:
-        allCardsFile = File('data/allcards.json')
+        allCardsFile = File('data/get_details.json')
         allCards = allCardsFile.rJSon()
     except:
         response = requests.get('https://api2.splinterlands.com/cards/get_details?')
@@ -1171,13 +1171,16 @@ class Launcher:
                                 print('Vui lòng nhập một số hợp lệ!')
                                 time.sleep(1)
 
-                        cl = ['Red', 'Green', 'Blue', 'White', 'Black', 'Gold']
+                        cl = ['Red', 'Green', 'Blue', 'White', 'Black']
+                        typ = ['Fire', 'Earth', 'Water', 'Life', 'Death']
                         cx = '0'
                         while (True):
-                            for i in range(0, len(cl)):
-                                print(str(i+1) + '. ' + cl[i])
+                            clear()
                             print('Chọn màu'.center(116))
-                            print('  [Q] Thoát\n')
+                            for i in range(0, len(cl)):
+                                print(str(i+1) + '. ' + typ[i])
+                            print("[Enter] Mặc định")
+                            print('\n[Q] Thoát\n')
                             cx = input('  > Chọn: ').upper()
                             if cx == 'Q':
                                 break
@@ -1186,11 +1189,13 @@ class Launcher:
                                     battle(account_selected[0], match, None)
                                 else:
                                     mbattle(account_selected, match, None)
+                                break
                             elif (cx.isdigit() and int(cx) in range(1, 7)):
                                 if len(account_selected) == 1:
                                     battle(account_selected[0], match, cl[int(cx) - 1])
                                 else:
                                     mbattle(account_selected, match, cl[int(cx) - 1])
+                                break
                             else:
                                 print('Vui lòng nhập một số hợp lệ!')
                                 time.sleep(1)
