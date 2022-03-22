@@ -11,6 +11,12 @@
             "Wizard of Eastwood",
             "Mycelic Infantry",
             "Khmer Princess"
+        ],
+        [
+            "Kelya Frendul",
+            "Cruel Sethropod",
+            "River Nymph",
+            "Ice Pixie"
         ]
     ],
     "14": [
@@ -19,6 +25,18 @@
             "Cursed Windeku",
             "Death Elemental",
             "Cursed Slimeball"
+        ],
+        [
+            "Pyre",
+            "Living Lava",
+            "Chaos Agent",
+            "Serpentine Spy"
+        ],
+        [
+            "Bortus",
+            "Albatross",
+            "Djinn Oshannus",
+            "Ice Pixie"
         ]
     ],
     "15": [
@@ -32,6 +50,19 @@
             "Unicorn Mustang",
             "Xenith Archer",
             "Khmer Princess"
+        ],
+        [
+            "Tarsa",
+            "Radiated Scorcher",
+            "Scavo Chemist",
+            "Serpentine Spy",
+            "Tenyii Striker"
+        ],
+        [
+            "Bortus",
+            "Serpent of Eld",
+            "Merdaali Guardian",
+            "Ice Pixie"
         ]
     ],
     "16": [
@@ -41,6 +72,20 @@
             "Failed Summoner",
             "Khmer Princess",
             "Regal Peryton"
+        ],
+        [
+            "Tarsa",
+            "Radiated Scorcher",
+            "Scavo Chemist",
+            "Chaos Agent",
+            "Serpentine Spy",
+            "Tenyii Striker"
+        ],
+        [
+            "Kelya Frendul",
+            "Djinn Oshannus",
+            "Merdaali Guardian",
+            "Hardy Stonefish"
         ]
     ],
     "17": [
@@ -50,6 +95,28 @@
             "Cursed Windeku",
             "Death Elemental",
             "Life Sapper"
+        ],
+        [
+            "Pyre",
+            "Living Lava",
+            "Serpentine Spy",
+            "Scavo Firebolt"
+        ],
+        [
+            "Obsidian",
+            "Chaos Agent",
+            "Mycelic Morphoid",
+            "Regal Peryton",
+            "Elven Mystic",
+            "Khmer Princess"
+        ],
+        [
+            "Kelya Frendul",
+            "Albatross",
+            "Hardy Stonefish",
+            "Angelic Mandarin",
+            "Deeplurker",
+            "Ice Pixie"
         ]
     ],
     "18": [
@@ -58,6 +125,21 @@
             "Unicorn Mustang",
             "Regal Peryton",
             "Khmer Princess"
+        ],
+        [
+            "Tarsa",
+            "Radiated Scorcher",
+            "Antoid Platoon",
+            "Chaos Agent",
+            "Serpentine Spy",
+            "Tenyii Striker"
+        ],
+        [
+            "Kelya Frendul",
+            "Hardy Stonefish",
+            "Djinn Oshannus",
+            "Ice Pixie",
+            "Merdaali Guardian"
         ]
     ],
     "19": [
@@ -67,6 +149,22 @@
             "Mycelic Morphoid",
             "Khmer Princess",
             "Regal Peryton"
+        ],
+        [
+            "Tarsa",
+            "Scavo Chemist",
+            "Radiated Scorcher",
+            "Chaos Agent",
+            "Lava Spider",
+            "Serpentine Spy",
+            "Tenyii Striker"
+        ],
+        [
+            "Kelya Frendul",
+            "Diemonshark",
+            "Ice Pixie",
+            "Kulu Swimhunter",
+            "Chaos Agent"
         ]
     ],
     "20": [
@@ -76,16 +174,22 @@
             "Cursed Slimeball",
             "Riftwing",
             "Death Elemental",
-            "Undead Badger"
+            "Undead Badger",
+            "Silent Sha-vi"
         ],
         [
-            "Mother Khala",
-            "Gargoya Scrapper",
-            "Chaos Agent",
-            "Truthspeaker",
-            "Time Mage",
-            "Pelacor Arbalest",
-            "Celestial Harpy"
+            "Tarsa",
+            "Living Lava",
+            "Serpentine Spy",
+            "Radiated Scorcher",
+            "Tenyii Striker"
+        ],
+        [
+            "Obsidian",
+            "Unicorn Mustang",
+            "Mycelic Morphoid",
+            "Khmer Princess",
+            "Regal Peryton"
         ]
     ],
     "21": [
@@ -97,6 +201,31 @@
             "Scavo Hireling",
             "Ice Pixie",
             "Albatross"
+        ],
+        [
+            "Tarsa",
+            "Radiated Scorcher",
+            "Antoid Platoon",
+            "Chaos Agent",
+            "Lava Spider",
+            "Serpentine Spy",
+            "Tenyii Striker"
+        ],
+        [
+            "Obsidian",
+            "Mycelic Morphoid",
+            "Mycelic Slipspawn",
+            "Regal Peryton",
+            "Khmer Princess"
+        ],
+        [
+            "Kelya Frendul",
+            "Hardy Stonefish",
+            "Albatross",
+            "Venari Spellsmith",
+            "Elven Mystic",
+            "River Nymph",
+            "Ice Pixie"
         ]
     ],
     "22": [
@@ -108,6 +237,14 @@
             "Ice Pixie",
             "Xenith Archer",
             "Kulu Swimhunter"
+        ],
+        [
+            "Obsidian",
+            "Hill Giant",
+            "Regal Peryton",
+            "Elven Mystic",
+            "Venari Spellsmith",
+            "Khmer Princess"
         ]
     ],
     "23": [
@@ -119,6 +256,22 @@
             "Mycelic Morphoid",
             "Khmer Princess",
             "Regal Peryton"
+        ],
+        [
+            "Tarsa",
+            "Living Lava",
+            "Chaos Agent",
+            "Scavo Hireling",
+            "Serpentine Spy",
+            "Tenyii Striker"
+        ],
+        [
+            "Kelya Frendul",
+            "Serpent of Eld",
+            "Merdaali Guardian",
+            "Ice Pixie",
+            "Feasting Seaweed",
+            "Scavo Hireling"
         ]
     ],
     "24": [
@@ -130,6 +283,15 @@
             "Angelic Mandarin",
             "Albatross",
             "Ice Pixie"
+        ],
+        [
+            "Obsidian",
+            "Failed Summoner",
+            "Chaos Agent",
+            "Regal Peryton",
+            "Elven Mystic",
+            "Goblin Psychic",
+            "Khmer Princess"
         ]
     ],
     "25": [
@@ -140,6 +302,31 @@
             "Time Mage",
             "Xenith Archer",
             "Pelacor Arbalest"
+        ],
+        [
+            "Tarsa",
+            "Radiated Scorcher",
+            "Antoid Platoon",
+            "Horny Toad",
+            "Djinn Apprentice",
+            "Serpentine Spy",
+            "Fire Elemental"
+        ],
+        [
+            "Obsidian",
+            "Unicorn Mustang",
+            "Khmer Princess",
+            "Goblin Psychic",
+            "Regal Peryton"
+        ],
+        [
+            "Kelya Frendul",
+            "Serpent of Eld",
+            "Albatross",
+            "River Nymph",
+            "Elven Mystic",
+            "Ice Pixie",
+            "Angelic Mandarin"
         ]
     ],
     "26": [
@@ -151,6 +338,24 @@
             "Khmer Princess",
             "Venari Spellsmith",
             "Chaos Agent"
+        ],
+        [
+            "Tarsa",
+            "Living Lava",
+            "Lava Spider",
+            "Creeping Ooze",
+            "Scavo Hireling",
+            "Serpentine Spy",
+            "Tenyii Striker"
+        ],
+        [
+            "Kelya Frendul",
+            "Xenith Monk",
+            "Ice Pixie",
+            "Feasting Seaweed",
+            "Merdaali Guardian",
+            "Scavo Hireling",
+            "Deeplurker"
         ]
     ],
     "27": [
@@ -161,6 +366,23 @@
             "Merdaali Guardian",
             "Scavo Hireling",
             "Feasting Seaweed"
+        ],
+        [
+            "Tarsa",
+            "Living Lava",
+            "Lava Spider",
+            "Creeping Ooze",
+            "Scavo Hireling",
+            "Serpentine Spy",
+            "Tenyii Striker"
+        ],
+        [
+            "Obsidian",
+            "Mycelic Morphoid",
+            "Mycelic Slipspawn",
+            "Regal Peryton",
+            "Goblin Psychic",
+            "Khmer Princess"
         ]
     ],
     "28": [
@@ -172,6 +394,23 @@
             "Scavo Hireling",
             "Feasting Seaweed",
             "Albatross"
+        ],
+        [
+            "Tarsa",
+            "Living Lava",
+            "Radiated Brute",
+            "Chaos Agent",
+            "Scavo Hireling",
+            "Serpentine Spy",
+            "Tenyii Striker"
+        ],
+        [
+            "Obsidian",
+            "Unicorn Mustang",
+            "Mycelic Morphoid",
+            "Elven Mystic",
+            "Goblin Psychic",
+            "Regal Peryton"
         ]
     ],
     "29": [
@@ -183,6 +422,24 @@
             "Parasitic Growth",
             "Serpentine Spy",
             "Tenyii Striker"
+        ],
+        [
+            "Obsidian",
+            "Mycelic Morphoid",
+            "Unicorn Mustang",
+            "Khmer Princess",
+            "Goblin Psychic",
+            "Regal Peryton",
+            "Djinn Biljka"
+        ],
+        [
+            "Kelya Frendul",
+            "Xenith Monk",
+            "Albatross",
+            "Djinn Oshannus",
+            "Ice Pixie",
+            "Deeplurker",
+            "Kulu Swimhunter"
         ]
     ],
     "30": [
@@ -194,6 +451,15 @@
             "Elven Mystic",
             "Goblin Psychic",
             "Regal Peryton"
+        ],
+        [
+            "Kelya Frendul",
+            "Diemonshark",
+            "Feasting Seaweed",
+            "Ice Pixie",
+            "Merdaali Guardian",
+            "Scavo Hireling",
+            "Deeplurker"
         ]
     ],
     "99": [
@@ -205,6 +471,24 @@
             "Mycelic Slipspawn",
             "Khmer Princess",
             "Goblin Psychic"
+        ],
+        [
+            "Tarsa",
+            "Living Lava",
+            "Elven Defender",
+            "Tenyii Striker",
+            "Disintegrator",
+            "Serpentine Spy",
+            "Fire Elemental"
+        ],
+        [
+            "Kelya Frendul",
+            "Disintegrator",
+            "Diemonshark",
+            "Djinn Oshannus",
+            "Merdaali Guardian",
+            "Deeplurker",
+            "Mantoid"
         ]
     ]
 }
