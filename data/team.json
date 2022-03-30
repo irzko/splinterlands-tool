@@ -17,6 +17,14 @@
             "Cruel Sethropod",
             "River Nymph",
             "Ice Pixie"
+        ],
+        [
+            "Thaddius Brood",
+            "Cursed Slimeball",
+            "Carrion Shade",
+            "Chaos Agent",
+            "Death Elemental",
+            "Life Sapper"
         ]
     ],
     "14": [
@@ -63,6 +71,11 @@
             "Serpent of Eld",
             "Merdaali Guardian",
             "Ice Pixie"
+        ],
+        [
+            "Thaddius Brood",
+            "Cursed Windeku",
+            "Silent Sha-vi"
         ]
     ],
     "16": [
@@ -86,6 +99,12 @@
             "Djinn Oshannus",
             "Merdaali Guardian",
             "Hardy Stonefish"
+        ],
+        [
+            "Thaddius Brood",
+            "Cursed Windeku",
+            "Silent Sha-vi",
+            "Cursed Slimeball"
         ]
     ],
     "17": [
@@ -140,6 +159,12 @@
             "Djinn Oshannus",
             "Ice Pixie",
             "Merdaali Guardian"
+        ],
+        [
+            "Thaddius Brood",
+            "Cursed Windeku",
+            "Silent Sha-vi",
+            "Maggots"
         ]
     ],
     "19": [
@@ -165,6 +190,14 @@
             "Ice Pixie",
             "Kulu Swimhunter",
             "Chaos Agent"
+        ],
+        [
+            "Thaddius Brood",
+            "Chaos Agent",
+            "Cursed Windeku",
+            "Cursed Slimeball",
+            "Undead Badger",
+            "Silent Sha-vi"
         ]
     ],
     "20": [
@@ -226,6 +259,15 @@
             "Elven Mystic",
             "River Nymph",
             "Ice Pixie"
+        ],
+        [
+            "Thaddius Brood",
+            "Cursed Windeku",
+            "Chaos Agent",
+            "Carrion Shade",
+            "Death Elemental",
+            "Life Sapper",
+            "Soul Strangler"
         ]
     ],
     "22": [
@@ -245,6 +287,15 @@
             "Elven Mystic",
             "Venari Spellsmith",
             "Khmer Princess"
+        ],
+        [
+            "Thaddius Brood",
+            "Cursed Windeku",
+            "Life Sapper",
+            "Death Elemental",
+            "Soul Strangler",
+            "Undead Badger",
+            "Cursed Slimeball"
         ]
     ],
     "23": [
@@ -292,6 +343,15 @@
             "Elven Mystic",
             "Goblin Psychic",
             "Khmer Princess"
+        ],
+        [
+            "Thaddius Brood",
+            "Cursed Windeku",
+            "Riftwing",
+            "Silent Sha-vi",
+            "Death Elemental",
+            "Carrion Shade",
+            "Chaos Agent"
         ]
     ],
     "25": [
@@ -327,6 +387,15 @@
             "Elven Mystic",
             "Ice Pixie",
             "Angelic Mandarin"
+        ],
+        [
+            "Thaddius Brood",
+            "Cursed Windeku",
+            "Riftwing",
+            "Chaos Agent",
+            "Undead Badger",
+            "Death Elemental",
+            "Silent Sha-vi"
         ]
     ],
     "26": [
@@ -356,6 +425,14 @@
             "Merdaali Guardian",
             "Scavo Hireling",
             "Deeplurker"
+        ],
+        [
+            "Thaddius Brood",
+            "Cursed Windeku",
+            "Silent Sha-vi",
+            "Soul Strangler",
+            "Dhampir Stalker",
+            "Carrion Shade"
         ]
     ],
     "27": [
@@ -411,6 +488,15 @@
             "Elven Mystic",
             "Goblin Psychic",
             "Regal Peryton"
+        ],
+        [
+            "Thaddius Brood",
+            "Cursed Windeku",
+            "Disintegrator",
+            "Carrion Shade",
+            "Death Elemental",
+            "Undead Badger",
+            "Silent Sha-vi"
         ]
     ],
     "29": [
@@ -460,6 +546,15 @@
             "Merdaali Guardian",
             "Scavo Hireling",
             "Deeplurker"
+        ],
+        [
+            "Thaddius Brood",
+            "Cursed Windeku",
+            "Undead Badger",
+            "Soul Strangler",
+            "Life Sapper",
+            "Dhampir Stalker",
+            "Silent Sha-vi"
         ]
     ],
     "99": [
@@ -489,6 +584,15 @@
             "Merdaali Guardian",
             "Deeplurker",
             "Mantoid"
+        ],
+        [
+            "Thaddius Brood",
+            "Cursed Windeku",
+            "Bone Golem",
+            "Supply Runner",
+            "Disintegrator",
+            "Silent Sha-vi",
+            "Dhampir Stalker"
         ]
     ]
 }
